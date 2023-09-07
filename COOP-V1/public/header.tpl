@@ -33,11 +33,11 @@
                 </div>
             </li>
             <li class="menu-item right"><a href="/plan_du_site.php">Plan du site</a></li>
-    
-            <li class="dropdown">
+
+            <li class="dropdown pull-right">
                 <a href="#" class="dropbtn">Espace personnel</a>
                 <div class="dropdown-content">
-                    <a href="/reunion.php">Page 1</a>
+                    <a href="#">Page 1</a>
                     <a href="#">Page 2</a>
                     <a href="#">Page 3</a>
                 </div>
@@ -53,7 +53,7 @@
 </main>
 
 <footer>
-    <p>&copy; <?php echo date("Y"); ?> Mon Site Web</p>
+    <p>&copy; <?php echo date("Y"); ?> Site internet réalisé par les étudiants de campus centre</p>
 </footer>
 </body>
 </html>

@@ -35,7 +35,7 @@
 body {
   background: #f1f2f7;
   display: table;
-  font-family: 'Open Sans' sans-serif;
+  font-family: 'Open Sans';
   font-size: 16px;
   width: 100%; }
 
@@ -692,4 +692,6 @@ footer {
   display: block;
 }
 
-/* ... Autres styles ... */
+.pull-right {
+  float: right;
+}

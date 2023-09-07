@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.3.2, created on 2023-09-07 18:07:34
+/* Smarty version 4.3.2, created on 2023-09-07 18:42:03
   from 'C:\laragon\www\coop-emplois\COOP-V1\mod_accueil\vue\accueilVue.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.2',
-  'unifunc' => 'content_64fa116639e886_28107046',
+  'unifunc' => 'content_64fa197b3fa0b2_49578604',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '77bfdcbc930c64bb0063b9baecb8f24b73065c29' => 
     array (
       0 => 'C:\\laragon\\www\\coop-emplois\\COOP-V1\\mod_accueil\\vue\\accueilVue.tpl',
-      1 => 1694110053,
+      1 => 1694112062,
       2 => 'file',
     ),
   ),
@@ -21,7 +21,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:public/header.tpl' => 1,
   ),
 ),false)) {
-function content_64fa116639e886_28107046 (Smarty_Internal_Template $_smarty_tpl) {
+function content_64fa197b3fa0b2_49578604 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!doctype html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
@@ -30,7 +30,7 @@ function content_64fa116639e886_28107046 (Smarty_Internal_Template $_smarty_tpl)
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>GOURMANDISE SARL</title>
+    <title>Coop'Emploi</title>
     <meta name="description" content="Intranet de l'entreprise">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
