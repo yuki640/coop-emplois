@@ -35,8 +35,6 @@
 
 <!-- PLACER LE Left Panel -->
 
-{include file='public/left.tpl'}
-
 <!-- FIN : Left Panel -->
 
 
