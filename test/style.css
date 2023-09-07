@@ -37,14 +37,13 @@ header nav ul li a {
     color: #fff;
 }
 
-/* Styles pour aligner à gauche et à droite */
-header nav ul li.menu-item.left {
-    float: left;
-}
+
 
 header nav ul li.menu-item.right {
     float: right;
-    margin-right: 0; /* Enlever la marge à droite pour le dernier élément aligné à droite */
+    margin-left: 20px;
+    
+    
 }
 
 /* Styles pour le contenu principal */

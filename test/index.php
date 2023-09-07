@@ -14,7 +14,7 @@
                 <li><a href="/">Accueil</a></li>
                 <li><a href="/reunion.php">Réunion</a></li>
                 <li><a href="/entretiens.php">Entretiens</a></li>
-                <li"><a href="/porteurs_de_projet.php">Porteurs de Projet</a></li>
+                <li><a href="/porteurs_de_projet.php">Porteurs de Projet</a></li>
                 <li><a href="/accompagnateurs.php">Accompagnateurs</a></li>
                 <li><a href="/parametres.php">Paramètres</a></li>
                 <li class="menu-item right"><a href="/plan_du_site.php">Plan du site</a></li>
