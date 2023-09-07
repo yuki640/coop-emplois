@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/coop-emplois.iml" filepath="$PROJECT_DIR$/.idea/coop-emplois.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../../../../laragon/www/coop-emplois/.idea/coop-emplois.iml" filepath="$PROJECT_DIR$/../../../../laragon/www/coop-emplois/.idea/coop-emplois.iml" />
     </modules>
   </component>
 </project>
