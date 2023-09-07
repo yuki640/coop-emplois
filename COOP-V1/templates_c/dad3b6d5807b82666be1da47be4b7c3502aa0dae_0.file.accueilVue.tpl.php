@@ -1,4 +1,28 @@
-<!doctype html>
+<?php
+/* Smarty version 4.3.2, created on 2023-09-07 18:28:16
+  from 'C:\Users\640po\OneDrive\Laragon2.0\www\coop-emploi\coop-emplois\COOP-V1\mod_accueil\vue\accueilVue.tpl' */
+
+/* @var Smarty_Internal_Template $_smarty_tpl */
+if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
+  'version' => '4.3.2',
+  'unifunc' => 'content_64fa1640027a31_94653165',
+  'has_nocache_code' => false,
+  'file_dependency' => 
+  array (
+    'dad3b6d5807b82666be1da47be4b7c3502aa0dae' => 
+    array (
+      0 => 'C:\\Users\\640po\\OneDrive\\Laragon2.0\\www\\coop-emploi\\coop-emplois\\COOP-V1\\mod_accueil\\vue\\accueilVue.tpl',
+      1 => 1694111262,
+      2 => 'file',
+    ),
+  ),
+  'includes' => 
+  array (
+    'file:public/header.tpl' => 1,
+  ),
+),false)) {
+function content_64fa1640027a31_94653165 (Smarty_Internal_Template $_smarty_tpl) {
+?><!doctype html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
@@ -25,7 +49,9 @@
 
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800' rel='stylesheet' type='text/css'>
 
-    <!-- <script type="text/javascript" src="https://cdn.jsdelivr.net/html5shiv/3.7.3/html5shiv.min.js"></script> -->
+    <!-- <?php echo '<script'; ?>
+ type="text/javascript" src="https://cdn.jsdelivr.net/html5shiv/3.7.3/html5shiv.min.js"><?php echo '</script'; ?>
+> -->
 
 </head>
 <body>
@@ -46,7 +72,8 @@
     <!--Header -->
 
     <!-- PLACER LE  HEADER -->
-    {include file='public/header.tpl'}
+    <?php $_smarty_tpl->_subTemplateRender('file:public/header.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
+?>
     <!-- FIN : header -->
 
     <!--<div class="breadcrumbs">
@@ -71,15 +98,6 @@
     <div class="content mt-3">
 
 
-{*        <br>*}
-{*        <div class="col-sm-6 col-lg-4">*}
-{*            <div class="card text-white">*}
-{*                <div class="card-body">*}
-{*                    <canvas id="camois"></canvas>*}
-{*                </div>*}
-{*            </div>*}
-{*        </div>*}
-{*        <br>*}
 
 
         <div class="animated fadeIn">
@@ -95,26 +113,55 @@
 </div><!-- /#right-panel -->
 
 
-<script src="public/assets/js/vendor/jquery-2.1.4.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js"></script>
-<script src="public/assets/js/plugins.js"></script>
-<script src="public/assets/js/main.js"></script>
+<?php echo '<script'; ?>
+ src="public/assets/js/vendor/jquery-2.1.4.min.js"><?php echo '</script'; ?>
+>
+<?php echo '<script'; ?>
+ src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js"><?php echo '</script'; ?>
+>
+<?php echo '<script'; ?>
+ src="public/assets/js/plugins.js"><?php echo '</script'; ?>
+>
+<?php echo '<script'; ?>
+ src="public/assets/js/main.js"><?php echo '</script'; ?>
+>
 
 
-<script src="public/assets/js/lib/chart-js/Chart.bundle.js"></script>
-<script src="public/assets/js/dashboard.js"></script>
-<script src="public/assets/js/widgets.js"></script>
-<script src="public/assets/js/lib/vector-map/jquery.vmap.js"></script>
-<script src="public/assets/js/lib/vector-map/jquery.vmap.min.js"></script>
-<script src="public/assets/js/lib/vector-map/jquery.vmap.sampledata.js"></script>
-<script src="public/assets/js/lib/vector-map/country/jquery.vmap.world.js"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
-<script src="public/assets/js/script_charts.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.3.0/chart.min.js"
+<?php echo '<script'; ?>
+ src="public/assets/js/lib/chart-js/Chart.bundle.js"><?php echo '</script'; ?>
+>
+<?php echo '<script'; ?>
+ src="public/assets/js/dashboard.js"><?php echo '</script'; ?>
+>
+<?php echo '<script'; ?>
+ src="public/assets/js/widgets.js"><?php echo '</script'; ?>
+>
+<?php echo '<script'; ?>
+ src="public/assets/js/lib/vector-map/jquery.vmap.js"><?php echo '</script'; ?>
+>
+<?php echo '<script'; ?>
+ src="public/assets/js/lib/vector-map/jquery.vmap.min.js"><?php echo '</script'; ?>
+>
+<?php echo '<script'; ?>
+ src="public/assets/js/lib/vector-map/jquery.vmap.sampledata.js"><?php echo '</script'; ?>
+>
+<?php echo '<script'; ?>
+ src="public/assets/js/lib/vector-map/country/jquery.vmap.world.js"><?php echo '</script'; ?>
+>
+<?php echo '<script'; ?>
+ src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"><?php echo '</script'; ?>
+>
+<?php echo '<script'; ?>
+ src="public/assets/js/script_charts.js"><?php echo '</script'; ?>
+>
+<?php echo '<script'; ?>
+ src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.3.0/chart.min.js"
         integrity="sha512-mlz/Fs1VtBou2TrUkGzX4VoGvybkD9nkeXWJm3rle0DPHssYYx4j+8kIS15T78ttGfmOjH0lLaBXGcShaVkdkg=="
         crossorigin="anonymous"
-        referrerpolicy="no-referrer"></script>
-<script>
+        referrerpolicy="no-referrer"><?php echo '</script'; ?>
+>
+<?php echo '<script'; ?>
+>
     ( function ( $ ) {
         "use strict";
 
@@ -131,8 +178,11 @@
             normalizeFunction: 'polynomial'
         } );
     } )( jQuery );
-</script>
+<?php echo '</script'; ?>
+>
 
 </body>
 </html>
 
+<?php }
+}
