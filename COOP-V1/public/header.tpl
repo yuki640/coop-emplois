@@ -1,39 +1,35 @@
-       <!-- Header-->
-        <header id="header" class="header">
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-            <div class="header-menu">
+    <link rel="stylesheet" href="public/assets/css/style.css">
+    <title>Mon Site Web</title>
+</head>
+<body>
+<header>
+    <nav>
+        <ul>
+            <li><a href="/">Accueil</a></li>
+            <li><a href="/reunion.php">Réunion</a></li>
+            <li><a href="/entretiens.php">Entretiens</a></li>
+            <li><a href="/porteurs_de_projet.php">Porteurs de Projet</a></li>
+            <li><a href="/accompagnateurs.php">Accompagnateurs</a></li>
+            <li><a href="/parametres.php">Paramètres</a></li>
+            <li class="menu-item right"><a href="/plan_du_site.php">Plan du site</a></li>
+            <li class="menu-item right"><a href="/espace_personnel.php">Espace personnel</a></li>
+        </ul>
+    </nav>
+</header>
 
-                <div class="col-sm-7">
-                    <a id="menuToggle" class="menutoggle pull-left"><i class="fa fa fa-tasks"></i></a>
-                    <div class="header-left">
-                        <button class="search-trigger"><i class="fa fa-search"></i></button>
-                        <div class="form-inline">
-                            <form class="search-form">
-                                <input class="form-control mr-sm-2" type="text" placeholder="Search ..." aria-label="Search">
-                                <button class="search-close" type="submit"><i class="fa fa-close"></i></button>
-                            </form>
-                        </div>
+<main>
+    <h1>Contenu principal</h1>
+    <p>Bienvenue sur mon site web. Ceci est la page d'accueil.</p>
+</main>
 
-
-                    </div>
-                </div>
-
-                <div class="col-sm-5">
-                    <div class="user-area dropdown float-right">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            <img class="user-avatar rounded-circle" src="public/images/admin.jpg" alt="User Avatar">
-                        </a>
-
-{*                        <div class="user-menu dropdown-menu">*}
-{*                             <a class="nav-link" href="index.php?gestion=authentification&action=deconnecter"><i class="fa fa-power -off"></i>/*{$deconnexion}</a>*}
-{*                        </div>*}
-                    </div>
-                        <div class="user-area">
-                        Bienvenue Mr.XX
-                        </div>
-
-                </div>
-            </div>
-
-        </header><!-- /header -->
-        <!-- Header-->
+<footer>
+    <p>&copy; <?php echo date("Y"); ?> Mon Site Web</p>
+</footer>
+</body>
+</html>
