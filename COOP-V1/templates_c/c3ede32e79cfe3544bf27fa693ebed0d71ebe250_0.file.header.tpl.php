@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.3.2, created on 2023-09-07 18:39:48
+/* Smarty version 4.3.2, created on 2023-09-07 18:41:02
   from 'C:\Users\640po\OneDrive\Laragon2.0\www\coop-emploi\coop-emplois\COOP-V1\public\header.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.2',
-  'unifunc' => 'content_64fa18f43b1a79_87884739',
+  'unifunc' => 'content_64fa193e59f558_68106273',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'c3ede32e79cfe3544bf27fa693ebed0d71ebe250' => 
     array (
       0 => 'C:\\Users\\640po\\OneDrive\\Laragon2.0\\www\\coop-emploi\\coop-emplois\\COOP-V1\\public\\header.tpl',
-      1 => 1694111987,
+      1 => 1694112004,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_64fa18f43b1a79_87884739 (Smarty_Internal_Template $_smarty_tpl) {
+function content_64fa193e59f558_68106273 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -56,7 +56,7 @@ function content_64fa18f43b1a79_87884739 (Smarty_Internal_Template $_smarty_tpl)
                 </div>
             </li>
             <li class="menu-item right"><a href="/plan_du_site.php">Plan du site</a></li>
-          <li class="menu-item right">
+    
             <li class="dropdown">
                 <a href="#" class="dropbtn">Espace personnel</a>
                 <div class="dropdown-content">
@@ -65,7 +65,7 @@ function content_64fa18f43b1a79_87884739 (Smarty_Internal_Template $_smarty_tpl)
                     <a href="#">Page 3</a>
                 </div>
             </li>
-            </li>
+            
         </ul>
     </nav>
 </header>
