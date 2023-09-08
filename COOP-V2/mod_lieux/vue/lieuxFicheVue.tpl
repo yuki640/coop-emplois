@@ -6,14 +6,14 @@
 <!--[if IE 8]>
 <html class="no-js lt-ie9" lang=""> <![endif]-->
 <!--[if gt IE 8]><!-->
-<html class="no-js" lang="">
+<html class="no-js" lang="FR">
 <!--<![endif]-->
 
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>{$titreVue}</title>
-    <meta name="description" content="{$titreVue}">
+    <title>titreVue</title>
+    <meta name="description" content="titreVue">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <link rel="apple-touch-icon" href="apple-icon.png">
@@ -41,9 +41,6 @@
 
 <!-- Left Panel -->
 
-
-{include file='public/left.tpl'}
-
 <!-- FIN : Left Panel -->
 
 
@@ -62,7 +59,7 @@
         <div class="col-sm-4">
             <div class="page-header float-left">
                 <div class="page-title">
-                    <h1>La gourmandise, ça se partage !</h1>
+                    <h1>L'emplois, c'est maintenant !</h1>
                 </div>
             </div>
         </div>
@@ -71,8 +68,8 @@
                 <div class="page-title">
                     <ol class="breadcrumb text-right">
                         <li><a href="index.php">Accueil</a></li>
-                        <li><a href="index.php?gestion=Client">Clients</a></li>
-                        <li class="active">{$titreVue}</li>
+                        <li><a href="index.php?gestion=Lieux">Lieux</a></li>
+                        <li class="active">TitreVue</li>
                     </ol>
                 </div>
             </div>
@@ -88,8 +85,8 @@
 
                 <div class="col-md-6">
 
-                    <div {if ClientTable::getMessageErreur () neq ''} class="alert alert-danger" role="alert" {/if} >
-                        {ClientTable::getMessageErreur ()}
+                    <div {if LieuxTable::getMessageErreur () neq ''} class="alert alert-danger" role="alert" {/if} >
+                        {LieuxTable::getMessageErreur ()}
                     </div>
 
                     <div class="card">
@@ -98,69 +95,126 @@
 
                             <!-- PLACER LE FORMULAIRE EN CONSULTATION -->
 
-                            <input type="hidden" name="gestion" value="client">
+                            <input type="hidden" name="gestion" value="lieux">
 
                             <input type="hidden" name="action" value="{$action}">
+
+                            <input type="hidden" name="datec" value="{date("d/m/Y H:i:s",time())}" >
+
+                            <input type="hidden" name="datem" value="{date("d/m/Y H:i:s",time())}">
 
                             <div class="card-body card-block">
 
                                 {if $action neq 'ajouter'}
                                     <div class="form-group">
                                         <label for="text" class=" form-control">
-                                            Code client :
+                                            Code lieux :
                                         </label>
-                                        <input type="text" name="codec" class="form-control"
-                                               value="{$unClient->getCodec()}"
+                                        <input type="text" name="codel" class="form-control"
+                                               value="{$unLieux->getCodeL()}"
                                                readonly>
                                     </div>
                                 {/if}
 
                                 <div class="form-group">
                                     <label for="text" class=" form-control">
-                                        Nom et prenom <sup>*</sup>:
+                                        Nom <sup>(*)</sup>:
                                     </label>
                                     <input type="text" name="nom" class="form-control"
-                                           value="{$unClient->getNom()}"
+                                           value="{$unLieux->getNom()}"
                                             {$readonly}
-                                            {$required}
+                                            required
                                     >
                                 </div>
 
                                 <div class="form-group">
                                     <label for="text" class=" form-control">
-                                        Adresse :
+                                        Service, N°de bureau ou étage :
                                     </label>
-                                    <input type="text" name="adresse" class="form-control"
-                                           value="{$unClient->getAdresse()}" {$readonly}>
+                                    <input type="text" name="adresse1" class="form-control"
+                                           value="{$unLieux->getAdresse1()}" {$readonly}>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="text" class=" form-control">
+                                       Résidence, Immeuble, Bâtiment, ZI :
+                                    </label>
+                                    <input type="text" name="adresse1=2" class="form-control"
+                                           value="{$unLieux->getAdresse2()}" {$readonly}>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="text" class=" form-control">
+                                        Numéro voie , type, nom de la voie :
+                                    </label>
+                                    <input type="text" name="adresse3" class="form-control"
+                                           value="{$unLieux->getAdresse3()}" {$readonly}>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="text" class=" form-control">
+                                        Mention de distribution, lieu-dit :
+                                    </label>
+                                    <input type="text" name="adresse4" class="form-control"
+                                           value="{$unLieux->getAdresse4()}" {$readonly}>
                                 </div>
 
                                 <div class="form-group">
                                     <label for="text" class=" form-control">
                                         Code postal <sup>*</sup>:
                                     </label>
-                                    <input type="text" name="cp" class="form-control" value="{$unClient->getCp()}"
+                                    <input type="text" name="codepostal" class="form-control"
+                                           value="{$unLieux->getCodepostal()}"
                                             {$readonly}
-                                            {$required}
+                                            required
                                     >
                                 </div>
 
                                 <div class="form-group">
                                     <label for="text" class=" form-control">
-                                        Ville <sup>*</sup>:
+                                        Localité de destination cedex <sup>(*)</sup>:
                                     </label>
                                     <input type="text" name="ville" class="form-control"
-                                           value="{$unClient->getVille()}"
+                                           value="{$unLieux->getVille()}"
                                             {$readonly}
-                                            {$required}
+                                            required
                                     >
                                 </div>
 
                                 <div class="form-group">
                                     <label for="text" class=" form-control">
-                                        Telephone :
+                                        Telephone de l'établissement :
                                     </label>
-                                    <input type="text" name="telephone" class="form-control"
-                                           value="{$unClient->getTelephone()}" {$readonly}>
+                                    <input type="text" name="telephoneS" class="form-control"
+                                           value="{$unLieux->getTelephoneS()}" {$readonly}>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="text" class=" form-control">
+                                        Nom du contact : <sup>(*)</sup>
+                                    </label>
+                                    <input type="text" name="contact" class="form-control"
+                                           value="{$unLieux->getContact()}" {$readonly}>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="text" class=" form-control">
+                                        Téléphone du contact <sup>(*)</sup>
+                                    </label>
+                                    <input type="text" name="telephoneC" class="form-control"
+                                           value="{$unLieux->getTelephoneC()}" {$readonly}
+                                           required
+                                    >
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="text" class=" form-control">
+                                        Capacité d'accueil de la salle : <sup>(*)</sup>
+                                    </label>
+                                    <input type="text" name="capacite" class="form-control"
+                                           value="{$unLieux->getCapacite()}" {$readonly}
+                                           required
+                                    >
                                 </div>
 
                                 <div class="card-body card-block">
@@ -168,7 +222,7 @@
                                     <div class="col-md-6">
 
                                         <input type="button" class="btn btn-submit" value="Retour"
-                                               onclick="location.href='index.php?gestion=client'">
+                                               onclick="location.href='index.php?gestion=lieux'">
 
                                     </div>
 
@@ -190,24 +244,6 @@
                 </div>
 
             </div><!-- .animated -->
-            {if $action != 'ajouter'}
-                <div class="col-md-6">
-                    <div class="card">
-                        <div class="card-header"><strong>Statistiques</strong></div>
-                        <div class="card-body">
-                            <div class="card-group">
-                                <b>CA Réalisé <br> {$unClient->getCAclient()} € <br><br>
-                                    Pourcentage du CA total <br> {$unClient->getPourcentageCA()} % <br><br>
-                                    Articles populaires:<br>
-                                    {foreach $unClient->getArticlePop() as $article}
-                                        {$article['designation']} - {$article['total_quantite']}
-                                        <br>
-                                    {/foreach}
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            {/if}
         </div><!-- .content -->
 
 

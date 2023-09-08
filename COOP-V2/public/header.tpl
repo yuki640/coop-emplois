@@ -20,9 +20,9 @@
                     <a href="#">Page 3</a>
                 </div>
             </li>
-            <li><a href="/entretiens.php">Entretiens</a></li>
-            <li><a href="/porteurs_de_projet.php">Porteurs de Projet</a></li>
-            <li><a href="/accompagnateurs.php">Accompagnateurs</a></li>
+            <li><a href="#"">Entretiens</a></li>
+            <li><a href="#">Porteurs de Projet</a></li>
+            <li><a href="#">Accompagnateurs</a></li>
            
             <li class="dropdown">
                 <a href="#" class="dropbtn">Paramètres</a>
@@ -47,13 +47,13 @@
     </nav>
 </header>
 
-<main>
-    <h1>Contenu principal</h1>
-    <p>Bienvenue sur mon site web. Ceci est la page d'accueil.</p>
-</main>
+{*<main>*}
+{*    <h1>Contenu principal</h1>*}
+{*    <p>Bienvenue sur mon site web. Ceci est la page d'accueil.</p>*}
+{*</main>*}
 
-<footer>
-    <p>&copy; <?php echo date("Y"); ?> Site internet réalisé par les étudiants de campus centre</p>
-</footer>
+{*<footer>*}
+{*    <p>&copy; <?php echo date("Y"); ?> Site internet réalisé par les étudiants de campus centre</p>*}
+{*</footer>*}
 </body>
 </html>

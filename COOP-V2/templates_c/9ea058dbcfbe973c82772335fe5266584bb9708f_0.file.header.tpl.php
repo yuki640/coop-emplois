@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.3.2, created on 2023-09-07 22:16:39
+/* Smarty version 4.3.2, created on 2023-09-08 11:06:40
   from 'C:\laragon\www\coop-emplois\COOP-V2\public\header.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.2',
-  'unifunc' => 'content_64fa4bc787ead8_26580597',
+  'unifunc' => 'content_64fb0040b658b5_47357940',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '9ea058dbcfbe973c82772335fe5266584bb9708f' => 
     array (
       0 => 'C:\\laragon\\www\\coop-emplois\\COOP-V2\\public\\header.tpl',
-      1 => 1694124989,
+      1 => 1694171199,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_64fa4bc787ead8_26580597 (Smarty_Internal_Template $_smarty_tpl) {
+function content_64fb0040b658b5_47357940 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -43,9 +43,9 @@ function content_64fa4bc787ead8_26580597 (Smarty_Internal_Template $_smarty_tpl)
                     <a href="#">Page 3</a>
                 </div>
             </li>
-            <li><a href="/entretiens.php">Entretiens</a></li>
-            <li><a href="/porteurs_de_projet.php">Porteurs de Projet</a></li>
-            <li><a href="/accompagnateurs.php">Accompagnateurs</a></li>
+            <li><a href="#"">Entretiens</a></li>
+            <li><a href="#">Porteurs de Projet</a></li>
+            <li><a href="#">Accompagnateurs</a></li>
            
             <li class="dropdown">
                 <a href="#" class="dropbtn">Paramètres</a>
@@ -70,16 +70,7 @@ function content_64fa4bc787ead8_26580597 (Smarty_Internal_Template $_smarty_tpl)
     </nav>
 </header>
 
-<main>
-    <h1>Contenu principal</h1>
-    <p>Bienvenue sur mon site web. Ceci est la page d'accueil.</p>
-</main>
 
-<footer>
-    <p>&copy; <?php echo '<?php'; ?>
- echo date("Y"); <?php echo '?>'; ?>
- Site internet réalisé par les étudiants de campus centre</p>
-</footer>
 </body>
 </html>
 <?php }

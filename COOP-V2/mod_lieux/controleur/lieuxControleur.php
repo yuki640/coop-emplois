@@ -64,18 +64,9 @@ class LieuxControleur
     {
 
         $controleLieux = new LieuxTable($this->parametre);
-//        var_dump($controleLieux);
-//        die();
-        $row = $this->oModele->verifieCommande($controleLieux);
-
-        if ($row) {
             // Insertion BD puis retour liste des lieux
             $this->oModele->deleteLieux($controleLieux);
             $this->lister();
-        } else {
-            $this->oVue->genererAffichageFiche($controleLieux);
-
-        }
     }
 
     public function form_modifier()
