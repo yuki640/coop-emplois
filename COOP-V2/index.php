@@ -12,13 +12,13 @@ Autoloader::chargerClasses();
 //
 //    $_REQUEST['gestion'] = 'authentification';
 //
-//else if(!isset($_REQUEST['gestion'])){
+/*else */if(!isset($_REQUEST['gestion'])){
 
     $_REQUEST['gestion'] = 'accueil';
 
-//}
+}
 
 // Création d'un objet, instance de la classe de type (routeur) accueil (client, produit, ...)
 $oRouteur = new $_REQUEST['gestion']($_REQUEST);
-var_dump($_REQUEST['gestion']);
+//var_dump($_REQUEST['gestion']);
 $oRouteur->choixAction();

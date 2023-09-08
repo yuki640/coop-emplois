@@ -1,7 +1,7 @@
 <?php
 Class LieuxTable{
 
-    private $codeL=""; //getCodec | setCodec
+    private $codel=""; //getCodec | setCodec
     private $nom=""; // getPrix_unitaire_HT
     private $adresse1="";
     private $adresse2="";
@@ -45,9 +45,9 @@ Class LieuxTable{
     /**
      * @return string
      */
-    public function getCodeL()
+    public function getCodel()
     {
-        return $this->codeL;
+        return $this->codel;
     }
 
     /**
@@ -93,7 +93,7 @@ Class LieuxTable{
     /**
      * @return string
      */
-    public function getCodePostal()
+    public function getCodepostal()
     {
         return $this->codePostal;
     }
@@ -200,16 +200,14 @@ Class LieuxTable{
     }
 
     /**
-     * @param mixed $adresse1
+     * @param string $adresse1
      */
-    public function setAdresse1($adresse1)
+    public function setAdresse1(string $adresse1)
     {
-        if(empty($adresse1) || ctype_space(strval($adresse1))) {
-            $this->setAutorisationBD(false);
-            self :: setMessageErreur("L'adresse est obligatoire. <br>");
-        }
         $this->adresse1 = $adresse1;
     }
+
+
 
     /**
      * @param string $adresse2
@@ -260,16 +258,13 @@ Class LieuxTable{
     }
 
     /**
-     * @param mixed $telephoneS
+     * @param string $telephoneS
      */
-    public function setTelephoneS($telephoneS)
+    public function setTelephoneS(string $telephoneS)
     {
-        if(empty($telephoneS) || ctype_space(strval($telephoneS))) {
-            $this->setAutorisationBD(false);
-            self :: setMessageErreur("Le téléphone de la salle est obligatoire. <br>");
-        }
         $this->telephoneS = $telephoneS;
     }
+
 
     /**
      * @param string $contact
@@ -277,6 +272,10 @@ Class LieuxTable{
     public function setContact(string $contact)
     {
         $this->contact = $contact;
+        if(empty($contact) || ctype_space(strval($contact))) {
+            $this->setAutorisationBD(false);
+            self :: setMessageErreur("Le contact est obligatoire. <br>");
+        }
     }
 
     /**
@@ -297,6 +296,10 @@ Class LieuxTable{
     public function setCapacite(string $capacite)
     {
         $this->capacite = $capacite;
+        if(empty($capacite) || ctype_space(strval($capacite))) {
+            $this->setAutorisationBD(false);
+            self :: setMessageErreur("La ville est obligatoire. <br>");
+        }
     }
 
     /**

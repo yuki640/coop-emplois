@@ -81,9 +81,9 @@
 
                                 <!-- PLACER LE FORMULAIRE D'AJOUT-->
                               <form class="pos-ajout" method="post" action="index.php">
-                                  <input type="hidden" name="gestion" value="client">
+                                  <input type="hidden" name="gestion" value="lieux">
                                   <input type="hidden" name="action" value="form_ajouter">
-                                  <label>Ajouter un client :
+                                  <label>Ajouter un lieu :
                                   <input type="image"
                                          name="btn_ajouter"
                                          src="public/images/icones/a16.png">
@@ -94,50 +94,50 @@
                         </div>
                         <div class="card-body">
 
-                            <div {if ClientTable::getMessageSucces () neq ''} class="alert alert-success" role="alert" {/if} >
-                                {ClientTable::getMessageSucces ()}
+                            <div {if LieuxTable::getMessageSucces () neq ''} class="alert alert-success" role="alert" {/if} >
+                                {LieuxTable::getMessageSucces ()}
                             </div>
 
                             <table id="bootstrap-data-table" class="table table-striped table-bordered">
                                 <!-- PLACER LA LISTE DES CLIENTS -->
                            <thead>
                            <tr>
-                               <th>Code Client</th>
-                               <th>Nom et prénom</th>
+                               <th>Code Lieux</th>
+                               <th>Nom du lieux</th>
                                <th>Ville</th>
-                               <th>Téléphone</th>
+                               <th>Téléphone Salle</th>
                                <th class="pos-actions">Consulter</th>
                                <th class="pos-actions">Modifier</th>
                                <th class="pos-actions">Supprimer</th>
                            </tr>
                            </thead>
                            <tbody>
-                                {foreach from=$listeClients item=unClient}
+                                {foreach from=$listeLieux item=unLieux}
                                     <tr>
-                                        <td>{$unClient->getCodec()}</td>
-                                        <td>{$unClient->getNom()}</td>
-                                        <td>{$unClient->getVille()}</td>
-                                        <td>{$unClient->getTelephone()}</td>
+                                        <td>{$unLieux->getCodeL()}</td>
+                                        <td>{$unLieux->getNom()}</td>
+                                        <td>{$unLieux->getVille()}</td>
+                                        <td>{$unLieux->getTelephoneS()}</td>
                                         <td>
                                             <form action="index.php" method="post">
-                                                <input type="hidden" name="codec" value="{$unClient->getCodec()}">
-                                                <input type="hidden" name="gestion" value="client">
+                                                <input type="hidden" name="codel" value="{$unLieux->getCodeL()}">
+                                                <input type="hidden" name="gestion" value="lieux">
                                                 <input type="hidden" name="action" value="form_consulter">
                                                 <input type="image" name="btn_consulter" src="public/images/icones/p16.png">
                                             </form>
                                         </td>
                                         <td>
                                             <form action="index.php" method="post">
-                                                <input type="hidden" name="codec" value="{$unClient->getCodec()}">
-                                                <input type="hidden" name="gestion" value="client">
+                                                <input type="hidden" name="codel" value="{$unLieux->getCodeL()}">
+                                                <input type="hidden" name="gestion" value="lieux">
                                                 <input type="hidden" name="action" value="form_modifier">
                                                 <input type="image" name="btn_modifier" src="public/images/icones/m16.png">
                                             </form>
                                         </td>
                                         <td>
                                             <form action="index.php" method="post">
-                                                <input type="hidden" name="codec" value="{$unClient->getCodec()}">
-                                                <input type="hidden" name="gestion" value="client">
+                                                <input type="hidden" name="codel" value="{$unLieux->getCodeL()}">
+                                                <input type="hidden" name="gestion" value="lieux">
                                                 <input type="hidden" name="action" value="form_supprimer">
                                                 <input type="image" name="btn_supprimer" src="public/images/icones/s16.png">
                                             </form>

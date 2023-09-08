@@ -33,38 +33,44 @@ class LieuxModele extends Modele
 
     public function getUnLieux()
     {
-        $sql = "SELECT * FROM lieux WHERE identifiant = ?";
-        $idRequete = $this->executeRequete($sql, [$this->parametre['identifiant']]); // requête préparée
+        $sql = "SELECT * FROM lieux WHERE codeL = ?";
+        $idRequete = $this->executeRequete($sql, [$this->parametre['codel']]); // requête préparée
 
         return new LieuxTable($idRequete->fetch(PDO::FETCH_ASSOC));
     }
 
-//    public function addLieux(LieuxTable $valeurs)
-//    {
-//        $sql = "INSERT INTO client (nom, adresse, cp, ville, telephone) VALUES (?, ?, ?, ?, ?)";
-//
-//        $idRequete = $this->executeRequete($sql, [
-//            $valeurs->getNom(),
-//            $valeurs->getAdresse(),
-//            $valeurs->getCp(),
-//            $valeurs->getVille(),
-//            $valeurs->getTelephone()
-//        ]);
-//
-//        if ($idRequete) {
-//
-//            ClientTable::setMessageSucces("Création du client correctement effectué.");
-//        }
-//    }
+    public function addLieux(LieuxTable $valeurs)
+    {
+        $sql = "INSERT INTO lieux (nom, adresse1, adresse2, adresse3, adresse4, codePostal, ville,
+                    telephoneS, contact, telephoneC, capacite) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+        $idRequete = $this->executeRequete($sql, [
+            $valeurs->getNom(),
+            $valeurs->getAdresse1(),
+            $valeurs->getAdresse2(),
+            $valeurs->getAdresse3(),
+            $valeurs->getAdresse4(),
+            $valeurs->getCodepostal(),
+            $valeurs->getVille(),
+            $valeurs->getTelephoneS(),
+            $valeurs->getContact(),
+            $valeurs->getTelephoneC(),
+            $valeurs->getCapacite(),
+        ]);
+
+        if ($idRequete) {
+
+            LieuxTable::setMessageSucces("Création du lieu correctement effectué.");
+        }
+    }
 
     public function deleteLieux(LieuxTable $valeurs)
     {
-        $sql = "DELETE FROM lieux where identifiant = ?";
+        $sql = "DELETE FROM lieux where codeL = ?";
         $idRequete = $this->executeRequete($sql, [
-            $valeurs->getIdentifiant()
+            $valeurs->getCodeL()
         ]);
         if ($idRequete) {
-            LieuxTable::setMessageSucces("Suppression du lieux correctement effectué.");
+            LieuxTable::setMessageSucces("Suppression du lieu correctement effectué.");
         }
     }
 
@@ -102,9 +108,10 @@ class LieuxModele extends Modele
             $valeurs->getTelephoneC(),
             $valeurs->getCapacite(),
             $valeurs->getDateM(),
+            $valeurs->getCodeL(),
         ]);
         if ($idRequete) {
-            LieuxTable::setMessageSucces("Modification du lieux correctement effectué.");
+            LieuxTable::setMessageSucces("Modification du lieu correctement effectué.");
         }
     }
 }

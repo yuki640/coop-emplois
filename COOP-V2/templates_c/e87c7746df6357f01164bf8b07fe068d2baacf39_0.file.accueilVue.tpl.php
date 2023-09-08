@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.3.2, created on 2023-09-07 21:58:58
+/* Smarty version 4.3.2, created on 2023-09-08 11:08:13
   from 'C:\laragon\www\coop-emplois\COOP-V2\mod_accueil\vue\accueilVue.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.2',
-  'unifunc' => 'content_64fa47a2eabca8_59183627',
+  'unifunc' => 'content_64fb009d30ab36_62487150',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'e87c7746df6357f01164bf8b07fe068d2baacf39' => 
     array (
       0 => 'C:\\laragon\\www\\coop-emplois\\COOP-V2\\mod_accueil\\vue\\accueilVue.tpl',
-      1 => 1694112062,
+      1 => 1694171263,
       2 => 'file',
     ),
   ),
@@ -21,7 +21,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:public/header.tpl' => 1,
   ),
 ),false)) {
-function content_64fa47a2eabca8_59183627 (Smarty_Internal_Template $_smarty_tpl) {
+function content_64fb009d30ab36_62487150 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!doctype html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
@@ -110,6 +110,16 @@ function content_64fa47a2eabca8_59183627 (Smarty_Internal_Template $_smarty_tpl)
             </div>
         </div> <!-- .content -->
     </div>
+    <main>
+        <h1>Contenu principal</h1>
+        <p>Bienvenue sur mon site web. Ceci est la page d'accueil.</p>
+    </main>
+
+    <footer>
+        <p>&copy; <?php echo '<?php'; ?>
+ echo date("Y"); <?php echo '?>'; ?>
+ Site internet réalisé par les étudiants de campus centre</p>
+    </footer>
 </div><!-- /#right-panel -->
 
 

@@ -1,10 +1,10 @@
 <?php
 
-//Routeur pour le client
+//Routeur pour le lieux
 class Lieux{
 
     private $parametre = []; // Tableau =$_REQUEST
-    private $ocontroleur; //propriété de type objet
+    private $oControleur; //propriété de type objet
 
     public function __construct($parametre){
         //Initialisation de la propriété parametre
