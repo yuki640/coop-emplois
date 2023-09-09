@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="4a8b9759-6c35-4898-ab88-c3613adc4ff5" name="Changes" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings">
+    <execution />
+  </component>
+  <component name="DatabaseLocalColorSettings">
+    <colors>
+      <entry key="client/gourmandise/d11ff4e9-bfdc-4f5a-91b1-02ba6caf1a79:TABLE" value="Blue" />
+      <entry key="commande/gourmandise/d11ff4e9-bfdc-4f5a-91b1-02ba6caf1a79:TABLE" value="Green" />
+      <entry key="ligne_commande/gourmandise/d11ff4e9-bfdc-4f5a-91b1-02ba6caf1a79:TABLE" value="Orange" />
+      <entry key="produit/gourmandise/d11ff4e9-bfdc-4f5a-91b1-02ba6caf1a79:TABLE" value="Rose" />
+      <entry key="vendeur/gourmandise/d11ff4e9-bfdc-4f5a-91b1-02ba6caf1a79:TABLE" value="Yellow" />
+    </colors>
+  </component>
+  <component name="Git.Settings">
+    <favorite-branches>
+      <branch-storage>
+        <map>
+          <entry type="LOCAL">
+            <value>
+              <list>
+                <branch-info repo="$PROJECT_DIR$" source="samuel" />
+              </list>
+            </value>
+          </entry>
+        </map>
+      </branch-storage>
+    </favorite-branches>
+    <option name="PREVIOUS_COMMIT_AUTHORS">
+      <list>
+        <option value="Thomas PARESCHI" />
+      </list>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2Ne7IMO6kUrHaSLyAAn95RddhAZ" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "ignore.virus.scanning.warn.message": "true",
+    "last_opened_file_path": "C:/laragon/www/GourmandiseSarl/mvc-goo-12-HistoriqueCommande",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "web.server",
+    "vue.rearranger.settings.migration": "true"
+  },
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "mysql"
+    ]
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\laragon\www\coop-emplois" />
+      <recent name="C:\laragon\www\GourmandiseSarl\mvc-goo-09" />
+      <recent name="C:\laragon\www\GourmandiseSarl" />
+      <recent name="C:\laragon\www\GourmandiseSarl\mvc-goo-08" />
+      <recent name="C:\laragon\www\GourmandiseSarl\mvc-goo-06" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\laragon\www\GourmandiseSarl\mvc-goo-04\mod_client" />
+      <recent name="C:\laragon\www\GourmandiseSarl\mvc-goo-01\include" />
+      <recent name="C:\laragon\www\GourmandiseSarl\@ressources" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="4a8b9759-6c35-4898-ab88-c3613adc4ff5" name="Changes" comment="" />
+      <created>1680012612216</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1680012612216</updated>
+      <workItem from="1680012613605" duration="2263000" />
+      <workItem from="1683098264567" duration="23636000" />
+      <workItem from="1683184404604" duration="46746000" />
+      <workItem from="1684772866159" duration="717000" />
+      <workItem from="1694109112410" duration="1789000" />
+      <workItem from="1694110933804" duration="7665000" />
+    </task>
+    <task id="LOCAL-00001" summary="Instauration de l'accueil">
+      <created>1694109139663</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1694109139663</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Instauration de l'accueil">
+      <created>1694109865909</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1694109865909</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Instauration de l'accueil">
+      <created>1694110323264</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1694110323264</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Instauration de l'accueil, presque terminé">
+      <created>1694111124183</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1694111124183</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Instauration de l'accueil, presque terminé">
+      <created>1694113618718</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1694113618718</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Création de la liste des lieux presque fini, manque juste l'affichage de la liste">
+      <created>1694125463316</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1694125463316</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
+    <option name="CHECK_NEW_TODO" value="false" />
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="Instauration de l'accueil" />
+    <MESSAGE value="Instauration de l'accueil, presque terminé" />
+    <MESSAGE value="Création de la liste des lieux presque fini, manque juste l'affichage de la liste" />
+    <option name="LAST_COMMIT_MESSAGE" value="Création de la liste des lieux presque fini, manque juste l'affichage de la liste" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/mvc-goo-01/include/configuration.php</url>
+          <line>1</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>
