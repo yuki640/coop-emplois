@@ -92,9 +92,9 @@ class LieuxModele extends Modele
 
     public function updateLieux(LieuxTable $valeurs)
     {
-        $sql = "UPDATE lieux SET nom = ?, adresse1 = ?,adresse2 = ?,adresse3 = ?,adresse4 = ?, code_postal = ?,
-                 ville = ?, telephone_s = ?,contact= ?, telephone_c = ?, capacite = ?, date_m = ?
-             WHERE codeL = ?";
+        $sql = "UPDATE lieux SET nom = ?, adresse1 = ?,adresse2 = ?,adresse3 = ?,adresse4 = ?, codepostal = ?,
+                 ville = ?, telephoneS = ?,contact= ?, telephoneC = ?, capacite = ?
+             WHERE codel = ?";
         $idRequete = $this->executeRequete($sql, [
             $valeurs->getNom(),
             $valeurs->getAdresse1(),
@@ -107,8 +107,7 @@ class LieuxModele extends Modele
             $valeurs->getContact(),
             $valeurs->getTelephoneC(),
             $valeurs->getCapacite(),
-            $valeurs->getDateM(),
-            $valeurs->getCodeL(),
+            $valeurs->getCodel()
         ]);
         if ($idRequete) {
             LieuxTable::setMessageSucces("Modification du lieu correctement effectué.");
