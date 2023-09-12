@@ -1,0 +1,99 @@
+Index: COOP-V1/public/header.tpl
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><!DOCTYPE html>\r\n<html lang=\"fr\">\r\n<head>\r\n    <meta charset=\"UTF-8\">\r\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\r\n\r\n    <link rel=\"stylesheet\" href=\"public/assets/css/style.css\">\r\n    <title>Mon Site Web</title>\r\n</head>\r\n<body>\r\n<header>\r\n    <nav>\r\n        <ul>\r\n            <li><a href=\"/\">Accueil</a></li>\r\n            <li><a href=\"/reunion.php\">Réunion</a></li>\r\n            <li><a href=\"/entretiens.php\">Entretiens</a></li>\r\n            <li><a href=\"/porteurs_de_projet.php\">Porteurs de Projet</a></li>\r\n            <li><a href=\"/accompagnateurs.php\">Accompagnateurs</a></li>\r\n            <li><a href=\"/parametres.php\">Paramètres</a></li>\r\n            <li class=\"menu-item right\"><a href=\"/plan_du_site.php\">Plan du site</a></li>\r\n            <li class=\"menu-item right\"><a href=\"/espace_personnel.php\">Espace personnel</a></li>\r\n        </ul>\r\n    </nav>\r\n</header>\r\n\r\n<main>\r\n    <h1>Contenu principal</h1>\r\n    <p>Bienvenue sur mon site web. Ceci est la page d'accueil.</p>\r\n</main>\r\n\r\n<footer>\r\n    <p>&copy; <?php echo date(\"Y\"); ?> Mon Site Web</p>\r\n</footer>\r\n</body>\r\n</html>\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/COOP-V1/public/header.tpl b/COOP-V1/public/header.tpl
+--- a/COOP-V1/public/header.tpl	(revision 5b9e43135538167852936329f85bec6ef7264abf)
++++ b/COOP-V1/public/header.tpl	(date 1694111795916)
+@@ -3,7 +3,14 @@
+ <head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+-
++    <link rel="stylesheet" href="public/assets/css/normalize.css">
++    <link rel="stylesheet" href="public/assets/css/bootstrap.min.css">
++    <link rel="stylesheet" href="public/assets/css/font-awesome.min.css">
++    <link rel="stylesheet" href="public/assets/css/themify-icons.css">
++    <link rel="stylesheet" href="public/assets/css/flag-icon.min.css">
++    <link rel="stylesheet" href="public/assets/css/cs-skin-elastic.css">
++    <!-- <link rel="stylesheet" href="assets/css/bootstrap-select.less"> -->
++    <link rel="stylesheet" href="public/assets/scss/style.css">
+     <link rel="stylesheet" href="public/assets/css/style.css">
+     <title>Mon Site Web</title>
+ </head>
+@@ -12,7 +19,7 @@
+     <nav>
+         <ul>
+             <li><a href="/">Accueil</a></li>
+-            <li><a href="/reunion.php">Réunion</a></li>
++
+             <li><a href="/entretiens.php">Entretiens</a></li>
+             <li><a href="/porteurs_de_projet.php">Porteurs de Projet</a></li>
+             <li><a href="/accompagnateurs.php">Accompagnateurs</a></li>
+Index: COOP-V1/templates_c/8c3b076fc7ba86b14b6191e882d395d24139ae13_0.file.header.tpl.php
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?php\r\n/* Smarty version 4.3.2, created on 2023-09-07 18:24:46\r\n  from 'C:\\laragon\\www\\coop-emplois\\COOP-V1\\public\\header.tpl' */\r\n\r\n/* @var Smarty_Internal_Template $_smarty_tpl */\r\nif ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (\r\n  'version' => '4.3.2',\r\n  'unifunc' => 'content_64fa156e1ec570_22525418',\r\n  'has_nocache_code' => false,\r\n  'file_dependency' => \r\n  array (\r\n    '8c3b076fc7ba86b14b6191e882d395d24139ae13' => \r\n    array (\r\n      0 => 'C:\\\\laragon\\\\www\\\\coop-emplois\\\\COOP-V1\\\\public\\\\header.tpl',\r\n      1 => 1694111074,\r\n      2 => 'file',\r\n    ),\r\n  ),\r\n  'includes' => \r\n  array (\r\n  ),\r\n),false)) {\r\nfunction content_64fa156e1ec570_22525418 (Smarty_Internal_Template $_smarty_tpl) {\r\n?><!DOCTYPE html>\r\n<html lang=\"fr\">\r\n<head>\r\n    <meta charset=\"UTF-8\">\r\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\r\n\r\n    <link rel=\"stylesheet\" href=\"public/assets/css/style.css\">\r\n    <title>Mon Site Web</title>\r\n</head>\r\n<body>\r\n<header>\r\n    <nav>\r\n        <ul>\r\n            <li><a href=\"/\">Accueil</a></li>\r\n            <li><a href=\"/reunion.php\">Réunion</a></li>\r\n            <li><a href=\"/entretiens.php\">Entretiens</a></li>\r\n            <li><a href=\"/porteurs_de_projet.php\">Porteurs de Projet</a></li>\r\n            <li><a href=\"/accompagnateurs.php\">Accompagnateurs</a></li>\r\n            <li><a href=\"/parametres.php\">Paramètres</a></li>\r\n            <li class=\"menu-item right\"><a href=\"/plan_du_site.php\">Plan du site</a></li>\r\n            <li class=\"menu-item right\"><a href=\"/espace_personnel.php\">Espace personnel</a></li>\r\n        </ul>\r\n    </nav>\r\n</header>\r\n\r\n<main>\r\n    <h1>Contenu principal</h1>\r\n    <p>Bienvenue sur mon site web. Ceci est la page d'accueil.</p>\r\n</main>\r\n\r\n<footer>\r\n    <p>&copy; <?php echo '<?php'; ?>\r\n echo date(\"Y\"); <?php echo '?>'; ?>\r\n Mon Site Web</p>\r\n</footer>\r\n</body>\r\n</html>\r\n<?php }\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/COOP-V1/templates_c/8c3b076fc7ba86b14b6191e882d395d24139ae13_0.file.header.tpl.php b/COOP-V1/templates_c/8c3b076fc7ba86b14b6191e882d395d24139ae13_0.file.header.tpl.php
+--- a/COOP-V1/templates_c/8c3b076fc7ba86b14b6191e882d395d24139ae13_0.file.header.tpl.php	(revision 5b9e43135538167852936329f85bec6ef7264abf)
++++ b/COOP-V1/templates_c/8c3b076fc7ba86b14b6191e882d395d24139ae13_0.file.header.tpl.php	(date 1694111796484)
+@@ -1,18 +1,18 @@
+ <?php
+-/* Smarty version 4.3.2, created on 2023-09-07 18:24:46
++/* Smarty version 4.3.2, created on 2023-09-07 18:36:36
+   from 'C:\laragon\www\coop-emplois\COOP-V1\public\header.tpl' */
+ 
+ /* @var Smarty_Internal_Template $_smarty_tpl */
+ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
+   'version' => '4.3.2',
+-  'unifunc' => 'content_64fa156e1ec570_22525418',
++  'unifunc' => 'content_64fa1834763251_98270578',
+   'has_nocache_code' => false,
+   'file_dependency' => 
+   array (
+     '8c3b076fc7ba86b14b6191e882d395d24139ae13' => 
+     array (
+       0 => 'C:\\laragon\\www\\coop-emplois\\COOP-V1\\public\\header.tpl',
+-      1 => 1694111074,
++      1 => 1694111795,
+       2 => 'file',
+     ),
+   ),
+@@ -20,13 +20,20 @@
+   array (
+   ),
+ ),false)) {
+-function content_64fa156e1ec570_22525418 (Smarty_Internal_Template $_smarty_tpl) {
++function content_64fa1834763251_98270578 (Smarty_Internal_Template $_smarty_tpl) {
+ ?><!DOCTYPE html>
+ <html lang="fr">
+ <head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+-
++    <link rel="stylesheet" href="public/assets/css/normalize.css">
++    <link rel="stylesheet" href="public/assets/css/bootstrap.min.css">
++    <link rel="stylesheet" href="public/assets/css/font-awesome.min.css">
++    <link rel="stylesheet" href="public/assets/css/themify-icons.css">
++    <link rel="stylesheet" href="public/assets/css/flag-icon.min.css">
++    <link rel="stylesheet" href="public/assets/css/cs-skin-elastic.css">
++    <!-- <link rel="stylesheet" href="assets/css/bootstrap-select.less"> -->
++    <link rel="stylesheet" href="public/assets/scss/style.css">
+     <link rel="stylesheet" href="public/assets/css/style.css">
+     <title>Mon Site Web</title>
+ </head>
+@@ -35,7 +42,7 @@
+     <nav>
+         <ul>
+             <li><a href="/">Accueil</a></li>
+-            <li><a href="/reunion.php">Réunion</a></li>
++
+             <li><a href="/entretiens.php">Entretiens</a></li>
+             <li><a href="/porteurs_de_projet.php">Porteurs de Projet</a></li>
+             <li><a href="/accompagnateurs.php">Accompagnateurs</a></li>

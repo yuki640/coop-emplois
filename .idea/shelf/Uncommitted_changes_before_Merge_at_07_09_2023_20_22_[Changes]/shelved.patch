@@ -1,0 +1,278 @@
+Index: README.txt
+===================================================================
+diff --git a/README.txt b/README.txt
+deleted file mode 100644
+--- a/README.txt	(revision ef586536a20e19094de5cbf603906205165d2f21)
++++ /dev/null	(revision ef586536a20e19094de5cbf603906205165d2f21)
+@@ -1,3 +0,0 @@
+-partie personaliser de samuel
+-
+- a ne j'amais modifier.
+\ No newline at end of file
+Index: COOP-V1/public/assets/css/style.css
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>/* This css file is to over write bootstarp css\r\n--------------------------------------------------------- /\r\n* Theme Name: Sufee-Admin Admin Template\r\n* Theme URI: http://demos.jeweltheme.com/Sufee-Admin/\r\n* Author: jewel_theme\r\n* Author URI: http://themeforest.net/user/jewel_theme/portfolio\r\n* Description:\r\n* Version: 1.0.0\r\n* License: GNU General Public License v2 or later\r\n* License URI: http://www.gnu.org/licenses/gpl-2.0.html\r\n* Tags: html, themplate, Sufee-Admin\r\n--------------------------------------------------------- */\r\n.bg-flat-color-1 {\r\n  background: #20a8d8; }\r\n\r\n.bg-flat-color-2 {\r\n  background: #63c2de; }\r\n\r\n.bg-flat-color-3 {\r\n  background: #ffc107; }\r\n\r\n.bg-flat-color-4 {\r\n  background: #f86c6b; }\r\n\r\n.bg-flat-color-5 {\r\n  background: #4dbd74; }\r\n\r\n.transition {\r\n  -webkit-transition: all 0.3s ease;\r\n  -moz-transition: all 0.3s ease;\r\n  -ms-transition: all 0.3s ease;\r\n  -o-transition: all 0.3s ease;\r\n  transition: all 0.3s ease; }\r\n\r\nbody {\r\n  background: #f1f2f7;\r\n  display: table;\r\n  font-family: 'Open Sans' sans-serif;\r\n  font-size: 16px;\r\n  width: 100%; }\r\n\r\ndiv[class*=\"col-\"] {\r\n  float: left; }\r\n\r\np {\r\n  font-size: 16px;\r\n  font-weight: 400;\r\n  line-height: 24px; }\r\n\r\np:focus {\r\n  border: none;\r\n  outline: 0; }\r\n\r\na, button {\r\n  text-decoration: none;\r\n  outline: none !important;\r\n  color: #878787;\r\n  -webkit-transition: all 0.25s ease;\r\n  -moz-transition: all 0.25s ease;\r\n  -ms-transition: all 0.25s ease;\r\n  -o-transition: all 0.25s ease;\r\n  transition: all 0.25s ease; }\r\n  a:active, a.active, button:active, button.active {\r\n    background: none !important;\r\n    border: none !important; }\r\n\r\na:hover,\r\na:focus {\r\n  text-decoration: none;\r\n  color: #000; }\r\n\r\nh1,\r\nh2,\r\nh3,\r\nh4,\r\nh5,\r\nh6 {\r\n  margin: 0; }\r\n\r\nul,\r\nol {\r\n  padding-left: 0; }\r\n\r\n.btn:focus,\r\nbutton:focus {\r\n  box-shadow: none !important;\r\n  outline: 0; }\r\n\r\nimg {\r\n  max-width: 100%; }\r\n\r\n/* Global Styles */\r\n/* Main Styles */\r\n.basix-container {\r\n  display: table;\r\n  min-height: 100vh;\r\n  position: relative;\r\n  width: 100%; }\r\n\r\naside.left-panel {\r\n  background: #272c33;\r\n  display: table-cell;\r\n  height: 100vh;\r\n  min-height: 100%;\r\n  padding: 0 25px;\r\n  vertical-align: top;\r\n  width: 280px;\r\n  transition: width 0.3s ease; }\r\n\r\n.navbar {\r\n  background: #272c33;\r\n  border-radius: 0;\r\n  border: none;\r\n  display: block;\r\n  margin: 0;\r\n  margin-bottom: 100px;\r\n  padding: 0; }\r\n  .navbar .navbar-header {\r\n    float: none;\r\n    text-align: center;\r\n    width: 100%; }\r\n  .navbar .navbar-brand {\r\n    border-bottom: 1px solid #4e4e52;\r\n    color: #f1f2f7 !important;\r\n    font-family: 'Open Sans';\r\n    font-size: 22px;\r\n    float: none;\r\n    line-height: 50px;\r\n    margin: 0;\r\n    text-align: left;\r\n    text-transform: capitalize;\r\n    display: block;\r\n    min-height: 69px;\r\n    padding: 0;\r\n    display: flex;\r\n    justify-content: center;\r\n    align-items: center;\r\n    position: relative; }\r\n    .navbar .navbar-brand span {\r\n      font-weight: 600; }\r\n    .navbar .navbar-brand img {\r\n      max-width: 160px; }\r\n    .navbar .navbar-brand.hidden {\r\n      display: none; }\r\n  .navbar .menu-title {\r\n    border-bottom: 1px solid #4e4e52;\r\n    color: #9496a1;\r\n    clear: both;\r\n    display: block;\r\n    font-family: 'Open Sans';\r\n    font-size: 14px;\r\n    font-weight: 700;\r\n    line-height: 50px;\r\n    padding: 15px 0 0 0;\r\n    text-transform: uppercase;\r\n    width: 100%; }\r\n  .navbar .navbar-nav {\r\n    float: none;\r\n    position: relative; }\r\n    .navbar .navbar-nav li {\r\n      width: 100%; }\r\n      .navbar .navbar-nav li.active .menu-icon, .navbar .navbar-nav li:hover .toggle_nav_button:before,\r\n      .navbar .navbar-nav li .toggle_nav_button.nav-open:before {\r\n        color: #fff !important; }\r\n      .navbar .navbar-nav li > a {\r\n        background: none !important;\r\n        color: #c8c9ce !important;\r\n        display: inline-block;\r\n        font-family: 'Open Sans';\r\n        font-size: 14px;\r\n        line-height: 30px;\r\n        padding: 10px 0;\r\n        position: relative;\r\n        width: 100%; }\r\n        .navbar .navbar-nav li > a:hover, .navbar .navbar-nav li > a:hover .menu-icon {\r\n          color: #fff !important; }\r\n        .navbar .navbar-nav li > a .menu-icon {\r\n          color: #8b939b;\r\n          float: left;\r\n          margin-top: 8px;\r\n          width: 55px;\r\n          text-align: left;\r\n          z-index: 9; }\r\n        .navbar .navbar-nav li > a .menu-title-text {\r\n          font-size: 14px; }\r\n        .navbar .navbar-nav li > a .badge {\r\n          border-radius: 0;\r\n          font-family: 'Open Sans';\r\n          font-weight: 600;\r\n          float: right;\r\n          margin: 6px 0 0 0;\r\n          padding: 0.4em 0.5em; }\r\n      .navbar .navbar-nav li.menu-item-has-children {\r\n        position: relative; }\r\n        .navbar .navbar-nav li.menu-item-has-children a {\r\n          line-height: 30px; }\r\n          .navbar .navbar-nav li.menu-item-has-children a:before {\r\n            content: \"\\f105\";\r\n            color: #c8c9ce;\r\n            font-family: 'Fontawesome';\r\n            font-size: 16px;\r\n            position: absolute;\r\n            top: 10px;\r\n            right: 0;\r\n            text-align: right;\r\n            -webkit-transition: all .25s ease;\r\n            -moz-transition: all .25s ease;\r\n            -ms-transition: all .25s ease;\r\n            -o-transition: all .25s ease;\r\n            transition: all .25s ease; }\r\n          .navbar .navbar-nav li.menu-item-has-children a:hover:before {\r\n            color: #fff; }\r\n        .navbar .navbar-nav li.menu-item-has-children .sub-menu {\r\n          background: #272c33;\r\n          border: none;\r\n          box-shadow: none;\r\n          overflow-y: hidden;\r\n          padding: 0 0 0 35px; }\r\n          .navbar .navbar-nav li.menu-item-has-children .sub-menu li {\r\n            position: relative; }\r\n          .navbar .navbar-nav li.menu-item-has-children .sub-menu i {\r\n            color: #c8c9ce;\r\n            float: left;\r\n            padding: 0;\r\n            position: absolute;\r\n            left: 0;\r\n            font-size: 14px;\r\n            top: 9px; }\r\n          .navbar .navbar-nav li.menu-item-has-children .sub-menu a {\r\n            padding: 2px 0 2px 30px; }\r\n            .navbar .navbar-nav li.menu-item-has-children .sub-menu a:before {\r\n              content: '';\r\n              display: none; }\r\n            .navbar .navbar-nav li.menu-item-has-children .sub-menu a .menu-icon {\r\n              top: 13px;\r\n              text-align: left;\r\n              width: 25px; }\r\n        .navbar .navbar-nav li.menu-item-has-children.show a:before {\r\n          content: \"\\f107\"; }\r\n        .navbar .navbar-nav li.menu-item-has-children.show .sub-menu {\r\n          max-height: 1000px;\r\n          opacity: 1;\r\n          position: static !important; }\r\n\r\n.navbar .navbar-nav > .active > a,\r\n.navbar .navbar-nav > .active > a:focus,\r\n.navbar .navbar-nav > .active > a:hover {\r\n  color: #d7d9e3 !important; }\r\n\r\n.navbar-nav li span.count {\r\n  background: #a9d86e;\r\n  border-radius: 50%;\r\n  color: #fff;\r\n  font-family: 'Open Sans';\r\n  font-size: 9px;\r\n  font-weight: 700;\r\n  float: right;\r\n  height: 20px;\r\n  width: 20px;\r\n  line-height: 20px;\r\n  margin-right: 15px;\r\n  text-align: center; }\r\n\r\nbody.open .navbar .navbar-brand.hidden {\r\n  display: block; }\r\n\r\n.open aside.left-panel {\r\n  max-width: 70px;\r\n  width: 70px; }\r\n  .open aside.left-panel .navbar .navbar-brand {\r\n    display: none; }\r\n    .open aside.left-panel .navbar .navbar-brand.hidden {\r\n      display: flex !important;\r\n      justify-content: center;\r\n      align-items: center;\r\n      padding-left: 0;\r\n      padding-right: 0;\r\n      text-align: center; }\r\n      .open aside.left-panel .navbar .navbar-brand.hidden img {\r\n        max-width: 30px;\r\n        margin: 0 auto; }\r\n    .open aside.left-panel .navbar .navbar-brand.d-md-none {\r\n      display: block !important;\r\n      margin: 13px 0 0;\r\n      min-height: 67px;\r\n      padding: 0;\r\n      text-align: center; }\r\n  .open aside.left-panel .navbar .navbar-nav:before {\r\n    display: none !important; }\r\n  .open aside.left-panel .navbar .navbar-nav li {\r\n    position: relative; }\r\n    .open aside.left-panel .navbar .navbar-nav li a {\r\n      font-size: 0;\r\n      z-index: 0;\r\n      transition: none; }\r\n      .open aside.left-panel .navbar .navbar-nav li a .menu-icon {\r\n        font-size: 20px;\r\n        z-index: -1;\r\n        width: inherit; }\r\n      .open aside.left-panel .navbar .navbar-nav li a .menu-title-text {\r\n        font-size: 0; }\r\n      .open aside.left-panel .navbar .navbar-nav li a .badge {\r\n        display: none; }\r\n    .open aside.left-panel .navbar .navbar-nav li > a {\r\n      max-width: 60px;\r\n      padding-left: 0; }\r\n    .open aside.left-panel .navbar .navbar-nav li.menu-item-has-children {\r\n      overflow: hidden; }\r\n      .open aside.left-panel .navbar .navbar-nav li.menu-item-has-children a:before {\r\n        content: '';\r\n        display: none; }\r\n      .open aside.left-panel .navbar .navbar-nav li.menu-item-has-children ul {\r\n        padding-left: 0; }\r\n      .open aside.left-panel .navbar .navbar-nav li.menu-item-has-children .sub-menu {\r\n        display: block;\r\n        left: inherit;\r\n        right: -180px;\r\n        top: 0; }\r\n        .open aside.left-panel .navbar .navbar-nav li.menu-item-has-children .sub-menu li a {\r\n          display: block;\r\n          font-size: 14px;\r\n          max-width: inherit;\r\n          padding: 2px 15px 2px 25px;\r\n          width: 100%; }\r\n          .open aside.left-panel .navbar .navbar-nav li.menu-item-has-children .sub-menu li a .menu-icon {\r\n            text-align: center; }\r\n      .open aside.left-panel .navbar .navbar-nav li.menu-item-has-children.show {\r\n        overflow: visible; }\r\n        .open aside.left-panel .navbar .navbar-nav li.menu-item-has-children.show .sub-menu {\r\n          position: absolute !important; }\r\n    .open aside.left-panel .navbar .navbar-nav li span.count {\r\n      display: none;\r\n      margin-right: 5px;\r\n      z-index: 1; }\r\n    .open aside.left-panel .navbar .navbar-nav li.active a:after {\r\n      content: '';\r\n      display: none; }\r\n  .open aside.left-panel .navbar .navbar-nav .menu-title {\r\n    font-size: 0;\r\n    line-height: 0;\r\n    opacity: 0;\r\n    padding: 0; }\r\n\r\n/* Right panel */\r\n.right-panel {\r\n  display: table-cell;\r\n  padding-left: 0 !important;\r\n  -webkit-transition: all .35s ease;\r\n  -moz-transition: all .35s ease;\r\n  -ms-transition: all .35s ease;\r\n  -o-transition: all .35s ease;\r\n  transition: all .35s ease; }\r\n\r\n.right-panel header.header {\r\n  background: #fff;\r\n  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.15);\r\n  clear: both;\r\n  display: inline-block;\r\n  padding: 15px 20px 13px 20px;\r\n  width: 100%; }\r\n\r\n.open .right-panel {\r\n  margin-left: -210px; }\r\n\r\nheader.fixed-top {\r\n  background: #fff;\r\n  padding: 20px; }\r\n\r\n.header-menu .col-sm-7 {\r\n  position: inherit; }\r\n\r\n.menutoggle {\r\n  background: #e74c3c;\r\n  border-radius: 50%;\r\n  color: #fff !important;\r\n  cursor: pointer;\r\n  font-size: 18px;\r\n  height: 43px;\r\n  line-height: 44px;\r\n  margin: -2px 20px 0 -57px;\r\n  text-align: center;\r\n  width: 43px; }\r\n\r\n.open .menutoggle i:before {\r\n  content: \"\\f0a4\"; }\r\n\r\n.search-trigger {\r\n  background: transparent;\r\n  border: none;\r\n  color: #272c33;\r\n  cursor: pointer;\r\n  font-size: 16px;\r\n  height: 41px;\r\n  width: 43px;\r\n  line-height: 38px; }\r\n\r\nheader .form-inline {\r\n  background: #263238;\r\n  display: none;\r\n  height: 70px;\r\n  margin: 0;\r\n  width: 100%;\r\n  position: absolute;\r\n  left: 0;\r\n  top: 0;\r\n  z-index: 9999; }\r\n  header .form-inline .search-form {\r\n    height: 100%;\r\n    max-width: 1025px;\r\n    margin: 0 auto;\r\n    position: relative; }\r\n    header .form-inline .search-form input[type=\"text\"] {\r\n      background: #263238;\r\n      border: none;\r\n      border-radius: 0;\r\n      box-shadow: none;\r\n      color: #d3d3d3;\r\n      font-size: 16px;\r\n      height: inherit;\r\n      margin-right: 0 !important;\r\n      padding: 10px 36px 10px 15px;\r\n      width: 100%; }\r\n    header .form-inline .search-form input[type=\"text\"].active,\r\n    header .form-inline .search-form input[type=\"text\"]:focus {\r\n      border-color: rgba(0, 0, 0, 0.125);\r\n      outline: 0; }\r\n    header .form-inline .search-form button {\r\n      background: transparent;\r\n      border: none;\r\n      color: #fff;\r\n      font-size: 16px;\r\n      position: absolute;\r\n      right: 15px;\r\n      top: 50%;\r\n      margin-top: -14px !important; }\r\n    header .form-inline .search-form button:active,\r\n    header .form-inline .search-form button:focus,\r\n    header .form-inline .search-form button:visited,\r\n    header .form-inline .search-form .btn-outline-success:hover {\r\n      background: transparent;\r\n      border: none !important;\r\n      box-shadow: none;\r\n      outline: 0 !important; }\r\n    header .form-inline .search-form.close {\r\n      display: none; }\r\n\r\n.header-left.open .form-inline {\r\n  display: block; }\r\n\r\n.header-left .dropdown {\r\n  display: inline-block; }\r\n  .header-left .dropdown .dropdown-toggle {\r\n    background: transparent;\r\n    border: none;\r\n    color: #272c33;\r\n    font-size: 16px; }\r\n    .header-left .dropdown .dropdown-toggle:after {\r\n      display: none; }\r\n    .header-left .dropdown .dropdown-toggle .count {\r\n      border-radius: 50%;\r\n      color: #fff;\r\n      font-size: 11px;\r\n      height: 15px;\r\n      width: 15px;\r\n      line-height: 15px;\r\n      right: 0;\r\n      top: 0;\r\n      position: absolute; }\r\n  .header-left .dropdown .dropdown-menu {\r\n    background: #fff;\r\n    border: none;\r\n    border-radius: 0;\r\n    box-shadow: none;\r\n    top: 49px !important; }\r\n    .header-left .dropdown .dropdown-menu p {\r\n      font-size: 15px;\r\n      margin: 0;\r\n      padding: 5px 15px; }\r\n    .header-left .dropdown .dropdown-menu .dropdown-item {\r\n      color: #272c33;\r\n      font-size: 13px;\r\n      padding: 10px 15px 3px;\r\n      text-overflow: ellipsis; }\r\n      .header-left .dropdown .dropdown-menu .dropdown-item .photo {\r\n        float: left;\r\n        margin-right: 15px;\r\n        width: 25px; }\r\n      .header-left .dropdown .dropdown-menu .dropdown-item .message .name {\r\n        margin-top: -5px; }\r\n      .header-left .dropdown .dropdown-menu .dropdown-item .message .time {\r\n        font-size: 11px; }\r\n      .header-left .dropdown .dropdown-menu .dropdown-item .message p {\r\n        clear: both;\r\n        font-size: 14px;\r\n        margin: 0;\r\n        padding: 0;\r\n        text-overflow: ellipsis; }\r\n      .header-left .dropdown .dropdown-menu .dropdown-item:hover {\r\n        background: transparent; }\r\n\r\n.dropdown-menu {\r\n  border-radius: 0;\r\n  transform: none !important; }\r\n\r\n.dropdown-toggle::after {\r\n  display: none; }\r\n\r\n.for-notification .dropdown-menu .dropdown-item {\r\n  padding: 5px 15px !important;\r\n  text-overflow: ellipsis; }\r\n  .for-notification .dropdown-menu .dropdown-item i {\r\n    float: left;\r\n    font-size: 14px;\r\n    margin: 5px 5px 0 0;\r\n    text-align: left;\r\n    width: 20px; }\r\n  .for-notification .dropdown-menu .dropdown-item p {\r\n    padding: 0 !important;\r\n    text-overflow: ellipsis; }\r\n\r\n.user-area {\r\n  float: right;\r\n  padding-right: 0;\r\n  position: relative; }\r\n  .user-area .user-menu {\r\n    background: #fff;\r\n    border: none;\r\n    font-family: 'Open Sans';\r\n    left: inherit !important;\r\n    right: 0;\r\n    top: 55px !important;\r\n    margin: 0;\r\n    max-width: 150px;\r\n    padding: 5px 10px;\r\n    position: absolute;\r\n    width: 100%;\r\n    z-index: 999;\r\n    min-width: 150px; }\r\n    .user-area .user-menu .nav-link {\r\n      color: #272c33;\r\n      display: block;\r\n      font-size: 14px;\r\n      line-height: 22px;\r\n      padding: 5px 0; }\r\n  .user-area .user-avatar {\r\n    float: right;\r\n    margin-top: 4px;\r\n    width: 32px; }\r\n  .user-area .user-info .name {\r\n    color: #8c8c8c;\r\n    font-size: 14px;\r\n    position: relative;\r\n    text-transform: uppercase; }\r\n  .user-area .count {\r\n    background: #d9534f;\r\n    border-radius: 50%;\r\n    color: #fff;\r\n    font-family: 'Open Sans';\r\n    font-size: 9px;\r\n    font-weight: 700;\r\n    float: right;\r\n    height: 20px;\r\n    width: 20px;\r\n    line-height: 20px;\r\n    text-align: center; }\r\n\r\n#menuToggle2 {\r\n  padding-left: 25px; }\r\n\r\n#language-select {\r\n  color: #f1f2f7;\r\n  float: right;\r\n  margin: 7px 20px 0 0;\r\n  max-width: 80px; }\r\n  #language-select:focus, #language-select:visited {\r\n    border: none;\r\n    outline: 0; }\r\n  #language-select .dropdown-toggle::after {\r\n    display: none; }\r\n  #language-select .dropdown-menu {\r\n    background: #fff;\r\n    border: none;\r\n    border-radius: 0;\r\n    left: -8px !important;\r\n    min-width: inherit;\r\n    padding: 0 5px;\r\n    top: 46px !important; }\r\n    #language-select .dropdown-menu .dropdown-item {\r\n      margin-right: 0;\r\n      max-width: 25px;\r\n      padding: 0; }\r\n      #language-select .dropdown-menu .dropdown-item:hover {\r\n        background: #fff; }\r\n      #language-select .dropdown-menu .dropdown-item .flag-icon {\r\n        margin-right: 0;\r\n        width: 25px; }\r\n\r\n.notification-show + .dropdown-menu,\r\n.message-show + .dropdown-menu,\r\n.language-show + .dropdown-menu {\r\n  display: block; }\r\n\r\n/*# sourceMappingURL=style.css.map */\r\n\r\n\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/COOP-V1/public/assets/css/style.css b/COOP-V1/public/assets/css/style.css
+--- a/COOP-V1/public/assets/css/style.css	(revision ef586536a20e19094de5cbf603906205165d2f21)
++++ b/COOP-V1/public/assets/css/style.css	(date 1694110951837)
+@@ -603,3 +603,64 @@
+ /*# sourceMappingURL=style.css.map */
+ 
+ 
++/* Réinitialisation des marges et des rembourrages par défaut du navigateur */
++* {
++  margin: 0;
++  padding: 0;
++  box-sizing: border-box;
++}
++
++/* Styles de base pour le corps de la page */
++body {
++  font-family: Arial, sans-serif;
++  background-color: #f0f0f0;
++}
++
++/* Styles pour l'en-tête (barre de navigation en haut) */
++header {
++  background-color: #333;
++  color: #fff;
++  padding: 10px 0;
++}
++
++header nav ul {
++  list-style-type: none;
++  text-align: left;
++}
++
++header nav ul li {
++  display: inline;
++  margin-right: 20px;
++}
++
++header nav ul li:last-child {
++  margin-right: 0;
++}
++
++header nav ul li a {
++  text-decoration: none;
++  color: #fff;
++}
++
++/* Styles pour aligner à gauche et à droite */
++header nav ul li.menu-item.left {
++  float: left;
++}
++
++header nav ul li.menu-item.right {
++  float: right;
++  margin-right: 0; /* Enlever la marge à droite pour le dernier élément aligné à droite */
++}
++
++/* Styles pour le contenu principal */
++main {
++  padding: 20px;
++}
++
++/* Styles pour le pied de page */
++footer {
++  background-color: #333;
++  color: #fff;
++  text-align: center;
++  padding: 10px 0;
++}
+Index: COOP-V1/templates_c/8c3b076fc7ba86b14b6191e882d395d24139ae13_0.file.header.tpl.php
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?php\r\n/* Smarty version 4.3.2, created on 2023-09-07 18:03:55\r\n  from 'C:\\laragon\\www\\coop-emplois\\COOP-V1\\public\\header.tpl' */\r\n\r\n/* @var Smarty_Internal_Template $_smarty_tpl */\r\nif ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (\r\n  'version' => '4.3.2',\r\n  'unifunc' => 'content_64fa108bca5d96_52158354',\r\n  'has_nocache_code' => false,\r\n  'file_dependency' => \r\n  array (\r\n    '8c3b076fc7ba86b14b6191e882d395d24139ae13' => \r\n    array (\r\n      0 => 'C:\\\\laragon\\\\www\\\\coop-emplois\\\\COOP-V1\\\\public\\\\header.tpl',\r\n      1 => 1694109834,\r\n      2 => 'file',\r\n    ),\r\n  ),\r\n  'includes' => \r\n  array (\r\n  ),\r\n),false)) {\r\nfunction content_64fa108bca5d96_52158354 (Smarty_Internal_Template $_smarty_tpl) {\r\n?>       <!-- Header-->\r\n        <header id=\"header\" class=\"header\">\r\n\r\n            <div class=\"header-menu\">\r\n\r\n                <div class=\"col-sm-7\">\r\n                    <a id=\"menuToggle\" class=\"menutoggle pull-left\"><i class=\"fa fa fa-tasks\"></i></a>\r\n                    <div class=\"header-left\">\r\n                        <button class=\"search-trigger\"><i class=\"fa fa-search\"></i></button>\r\n                        <div class=\"form-inline\">\r\n                            <form class=\"search-form\">\r\n                                <input class=\"form-control mr-sm-2\" type=\"text\" placeholder=\"Search ...\" aria-label=\"Search\">\r\n                                <button class=\"search-close\" type=\"submit\"><i class=\"fa fa-close\"></i></button>\r\n                            </form>\r\n                        </div>\r\n\r\n\r\n                    </div>\r\n                </div>\r\n\r\n                <div class=\"col-sm-5\">\r\n                    <div class=\"user-area dropdown float-right\">\r\n                        <a href=\"#\" class=\"dropdown-toggle\" data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\">\r\n                            <img class=\"user-avatar rounded-circle\" src=\"public/images/admin.jpg\" alt=\"User Avatar\">\r\n                        </a>\r\n\r\n                    </div>\r\n                        <div class=\"user-area\">\r\n                        Bienvenue Mr.XX\r\n                        </div>\r\n\r\n                </div>\r\n            </div>\r\n\r\n        </header><!-- /header -->\r\n        <!-- Header-->\r\n<?php }\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/COOP-V1/templates_c/8c3b076fc7ba86b14b6191e882d395d24139ae13_0.file.header.tpl.php b/COOP-V1/templates_c/8c3b076fc7ba86b14b6191e882d395d24139ae13_0.file.header.tpl.php
+--- a/COOP-V1/templates_c/8c3b076fc7ba86b14b6191e882d395d24139ae13_0.file.header.tpl.php	(revision ef586536a20e19094de5cbf603906205165d2f21)
++++ b/COOP-V1/templates_c/8c3b076fc7ba86b14b6191e882d395d24139ae13_0.file.header.tpl.php	(date 1694110951838)
+@@ -1,18 +1,18 @@
+ <?php
+-/* Smarty version 4.3.2, created on 2023-09-07 18:03:55
++/* Smarty version 4.3.2, created on 2023-09-07 18:21:09
+   from 'C:\laragon\www\coop-emplois\COOP-V1\public\header.tpl' */
+ 
+ /* @var Smarty_Internal_Template $_smarty_tpl */
+ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
+   'version' => '4.3.2',
+-  'unifunc' => 'content_64fa108bca5d96_52158354',
++  'unifunc' => 'content_64fa1495cc49a9_39675876',
+   'has_nocache_code' => false,
+   'file_dependency' => 
+   array (
+     '8c3b076fc7ba86b14b6191e882d395d24139ae13' => 
+     array (
+       0 => 'C:\\laragon\\www\\coop-emplois\\COOP-V1\\public\\header.tpl',
+-      1 => 1694109834,
++      1 => 1694110869,
+       2 => 'file',
+     ),
+   ),
+@@ -20,42 +20,43 @@
+   array (
+   ),
+ ),false)) {
+-function content_64fa108bca5d96_52158354 (Smarty_Internal_Template $_smarty_tpl) {
+-?>       <!-- Header-->
+-        <header id="header" class="header">
+-
+-            <div class="header-menu">
++function content_64fa1495cc49a9_39675876 (Smarty_Internal_Template $_smarty_tpl) {
++?><!DOCTYPE html>
++<html lang="fr">
++<head>
++    <meta charset="UTF-8">
++    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ 
+-                <div class="col-sm-7">
+-                    <a id="menuToggle" class="menutoggle pull-left"><i class="fa fa fa-tasks"></i></a>
+-                    <div class="header-left">
+-                        <button class="search-trigger"><i class="fa fa-search"></i></button>
+-                        <div class="form-inline">
+-                            <form class="search-form">
+-                                <input class="form-control mr-sm-2" type="text" placeholder="Search ..." aria-label="Search">
+-                                <button class="search-close" type="submit"><i class="fa fa-close"></i></button>
+-                            </form>
+-                        </div>
++    <link rel="stylesheet" href="public/assets/css/style.css">
++    <title>Mon Site Web</title>
++</head>
++<body>
++<header>
++    <nav>
++        <ul>
++            <li><a href="/">Accueil</a></li>
++            <li><a href="/reunion.php">Réunion</a></li>
++            <li><a href="/entretiens.php">Entretiens</a></li>
++            <li"><a href="/porteurs_de_projet.php">Porteurs de Projet</a></li>
++            <li><a href="/accompagnateurs.php">Accompagnateurs</a></li>
++            <li><a href="/parametres.php">Paramètres</a></li>
++            <li class="menu-item right"><a href="/plan_du_site.php">Plan du site</a></li>
++            <li class="menu-item right"><a href="/espace_personnel.php">Espace personnel</a></li>
++        </ul>
++    </nav>
++</header>
+ 
++<main>
++    <h1>Contenu principal</h1>
++    <p>Bienvenue sur mon site web. Ceci est la page d'accueil.</p>
++</main>
+ 
+-                    </div>
+-                </div>
+-
+-                <div class="col-sm-5">
+-                    <div class="user-area dropdown float-right">
+-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+-                            <img class="user-avatar rounded-circle" src="public/images/admin.jpg" alt="User Avatar">
+-                        </a>
+-
+-                    </div>
+-                        <div class="user-area">
+-                        Bienvenue Mr.XX
+-                        </div>
+-
+-                </div>
+-            </div>
+-
+-        </header><!-- /header -->
+-        <!-- Header-->
++<footer>
++    <p>&copy; <?php echo '<?php'; ?>
++ echo date("Y"); <?php echo '?>'; ?>
++ Mon Site Web</p>
++</footer>
++</body>
++</html>
+ <?php }
+ }
+Index: COOP-V1/public/header.tpl
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>       <!-- Header-->\r\n        <header id=\"header\" class=\"header\">\r\n\r\n            <div class=\"header-menu\">\r\n\r\n                <div class=\"col-sm-7\">\r\n                    <a id=\"menuToggle\" class=\"menutoggle pull-left\"><i class=\"fa fa fa-tasks\"></i></a>\r\n                    <div class=\"header-left\">\r\n                        <button class=\"search-trigger\"><i class=\"fa fa-search\"></i></button>\r\n                        <div class=\"form-inline\">\r\n                            <form class=\"search-form\">\r\n                                <input class=\"form-control mr-sm-2\" type=\"text\" placeholder=\"Search ...\" aria-label=\"Search\">\r\n                                <button class=\"search-close\" type=\"submit\"><i class=\"fa fa-close\"></i></button>\r\n                            </form>\r\n                        </div>\r\n\r\n\r\n                    </div>\r\n                </div>\r\n\r\n                <div class=\"col-sm-5\">\r\n                    <div class=\"user-area dropdown float-right\">\r\n                        <a href=\"#\" class=\"dropdown-toggle\" data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\">\r\n                            <img class=\"user-avatar rounded-circle\" src=\"public/images/admin.jpg\" alt=\"User Avatar\">\r\n                        </a>\r\n\r\n{*                        <div class=\"user-menu dropdown-menu\">*}\r\n{*                             <a class=\"nav-link\" href=\"index.php?gestion=authentification&action=deconnecter\"><i class=\"fa fa-power -off\"></i>/*{$deconnexion}</a>*}\r\n{*                        </div>*}\r\n                    </div>\r\n                        <div class=\"user-area\">\r\n                        Bienvenue Mr.XX\r\n                        </div>\r\n\r\n                </div>\r\n            </div>\r\n\r\n        </header><!-- /header -->\r\n        <!-- Header-->\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/COOP-V1/public/header.tpl b/COOP-V1/public/header.tpl
+--- a/COOP-V1/public/header.tpl	(revision ef586536a20e19094de5cbf603906205165d2f21)
++++ b/COOP-V1/public/header.tpl	(date 1694110951838)
+@@ -1,39 +1,35 @@
+-       <!-- Header-->
+-        <header id="header" class="header">
+-
+-            <div class="header-menu">
++<!DOCTYPE html>
++<html lang="fr">
++<head>
++    <meta charset="UTF-8">
++    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ 
+-                <div class="col-sm-7">
+-                    <a id="menuToggle" class="menutoggle pull-left"><i class="fa fa fa-tasks"></i></a>
+-                    <div class="header-left">
+-                        <button class="search-trigger"><i class="fa fa-search"></i></button>
+-                        <div class="form-inline">
+-                            <form class="search-form">
+-                                <input class="form-control mr-sm-2" type="text" placeholder="Search ..." aria-label="Search">
+-                                <button class="search-close" type="submit"><i class="fa fa-close"></i></button>
+-                            </form>
+-                        </div>
++    <link rel="stylesheet" href="public/assets/css/style.css">
++    <title>Mon Site Web</title>
++</head>
++<body>
++<header>
++    <nav>
++        <ul>
++            <li><a href="/">Accueil</a></li>
++            <li><a href="/reunion.php">Réunion</a></li>
++            <li><a href="/entretiens.php">Entretiens</a></li>
++            <li"><a href="/porteurs_de_projet.php">Porteurs de Projet</a></li>
++            <li><a href="/accompagnateurs.php">Accompagnateurs</a></li>
++            <li><a href="/parametres.php">Paramètres</a></li>
++            <li class="menu-item right"><a href="/plan_du_site.php">Plan du site</a></li>
++            <li class="menu-item right"><a href="/espace_personnel.php">Espace personnel</a></li>
++        </ul>
++    </nav>
++</header>
+ 
++<main>
++    <h1>Contenu principal</h1>
++    <p>Bienvenue sur mon site web. Ceci est la page d'accueil.</p>
++</main>
+ 
+-                    </div>
+-                </div>
+-
+-                <div class="col-sm-5">
+-                    <div class="user-area dropdown float-right">
+-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+-                            <img class="user-avatar rounded-circle" src="public/images/admin.jpg" alt="User Avatar">
+-                        </a>
+-
+-{*                        <div class="user-menu dropdown-menu">*}
+-{*                             <a class="nav-link" href="index.php?gestion=authentification&action=deconnecter"><i class="fa fa-power -off"></i>/*{$deconnexion}</a>*}
+-{*                        </div>*}
+-                    </div>
+-                        <div class="user-area">
+-                        Bienvenue Mr.XX
+-                        </div>
+-
+-                </div>
+-            </div>
+-
+-        </header><!-- /header -->
+-        <!-- Header-->
++<footer>
++    <p>&copy; <?php echo date("Y"); ?> Mon Site Web</p>
++</footer>
++</body>
++</html>

@@ -96,10 +96,7 @@
         <h1>Contenu principal</h1>
         <p>Bienvenue sur mon site web. Ceci est la page d'accueil.</p>
     </main>
-
-    <footer>
-        <p>&copy; <?php echo date("Y"); ?> Site internet réalisé par les étudiants de campus centre</p>
-    </footer>
+    {include file='public/footer.tpl'}
 </div><!-- /#right-panel -->
 
 

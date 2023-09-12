@@ -1,4 +1,28 @@
-<!doctype html>
+<?php
+/* Smarty version 4.3.2, created on 2023-09-08 13:59:27
+  from 'C:\laragon\www\coop-emplois\COOP-V2\mod_lieux\vue\lieuxListeVue.tpl' */
+
+/* @var Smarty_Internal_Template $_smarty_tpl */
+if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
+  'version' => '4.3.2',
+  'unifunc' => 'content_64fb28bfbc4e84_29890836',
+  'has_nocache_code' => false,
+  'file_dependency' => 
+  array (
+    '2b279a13dbcae8fdec54f1fefc2e951baf150597' => 
+    array (
+      0 => 'C:\\laragon\\www\\coop-emplois\\COOP-V2\\mod_lieux\\vue\\lieuxListeVue.tpl',
+      1 => 1694181565,
+      2 => 'file',
+    ),
+  ),
+  'includes' => 
+  array (
+    'file:public/header.tpl' => 1,
+  ),
+),false)) {
+function content_64fb28bfbc4e84_29890836 (Smarty_Internal_Template $_smarty_tpl) {
+?><!doctype html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
@@ -26,7 +50,9 @@
 
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800' rel='stylesheet' type='text/css'>
 
-    <!-- <script type="text/javascript" src="https://cdn.jsdelivr.net/html5shiv/3.7.3/html5shiv.min.js"></script> -->
+    <!-- <?php echo '<script'; ?>
+ type="text/javascript" src="https://cdn.jsdelivr.net/html5shiv/3.7.3/html5shiv.min.js"><?php echo '</script'; ?>
+> -->
 
 </head>
 <body>
@@ -43,7 +69,8 @@
 
     <!--Header -->
 
-    {include file='public/header.tpl'}
+    <?php $_smarty_tpl->_subTemplateRender('file:public/header.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
+?>
 
     <!-- FIN : header -->
 
@@ -94,8 +121,9 @@
                         </div>
                         <div class="card-body">
 
-                            <div {if LieuxTable::getMessageSucces () neq ''} class="alert alert-success" role="alert" {/if} >
-                                {LieuxTable::getMessageSucces ()}
+                            <div <?php if (LieuxTable::getMessageSucces() != '') {?> class="alert alert-success" role="alert" <?php }?> >
+                                <?php echo LieuxTable::getMessageSucces();?>
+
                             </div>
 
                             <table id="bootstrap-data-table" class="table table-striped table-bordered">
@@ -113,16 +141,27 @@
                            </tr>
                            </thead>
                            <tbody>
-                                {foreach from=$listeLieux item=unLieux}
+                                <?php
+$_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['listeLieux']->value, 'unLieux');
+$_smarty_tpl->tpl_vars['unLieux']->do_else = true;
+if ($_from !== null) foreach ($_from as $_smarty_tpl->tpl_vars['unLieux']->value) {
+$_smarty_tpl->tpl_vars['unLieux']->do_else = false;
+?>
                                     <tr>
-                                        <td>{$unLieux->getCodeL()}</td>
-                                        <td>{$unLieux->getNom()}</td>
-                                        <td>{$unLieux->getVille()}</td>
-                                        <td>{$unLieux->getContact()}</td>
-                                        <td>{$unLieux->getTelephoneC()}</td>
+                                        <td><?php echo $_smarty_tpl->tpl_vars['unLieux']->value->getCodeL();?>
+</td>
+                                        <td><?php echo $_smarty_tpl->tpl_vars['unLieux']->value->getNom();?>
+</td>
+                                        <td><?php echo $_smarty_tpl->tpl_vars['unLieux']->value->getVille();?>
+</td>
+                                        <td><?php echo $_smarty_tpl->tpl_vars['unLieux']->value->getContact();?>
+</td>
+                                        <td><?php echo $_smarty_tpl->tpl_vars['unLieux']->value->getTelephoneC();?>
+</td>
                                         <td>
                                             <form action="index.php" method="post">
-                                                <input type="hidden" name="codel" value="{$unLieux->getCodeL()}">
+                                                <input type="hidden" name="codel" value="<?php echo $_smarty_tpl->tpl_vars['unLieux']->value->getCodeL();?>
+">
                                                 <input type="hidden" name="gestion" value="lieux">
                                                 <input type="hidden" name="action" value="form_consulter">
                                                 <input type="image" name="btn_consulter" src="public/images/icones/p16.png">
@@ -130,7 +169,8 @@
                                         </td>
                                         <td>
                                             <form action="index.php" method="post">
-                                                <input type="hidden" name="codel" value="{$unLieux->getCodeL()}">
+                                                <input type="hidden" name="codel" value="<?php echo $_smarty_tpl->tpl_vars['unLieux']->value->getCodeL();?>
+">
                                                 <input type="hidden" name="gestion" value="lieux">
                                                 <input type="hidden" name="action" value="form_modifier">
                                                 <input type="image" name="btn_modifier" src="public/images/icones/m16.png">
@@ -138,7 +178,8 @@
                                         </td>
                                         <td>
                                             <form action="index.php" method="post">
-                                                <input type="hidden" name="codel" value="{$unLieux->getCodeL()}">
+                                                <input type="hidden" name="codel" value="<?php echo $_smarty_tpl->tpl_vars['unLieux']->value->getCodeL();?>
+">
                                                 <input type="hidden" name="gestion" value="lieux">
                                                 <input type="hidden" name="action" value="form_supprimer">
                                                 <input type="image" name="btn_supprimer" src="public/images/icones/s16.png">
@@ -146,7 +187,9 @@
                                         </td>
                                     </tr>
 
-                                    {/foreach}
+                                    <?php
+}
+$_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
 
                                 </tbody>
                             </table>
@@ -162,30 +205,64 @@
                     </div><!-- /#right-panel -->
 
                     <!-- Right Panel -->
-                    <script src="public/assets/js/vendor/jquery-2.1.4.min.js"></script>
-                    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js"></script>
-                    <script src="public/assets/js/plugins.js"></script>
-                    <script src="public/assets/js/main.js"></script>
+                    <?php echo '<script'; ?>
+ src="public/assets/js/vendor/jquery-2.1.4.min.js"><?php echo '</script'; ?>
+>
+                    <?php echo '<script'; ?>
+ src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js"><?php echo '</script'; ?>
+>
+                    <?php echo '<script'; ?>
+ src="public/assets/js/plugins.js"><?php echo '</script'; ?>
+>
+                    <?php echo '<script'; ?>
+ src="public/assets/js/main.js"><?php echo '</script'; ?>
+>
 
 
-                    <script src="public/assets/js/lib/data-table/datatables.min.js"></script>
-                    <script src="public/assets/js/lib/data-table/dataTables.bootstrap.min.js"></script>
-                    <script src="public/assets/js/lib/data-table/dataTables.buttons.min.js"></script>
-                    <script src="public/assets/js/lib/data-table/buttons.bootstrap.min.js"></script>
-                    <script src="public/assets/js/lib/data-table/jszip.min.js"></script>
-                    <script src="public/assets/js/lib/data-table/pdfmake.min.js"></script>
-                    <script src="public/assets/js/lib/data-table/vfs_fonts.js"></script>
-                    <script src="public/assets/js/lib/data-table/buttons.html5.min.js"></script>
-                    <script src="public/assets/js/lib/data-table/buttons.print.min.js"></script>
-                    <script src="public/assets/js/lib/data-table/buttons.colVis.min.js"></script>
-                    <script src="public/assets/js/lib/data-table/datatables-init.js"></script>
+                    <?php echo '<script'; ?>
+ src="public/assets/js/lib/data-table/datatables.min.js"><?php echo '</script'; ?>
+>
+                    <?php echo '<script'; ?>
+ src="public/assets/js/lib/data-table/dataTables.bootstrap.min.js"><?php echo '</script'; ?>
+>
+                    <?php echo '<script'; ?>
+ src="public/assets/js/lib/data-table/dataTables.buttons.min.js"><?php echo '</script'; ?>
+>
+                    <?php echo '<script'; ?>
+ src="public/assets/js/lib/data-table/buttons.bootstrap.min.js"><?php echo '</script'; ?>
+>
+                    <?php echo '<script'; ?>
+ src="public/assets/js/lib/data-table/jszip.min.js"><?php echo '</script'; ?>
+>
+                    <?php echo '<script'; ?>
+ src="public/assets/js/lib/data-table/pdfmake.min.js"><?php echo '</script'; ?>
+>
+                    <?php echo '<script'; ?>
+ src="public/assets/js/lib/data-table/vfs_fonts.js"><?php echo '</script'; ?>
+>
+                    <?php echo '<script'; ?>
+ src="public/assets/js/lib/data-table/buttons.html5.min.js"><?php echo '</script'; ?>
+>
+                    <?php echo '<script'; ?>
+ src="public/assets/js/lib/data-table/buttons.print.min.js"><?php echo '</script'; ?>
+>
+                    <?php echo '<script'; ?>
+ src="public/assets/js/lib/data-table/buttons.colVis.min.js"><?php echo '</script'; ?>
+>
+                    <?php echo '<script'; ?>
+ src="public/assets/js/lib/data-table/datatables-init.js"><?php echo '</script'; ?>
+>
 
 
-                    <script type="text/javascript">
+                    <?php echo '<script'; ?>
+ type="text/javascript">
                         $(document).ready(function () {
                             $('#bootstrap-data-table-export').DataTable();
                         });
-                    </script>
+                    <?php echo '</script'; ?>
+>
 
 </body>
 </html>
+<?php }
+}
