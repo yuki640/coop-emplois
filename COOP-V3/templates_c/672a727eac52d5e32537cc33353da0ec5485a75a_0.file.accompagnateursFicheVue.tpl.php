@@ -1,3 +1,29 @@
+<?php
+/* Smarty version 4.3.2, created on 2023-09-12 17:43:32
+  from 'C:\laragon\www\coop-emplois\COOP-V3\mod_accompagnateurs\vue\accompagnateursFicheVue.tpl' */
+
+/* @var Smarty_Internal_Template $_smarty_tpl */
+if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
+  'version' => '4.3.2',
+  'unifunc' => 'content_6500a344e999c1_71292579',
+  'has_nocache_code' => false,
+  'file_dependency' => 
+  array (
+    '672a727eac52d5e32537cc33353da0ec5485a75a' => 
+    array (
+      0 => 'C:\\laragon\\www\\coop-emplois\\COOP-V3\\mod_accompagnateurs\\vue\\accompagnateursFicheVue.tpl',
+      1 => 1694540602,
+      2 => 'file',
+    ),
+  ),
+  'includes' => 
+  array (
+    'file:public/header.tpl' => 1,
+  ),
+),false)) {
+function content_6500a344e999c1_71292579 (Smarty_Internal_Template $_smarty_tpl) {
+$_smarty_tpl->_checkPlugins(array(0=>array('file'=>'C:\\laragon\\www\\coop-emplois\\COOP-V3\\include\\libs\\plugins\\modifier.capitalize.php','function'=>'smarty_modifier_capitalize',),));
+?>
 <!doctype html>
 <!--[if lt IE 7]>
 <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
@@ -32,7 +58,9 @@
 
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800' rel='stylesheet' type='text/css'>
 
-    <!-- <script type="text/javascript" src="https://cdn.jsdelivr.net/html5shiv/3.7.3/html5shiv.min.js"></script> -->
+    <!-- <?php echo '<script'; ?>
+ type="text/javascript" src="https://cdn.jsdelivr.net/html5shiv/3.7.3/html5shiv.min.js"><?php echo '</script'; ?>
+> -->
 
 </head>
 
@@ -50,7 +78,8 @@
 
     <!--Header -->
 
-    {include file='public/header.tpl'}
+    <?php $_smarty_tpl->_subTemplateRender('file:public/header.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
+?>
 
     <!-- FIN : header -->
 
@@ -85,44 +114,52 @@
 
                 <div class="col-md-6">
 
-                    <div {if AccompagnateursTable::getMessageErreur () neq ''} class="alert alert-danger" role="alert" {/if} >
-                        {AccompagnateursTable::getMessageErreur ()}
+                    <div <?php if (AccompagnateursTable::getMessageErreur() != '') {?> class="alert alert-danger" role="alert" <?php }?> >
+                        <?php echo AccompagnateursTable::getMessageErreur();?>
+
                     </div>
 
                     <div class="card">
-                        <div class="card-header"><strong>{$titrePage}</strong></div>
+                        <div class="card-header"><strong><?php echo $_smarty_tpl->tpl_vars['titrePage']->value;?>
+</strong></div>
                         <form action="index.php" method="POST">
 
                             <!-- PLACER LE FORMULAIRE EN CONSULTATION -->
 
                             <input type="hidden" name="gestion" value="accompagnateurs">
 
-                            <input type="hidden" name="action" value="{$action}">
+                            <input type="hidden" name="action" value="<?php echo $_smarty_tpl->tpl_vars['action']->value;?>
+">
 
-                            <input type="hidden" name="datec" value="{date("d/m/Y H:i:s",time())}" >
+                            <input type="hidden" name="datec" value="<?php echo date("d/m/Y H:i:s",time());?>
+" >
 
-                            <input type="hidden" name="datem" value="{date("d/m/Y H:i:s",time())}">
+                            <input type="hidden" name="datem" value="<?php echo date("d/m/Y H:i:s",time());?>
+">
 
                             <div class="card-body card-block">
 
-                                {if $action neq 'ajouter'}
+                                <?php if ($_smarty_tpl->tpl_vars['action']->value != 'ajouter') {?>
                                     <div class="form-group">
                                         <label for="text" class=" form-control">
                                             Code accompagnateurs :
                                         </label>
                                         <input type="text" name="codea" class="form-control"
-                                               value="{$unAccompagnateurs->getCodeA()}"
+                                               value="<?php echo $_smarty_tpl->tpl_vars['unAccompagnateurs']->value->getCodeA();?>
+"
                                                readonly>
                                     </div>
-                                {/if}
+                                <?php }?>
 
                                 <div class="form-group">
                                     <label for="text" class=" form-control">
                                         Nom <sup>(*)</sup>:
                                     </label>
                                     <input type="text" name="nom" class="form-control"
-                                           value="{$unAccompagnateurs->getNom()}"
-                                            {$readonly}
+                                           value="<?php echo $_smarty_tpl->tpl_vars['unAccompagnateurs']->value->getNom();?>
+"
+                                            <?php echo $_smarty_tpl->tpl_vars['readonly']->value;?>
+
                                             required
                                     >
                                 </div>
@@ -132,7 +169,9 @@
                                         Prénom <sup>(*)</sup>:
                                     </label>
                                     <input type="text" name="prenom" class="form-control"
-                                           value="{$unAccompagnateurs->getPrenom()}" {$readonly}>
+                                           value="<?php echo $_smarty_tpl->tpl_vars['unAccompagnateurs']->value->getPrenom();?>
+" <?php echo $_smarty_tpl->tpl_vars['readonly']->value;?>
+>
                                 </div>
 
                                 <div class="form-group">
@@ -140,7 +179,9 @@
                                        Téléphone <sup>(*)</sup>:
                                     </label>
                                     <input type="text" name="prenom" class="form-control"
-                                           value="{$unAccompagnateurs->getTelephone()}" {$readonly}>
+                                           value="<?php echo $_smarty_tpl->tpl_vars['unAccompagnateurs']->value->getTelephone();?>
+" <?php echo $_smarty_tpl->tpl_vars['readonly']->value;?>
+>
                                 </div>
 
                                 <div class="form-group">
@@ -148,7 +189,9 @@
                                         Email <sup>(*)</sup>:
                                     </label>
                                     <input type="text" name="email" class="form-control"
-                                           value="{$unAccompagnateurs->getEmail()}" {$readonly}>
+                                           value="<?php echo $_smarty_tpl->tpl_vars['unAccompagnateurs']->value->getEmail();?>
+" <?php echo $_smarty_tpl->tpl_vars['readonly']->value;?>
+>
                                 </div>
 
                                 <div class="form-group">
@@ -156,17 +199,12 @@
                                         Specialisation :
                                     </label>
                                     <input type="text" name="specialisation" class="form-control"
-                                           value="{$unAccompagnateurs->getSpecialisation()}" {$readonly}>
+                                           value="<?php echo $_smarty_tpl->tpl_vars['unAccompagnateurs']->value->getSpecialisation();?>
+" <?php echo $_smarty_tpl->tpl_vars['readonly']->value;?>
+>
                                 </div>
 
-                                {* <div class="form-group">
-                                    <label for="text" class=" form-control">
-                                        Login <sup>(*)</sup>:
-                                    </label>
-                                    <input type="text" name="login" class="form-control"
-                                           value="{$unAccompagnateurs->getLogin()}" {$readonly}>
-                                </div> *}
-
+                                
                                 
 
                                 <div class="card-body card-block">
@@ -179,12 +217,13 @@
                                     </div>
 
                                     <div class="col-md-6">
-                                        {if $action != 'consulter'}
+                                        <?php if ($_smarty_tpl->tpl_vars['action']->value != 'consulter') {?>
                                             <input type="submit"
                                                    class="btn btn-submit"
                                                    name="btn-valider"
-                                                   value="{$action|capitalize}">
-                                        {/if}
+                                                   value="<?php echo smarty_modifier_capitalize($_smarty_tpl->tpl_vars['action']->value);?>
+">
+                                        <?php }?>
 
                                     </div>
                                     <br>
@@ -202,31 +241,64 @@
     </div><!-- /#right-panel -->
 
     <!-- Right Panel -->
-    <script src="public/assets/js/vendor/jquery-2.1.4.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js"></script>
-    <script src="public/assets/js/plugins.js"></script>
-    <script src="public/assets/js/main.js"></script>
+    <?php echo '<script'; ?>
+ src="public/assets/js/vendor/jquery-2.1.4.min.js"><?php echo '</script'; ?>
+>
+    <?php echo '<script'; ?>
+ src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js"><?php echo '</script'; ?>
+>
+    <?php echo '<script'; ?>
+ src="public/assets/js/plugins.js"><?php echo '</script'; ?>
+>
+    <?php echo '<script'; ?>
+ src="public/assets/js/main.js"><?php echo '</script'; ?>
+>
 
 
-    <script src="public/assets/js/lib/data-table/datatables.min.js"></script>
-    <script src="public/assets/js/lib/data-table/dataTables.bootstrap.min.js"></script>
-    <script src="public/assets/js/lib/data-table/dataTables.buttons.min.js"></script>
-    <script src="public/assets/js/lib/data-table/buttons.bootstrap.min.js"></script>
-    <script src="public/assets/js/lib/data-table/jszip.min.js"></script>
-    <script src="public/assets/js/lib/data-table/pdfmake.min.js"></script>
-    <script src="public/assets/js/lib/data-table/vfs_fonts.js"></script>
-    <script src="public/assets/js/lib/data-table/buttons.html5.min.js"></script>
-    <script src="public/assets/js/lib/data-table/buttons.print.min.js"></script>
-    <script src="public/assets/js/lib/data-table/buttons.colVis.min.js"></script>
-    <script src="public/assets/js/lib/data-table/datatables-init.js"></script>
+    <?php echo '<script'; ?>
+ src="public/assets/js/lib/data-table/datatables.min.js"><?php echo '</script'; ?>
+>
+    <?php echo '<script'; ?>
+ src="public/assets/js/lib/data-table/dataTables.bootstrap.min.js"><?php echo '</script'; ?>
+>
+    <?php echo '<script'; ?>
+ src="public/assets/js/lib/data-table/dataTables.buttons.min.js"><?php echo '</script'; ?>
+>
+    <?php echo '<script'; ?>
+ src="public/assets/js/lib/data-table/buttons.bootstrap.min.js"><?php echo '</script'; ?>
+>
+    <?php echo '<script'; ?>
+ src="public/assets/js/lib/data-table/jszip.min.js"><?php echo '</script'; ?>
+>
+    <?php echo '<script'; ?>
+ src="public/assets/js/lib/data-table/pdfmake.min.js"><?php echo '</script'; ?>
+>
+    <?php echo '<script'; ?>
+ src="public/assets/js/lib/data-table/vfs_fonts.js"><?php echo '</script'; ?>
+>
+    <?php echo '<script'; ?>
+ src="public/assets/js/lib/data-table/buttons.html5.min.js"><?php echo '</script'; ?>
+>
+    <?php echo '<script'; ?>
+ src="public/assets/js/lib/data-table/buttons.print.min.js"><?php echo '</script'; ?>
+>
+    <?php echo '<script'; ?>
+ src="public/assets/js/lib/data-table/buttons.colVis.min.js"><?php echo '</script'; ?>
+>
+    <?php echo '<script'; ?>
+ src="public/assets/js/lib/data-table/datatables-init.js"><?php echo '</script'; ?>
+>
 
 
-    <script type="text/javascript">
+    <?php echo '<script'; ?>
+ type="text/javascript">
         $(document).ready(function () {
             $('#bootstrap-data-table-export').DataTable();
         });
-    </script>
+    <?php echo '</script'; ?>
+>
 
 </body>
 
-</html>
+</html><?php }
+}

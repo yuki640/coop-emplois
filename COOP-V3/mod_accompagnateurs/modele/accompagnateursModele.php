@@ -33,28 +33,22 @@ class AccompagnateursModele extends Modele
 
     public function getUnAccompagnateurs()
     {
-        $sql = "SELECT * FROM accompagnateurs WHERE codeL = ?";
-        $idRequete = $this->executeRequete($sql, [$this->parametre['codel']]); // requête préparée
+        $sql = "SELECT * FROM accompagnateurs WHERE codeA = ?";
+        $idRequete = $this->executeRequete($sql, [$this->parametre['codea']]); // requête préparée
 
         return new AccompagnateursTable($idRequete->fetch(PDO::FETCH_ASSOC));
     }
 
-    public function addAccompagnateurs(accompagnateursTable $valeurs)
+    public function addAccompagnateurs(AccompagnateursTable $valeurs)
     {
-        $sql = "INSERT INTO accompagnateurs (nom, adresse1, adresse2, adresse3, adresse4, codePostal, ville,
-                    telephoneS, contact, telephoneC, capacite) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+        $sql = "INSERT INTO accompagnateurs (nom, prenom, telephone, email, specialisation) VALUES (?, ?, ?, ?, ?)";
         $idRequete = $this->executeRequete($sql, [
             $valeurs->getNom(),
-            $valeurs->getAdresse1(),
-            $valeurs->getAdresse2(),
-            $valeurs->getAdresse3(),
-            $valeurs->getAdresse4(),
-            $valeurs->getCodepostal(),
-            $valeurs->getVille(),
-            $valeurs->getTelephoneS(),
-            $valeurs->getContact(),
-            $valeurs->getTelephoneC(),
-            $valeurs->getCapacite(),
+            $valeurs->getPrenom(),
+            $valeurs->getTelephone(),
+            $valeurs->getEmail(),
+            $valeurs->getSpecialisation()
+
         ]);
 
         if ($idRequete) {
@@ -65,9 +59,9 @@ class AccompagnateursModele extends Modele
 
     public function deleteAccompagnateurs(AccompagnateursTable $valeurs)
     {
-        $sql = "DELETE FROM accompagnateurs where codeL = ?";
+        $sql = "DELETE FROM accompagnateurs where codeA = ?";
         $idRequete = $this->executeRequete($sql, [
-            $valeurs->getCodeL()
+            $valeurs->getCodeA()
         ]);
         if ($idRequete) {
             AccompagnateursTable::setMessageSucces("Suppression du accompagnateurs correctement effectué.");
@@ -92,23 +86,15 @@ class AccompagnateursModele extends Modele
 
     public function updateAccompagnateurs(AccompagnateursTable $valeurs)
     {
-        $sql = "UPDATE accompagnateurs SET nom = ?, adresse1 = ?,adresse2 = ?,adresse3 = ?,adresse4 = ?, code_postal = ?,
-                 ville = ?, telephone_s = ?,contact= ?, telephone_c = ?, capacite = ?, date_m = ?
-             WHERE codeL = ?";
+        $sql = "UPDATE accompagnateurs SET nom = ?, prenom = ?,telephone = ?,email = ?,specialisation = ?, date_m = ? WHERE codea = ?";
         $idRequete = $this->executeRequete($sql, [
             $valeurs->getNom(),
-            $valeurs->getAdresse1(),
-            $valeurs->getAdresse2(),
-            $valeurs->getAdresse3(),
-            $valeurs->getAdresse4(),
-            $valeurs->getCodePostal(),
-            $valeurs->getVille(),
-            $valeurs->getTelephoneS(),
-            $valeurs->getContact(),
-            $valeurs->getTelephoneC(),
-            $valeurs->getCapacite(),
-            $valeurs->getDateM(),
-            $valeurs->getCodeL(),
+            $valeurs->getPrenom(),
+            $valeurs->getTelephone(),
+            $valeurs->getEmail(),
+            $valeurs->getSpecialisation(),
+            $valeurs->getDate_m(),
+            $valeurs->getCodea(),
         ]);
         if ($idRequete) {
             AccompagnateursTable::setMessageSucces("Modification du accompagnateurs correctement effectué.");

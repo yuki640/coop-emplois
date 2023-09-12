@@ -1,20 +1,14 @@
 <?php
 Class AccompagnateursTable{
 
-    private $codel=""; //getCodec | setCodec
+    private $codea=""; //getCodec | setCodec
     private $nom=""; // getPrix_unitaire_HT
-    private $adresse1="";
-    private $adresse2="";
-    private $adresse3="";
-    private $adresse4="";
-    private $codePostal="";
-    private $ville="";
-    private $telephoneS="";
-    private $contact="";
-    private $telephoneC="";
-    private $capacite="";
-    private $dateC="";
-    private $dateM="";
+    private $prenom="";
+    private $telephone="";
+    private $email="";
+    private $specialisation="";
+    private $date_C="";
+    private $date_M="";
 
     private $autorisationBD = true;
     private static $messageErreur = "";
@@ -41,13 +35,12 @@ Class AccompagnateursTable{
         }
     }
 
-// Getters
     /**
      * @return string
      */
-    public function getCodel()
+    public function getCodea()
     {
-        return $this->codel;
+        return $this->codea;
     }
 
     /**
@@ -61,98 +54,53 @@ Class AccompagnateursTable{
     /**
      * @return string
      */
-    public function getAdresse1()
+    public function getPrenom()
     {
-        return $this->adresse1;
+        return $this->prenom;
     }
 
     /**
      * @return string
      */
-    public function getAdresse2()
+    public function getTelephone()
     {
-        return $this->adresse2;
+        return $this->telephone;
     }
 
     /**
      * @return string
      */
-    public function getAdresse3()
+    public function getEmail()
     {
-        return $this->adresse3;
+        return $this->email;
     }
 
     /**
      * @return string
      */
-    public function getAdresse4()
+    public function getSpecialisation()
     {
-        return $this->adresse4;
+        return $this->specialisation;
     }
 
     /**
      * @return string
      */
-    public function getCodepostal()
+    public function getDate_C()
     {
-        return $this->codePostal;
+        return $this->date_C;
     }
 
     /**
      * @return string
      */
-    public function getVille()
+    public function getDate_M()
     {
-        return $this->ville;
+        return $this->date_M;
     }
 
-    /**
-     * @return string
-     */
-    public function getTelephoneS()
-    {
-        return $this->telephoneS;
-    }
 
-    /**
-     * @return string
-     */
-    public function getContact()
-    {
-        return $this->contact;
-    }
 
-    /**
-     * @return string
-     */
-    public function getTelephoneC()
-    {
-        return $this->telephoneC;
-    }
-
-    /**
-     * @return string
-     */
-    public function getCapacite()
-    {
-        return $this->capacite;
-    }
-
-    /**
-     * @return string
-     */
-    public function getDateC()
-    {
-        return $this->dateC;
-    }
-
-    /**
-     * @return string
-     */
-    public function getDateM()
-    {
-        return $this->dateM;
-    }
 
     /**
      * @return bool
@@ -178,145 +126,81 @@ Class AccompagnateursTable{
         return self::$messageSucces;
     }
 
+
+
+
+
  // Setters
+
+
+
+
+
     /**
-     * @param mixed $codel
+     * @param string $codea
      */
-    public function setCodeL($codel)
+    public function setCodea(string $codea)
     {
-        $this->codel = $codel;
+        $this->codea = $codea;
     }
 
     /**
-     * @param mixed $nom
+     * @param string $nom
      */
-    public function setNom($nom)
+    public function setNom(string $nom)
     {
-        if(empty($nom) || ctype_space(strval($nom))) {
-            $this->setAutorisationBD(false);
-            self :: setMessageErreur("Le nom est obligatoire. <br>");
-        }
         $this->nom = $nom;
     }
 
     /**
-     * @param string $adresse1
+     * @param string $prenom
      */
-    public function setAdresse1(string $adresse1)
+    public function setPrenom(string $prenom)
     {
-        $this->adresse1 = $adresse1;
-    }
-
-
-
-    /**
-     * @param string $adresse2
-     */
-    public function setAdresse2(string $adresse2)
-    {
-        $this->adresse2 = $adresse2;
+        $this->prenom = $prenom;
     }
 
     /**
-     * @param string $adresse3
+     * @param string $telephone
      */
-    public function setAdresse3(string $adresse3)
+    public function setTelephone(string $telephone)
     {
-        $this->adresse3 = $adresse3;
+        $this->telephone = $telephone;
     }
 
     /**
-     * @param string $adresse4
+     * @param string $email
      */
-    public function setAdresse4(string $adresse4)
+    public function setEmail(string $email)
     {
-        $this->adresse4 = $adresse4;
+        $this->email = $email;
     }
 
     /**
-     * @param mixed $codePostal
+     * @param string $specialisation
      */
-    public function setCodePostal($codePostal)
+    public function setSpecialisation(string $specialisation)
     {
-        if(empty($codePostal) || ctype_space(strval($codePostal))) {
-            $this->setAutorisationBD(false);
-            self :: setMessageErreur("Le code postal est obligatoire. <br>");
-        }
-        $this->codePostal = $codePostal;
+        $this->specialisation = $specialisation;
     }
 
     /**
-     * @param mixed $ville
+     * @param string $date_C
      */
-    public function setVille($ville)
+    public function setDateC(string $date_C)
     {
-        $this->ville = $ville;
-        if(empty($ville) || ctype_space(strval($ville))) {
-            $this->setAutorisationBD(false);
-            self :: setMessageErreur("La ville est obligatoire. <br>");
-        }
+        $this->dateC = $date_C;
     }
 
     /**
-     * @param string $telephoneS
+     * @param string $date_M
      */
-    public function setTelephoneS(string $telephoneS)
+    public function setDateM(string $date_M)
     {
-        $this->telephoneS = $telephoneS;
+        $this->dateM = $date_M;
     }
 
 
-    /**
-     * @param string $contact
-     */
-    public function setContact(string $contact)
-    {
-        $this->contact = $contact;
-        if(empty($contact) || ctype_space(strval($contact))) {
-            $this->setAutorisationBD(false);
-            self :: setMessageErreur("Le contact est obligatoire. <br>");
-        }
-    }
-
-    /**
-     * @param mixed $telephoneC
-     */
-    public function setTelephoneC($telephoneC)
-    {
-        if(empty($telephoneC) || ctype_space(strval($telephoneC))) {
-            $this->setAutorisationBD(false);
-            self :: setMessageErreur("Le téléphone du contact est obligatoire. <br>");
-        }
-        $this->telephoneC = $telephoneC;
-    }
-
-    /**
-     * @param string $capacite
-     */
-    public function setCapacite(string $capacite)
-    {
-        $this->capacite = $capacite;
-        if(empty($capacite) || ctype_space(strval($capacite))) {
-            $this->setAutorisationBD(false);
-            self :: setMessageErreur("La ville est obligatoire. <br>");
-        }
-    }
-
-    /**
-     * @param string $dateC
-     */
-    public function setDateC(string $dateC)
-    {
-        $this->dateC = $dateC;
-    }
-
-    /**
-     * @param string $dateM
-     */
-    public function setDateM(string $dateM)
-    {
-        $this->dateM = $dateM;
-    }
 
     /**
      * @param bool $autorisationBD

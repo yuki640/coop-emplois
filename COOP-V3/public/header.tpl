@@ -22,7 +22,7 @@
             </li>
             <li><a href="#"">Entretiens</a></li>
             <li><a href="#">Porteurs de Projet</a></li>
-            <li><a href="#">Accompagnateurs</a></li>
+            <li><a href="index.php?gestion=accompagnateurs">Accompagnateurs</a></li>
            
             <li class="dropdown">
                 <a href="#" class="dropbtn">Paramètres</a>
