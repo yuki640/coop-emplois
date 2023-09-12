@@ -149,6 +149,10 @@ Class AccompagnateursTable{
      */
     public function setNom(string $nom)
     {
+        if(empty($nom) || ctype_space(strval($nom))) {
+            $this->setAutorisationBD(false);
+            self :: setMessageErreur("Le nom est obligatoire. <br>");
+        }
         $this->nom = $nom;
     }
 
@@ -157,6 +161,10 @@ Class AccompagnateursTable{
      */
     public function setPrenom(string $prenom)
     {
+        if(empty($prenom) || ctype_space(strval($prenom))) {
+            $this->setAutorisationBD(false);
+            self :: setMessageErreur("Le prenom est obligatoire. <br>");
+        }
         $this->prenom = $prenom;
     }
 
@@ -165,7 +173,10 @@ Class AccompagnateursTable{
      */
     public function setTelephone(string $telephone)
     {
-        $this->telephone = $telephone;
+        if(empty($telephone) || ctype_space(strval($telephone))) {
+            $this->setAutorisationBD(false);
+            self :: setMessageErreur("Le telephone est obligatoire. <br>");
+        }
     }
 
     /**
@@ -173,6 +184,10 @@ Class AccompagnateursTable{
      */
     public function setEmail(string $email)
     {
+        if(empty($email) || ctype_space(strval($email))) {
+            $this->setAutorisationBD(false);
+            self :: setMessageErreur("Le email est obligatoire. <br>");
+        }
         $this->email = $email;
     }
 

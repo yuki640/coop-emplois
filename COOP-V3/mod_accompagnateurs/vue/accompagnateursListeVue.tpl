@@ -107,6 +107,7 @@
                                <th>Nom de L'Accompagnateurs</th>
                                <th>Prenom</th>
                                <th>Téléphone</th>
+                               <th>specialisation</th>
 
                                <th class="pos-actions">Consulter</th>
                                <th class="pos-actions">Modifier</th>
@@ -118,9 +119,10 @@
                                     <tr>
                                         <td>{$unAccompagnateurs->getCodeA()}</td>
                                         <td>{$unAccompagnateurs->getNom()}</td>
-                                        <td>{$unAccompagnateurs->getVille()}</td>
-                                        <td>{$unAccompagnateurs->getTelephoneS()}</td>
-                                        <td>
+                                        <td>{$unAccompagnateurs->getPrenom()}</td>
+                                        <td>{$unAccompagnateurs->getTelephone()}</td>
+                                        <td>{$unAccompagnateurs->getSpecialisation()}</td>
+                                        
                                             <form action="index.php" method="post">
                                                 <input type="hidden" name="codea" value="{$unAccompagnateurs->getCodeA()}">
                                                 <input type="hidden" name="gestion" value="accompagnateurs">
