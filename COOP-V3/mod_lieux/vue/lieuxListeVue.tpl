@@ -102,10 +102,11 @@
                                 <!-- PLACER LA LISTE DES CLIENTS -->
                            <thead>
                            <tr>
-                               <th>Code Lieux</th>
-                               <th>Nom du lieux</th>
+                               <th>ID</th>
+                               <th>Nom</th>
                                <th>Ville</th>
-                               <th>Téléphone Salle</th>
+                               <th>Contact</th>
+                               <th>Téléphone</th>
                                <th class="pos-actions">Consulter</th>
                                <th class="pos-actions">Modifier</th>
                                <th class="pos-actions">Supprimer</th>
@@ -117,7 +118,8 @@
                                         <td>{$unLieux->getCodeL()}</td>
                                         <td>{$unLieux->getNom()}</td>
                                         <td>{$unLieux->getVille()}</td>
-                                        <td>{$unLieux->getTelephoneS()}</td>
+                                        <td>{$unLieux->getContact()}</td>
+                                        <td>{$unLieux->getTelephoneC()}</td>
                                         <td>
                                             <form action="index.php" method="post">
                                                 <input type="hidden" name="codel" value="{$unLieux->getCodeL()}">
@@ -158,7 +160,7 @@
 
 
                     </div><!-- /#right-panel -->
-    {include file='public/footer.tpl'}
+
                     <!-- Right Panel -->
                     <script src="public/assets/js/vendor/jquery-2.1.4.min.js"></script>
                     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js"></script>
