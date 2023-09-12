@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.3.2, created on 2023-09-12 17:26:33
+/* Smarty version 4.3.2, created on 2023-09-12 18:09:05
   from 'C:\laragon\www\coop-emplois\COOP-V3\mod_Accompagnateurs\vue\AccompagnateursListeVue.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.2',
-  'unifunc' => 'content_65009f493a2942_88897522',
+  'unifunc' => 'content_6500a9419157e7_11987984',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'f491b028b73d10bf41a828419bf57b3b640edb88' => 
     array (
       0 => 'C:\\laragon\\www\\coop-emplois\\COOP-V3\\mod_Accompagnateurs\\vue\\AccompagnateursListeVue.tpl',
-      1 => 1694539585,
+      1 => 1694542070,
       2 => 'file',
     ),
   ),
@@ -21,7 +21,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:public/header.tpl' => 1,
   ),
 ),false)) {
-function content_65009f493a2942_88897522 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6500a9419157e7_11987984 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!doctype html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
@@ -148,7 +148,7 @@ if ($_from !== null) foreach ($_from as $_smarty_tpl->tpl_vars['unAccompagnateur
 $_smarty_tpl->tpl_vars['unAccompagnateurs']->do_else = false;
 ?>
                                     <tr>
-                                        <td><?php echo $_smarty_tpl->tpl_vars['unAccompagnateurs']->value->getCodeL();?>
+                                        <td><?php echo $_smarty_tpl->tpl_vars['unAccompagnateurs']->value->getCodeA();?>
 </td>
                                         <td><?php echo $_smarty_tpl->tpl_vars['unAccompagnateurs']->value->getNom();?>
 </td>
@@ -158,7 +158,7 @@ $_smarty_tpl->tpl_vars['unAccompagnateurs']->do_else = false;
 </td>
                                         <td>
                                             <form action="index.php" method="post">
-                                                <input type="hidden" name="codel" value="<?php echo $_smarty_tpl->tpl_vars['unAccompagnateurs']->value->getCodeL();?>
+                                                <input type="hidden" name="codea" value="<?php echo $_smarty_tpl->tpl_vars['unAccompagnateurs']->value->getCodeA();?>
 ">
                                                 <input type="hidden" name="gestion" value="accompagnateurs">
                                                 <input type="hidden" name="action" value="form_consulter">
@@ -167,7 +167,7 @@ $_smarty_tpl->tpl_vars['unAccompagnateurs']->do_else = false;
                                         </td>
                                         <td>
                                             <form action="index.php" method="post">
-                                                <input type="hidden" name="codel" value="<?php echo $_smarty_tpl->tpl_vars['unAccompagnateurs']->value->getCodeL();?>
+                                                <input type="hidden" name="codea" value="<?php echo $_smarty_tpl->tpl_vars['unAccompagnateurs']->value->getCodeA();?>
 ">
                                                 <input type="hidden" name="gestion" value="accompagnateurs">
                                                 <input type="hidden" name="action" value="form_modifier">
@@ -176,7 +176,7 @@ $_smarty_tpl->tpl_vars['unAccompagnateurs']->do_else = false;
                                         </td>
                                         <td>
                                             <form action="index.php" method="post">
-                                                <input type="hidden" name="codel" value="<?php echo $_smarty_tpl->tpl_vars['unAccompagnateurs']->value->getCodeL();?>
+                                                <input type="hidden" name="codea" value="<?php echo $_smarty_tpl->tpl_vars['unAccompagnateurs']->value->getCodeA();?>
 ">
                                                 <input type="hidden" name="gestion" value="accompagnateurs">
                                                 <input type="hidden" name="action" value="form_supprimer">

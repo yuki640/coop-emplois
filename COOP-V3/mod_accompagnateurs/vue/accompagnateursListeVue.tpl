@@ -104,9 +104,10 @@
                            <thead>
                            <tr>
                                <th>Code Accompagnateurs</th>
-                               <th>Nom du Accompagnateurs</th>
-                               <th>Ville</th>
-                               <th>Téléphone Salle</th>
+                               <th>Nom de L'Accompagnateurs</th>
+                               <th>Prenom</th>
+                               <th>Téléphone</th>
+
                                <th class="pos-actions">Consulter</th>
                                <th class="pos-actions">Modifier</th>
                                <th class="pos-actions">Supprimer</th>
@@ -115,13 +116,13 @@
                            <tbody>
                                 {foreach from=$listeAccompagnateurs item=unAccompagnateurs}
                                     <tr>
-                                        <td>{$unAccompagnateurs->getCodeL()}</td>
+                                        <td>{$unAccompagnateurs->getCodeA()}</td>
                                         <td>{$unAccompagnateurs->getNom()}</td>
                                         <td>{$unAccompagnateurs->getVille()}</td>
                                         <td>{$unAccompagnateurs->getTelephoneS()}</td>
                                         <td>
                                             <form action="index.php" method="post">
-                                                <input type="hidden" name="codel" value="{$unAccompagnateurs->getCodeL()}">
+                                                <input type="hidden" name="codea" value="{$unAccompagnateurs->getCodeA()}">
                                                 <input type="hidden" name="gestion" value="accompagnateurs">
                                                 <input type="hidden" name="action" value="form_consulter">
                                                 <input type="image" name="btn_consulter" src="public/images/icones/p16.png">
@@ -129,7 +130,7 @@
                                         </td>
                                         <td>
                                             <form action="index.php" method="post">
-                                                <input type="hidden" name="codel" value="{$unAccompagnateurs->getCodeL()}">
+                                                <input type="hidden" name="codea" value="{$unAccompagnateurs->getCodeA()}">
                                                 <input type="hidden" name="gestion" value="accompagnateurs">
                                                 <input type="hidden" name="action" value="form_modifier">
                                                 <input type="image" name="btn_modifier" src="public/images/icones/m16.png">
@@ -137,7 +138,7 @@
                                         </td>
                                         <td>
                                             <form action="index.php" method="post">
-                                                <input type="hidden" name="codel" value="{$unAccompagnateurs->getCodeL()}">
+                                                <input type="hidden" name="codea" value="{$unAccompagnateurs->getCodeA()}">
                                                 <input type="hidden" name="gestion" value="accompagnateurs">
                                                 <input type="hidden" name="action" value="form_supprimer">
                                                 <input type="image" name="btn_supprimer" src="public/images/icones/s16.png">
