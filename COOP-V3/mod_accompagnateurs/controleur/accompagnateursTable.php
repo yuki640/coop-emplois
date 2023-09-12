@@ -177,6 +177,7 @@ Class AccompagnateursTable{
             $this->setAutorisationBD(false);
             self :: setMessageErreur("Le telephone est obligatoire. <br>");
         }
+        $this->telephone = $telephone;
     }
 
     /**

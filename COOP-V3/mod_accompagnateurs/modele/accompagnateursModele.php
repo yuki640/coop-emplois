@@ -48,8 +48,11 @@ class AccompagnateursModele extends Modele
             $valeurs->getTelephone(),
             $valeurs->getEmail(),
             $valeurs->getSpecialisation()
-
+            
         ]);
+
+        // var_dump($valeurs);
+        //     die();
 
         if ($idRequete) {
 
@@ -86,14 +89,13 @@ class AccompagnateursModele extends Modele
 
     public function updateAccompagnateurs(AccompagnateursTable $valeurs)
     {
-        $sql = "UPDATE accompagnateurs SET nom = ?, prenom = ?,telephone = ?,email = ?,specialisation = ?, date_m = ? WHERE codea = ?";
+        $sql = "UPDATE accompagnateurs SET nom = ?, prenom = ?,telephone = ?,email = ?,specialisation = ? WHERE codea = ?";
         $idRequete = $this->executeRequete($sql, [
             $valeurs->getNom(),
             $valeurs->getPrenom(),
             $valeurs->getTelephone(),
             $valeurs->getEmail(),
             $valeurs->getSpecialisation(),
-            $valeurs->getDate_m(),
             $valeurs->getCodea(),
         ]);
         if ($idRequete) {

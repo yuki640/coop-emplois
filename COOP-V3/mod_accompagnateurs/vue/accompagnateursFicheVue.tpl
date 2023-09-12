@@ -139,7 +139,7 @@
                                     <label for="text" class=" form-control">
                                        Téléphone <sup>(*)</sup>:
                                     </label>
-                                    <input type="text" name="prenom" class="form-control"
+                                    <input type="text" name="telephone" class="form-control"
                                            value="{$unAccompagnateurs->getTelephone()}" {$readonly}>
                                 </div>
 

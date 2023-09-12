@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.3.2, created on 2023-09-12 17:43:32
+/* Smarty version 4.3.2, created on 2023-09-12 18:31:36
   from 'C:\laragon\www\coop-emplois\COOP-V3\mod_accompagnateurs\vue\accompagnateursFicheVue.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.2',
-  'unifunc' => 'content_6500a344e999c1_71292579',
+  'unifunc' => 'content_6500ae88e6f8e1_92432407',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '672a727eac52d5e32537cc33353da0ec5485a75a' => 
     array (
       0 => 'C:\\laragon\\www\\coop-emplois\\COOP-V3\\mod_accompagnateurs\\vue\\accompagnateursFicheVue.tpl',
-      1 => 1694540602,
+      1 => 1694543465,
       2 => 'file',
     ),
   ),
@@ -21,7 +21,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:public/header.tpl' => 1,
   ),
 ),false)) {
-function content_6500a344e999c1_71292579 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6500ae88e6f8e1_92432407 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'C:\\laragon\\www\\coop-emplois\\COOP-V3\\include\\libs\\plugins\\modifier.capitalize.php','function'=>'smarty_modifier_capitalize',),));
 ?>
 <!doctype html>
@@ -178,7 +178,7 @@ $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'C:\\laragon\\www\\coop-emplo
                                     <label for="text" class=" form-control">
                                        Téléphone <sup>(*)</sup>:
                                     </label>
-                                    <input type="text" name="prenom" class="form-control"
+                                    <input type="text" name="telephone" class="form-control"
                                            value="<?php echo $_smarty_tpl->tpl_vars['unAccompagnateurs']->value->getTelephone();?>
 " <?php echo $_smarty_tpl->tpl_vars['readonly']->value;?>
 >
