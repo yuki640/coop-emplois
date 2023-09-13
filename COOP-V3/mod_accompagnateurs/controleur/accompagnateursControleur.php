@@ -44,12 +44,19 @@ class AccompagnateursControleur
         $controleAccompagnateurs = new AccompagnateursTable($this->parametre);
 
         if ($controleAccompagnateurs->getAutorisationBD() == false) {
-            //Retour à la fiche
-            $this->oVue->genererAffichageFiche($controleAccompagnateurs);
+                //Retour à la fiche
+                $this->oVue->genererAffichageFiche($controleAccompagnateurs);
         } else {
-            // Insertion BD puis retour liste des Accompagnateurs
-            $this->oModele->addAccompagnateurs($controleAccompagnateurs);
-            $this->lister();
+            // Vérification de l'adresse mail
+
+            if($this->oModele->verifieMail($controleAccompagnateurs) == false) {
+                //Retour à la fiche
+                $this->oVue->genererAffichageFiche($controleAccompagnateurs);
+            }else {
+                // Insertion BD puis retour liste des Accompagnateurs
+                $this->oModele->addAccompagnateurs($controleAccompagnateurs);
+                $this->lister();
+            }
         }
     }
 
@@ -85,9 +92,14 @@ class AccompagnateursControleur
             //Retour à la fiche
             $this->oVue->genererAffichageFiche($controleAccompagnateurs);
         } else {
-            // Insertion BD puis retour liste des Accompagnateurs
-            $this->oModele->updateAccompagnateurs($controleAccompagnateurs);
-            $this->lister();
+            if($this->oModele->verifieMail($controleAccompagnateurs) == false) {
+                //Retour à la fiche
+                $this->oVue->genererAffichageFiche($controleAccompagnateurs);
+            }else {
+                // Insertion BD puis retour liste des Accompagnateurs
+                $this->oModele->addAccompagnateurs($controleAccompagnateurs);
+                $this->lister();
+            }
         }
     }
 }

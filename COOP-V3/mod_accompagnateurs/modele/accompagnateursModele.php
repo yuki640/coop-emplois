@@ -71,21 +71,21 @@ class AccompagnateursModele extends Modele
         }
     }
 
-//    public function verifieAssignation(AccompagnateursTable $valeurs)
-//    {
-//        $sql = "select * from accompagnateur where codeA = ?";
-//        $idRequete = $this->executeRequete($sql, [
-//            $valeurs->getidentifiant()
-//        ]);
-//
-//        $rowCount = $idRequete->rowCount();
-//
-//        if ($rowCount > 0) {
-//            ClientTable::setMessageErreur("Suppression du accompagnateurs impossible car ce client posséde une réunion");
-//            return false;
-//        }
-//        return true;
-//    }
+    public function verifieMail(AccompagnateursTable $valeurs)
+    {
+        $sql = "select * from accompagnateurs where email = ?";
+        $idRequete = $this->executeRequete($sql, [
+            $valeurs->getEmail()
+        ]);
+
+        $rowCount = $idRequete->rowCount();
+
+        if ($rowCount > 0 ) {
+            AccompagnateursTable::setMessageErreur("cet email est déja utilisé");
+            return false;
+        }
+        return true;
+    }
 
     public function updateAccompagnateurs(AccompagnateursTable $valeurs)
     {
