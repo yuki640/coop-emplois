@@ -228,5 +228,7 @@
     </script>
 
 </body>
-
+{* debut footer *}
+{include file='public/footer.tpl'}
+{* fin footer *}
 </html>

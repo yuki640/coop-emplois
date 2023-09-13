@@ -1,28 +1,27 @@
 <?php
-/* Smarty version 4.3.2, created on 2023-09-12 16:45:40
+/* Smarty version 4.3.2, created on 2023-09-13 08:04:23
   from 'C:\laragon\www\coop-emplois\COOP-V3\mod_accueil\vue\accueilVue.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.2',
-  'unifunc' => 'content_650095b45f6395_75178750',
+  'unifunc' => 'content_65016d07dc8ba7_42919712',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'd52cd6f4557b73fa09f64be55a6a6adf472d9821' => 
     array (
       0 => 'C:\\laragon\\www\\coop-emplois\\COOP-V3\\mod_accueil\\vue\\accueilVue.tpl',
-      1 => 1694537131,
+      1 => 1694592259,
       2 => 'file',
     ),
   ),
   'includes' => 
   array (
     'file:public/header.tpl' => 1,
-    'file:public/footer.tpl' => 1,
   ),
 ),false)) {
-function content_650095b45f6395_75178750 (Smarty_Internal_Template $_smarty_tpl) {
+function content_65016d07dc8ba7_42919712 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!doctype html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
@@ -115,9 +114,7 @@ function content_650095b45f6395_75178750 (Smarty_Internal_Template $_smarty_tpl)
         <h1>Contenu principal</h1>
         <p>Bienvenue sur mon site web. Ceci est la page d'accueil.</p>
     </main>
-    <?php $_smarty_tpl->_subTemplateRender('file:public/footer.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
-?>
-</div><!-- /#right-panel -->
+    </div><!-- /#right-panel -->
 
 
 <?php echo '<script'; ?>
