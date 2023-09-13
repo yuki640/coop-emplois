@@ -85,19 +85,31 @@ class AccompagnateursControleur
 
     public function modifier()
     {
-
         $controleAccompagnateurs = new AccompagnateursTable($this->parametre);
-
+        $mailbase = $_POST['mailbase'];
+        $mailmodifie = $_POST['email'];
+        $mailidentique  = false;
+        if($mailbase <> $mailmodifie){
+            $mailidentique = false;
+        } else{
+            $mailidentique = true;
+        }
         if ($controleAccompagnateurs->getAutorisationBD() == false) {
             //Retour à la fiche
             $this->oVue->genererAffichageFiche($controleAccompagnateurs);
         } else {
-            if($this->oModele->verifieMail($controleAccompagnateurs) == false) {
-                //Retour à la fiche
-                $this->oVue->genererAffichageFiche($controleAccompagnateurs);
-            }else {
+            if ($mailidentique == false) {
+                if ($this->oModele->verifieMail($controleAccompagnateurs) == false) {
+                    //Retour à la fiche
+                    $this->oVue->genererAffichageFiche($controleAccompagnateurs);
+                } else {
+                    // Insertion BD puis retour liste des Accompagnateurs
+                    $this->oModele->updateAccompagnateurs($controleAccompagnateurs);
+                    $this->lister();
+                }
+            } else {
                 // Insertion BD puis retour liste des Accompagnateurs
-                $this->oModele->addAccompagnateurs($controleAccompagnateurs);
+                $this->oModele->updateAccompagnateurs($controleAccompagnateurs);
                 $this->lister();
             }
         }

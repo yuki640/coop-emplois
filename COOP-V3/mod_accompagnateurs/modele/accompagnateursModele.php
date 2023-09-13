@@ -67,7 +67,7 @@ class AccompagnateursModele extends Modele
             $valeurs->getCodeA()
         ]);
         if ($idRequete) {
-            AccompagnateursTable::setMessageSucces("Suppression du accompagnateurs correctement effectué.");
+            AccompagnateursTable::setMessageSucces("Suppression de l'accompagnateurs correctement effectué.");
         }
     }
 
@@ -79,7 +79,6 @@ class AccompagnateursModele extends Modele
         ]);
 
         $rowCount = $idRequete->rowCount();
-
         if ($rowCount > 0 ) {
             AccompagnateursTable::setMessageErreur("cet email est déja utilisé");
             return false;
@@ -99,7 +98,7 @@ class AccompagnateursModele extends Modele
             $valeurs->getCodea(),
         ]);
         if ($idRequete) {
-            AccompagnateursTable::setMessageSucces("Modification du accompagnateurs correctement effectué.");
+            AccompagnateursTable::setMessageSucces("Modification de l'accompagnateur correctement effectué.");
         }
     }
 }

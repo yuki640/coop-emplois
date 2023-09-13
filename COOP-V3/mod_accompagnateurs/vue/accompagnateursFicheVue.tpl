@@ -99,9 +99,11 @@
 
                             <input type="hidden" name="action" value="{$action}">
 
-                            <input type="hidden" name="datec" value="{date("d/m/Y H:i:s",time())}" >
+{*                            <input type="hidden" name="datec" value="{date("d/m/Y H:i:s",time())}" >*}
 
-                            <input type="hidden" name="datem" value="{date("d/m/Y H:i:s",time())}">
+{*                            <input type="hidden" name="datem" value="{date("d/m/Y H:i:s",time())}">*}
+
+                            <input type="hidden" name="mailbase" value="{$unAccompagnateurs->getEmail()}">
 
                             <div class="card-body card-block">
 

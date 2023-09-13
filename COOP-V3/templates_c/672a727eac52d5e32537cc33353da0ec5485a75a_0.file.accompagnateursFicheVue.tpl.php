@@ -1,27 +1,28 @@
 <?php
-/* Smarty version 4.3.2, created on 2023-09-12 18:31:36
+/* Smarty version 4.3.2, created on 2023-09-13 17:24:01
   from 'C:\laragon\www\coop-emplois\COOP-V3\mod_accompagnateurs\vue\accompagnateursFicheVue.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.2',
-  'unifunc' => 'content_6500ae88e6f8e1_92432407',
+  'unifunc' => 'content_6501f0314d93e4_38609066',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '672a727eac52d5e32537cc33353da0ec5485a75a' => 
     array (
       0 => 'C:\\laragon\\www\\coop-emplois\\COOP-V3\\mod_accompagnateurs\\vue\\accompagnateursFicheVue.tpl',
-      1 => 1694543465,
+      1 => 1694625431,
       2 => 'file',
     ),
   ),
   'includes' => 
   array (
     'file:public/header.tpl' => 1,
+    'file:public/footer.tpl' => 1,
   ),
 ),false)) {
-function content_6500ae88e6f8e1_92432407 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6501f0314d93e4_38609066 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'C:\\laragon\\www\\coop-emplois\\COOP-V3\\include\\libs\\plugins\\modifier.capitalize.php','function'=>'smarty_modifier_capitalize',),));
 ?>
 <!doctype html>
@@ -131,10 +132,9 @@ $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'C:\\laragon\\www\\coop-emplo
                             <input type="hidden" name="action" value="<?php echo $_smarty_tpl->tpl_vars['action']->value;?>
 ">
 
-                            <input type="hidden" name="datec" value="<?php echo date("d/m/Y H:i:s",time());?>
-" >
 
-                            <input type="hidden" name="datem" value="<?php echo date("d/m/Y H:i:s",time());?>
+
+                            <input type="hidden" name="mailbase" value="<?php echo $_smarty_tpl->tpl_vars['unAccompagnateurs']->value->getEmail();?>
 ">
 
                             <div class="card-body card-block">
@@ -299,6 +299,7 @@ $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'C:\\laragon\\www\\coop-emplo
 >
 
 </body>
-
+<?php $_smarty_tpl->_subTemplateRender('file:public/footer.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
+?>
 </html><?php }
 }
