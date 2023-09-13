@@ -93,6 +93,7 @@
         </div> <!-- .content -->
     </div>
     <main>
+    
         <h1>Contenu principal</h1>
         <p>Bienvenue sur mon site web. Ceci est la page d'accueil.</p>
     </main>
