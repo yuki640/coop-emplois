@@ -41,14 +41,17 @@ class AccompagnateursModele extends Modele
 
     public function addAccompagnateurs(AccompagnateursTable $valeurs)
     {
-        $sql = "INSERT INTO accompagnateurs (nom, prenom, telephone, email, specialisation) VALUES (?, ?, ?, ?, ?)";
+        $loginsetup = lcfirst(substr($valeurs->getNom(),0,1)). lcfirst(substr($valeurs->getPrenom(),0,1)) . date("dmo-hi");
+        $valeurs->setLogin($loginsetup);
+
+        $sql = "INSERT INTO accompagnateurs (nom, prenom, telephone, email, specialisation, login) VALUES (?, ?, ?, ?, ?,?)";
         $idRequete = $this->executeRequete($sql, [
             $valeurs->getNom(),
             $valeurs->getPrenom(),
             $valeurs->getTelephone(),
             $valeurs->getEmail(),
-            $valeurs->getSpecialisation()
-            
+            $valeurs->getSpecialisation(),
+            $valeurs->getLogin()
         ]);
 
         // var_dump($valeurs);
