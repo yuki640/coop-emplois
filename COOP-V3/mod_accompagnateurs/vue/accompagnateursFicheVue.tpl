@@ -168,6 +168,16 @@
                                                value="{$unAccompagnateurs->getLogin()}"
                                                readonly>
                                     </div>
+
+                                    <div class="form-group">
+                                        <label for="text" class=" form-control">
+                                            derniére Modification le :
+                                        </label>
+                                        <input type="text" name="date_m" class="form-control"
+                                               value="{$unAccompagnateurs->getDate_M()}"
+                                               readonly>
+                                    </div>
+
                                 {/if}
 
                                 

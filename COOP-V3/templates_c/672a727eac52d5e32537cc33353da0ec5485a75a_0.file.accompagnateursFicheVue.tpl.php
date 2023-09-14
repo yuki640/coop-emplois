@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.3.2, created on 2023-09-14 15:18:18
+/* Smarty version 4.3.2, created on 2023-09-14 16:48:24
   from 'C:\laragon\www\coop-emplois\COOP-V3\mod_accompagnateurs\vue\accompagnateursFicheVue.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.2',
-  'unifunc' => 'content_6503243a4ae895_06209586',
+  'unifunc' => 'content_650339587e98c4_73079077',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '672a727eac52d5e32537cc33353da0ec5485a75a' => 
     array (
       0 => 'C:\\laragon\\www\\coop-emplois\\COOP-V3\\mod_accompagnateurs\\vue\\accompagnateursFicheVue.tpl',
-      1 => 1694704692,
+      1 => 1694710102,
       2 => 'file',
     ),
   ),
@@ -22,7 +22,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:public/footer.tpl' => 1,
   ),
 ),false)) {
-function content_6503243a4ae895_06209586 (Smarty_Internal_Template $_smarty_tpl) {
+function content_650339587e98c4_73079077 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'C:\\laragon\\www\\coop-emplois\\COOP-V3\\include\\libs\\plugins\\modifier.capitalize.php','function'=>'smarty_modifier_capitalize',),));
 ?>
 <!doctype html>
@@ -214,6 +214,17 @@ $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'C:\\laragon\\www\\coop-emplo
 "
                                                readonly>
                                     </div>
+
+                                    <div class="form-group">
+                                        <label for="text" class=" form-control">
+                                            derniére Modification le :
+                                        </label>
+                                        <input type="text" name="date_m" class="form-control"
+                                               value="<?php echo $_smarty_tpl->tpl_vars['unAccompagnateurs']->value->getDate_M();?>
+"
+                                               readonly>
+                                    </div>
+
                                 <?php }?>
 
                                 
