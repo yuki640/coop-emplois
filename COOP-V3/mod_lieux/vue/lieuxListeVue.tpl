@@ -156,8 +156,11 @@
 
 
            </div><!-- .animated -->
-                        </div><!-- .content -->
 
+                        </div><!-- .content -->
+        {* debut footer *}
+        {include file='public/footer.tpl'}
+        {* fin footer *}
 
                     </div><!-- /#right-panel -->
 
@@ -186,9 +189,7 @@
                             $('#bootstrap-data-table-export').DataTable();
                         });
                     </script>
-
+</div>
 </body>
-{* debut footer *}
-{include file='public/footer.tpl'}
-{* fin footer *}
+
 </html>

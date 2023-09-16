@@ -99,9 +99,6 @@
 
                             <input type="hidden" name="action" value="{$action}">
 
-                            <input type="hidden" name="datec" value="{date("d/m/Y H:i:s",time())}" >
-
-                            <input type="hidden" name="datem" value="{date("d/m/Y H:i:s",time())}">
 
                             <div class="card-body card-block">
 
@@ -244,8 +241,11 @@
                 </div>
 
             </div><!-- .animated -->
-        </div><!-- .content -->
 
+        </div><!-- .content -->
+        {* debut footer *}
+        {include file='public/footer.tpl'}
+        {* fin footer *}
 
     </div><!-- /#right-panel -->
 
@@ -276,7 +276,4 @@
     </script>
 
 </body>
-{* debut footer *}
-{include file='public/footer.tpl'}
-{* fin footer *}
 </html>
