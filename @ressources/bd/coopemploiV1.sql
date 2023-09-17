@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: Sep 12, 2023 at 06:54 PM
+-- Generation Time: Sep 17, 2023 at 03:47 PM
 -- Server version: 8.0.30
 -- PHP Version: 8.1.10
 
@@ -34,6 +34,7 @@ CREATE TABLE `accompagnateurs` (
   `telephone` varchar(20) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   `email` varchar(75) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   `specialisation` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL COMMENT 'La spécialisation de l’accompagnateurs ',
+  `login` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `date_c` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT 'Date de création',
   `date_m` datetime DEFAULT CURRENT_TIMESTAMP COMMENT 'Date de modification '
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
@@ -42,8 +43,8 @@ CREATE TABLE `accompagnateurs` (
 -- Dumping data for table `accompagnateurs`
 --
 
-INSERT INTO `accompagnateurs` (`codeA`, `nom`, `prenom`, `telephone`, `email`, `specialisation`, `date_c`, `date_m`) VALUES
-(1, 'pareschi', 'thomas', '0777995137', 'toto41700@hotmail.fr', '', '2023-09-12 19:58:35', '2023-09-12 19:58:35');
+INSERT INTO `accompagnateurs` (`codeA`, `nom`, `prenom`, `telephone`, `email`, `specialisation`, `login`, `date_c`, `date_m`) VALUES
+(9, 'centreal', 'Thomas', '0504520727', 'toto41700@hotmail.fr', 'SLAM', 'ct14092023-0316', '2023-09-14 17:16:34', '2023-09-14 17:16:34');
 
 -- --------------------------------------------------------
 
@@ -100,7 +101,7 @@ ALTER TABLE `lieux`
 -- AUTO_INCREMENT for table `accompagnateurs`
 --
 ALTER TABLE `accompagnateurs`
-  MODIFY `codeA` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `codeA` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT for table `lieux`
