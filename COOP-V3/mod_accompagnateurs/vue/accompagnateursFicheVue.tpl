@@ -99,9 +99,9 @@
 
                             <input type="hidden" name="action" value="{$action}">
 
-                            <input type="hidden" name="datec" value="{date("d/m/Y H:i:s",time())}" >
 
-                            <input type="hidden" name="datem" value="{date("d/m/Y H:i:s",time())}">
+
+                            <input type="hidden" name="mailbase" value="{$unAccompagnateurs->getEmail()}">
 
                             <div class="card-body card-block">
 
@@ -159,13 +159,16 @@
                                            value="{$unAccompagnateurs->getSpecialisation()}" {$readonly}>
                                 </div>
 
-                                {* <div class="form-group">
-                                    <label for="text" class=" form-control">
-                                        Login <sup>(*)</sup>:
-                                    </label>
-                                    <input type="text" name="login" class="form-control"
-                                           value="{$unAccompagnateurs->getLogin()}" {$readonly}>
-                                </div> *}
+                                {if $action neq 'ajouter'}
+                                    <div class="form-group">
+                                        <label for="text" class=" form-control">
+                                            Login :
+                                        </label>
+                                        <input type="text" name="login" class="form-control"
+                                               value="{$unAccompagnateurs->getLogin()}"
+                                               readonly>
+                                    </div>
+                                {/if}
 
                                 
 
@@ -228,5 +231,7 @@
     </script>
 
 </body>
-
+{* debut footer *}
+{include file='public/footer.tpl'}
+{* fin footer *}
 </html>

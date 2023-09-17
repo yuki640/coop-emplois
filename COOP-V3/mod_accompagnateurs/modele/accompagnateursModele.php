@@ -41,14 +41,17 @@ class AccompagnateursModele extends Modele
 
     public function addAccompagnateurs(AccompagnateursTable $valeurs)
     {
-        $sql = "INSERT INTO accompagnateurs (nom, prenom, telephone, email, specialisation) VALUES (?, ?, ?, ?, ?)";
+        $loginsetup = lcfirst(substr($valeurs->getNom(),0,1)). lcfirst(substr($valeurs->getPrenom(),0,1)) . date("dmo-hi");
+        $valeurs->setLogin($loginsetup);
+
+        $sql = "INSERT INTO accompagnateurs (nom, prenom, telephone, email, specialisation, login) VALUES (?, ?, ?, ?, ?,?)";
         $idRequete = $this->executeRequete($sql, [
             $valeurs->getNom(),
             $valeurs->getPrenom(),
             $valeurs->getTelephone(),
             $valeurs->getEmail(),
-            $valeurs->getSpecialisation()
-            
+            $valeurs->getSpecialisation(),
+            $valeurs->getLogin()
         ]);
 
         // var_dump($valeurs);
@@ -67,25 +70,24 @@ class AccompagnateursModele extends Modele
             $valeurs->getCodeA()
         ]);
         if ($idRequete) {
-            AccompagnateursTable::setMessageSucces("Suppression du accompagnateurs correctement effectué.");
+            AccompagnateursTable::setMessageSucces("Suppression de l'accompagnateurs correctement effectué.");
         }
     }
 
-//    public function verifieAssignation(AccompagnateursTable $valeurs)
-//    {
-//        $sql = "select * from accompagnateur where codeA = ?";
-//        $idRequete = $this->executeRequete($sql, [
-//            $valeurs->getidentifiant()
-//        ]);
-//
-//        $rowCount = $idRequete->rowCount();
-//
-//        if ($rowCount > 0) {
-//            ClientTable::setMessageErreur("Suppression du accompagnateurs impossible car ce client posséde une réunion");
-//            return false;
-//        }
-//        return true;
-//    }
+    public function verifieMail(AccompagnateursTable $valeurs)
+    {
+        $sql = "select * from accompagnateurs where email = ?";
+        $idRequete = $this->executeRequete($sql, [
+            $valeurs->getEmail()
+        ]);
+
+        $rowCount = $idRequete->rowCount();
+        if ($rowCount > 0 ) {
+            AccompagnateursTable::setMessageErreur("cet email est déja utilisé");
+            return false;
+        }
+        return true;
+    }
 
     public function updateAccompagnateurs(AccompagnateursTable $valeurs)
     {
@@ -99,7 +101,7 @@ class AccompagnateursModele extends Modele
             $valeurs->getCodea(),
         ]);
         if ($idRequete) {
-            AccompagnateursTable::setMessageSucces("Modification du accompagnateurs correctement effectué.");
+            AccompagnateursTable::setMessageSucces("Modification de l'accompagnateur correctement effectué.");
         }
     }
 }

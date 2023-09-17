@@ -9,7 +9,7 @@ Class AccompagnateursTable{
     private $specialisation="";
     private $date_C="";
     private $date_M="";
-
+    private $login="";
     private $autorisationBD = true;
     private static $messageErreur = "";
     private static $messageSucces = "";
@@ -99,7 +99,13 @@ Class AccompagnateursTable{
         return $this->date_M;
     }
 
-
+    /**
+     * @return string
+     */
+    public function getLogin()
+    {
+        return $this->login;
+    }
 
 
     /**
@@ -126,15 +132,7 @@ Class AccompagnateursTable{
         return self::$messageSucces;
     }
 
-
-
-
-
  // Setters
-
-
-
-
 
     /**
      * @param string $codea
@@ -216,7 +214,13 @@ Class AccompagnateursTable{
         $this->dateM = $date_M;
     }
 
-
+    /**
+     * @param string $login
+     */
+    public function setLogin(string $login)
+    {
+        $this->login = $login;
+    }
 
     /**
      * @param bool $autorisationBD
