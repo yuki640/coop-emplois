@@ -1,0 +1,62 @@
+/* CSS pour le style de la nav bar */
+header {
+    background-color: #000000;
+    padding: 10px;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline-block;
+    margin-right: 5px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 5px;
+}
+
+/* Alignement des éléments à gauche */
+nav ul li.left {
+    float: left;
+}
+
+/* Alignement des éléments à droite */
+nav ul li.right {
+    float: right;
+}
+
+/* Style pour la dropdown */
+.dropdown {
+    position: relative;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 200px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Style pour les liens dans la dropdown */
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #5c5c5c;
+}
