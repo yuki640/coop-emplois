@@ -9,6 +9,8 @@ class Lieux{
     public function __construct($parametre){
         //Initialisation de la propriété parametre
         $this->parametre = $parametre;
+        // Chargement ou appel du controleur
+
         // Création d'un objet, instance de la classe ClientControleur
         $this->oControleur = new LieuxControleur($this->parametre);
     }

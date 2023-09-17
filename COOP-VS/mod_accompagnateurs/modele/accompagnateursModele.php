@@ -83,7 +83,7 @@ class AccompagnateursModele extends Modele
 
         $rowCount = $idRequete->rowCount();
         if ($rowCount > 0 ) {
-            AccompagnateursTable::setMessageErreur("cet email ests déja utilisé");
+            AccompagnateursTable::setMessageErreur("cet email est déja utilisé");
             return false;
         }
         return true;
@@ -91,20 +91,13 @@ class AccompagnateursModele extends Modele
 
     public function updateAccompagnateurs(AccompagnateursTable $valeurs)
     {
-        $datemodif = date("d-m-o:hi");
-        $valeurs->setDateM($datemodif);
-        //TODO A verifier la prochaine fois
-        var_dump($datemodif,$valeurs->getDate_M());
-        die();
-        $sql = "UPDATE accompagnateurs SET nom = ?, prenom = ?,telephone = ?,email = ?,specialisation = ?, login= ?, date_m= ? WHERE codea = ?";
+        $sql = "UPDATE accompagnateurs SET nom = ?, prenom = ?,telephone = ?,email = ?,specialisation = ? WHERE codea = ?";
         $idRequete = $this->executeRequete($sql, [
             $valeurs->getNom(),
             $valeurs->getPrenom(),
             $valeurs->getTelephone(),
             $valeurs->getEmail(),
             $valeurs->getSpecialisation(),
-            $valeurs->getLogin(),
-            $valeurs->getDate_M(),
             $valeurs->getCodea(),
         ]);
         if ($idRequete) {
