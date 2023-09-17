@@ -1,28 +1,27 @@
 <?php
-/* Smarty version 4.3.2, created on 2023-09-12 16:45:53
+/* Smarty version 4.3.2, created on 2023-09-12 19:20:08
   from 'C:\laragon\www\coop-emplois\COOP-V3\mod_lieux\vue\lieuxListeVue.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.2',
-  'unifunc' => 'content_650095c12235a0_86511878',
+  'unifunc' => 'content_6500b9e884dbb4_18471501',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '3118dd9ce8726388ad87284978edf839c00edadc' => 
     array (
       0 => 'C:\\laragon\\www\\coop-emplois\\COOP-V3\\mod_lieux\\vue\\lieuxListeVue.tpl',
-      1 => 1694537131,
+      1 => 1694546371,
       2 => 'file',
     ),
   ),
   'includes' => 
   array (
     'file:public/header.tpl' => 1,
-    'file:public/footer.tpl' => 1,
   ),
 ),false)) {
-function content_650095c12235a0_86511878 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6500b9e884dbb4_18471501 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!doctype html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
@@ -131,10 +130,11 @@ function content_650095c12235a0_86511878 (Smarty_Internal_Template $_smarty_tpl)
                                 <!-- PLACER LA LISTE DES CLIENTS -->
                            <thead>
                            <tr>
-                               <th>Code Lieux</th>
-                               <th>Nom du lieux</th>
+                               <th>ID</th>
+                               <th>Nom</th>
                                <th>Ville</th>
-                               <th>Téléphone Salle</th>
+                               <th>Contact</th>
+                               <th>Téléphone</th>
                                <th class="pos-actions">Consulter</th>
                                <th class="pos-actions">Modifier</th>
                                <th class="pos-actions">Supprimer</th>
@@ -154,7 +154,9 @@ $_smarty_tpl->tpl_vars['unLieux']->do_else = false;
 </td>
                                         <td><?php echo $_smarty_tpl->tpl_vars['unLieux']->value->getVille();?>
 </td>
-                                        <td><?php echo $_smarty_tpl->tpl_vars['unLieux']->value->getTelephoneS();?>
+                                        <td><?php echo $_smarty_tpl->tpl_vars['unLieux']->value->getContact();?>
+</td>
+                                        <td><?php echo $_smarty_tpl->tpl_vars['unLieux']->value->getTelephoneC();?>
 </td>
                                         <td>
                                             <form action="index.php" method="post">
@@ -201,8 +203,7 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
 
 
                     </div><!-- /#right-panel -->
-    <?php $_smarty_tpl->_subTemplateRender('file:public/footer.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
-?>
+
                     <!-- Right Panel -->
                     <?php echo '<script'; ?>
  src="public/assets/js/vendor/jquery-2.1.4.min.js"><?php echo '</script'; ?>
