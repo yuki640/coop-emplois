@@ -1,18 +1,30 @@
 <?php
+<<<<<<< HEAD
 /* Smarty version 4.3.2, created on 2023-09-18 17:52:32
+=======
+/* Smarty version 4.3.2, created on 2023-09-17 15:44:39
+>>>>>>> origin/thomas
   from 'C:\laragon\www\coop-emplois\COOP-VS\mod_lieux\vue\lieuxListeVue.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.2',
+<<<<<<< HEAD
   'unifunc' => 'content_65088e60851771_80152503',
+=======
+  'unifunc' => 'content_65071ee75ccb59_93258327',
+>>>>>>> origin/thomas
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'fd23a542397604af4ff87b3a53513af7877b020d' => 
     array (
       0 => 'C:\\laragon\\www\\coop-emplois\\COOP-VS\\mod_lieux\\vue\\lieuxListeVue.tpl',
+<<<<<<< HEAD
       1 => 1694960724,
+=======
+      1 => 1694965030,
+>>>>>>> origin/thomas
       2 => 'file',
     ),
   ),
@@ -22,7 +34,11 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:public/footer.tpl' => 1,
   ),
 ),false)) {
+<<<<<<< HEAD
 function content_65088e60851771_80152503 (Smarty_Internal_Template $_smarty_tpl) {
+=======
+function content_65071ee75ccb59_93258327 (Smarty_Internal_Template $_smarty_tpl) {
+>>>>>>> origin/thomas
 ?><!DOCTYPE html>
 <html lang="fr">
 
