@@ -50,13 +50,13 @@
 
                                 <!-- PLACER LE FORMULAIRE EN CONSULTATION -->
 
-                                <input type="hidden" name="gestion" value="accompagnateurs">
+                                <input type="hidden" name="gestion" value="accompagnateur">
 
                                 <input type="hidden" name="action" value="{$action}">
 
 
 
-                                <input type="hidden" name="mailbase" value="{$unAccompagnateurs->getEmail()}">
+                                <input type="hidden" name="mailbase" value="{$unAccompagnateur->getEmail()}">
 
                                 <div class="card-body card-block">
 
@@ -66,7 +66,7 @@
                                                 Code accompagnateurs :
                                             </label>
                                             <input type="text" name="codea" class="form-control"
-                                                value="{$unAccompagnateurs->getCodeA()}" readonly>
+                                                value="{$unAccompagnateur->getCodeA()}" readonly>
                                         </div>
                                     {/if}
 
@@ -75,7 +75,7 @@
                                             Nom <sup>(*)</sup>:
                                         </label>
                                         <input type="text" name="nom" class="form-control"
-                                            value="{$unAccompagnateurs->getNom()}" {$readonly} required>
+                                            value="{$unAccompagnateur->getNom()}" {$readonly} required>
                                     </div>
 
                                     <div class="form-group">
@@ -83,7 +83,7 @@
                                             Prénom <sup>(*)</sup>:
                                         </label>
                                         <input type="text" name="prenom" class="form-control"
-                                            value="{$unAccompagnateurs->getPrenom()}" {$readonly}>
+                                            value="{$unAccompagnateur->getPrenom()}" {$readonly}>
                                     </div>
 
                                     <div class="form-group">
@@ -91,7 +91,7 @@
                                             Téléphone <sup>(*)</sup>:
                                         </label>
                                         <input type="text" name="telephone" class="form-control"
-                                            value="{$unAccompagnateurs->getTelephone()}" {$readonly}>
+                                            value="{$unAccompagnateur->getTelephone()}" {$readonly}>
                                     </div>
 
                                     <div class="form-group">
@@ -99,7 +99,7 @@
                                             Email <sup>(*)</sup>:
                                         </label>
                                         <input type="text" name="email" class="form-control"
-                                            value="{$unAccompagnateurs->getEmail()}" {$readonly}>
+                                            value="{$unAccompagnateur->getEmail()}" {$readonly}>
                                     </div>
 
                                     <div class="form-group">
@@ -107,7 +107,7 @@
                                             Specialisation :
                                         </label>
                                         <input type="text" name="specialisation" class="form-control"
-                                            value="{$unAccompagnateurs->getSpecialisation()}" {$readonly}>
+                                            value="{$unAccompagnateur->getSpecialisation()}" {$readonly}>
                                     </div>
 
                                     {if $action neq 'ajouter'}
@@ -116,7 +116,7 @@
                                                 Login :
                                             </label>
                                             <input type="text" name="login" class="form-control"
-                                                value="{$unAccompagnateurs->getLogin()}" readonly>
+                                                value="{$unAccompagnateur->getLogin()}" readonly>
                                         </div>
                                     {/if}
 
@@ -127,7 +127,7 @@
                                         <div class="col-md-6">
 
                                             <input type="button" class="btn btn-submit" value="Retour"
-                                                onclick="location.href='index.php?gestion=accompagnateurs'">
+                                                onclick="location.href='index.php?gestion=accompagnateur'">
 
                                         </div>
 

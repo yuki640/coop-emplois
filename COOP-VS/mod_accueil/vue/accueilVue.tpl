@@ -13,8 +13,6 @@
 </head>
 <body>
 
-
-
 <div id="right-panel" class="right-panel">
 
     {include file='public/header.tpl'}

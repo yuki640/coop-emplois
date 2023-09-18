@@ -85,6 +85,7 @@ class AccompagnateursControleur
 
     public function modifier()
     {
+
         $controleAccompagnateurs = new AccompagnateursTable($this->parametre);
         $mailbase = $_POST['mailbase'];
         $mailmodifie = $_POST['email'];

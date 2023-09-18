@@ -175,7 +175,7 @@
 
                             <div class="col-md-6">
 
-                                <input type="button" class="btn btn-submit" value="Retour"
+                                <input type="button" class="btn btn-retour" value="Retour"
                                        onclick="location.href='index.php?gestion=lieux'">
 
                             </div>

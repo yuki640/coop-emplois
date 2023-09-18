@@ -1,7 +1,7 @@
 <?php
 
-//Routeur pour le accompagnateurs
-class Accompagnateurs{
+//Routeur pour l'accompagnateur
+class Accompagnateur{
 
     private $parametre = []; // Tableau =$_REQUEST
     private $oControleur; //propriété de type objet

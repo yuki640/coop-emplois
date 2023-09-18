@@ -7,7 +7,7 @@
 
     <link rel="stylesheet" href="public/assets/css/liste.css">
 
-    <title>liste de lieux</title>
+    <title>liste des lieux</title>
 
 
 </head>
@@ -21,7 +21,7 @@
         <!-- FIN : header -->
 
         <div class="page-title">
-            <h1>L'emplois, c'est maintenant </h1>
+            <h1>Lieux</h1>
         </div>
         <div class="card-header">
             <strong class="card-title">
@@ -61,16 +61,16 @@
            </tr>
            </thead>
            <tbody>
-                {foreach from=$listeLieux item=unLieux}
+                {foreach from=$listeLieux item=unLieu}
                     <tr>
-                        <td>{$unLieux->getCodeL()}</td>
-                        <td>{$unLieux->getNom()}</td>
-                        <td>{$unLieux->getVille()}</td>
-                        <td>{$unLieux->getContact()}</td>
-                        <td>{$unLieux->getTelephoneC()}</td>
+                        <td>{$unLieu->getCodeL()}</td>
+                        <td>{$unLieu->getNom()}</td>
+                        <td>{$unLieu->getVille()}</td>
+                        <td>{$unLieu->getContact()}</td>
+                        <td>{$unLieu->getTelephoneC()}</td>
                         <td>
                             <form action="index.php" method="post">
-                                <input type="hidden" name="codel" value="{$unLieux->getCodeL()}">
+                                <input type="hidden" name="codel" value="{$unLieu->getCodeL()}">
                                 <input type="hidden" name="gestion" value="lieux">
                                 <input type="hidden" name="action" value="form_consulter">
                                 <input type="image" name="btn_consulter" src="public/images/icones/p16.png">
@@ -78,7 +78,7 @@
                         </td>
                         <td>
                             <form action="index.php" method="post">
-                                <input type="hidden" name="codel" value="{$unLieux->getCodeL()}">
+                                <input type="hidden" name="codel" value="{$unLieu->getCodeL()}">
                                 <input type="hidden" name="gestion" value="lieux">
                                 <input type="hidden" name="action" value="form_modifier">
                                 <input type="image" name="btn_modifier" src="public/images/icones/m16.png">
@@ -86,7 +86,7 @@
                         </td>
                         <td>
                             <form action="index.php" method="post">
-                                <input type="hidden" name="codel" value="{$unLieux->getCodeL()}">
+                                <input type="hidden" name="codel" value="{$unLieu->getCodeL()}">
                                 <input type="hidden" name="gestion" value="lieux">
                                 <input type="hidden" name="action" value="form_supprimer">
                                 <input type="image" name="btn_supprimer" src="public/images/icones/s16.png">
