@@ -30,7 +30,7 @@ class AccompagnateursVue
 
         $this->tpl->assign('listeAccompagnateurs', $valeurs);
 
-        $this->tpl->display('mod_Accompagnateurs/vue/AccompagnateursListeVue.tpl');
+        $this->tpl->display('mod_accompagnateurs/vue/accompagnateursListeVue.tpl');
     }
 
     public function genererAffichageFiche($valeurs)
