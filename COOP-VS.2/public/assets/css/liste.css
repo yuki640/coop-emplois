@@ -1,0 +1,61 @@
+/* Debut css pour tableau mysql */
+.page-title {
+    margin: 20px 0;
+  }
+  
+  .card-header {
+    margin-bottom: 20px;
+  }
+  
+  .card-title {
+    font-weight: bold;
+  }
+  
+  .pos-ajout label {
+    display: block;
+  }
+  
+  .pos-actions {
+    text-align: center;
+  }
+  
+  .table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+  }
+  
+  .table th,
+  .table td {
+    padding: 10px;
+    border: 1px solid #ccc;
+  }
+  
+  .table th {
+    background-color: #f0f0f0;
+  }
+  
+  .table tbody tr:hover {
+    background-color: #f9f9f9;
+  }
+  
+  .alert {
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid transparent;
+    border-radius: 4px;
+  }
+  
+  .alert-success {
+    background-color: #d4edda;
+    border-color: #c3e6cb;
+    color: #155724;
+  }
+  
+  #right-panel {
+    background-color: #fff;
+    border: 1px solid #ccc;
+  }
+  
+  /* Fin css pour tableau mysql */
+  
