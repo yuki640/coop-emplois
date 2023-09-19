@@ -64,6 +64,7 @@ class LieuxControleur
     {
 
         $controleLieux = new LieuxTable($this->parametre);
+
             // Insertion BD puis retour liste des lieux
             $this->oModele->deleteLieux($controleLieux);
             $this->lister();

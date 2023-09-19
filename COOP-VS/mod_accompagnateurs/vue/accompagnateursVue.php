@@ -48,7 +48,7 @@ class AccompagnateursVue
 
                 $this->tpl->assign('titrePage', 'Fiche accompagnateurs :  Consultation');
 
-                $this->tpl->assign('unAccompagnateurs', $valeurs);
+                $this->tpl->assign('unAccompagnateur', $valeurs);
 
                 break;
             case 'form_ajouter':
@@ -61,7 +61,7 @@ class AccompagnateursVue
 
                 $this->tpl->assign('titrePage', 'Fiche accompagnateurs :  Création');
 
-                $this->tpl->assign('unAccompagnateurs', $valeurs);
+                $this->tpl->assign('unAccompagnateur', $valeurs);
                 break;
 
             case 'form_supprimer':
@@ -74,7 +74,7 @@ class AccompagnateursVue
 
                 $this->tpl->assign('titrePage', 'Fiche accompagnateurs :  Suppression');
 
-                $this->tpl->assign('unAccompagnateurs', $valeurs);
+                $this->tpl->assign('unAccompagnateur', $valeurs);
                 break;
 
             case 'form_modifier':
@@ -85,9 +85,9 @@ class AccompagnateursVue
 
                 $this->tpl->assign('required', 'required');
 
-                $this->tpl->assign('titrePage', 'Fiche accompagnateurs :  Modification');
+                $this->tpl->assign('titrePage', 'Fiche accompagnateur :  Modification');
 
-                $this->tpl->assign('unAccompagnateurs', $valeurs);
+                $this->tpl->assign('unAccompagnateur', $valeurs);
                 break;
         }
 

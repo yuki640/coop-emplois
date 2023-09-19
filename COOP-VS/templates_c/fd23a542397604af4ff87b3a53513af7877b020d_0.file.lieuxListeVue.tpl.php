@@ -1,4 +1,29 @@
-<!DOCTYPE html>
+<?php
+/* Smarty version 4.3.2, created on 2023-09-17 15:44:39
+  from 'C:\laragon\www\coop-emplois\COOP-VS\mod_lieux\vue\lieuxListeVue.tpl' */
+
+/* @var Smarty_Internal_Template $_smarty_tpl */
+if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
+  'version' => '4.3.2',
+  'unifunc' => 'content_65071ee75ccb59_93258327',
+  'has_nocache_code' => false,
+  'file_dependency' => 
+  array (
+    'fd23a542397604af4ff87b3a53513af7877b020d' => 
+    array (
+      0 => 'C:\\laragon\\www\\coop-emplois\\COOP-VS\\mod_lieux\\vue\\lieuxListeVue.tpl',
+      1 => 1694965030,
+      2 => 'file',
+    ),
+  ),
+  'includes' => 
+  array (
+    'file:public/header.tpl' => 1,
+    'file:public/footer.tpl' => 1,
+  ),
+),false)) {
+function content_65071ee75ccb59_93258327 (Smarty_Internal_Template $_smarty_tpl) {
+?><!DOCTYPE html>
 <html lang="fr">
 
 <head>
@@ -7,7 +32,7 @@
 
     <link rel="stylesheet" href="public/assets/css/liste.css">
 
-    <title>liste des lieux</title>
+    <title>liste de lieux</title>
 
 
 </head>
@@ -17,11 +42,12 @@
     <div id="right-panel" class="right-panel">
 
         <!--Header -->
-        {include file='public/header.tpl'}
+        <?php $_smarty_tpl->_subTemplateRender('file:public/header.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
+?>
         <!-- FIN : header -->
 
         <div class="page-title">
-            <h1>Lieux</h1>
+            <h1>L'emplois, c'est maintenant </h1>
         </div>
         <div class="card-header">
             <strong class="card-title">
@@ -42,8 +68,9 @@
         </div>
         <div class="card-body">
 
-            <div {if LieuxTable::getMessageSucces () neq ''} class="alert alert-success" role="alert" {/if} >
-                {LieuxTable::getMessageSucces ()}
+            <div <?php if (LieuxTable::getMessageSucces() != '') {?> class="alert alert-success" role="alert" <?php }?> >
+                <?php echo LieuxTable::getMessageSucces();?>
+
             </div>
 
             <table id="bootstrap-data-table" class="table table-striped table-bordered">
@@ -61,16 +88,27 @@
            </tr>
            </thead>
            <tbody>
-                {foreach from=$listeLieux item=unLieu}
+                <?php
+$_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['listeLieux']->value, 'unLieux');
+$_smarty_tpl->tpl_vars['unLieux']->do_else = true;
+if ($_from !== null) foreach ($_from as $_smarty_tpl->tpl_vars['unLieux']->value) {
+$_smarty_tpl->tpl_vars['unLieux']->do_else = false;
+?>
                     <tr>
-                        <td>{$unLieu->getCodeL()}</td>
-                        <td>{$unLieu->getNom()}</td>
-                        <td>{$unLieu->getVille()}</td>
-                        <td>{$unLieu->getContact()}</td>
-                        <td>{$unLieu->getTelephoneC()}</td>
+                        <td><?php echo $_smarty_tpl->tpl_vars['unLieux']->value->getCodeL();?>
+</td>
+                        <td><?php echo $_smarty_tpl->tpl_vars['unLieux']->value->getNom();?>
+</td>
+                        <td><?php echo $_smarty_tpl->tpl_vars['unLieux']->value->getVille();?>
+</td>
+                        <td><?php echo $_smarty_tpl->tpl_vars['unLieux']->value->getContact();?>
+</td>
+                        <td><?php echo $_smarty_tpl->tpl_vars['unLieux']->value->getTelephoneC();?>
+</td>
                         <td>
                             <form action="index.php" method="post">
-                                <input type="hidden" name="codel" value="{$unLieu->getCodeL()}">
+                                <input type="hidden" name="codel" value="<?php echo $_smarty_tpl->tpl_vars['unLieux']->value->getCodeL();?>
+">
                                 <input type="hidden" name="gestion" value="lieux">
                                 <input type="hidden" name="action" value="form_consulter">
                                 <input type="image" name="btn_consulter" src="public/images/icones/p16.png">
@@ -78,7 +116,8 @@
                         </td>
                         <td>
                             <form action="index.php" method="post">
-                                <input type="hidden" name="codel" value="{$unLieu->getCodeL()}">
+                                <input type="hidden" name="codel" value="<?php echo $_smarty_tpl->tpl_vars['unLieux']->value->getCodeL();?>
+">
                                 <input type="hidden" name="gestion" value="lieux">
                                 <input type="hidden" name="action" value="form_modifier">
                                 <input type="image" name="btn_modifier" src="public/images/icones/m16.png">
@@ -86,7 +125,8 @@
                         </td>
                         <td>
                             <form action="index.php" method="post">
-                                <input type="hidden" name="codel" value="{$unLieu->getCodeL()}">
+                                <input type="hidden" name="codel" value="<?php echo $_smarty_tpl->tpl_vars['unLieux']->value->getCodeL();?>
+">
                                 <input type="hidden" name="gestion" value="lieux">
                                 <input type="hidden" name="action" value="form_supprimer">
                                 <input type="image" name="btn_supprimer" src="public/images/icones/s16.png">
@@ -94,7 +134,9 @@
                         </td>
                     </tr>
 
-                    {/foreach}
+                    <?php
+}
+$_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
 
                 </tbody>
             </table>
@@ -105,9 +147,8 @@
 
 </body>
 
-{* ajouter footer *}
-{include file='public/footer.tpl'}
-{* fin ajouter footer *}
+<?php $_smarty_tpl->_subTemplateRender('file:public/footer.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
+?>
 
 
 </html>
@@ -116,3 +157,5 @@
 
 
 
+<?php }
+}

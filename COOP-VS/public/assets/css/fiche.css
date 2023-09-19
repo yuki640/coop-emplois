@@ -56,6 +56,13 @@ body {
 .btn-submit {
     background-color: #4CAF50;
     color: white;
+
+}
+
+.btn-retour {
+    background-color: #f87d12;
+    color: white;
+
 }
 
 .btn-submit:hover {

@@ -24,7 +24,7 @@
                 </li>
                 <li><a href="#"">Entretiens</a></li>
             <li><a href=" #">Porteurs de Projet</a></li>
-                <li><a href="index.php?gestion=accompagnateurs">Accompagnateurs</a></li>
+                <li><a href="index.php?gestion=accompagnateur">Accompagnateurs</a></li>
 
                 <li class="dropdown">
                     <a href="#" class="dropbtn">Paramètres</a>
@@ -54,6 +54,10 @@
         </nav>
     </header>
 
+    <img src="public/images/logo_coopemploi.png" style="
+    height: 100px;
+     width: 130px;
+">
 
 </body>
 

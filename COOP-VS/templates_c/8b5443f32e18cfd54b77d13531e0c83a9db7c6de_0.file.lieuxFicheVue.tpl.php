@@ -1,3 +1,30 @@
+<?php
+/* Smarty version 4.3.2, created on 2023-09-17 16:03:40
+  from 'C:\laragon\www\coop-emplois\COOP-VS\mod_lieux\vue\lieuxFicheVue.tpl' */
+
+/* @var Smarty_Internal_Template $_smarty_tpl */
+if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
+  'version' => '4.3.2',
+  'unifunc' => 'content_6507235c2f27b1_83100501',
+  'has_nocache_code' => false,
+  'file_dependency' => 
+  array (
+    '8b5443f32e18cfd54b77d13531e0c83a9db7c6de' => 
+    array (
+      0 => 'C:\\laragon\\www\\coop-emplois\\COOP-VS\\mod_lieux\\vue\\lieuxFicheVue.tpl',
+      1 => 1694965030,
+      2 => 'file',
+    ),
+  ),
+  'includes' => 
+  array (
+    'file:public/header.tpl' => 1,
+    'file:public/footer.tpl' => 1,
+  ),
+),false)) {
+function content_6507235c2f27b1_83100501 (Smarty_Internal_Template $_smarty_tpl) {
+$_smarty_tpl->_checkPlugins(array(0=>array('file'=>'C:\\laragon\\www\\coop-emplois\\COOP-VS\\include\\libs\\plugins\\modifier.capitalize.php','function'=>'smarty_modifier_capitalize',),));
+?>
 <!DOCTYPE html>
 <html lang="fr">
 
@@ -19,7 +46,8 @@
 
         <!--Header -->
 
-        {include file='public/header.tpl'}
+        <?php $_smarty_tpl->_subTemplateRender('file:public/header.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
+?>
 
         <!-- FIN : header -->
 
@@ -39,44 +67,52 @@
 
                 <div class="col-md-6">
 
-            <div {if LieuxTable::getMessageErreur () neq ''} class="alert alert-danger" role="alert" {/if} >
-                {LieuxTable::getMessageErreur ()}
+            <div <?php if (LieuxTable::getMessageErreur() != '') {?> class="alert alert-danger" role="alert" <?php }?> >
+                <?php echo LieuxTable::getMessageErreur();?>
+
             </div>
 
             <div class="card">
-                <div class="card-header"><strong>{$titrePage}</strong></div>
+                <div class="card-header"><strong><?php echo $_smarty_tpl->tpl_vars['titrePage']->value;?>
+</strong></div>
                 <form action="index.php" method="POST">
 
                     <!-- PLACER LE FORMULAIRE EN CONSULTATION -->
 
                     <input type="hidden" name="gestion" value="lieux">
 
-                    <input type="hidden" name="action" value="{$action}">
+                    <input type="hidden" name="action" value="<?php echo $_smarty_tpl->tpl_vars['action']->value;?>
+">
 
-                    <input type="hidden" name="datec" value="{date("d/m/Y H:i:s",time())}" >
+                    <input type="hidden" name="datec" value="<?php echo date("d/m/Y H:i:s",time());?>
+" >
 
-                    <input type="hidden" name="datem" value="{date("d/m/Y H:i:s",time())}">
+                    <input type="hidden" name="datem" value="<?php echo date("d/m/Y H:i:s",time());?>
+">
 
                     <div class="card-body card-block">
 
-                        {if $action neq 'ajouter'}
+                        <?php if ($_smarty_tpl->tpl_vars['action']->value != 'ajouter') {?>
                             <div class="form-group">
                                 <label for="text" class=" form-control">
                                     Code lieux :
                                 </label>
                                 <input type="text" name="codel" class="form-control"
-                                       value="{$unLieux->getCodeL()}"
+                                       value="<?php echo $_smarty_tpl->tpl_vars['unLieux']->value->getCodeL();?>
+"
                                        readonly>
                             </div>
-                        {/if}
+                        <?php }?>
 
                         <div class="form-group">
                             <label for="text" class=" form-control">
                                 Nom <sup>(*)</sup>:
                             </label>
                             <input type="text" name="nom" class="form-control"
-                                   value="{$unLieux->getNom()}"
-                                    {$readonly}
+                                   value="<?php echo $_smarty_tpl->tpl_vars['unLieux']->value->getNom();?>
+"
+                                    <?php echo $_smarty_tpl->tpl_vars['readonly']->value;?>
+
                                     required
                             >
                         </div>
@@ -86,7 +122,9 @@
                                 Service, N°de bureau ou étage :
                             </label>
                             <input type="text" name="adresse1" class="form-control"
-                                   value="{$unLieux->getAdresse1()}" {$readonly}>
+                                   value="<?php echo $_smarty_tpl->tpl_vars['unLieux']->value->getAdresse1();?>
+" <?php echo $_smarty_tpl->tpl_vars['readonly']->value;?>
+>
                         </div>
 
                         <div class="form-group">
@@ -94,7 +132,9 @@
                                Résidence, Immeuble, Bâtiment, ZI :
                             </label>
                             <input type="text" name="adresse1=2" class="form-control"
-                                   value="{$unLieux->getAdresse2()}" {$readonly}>
+                                   value="<?php echo $_smarty_tpl->tpl_vars['unLieux']->value->getAdresse2();?>
+" <?php echo $_smarty_tpl->tpl_vars['readonly']->value;?>
+>
                         </div>
 
                         <div class="form-group">
@@ -102,7 +142,9 @@
                                 Numéro voie , type, nom de la voie :
                             </label>
                             <input type="text" name="adresse3" class="form-control"
-                                   value="{$unLieux->getAdresse3()}" {$readonly}>
+                                   value="<?php echo $_smarty_tpl->tpl_vars['unLieux']->value->getAdresse3();?>
+" <?php echo $_smarty_tpl->tpl_vars['readonly']->value;?>
+>
                         </div>
 
                         <div class="form-group">
@@ -110,7 +152,9 @@
                                 Mention de distribution, lieu-dit :
                             </label>
                             <input type="text" name="adresse4" class="form-control"
-                                   value="{$unLieux->getAdresse4()}" {$readonly}>
+                                   value="<?php echo $_smarty_tpl->tpl_vars['unLieux']->value->getAdresse4();?>
+" <?php echo $_smarty_tpl->tpl_vars['readonly']->value;?>
+>
                         </div>
 
                         <div class="form-group">
@@ -118,8 +162,10 @@
                                 Code postal <sup>*</sup>:
                             </label>
                             <input type="text" name="codepostal" class="form-control"
-                                   value="{$unLieux->getCodepostal()}"
-                                    {$readonly}
+                                   value="<?php echo $_smarty_tpl->tpl_vars['unLieux']->value->getCodepostal();?>
+"
+                                    <?php echo $_smarty_tpl->tpl_vars['readonly']->value;?>
+
                                     required
                             >
                         </div>
@@ -129,8 +175,10 @@
                                 Localité de destination cedex <sup>(*)</sup>:
                             </label>
                             <input type="text" name="ville" class="form-control"
-                                   value="{$unLieux->getVille()}"
-                                    {$readonly}
+                                   value="<?php echo $_smarty_tpl->tpl_vars['unLieux']->value->getVille();?>
+"
+                                    <?php echo $_smarty_tpl->tpl_vars['readonly']->value;?>
+
                                     required
                             >
                         </div>
@@ -140,7 +188,9 @@
                                 Telephone de l'établissement :
                             </label>
                             <input type="text" name="telephoneS" class="form-control"
-                                   value="{$unLieux->getTelephoneS()}" {$readonly}>
+                                   value="<?php echo $_smarty_tpl->tpl_vars['unLieux']->value->getTelephoneS();?>
+" <?php echo $_smarty_tpl->tpl_vars['readonly']->value;?>
+>
                         </div>
 
                         <div class="form-group">
@@ -148,7 +198,9 @@
                                 Nom du contact : <sup>(*)</sup>
                             </label>
                             <input type="text" name="contact" class="form-control"
-                                   value="{$unLieux->getContact()}" {$readonly}>
+                                   value="<?php echo $_smarty_tpl->tpl_vars['unLieux']->value->getContact();?>
+" <?php echo $_smarty_tpl->tpl_vars['readonly']->value;?>
+>
                         </div>
 
                         <div class="form-group">
@@ -156,7 +208,9 @@
                                 Téléphone du contact <sup>(*)</sup>
                             </label>
                             <input type="text" name="telephoneC" class="form-control"
-                                   value="{$unLieux->getTelephoneC()}" {$readonly}
+                                   value="<?php echo $_smarty_tpl->tpl_vars['unLieux']->value->getTelephoneC();?>
+" <?php echo $_smarty_tpl->tpl_vars['readonly']->value;?>
+
                                    required
                             >
                         </div>
@@ -166,7 +220,9 @@
                                 Capacité d'accueil de la salle : <sup>(*)</sup>
                             </label>
                             <input type="text" name="capacite" class="form-control"
-                                   value="{$unLieux->getCapacite()}" {$readonly}
+                                   value="<?php echo $_smarty_tpl->tpl_vars['unLieux']->value->getCapacite();?>
+" <?php echo $_smarty_tpl->tpl_vars['readonly']->value;?>
+
                                    required
                             >
                         </div>
@@ -175,18 +231,19 @@
 
                             <div class="col-md-6">
 
-                                <input type="button" class="btn btn-retour" value="Retour"
+                                <input type="button" class="btn btn-submit" value="Retour"
                                        onclick="location.href='index.php?gestion=lieux'">
 
                             </div>
 
                             <div class="col-md-6">
-                                {if $action != 'consulter'}
+                                <?php if ($_smarty_tpl->tpl_vars['action']->value != 'consulter') {?>
                                     <input type="submit"
                                            class="btn btn-submit"
                                            name="btn-valider"
-                                           value="{$action|capitalize}">
-                                {/if}
+                                           value="<?php echo smarty_modifier_capitalize($_smarty_tpl->tpl_vars['action']->value);?>
+">
+                                <?php }?>
 
                             </div>
                             <br>
@@ -206,8 +263,8 @@
     </div><!-- /#right-panel -->
 
 </body>
-{* debut footer *}
-{include file='public/footer.tpl'}
-{* fin footer *}
+<?php $_smarty_tpl->_subTemplateRender('file:public/footer.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
+?>
 
-</html>
+</html><?php }
+}
