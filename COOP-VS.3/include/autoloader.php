@@ -23,6 +23,10 @@ class Autoloader{
             'mod_accompagnateurs/controleur/',
             'mod_accompagnateurs/modele/',
             'mod_accompagnateurs/vue/',
+            'mod_reunion/',
+            'mod_reunion/controleur/',
+            'mod_reunion/modele/',
+            'mod_reunion/vue/',
         ];
 
         foreach($repertoires as $repertoire) {
