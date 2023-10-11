@@ -1,8 +1,12 @@
 <?php
 <<<<<<< HEAD
+<<<<<<< HEAD
 /* Smarty version 4.3.2, created on 2023-09-18 18:06:14
 =======
 /* Smarty version 4.3.2, created on 2023-09-17 15:39:55
+>>>>>>> origin/thomas
+=======
+/* Smarty version 4.3.2, created on 2023-09-18 20:48:42
 >>>>>>> origin/thomas
   from 'C:\laragon\www\coop-emplois\COOP-VS\public\header.tpl' */
 
@@ -10,9 +14,13 @@
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.2',
 <<<<<<< HEAD
+<<<<<<< HEAD
   'unifunc' => 'content_65089196032d02_81539262',
 =======
   'unifunc' => 'content_65071dcbb77014_53107542',
+>>>>>>> origin/thomas
+=======
+  'unifunc' => 'content_6508b7aa6622f4_89371637',
 >>>>>>> origin/thomas
   'has_nocache_code' => false,
   'file_dependency' => 
@@ -21,9 +29,13 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     array (
       0 => 'C:\\laragon\\www\\coop-emplois\\COOP-VS\\public\\header.tpl',
 <<<<<<< HEAD
+<<<<<<< HEAD
       1 => 1695060365,
 =======
       1 => 1694965030,
+>>>>>>> origin/thomas
+=======
+      1 => 1695070119,
 >>>>>>> origin/thomas
       2 => 'file',
     ),
@@ -33,9 +45,13 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   ),
 ),false)) {
 <<<<<<< HEAD
+<<<<<<< HEAD
 function content_65089196032d02_81539262 (Smarty_Internal_Template $_smarty_tpl) {
 =======
 function content_65071dcbb77014_53107542 (Smarty_Internal_Template $_smarty_tpl) {
+>>>>>>> origin/thomas
+=======
+function content_6508b7aa6622f4_89371637 (Smarty_Internal_Template $_smarty_tpl) {
 >>>>>>> origin/thomas
 ?><!DOCTYPE html>
 <html lang="fr">
@@ -63,7 +79,7 @@ function content_65071dcbb77014_53107542 (Smarty_Internal_Template $_smarty_tpl)
                 </li>
                 <li><a href="#"">Entretiens</a></li>
             <li><a href=" #">Porteurs de Projet</a></li>
-                <li><a href="index.php?gestion=accompagnateurs">Accompagnateurs</a></li>
+                <li><a href="index.php?gestion=accompagnateur">Accompagnateurs</a></li>
 
                 <li class="dropdown">
                     <a href="#" class="dropbtn">Paramètres</a>
@@ -93,6 +109,10 @@ function content_65071dcbb77014_53107542 (Smarty_Internal_Template $_smarty_tpl)
         </nav>
     </header>
 
+    <img src="public/images/logo_coopemploi.png" style="
+    height: 100px;
+     width: 130px;
+">
 
 </body>
 
