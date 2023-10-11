@@ -21,7 +21,7 @@
                         <a href="index.php?gestion=reunion&action=listerDP">Déja passée</a>
                     </div>
                 </li>
-                <li><a href="#"">Entretiens</a></li>
+                <li><a href="#">Entretiens</a></li>
             <li><a href=" #">Porteurs de Projet</a></li>
                 <li><a href="index.php?gestion=accompagnateur">Accompagnateurs</a></li>
 
@@ -39,7 +39,7 @@
                         <li><a href="#">Plan du site</a></li>
                         <li class="dropdown pull-right">
                             <a href="#" class="dropbtn">Espace personnel</a>
-                            <div class="dropdown-content">
+                            <div class="dropdown-content expanded-dropdown-content">
                                 <a href="#">Page 1</a>
                                 <a href="#">Page 2</a>
                                 <a href="#">Page 3</a>

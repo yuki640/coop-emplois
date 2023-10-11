@@ -88,7 +88,7 @@ class AccompagnateursControleur
 
         $controleAccompagnateurs = new AccompagnateursTable($this->parametre);
         $mailbase = $_POST['mailbase'];
-        $mailmodifie = $_POST['email'];
+        $mailmodifie = $_POST['acc_mail'];
         $mailidentique  = false;
         if($mailbase <> $mailmodifie){
             $mailidentique = false;

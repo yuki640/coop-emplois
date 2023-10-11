@@ -64,7 +64,7 @@
                                 <label for="text" class=" form-control">
                                     Code lieux :
                                 </label>
-                                <input type="text" name="codel" class="form-control"
+                                <input type="text" name="lie_ide" class="form-control"
                                        value="{$unLieux->getIde()}"
                                        readonly>
                             </div>
@@ -74,7 +74,7 @@
                             <label for="text" class=" form-control">
                                 Nom <sup>(*)</sup>:
                             </label>
-                            <input type="text" name="nom" class="form-control"
+                            <input type="text" name="lie_nom" class="form-control"
                                    value="{$unLieux->getNom()}"
                                     {$readonly}
                                     required
@@ -85,7 +85,7 @@
                             <label for="text" class=" form-control">
                                 Service, N°de bureau ou étage :
                             </label>
-                            <input type="text" name="adresse1" class="form-control"
+                            <input type="text" name="lie_ad1" class="form-control"
                                    value="{$unLieux->getAdresse1()}" {$readonly}>
                         </div>
 
@@ -93,7 +93,7 @@
                             <label for="text" class=" form-control">
                                Résidence, Immeuble, Bâtiment, ZI :
                             </label>
-                            <input type="text" name="adresse1=2" class="form-control"
+                            <input type="text" name="lie_ad2" class="form-control"
                                    value="{$unLieux->getAdresse2()}" {$readonly}>
                         </div>
 
@@ -101,7 +101,7 @@
                             <label for="text" class=" form-control">
                                 Numéro voie , type, nom de la voie :
                             </label>
-                            <input type="text" name="adresse3" class="form-control"
+                            <input type="text" name="lie_ad3" class="form-control"
                                    value="{$unLieux->getAdresse3()}" {$readonly}>
                         </div>
 
@@ -109,7 +109,7 @@
                             <label for="text" class=" form-control">
                                 Mention de distribution, lieu-dit :
                             </label>
-                            <input type="text" name="adresse4" class="form-control"
+                            <input type="text" name="lie_ad4" class="form-control"
                                    value="{$unLieux->getAdresse4()}" {$readonly}>
                         </div>
 
@@ -117,7 +117,7 @@
                             <label for="text" class=" form-control">
                                 Code postal <sup>*</sup>:
                             </label>
-                            <input type="text" name="codepostal" class="form-control"
+                            <input type="text" name="lie_cpo" class="form-control"
                                    value="{$unLieux->getCodepostal()}"
                                     {$readonly}
                                     required
@@ -128,7 +128,7 @@
                             <label for="text" class=" form-control">
                                 Localité de destination cedex <sup>(*)</sup>:
                             </label>
-                            <input type="text" name="ville" class="form-control"
+                            <input type="text" name="lie_ville" class="form-control"
                                    value="{$unLieux->getVille()}"
                                     {$readonly}
                                     required
@@ -139,7 +139,7 @@
                             <label for="text" class=" form-control">
                                 Telephone de l'établissement :
                             </label>
-                            <input type="text" name="telephoneS" class="form-control"
+                            <input type="text" name="lie_tel" class="form-control"
                                    value="{$unLieux->getTelephoneS()}" {$readonly}>
                         </div>
 
@@ -147,7 +147,7 @@
                             <label for="text" class=" form-control">
                                 Nom du contact : <sup>(*)</sup>
                             </label>
-                            <input type="text" name="contact" class="form-control"
+                            <input type="text" name="lie_con" class="form-control"
                                    value="{$unLieux->getContact()}" {$readonly}>
                         </div>
 
@@ -155,7 +155,7 @@
                             <label for="text" class=" form-control">
                                 Téléphone du contact <sup>(*)</sup>
                             </label>
-                            <input type="text" name="telephoneC" class="form-control"
+                            <input type="text" name="lie_tco" class="form-control"
                                    value="{$unLieux->getTelephoneC()}" {$readonly}
                                    required
                             >
@@ -165,7 +165,7 @@
                             <label for="text" class=" form-control">
                                 Capacité d'accueil de la salle : <sup>(*)</sup>
                             </label>
-                            <input type="text" name="capacite" class="form-control"
+                            <input type="text" name="lie_cap" class="form-control"
                                    value="{$unLieux->getCapacite()}" {$readonly}
                                    required
                             >

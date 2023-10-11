@@ -37,8 +37,8 @@
 
                 <div class="col-md-6">
 
-                    <div {if LieuxTable::getMessageErreur () neq ''} class="alert alert-danger" role="alert" {/if} >
-                        {LieuxTable::getMessageErreur ()}
+                    <div {if ReunionTable::getMessageErreur () neq ''} class="alert alert-danger" role="alert" {/if} >
+                        {ReunionTable::getMessageErreur ()}
                     </div>
 
                     <div class="card">
@@ -47,33 +47,33 @@
 
                             <!-- PLACER LE FORMULAIRE EN CONSULTATION -->
 
-                            <input type="hidden" name="gestion" value="lieux">
+                            <input type="hidden" name="gestion" value="reunion">
 
                             <input type="hidden" name="action" value="{$action}">
 
-                            <input type="hidden" name="lie_dcr" value="{date("d/m/Y H:i:s",time())}">
+                            <input type="hidden" name="reu_dcr" value="{date("d/m/Y H:i:s",time())}">
 
-                            <input type="hidden" name="lie_dmo" value="{date("d/m/Y H:i:s",time())}">
+                            <input type="hidden" name="reu_dmo" value="{date("d/m/Y H:i:s",time())}">
 
                             <div class="card-body card-block">
 
                                 {if $action neq 'ajouter'}
                                     <div class="form-group">
                                         <label for="text" class=" form-control">
-                                            Code lieux :
+                                            Code Réunion :
                                         </label>
                                         <input type="text" name="codel" class="form-control"
-                                               value="{$unLieux->getIde()}"
+                                               value="{$unReunion->getReuIde()}"
                                                readonly>
                                     </div>
                                 {/if}
 
                                 <div class="form-group">
                                     <label for="text" class=" form-control">
-                                        Nom <sup>(*)</sup>:
+                                        Date de la réunion <sup>(*)</sup>:
                                     </label>
                                     <input type="text" name="nom" class="form-control"
-                                           value="{$unLieux->getNom()}"
+                                           value="{$unLieux->getReuDat()}"
                                             {$readonly}
                                            required
                                     >

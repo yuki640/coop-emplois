@@ -135,7 +135,7 @@ Class LieuxTable{
      */
     public function getCapacite()
     {
-        return $this->lie_con;
+        return $this->lie_cap;
     }
 
     /**

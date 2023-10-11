@@ -6,18 +6,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="stylesheet" href="public/assets/css/style.css">
+    <link rel="stylesheet" href="public/assets/css/header.css">
+    <link rel="stylesheet" href="public/assets/css/footer.css">
 
     <title>Coop-emplois</title>
 
 
 </head>
 <body>
-
-<div id="right-panel" class="right-panel">
-
     {include file='public/header.tpl'}
-  
-    
+
+    <div id="right-panel" class="right-panel">
+
+
     <main>
     
         <h1>Contenu principal</h1>
@@ -27,8 +28,8 @@
     
 </div><!-- /#right-panel -->
 
-
-</body>
 {include file='public/footer.tpl'}
+</body>
+
 </html>
 

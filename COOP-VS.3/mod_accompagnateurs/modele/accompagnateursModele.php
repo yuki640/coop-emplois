@@ -49,8 +49,8 @@ class AccompagnateursModele extends Modele
             $valeurs->getNom(),
             $valeurs->getPrenom(),
             $valeurs->getTelephone(),
-            $valeurs->getEmail(),
-            $valeurs->getSpecialisation(),
+            $valeurs->getMail(),
+            $valeurs->getFonction(),
         ]);
 
         // var_dump($valeurs);
@@ -66,7 +66,7 @@ class AccompagnateursModele extends Modele
     {
         $sql = "DELETE FROM p4t1_accompagnateurs where acc_ide = ?";
         $idRequete = $this->executeRequete($sql, [
-            $valeurs->getCodeA()
+            $valeurs->getIde()
         ]);
         if ($idRequete) {
             AccompagnateursTable::setMessageSucces("Suppression de l'accompagnateurs correctement effectué.");
@@ -77,7 +77,7 @@ class AccompagnateursModele extends Modele
     {
         $sql = "select * from p4t1_accompagnateurs where acc_mail = ?";
         $idRequete = $this->executeRequete($sql, [
-            $valeurs->getEmail()
+            $valeurs->getMail()
         ]);
 
         $rowCount = $idRequete->rowCount();
@@ -95,9 +95,9 @@ class AccompagnateursModele extends Modele
             $valeurs->getNom(),
             $valeurs->getPrenom(),
             $valeurs->getTelephone(),
-            $valeurs->getEmail(),
-            $valeurs->getSpecialisation(),
-            $valeurs->getCodea(),
+            $valeurs->getMail(),
+            $valeurs->getFonction(),
+            $valeurs->getIde(),
         ]);
         if ($idRequete) {
             AccompagnateursTable::setMessageSucces("Modification de l'accompagnateur correctement effectué.");
