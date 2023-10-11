@@ -33,9 +33,8 @@ class ReunionVue
         $this->tpl->display('mod_reunion/vue/reunionListeVue.tpl');
     }
 
-    public function genererAffichageFiche($valeurs)
+    public function genererAffichageFiche($valeurs, $listeLieux, $listeAccompagnateurs)
     {
-
         //       $this->chargementValeurs();
 
         switch ($this->parametre['action']) {
@@ -50,6 +49,10 @@ class ReunionVue
 
                 $this->tpl->assign('unReunion', $valeurs);
 
+                $this->tpl->assign('listeLieux', $listeLieux);
+
+                $this->tpl->assign('listeAccompagnateurs', $listeAccompagnateurs);
+
                 break;
             case 'form_ajouter':
             case 'ajouter':
@@ -62,6 +65,11 @@ class ReunionVue
                 $this->tpl->assign('titrePage', 'Fiche reunion :  Création');
 
                 $this->tpl->assign('unReunion', $valeurs);
+
+            $this->tpl->assign('listeLieux', $listeLieux);
+
+            $this->tpl->assign('listeAccompagnateurs', $listeAccompagnateurs);
+
                 break;
 
             case 'form_supprimer':
@@ -75,6 +83,11 @@ class ReunionVue
                 $this->tpl->assign('titrePage', 'Fiche reunion :  Suppression');
 
                 $this->tpl->assign('unReunion', $valeurs);
+
+            $this->tpl->assign('listeLieux', $listeLieux);
+
+            $this->tpl->assign('listeAccompagnateurs', $listeAccompagnateurs);
+
                 break;
 
             case 'form_modifier':
@@ -88,6 +101,11 @@ class ReunionVue
                 $this->tpl->assign('titrePage', 'Fiche reunion :  Modification');
 
                 $this->tpl->assign('unReunion', $valeurs);
+
+            $this->tpl->assign('listeLieux', $listeLieux);
+
+            $this->tpl->assign('listeAccompagnateurs', $listeAccompagnateurs);
+
                 break;
         }
 

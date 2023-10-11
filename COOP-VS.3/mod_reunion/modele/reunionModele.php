@@ -31,9 +31,34 @@ class ReunionModele extends Modele
 
     }
 
+    public function getListeLieux()
+    {
+        $sql = "SELECT lie_ide, lie_nom FROM p4t1_lieux";
+        $idRequete = $this->executeRequete($sql);
+
+        $listeLieux = [];
+        while ($row = $idRequete->fetch(PDO::FETCH_ASSOC)) {
+            $listeLieux[] = $row;
+        }
+        return $listeLieux;
+    }
+
+    public function getListeAccompagnateurs()
+    {
+        $sql = "SELECT acc_ide, acc_nom, acc_pre FROM p4t1_accompagnateurs";
+        $idRequete = $this->executeRequete($sql);
+
+        $listeAccompagnateurs = [];
+        while ($row = $idRequete->fetch(PDO::FETCH_ASSOC)) {
+            $listeAccompagnateurs[] = $row;
+        }
+        return $listeAccompagnateurs;
+    }
+
     public function getUnReunion()
     {
-        $sql = "SELECT * FROM p4t1_reunionx WHERE reu_ide = ?";
+        $sql = "SELECT * FROM p4t1_reunion WHERE reu_ide = ?";
+
         $idRequete = $this->executeRequete($sql, [$this->parametre['reu_ide']]); // requête préparée
 
         return new ReunionTable($idRequete->fetch(PDO::FETCH_ASSOC));

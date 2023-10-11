@@ -19,41 +19,48 @@ class ReunionControleur
     public function listerAV()
     {
         $listage = ">";
-        $reunionReunion = $this->oModele->getListeReunion($listage);
+        $listeReunion = $this->oModele->getListeReunion($listage);
 
-        $this->oVue->genererAffichageListe($reunionReunion);
+        $this->oVue->genererAffichageListe($listeReunion);
     }
 
     public function listerDP()
     {
         $listage = "<";
-        $reunionReunion = $this->oModele->getListeReunion($listage);
+        $listeReunion = $this->oModele->getListeReunion($listage);
 
-        $this->oVue->genererAffichageListe($reunionReunion);
+        $this->oVue->genererAffichageListe($listeReunion);
+    }
+
+    public function preparerFiche()
+    {
+        $listeLieux = $this->oModele->getListeLieux();
+        $this->oVue->genererAffichageFiche(new ReunionTable(), $listeLieux);
     }
 
     public function form_consulter()
     {
-
         $unReunion = $this->oModele->getUnReunion();
-        $this->oVue->genererAffichageFiche($unReunion);
+        $this->preparerFiche($unReunion);
     }
 
     public function form_ajouter()
     {
-        $prepareReunion = new ReunionTable();
-
-        $this->oVue->genererAffichageFiche($prepareReunion);
+        $listeLieux = $this->oModele->getListeLieux();
+        $listeAccompagnateurs = $this->oModele->getListeAccompagnateurs();
+        $unReunion = new ReunionTable(); // Créez une instance vide ici
+        $this->oVue->genererAffichageFiche($unReunion, $listeLieux, $listeAccompagnateurs);
     }
 
     public function ajouter()
     {
 
         $controleReunion = new ReunionTable($this->parametre);
+        $controleReunion->setReuLie($this->parametre['reu_lie']); // Assurez-vous que le nom du champ combo est correct
 
         if ($controleReunion->getAutorisationBD() == false) {
             //Retour à la fiche
-            $this->oVue->genererAffichageFiche($controleReunion);
+            $this->preparerFiche($controleReunion);
         } else {
             // Insertion BD puis retour liste des reunion
             $this->oModele->addReunion($controleReunion);

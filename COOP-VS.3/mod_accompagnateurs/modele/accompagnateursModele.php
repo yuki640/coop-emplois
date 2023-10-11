@@ -28,9 +28,7 @@ class AccompagnateursModele extends Modele
         } else {
             return null;
         }
-
     }
-
     public function getUnAccompagnateurs()
     {
         $sql = "SELECT * FROM p4t1_accompagnateurs WHERE acc_ide = ?";
@@ -44,7 +42,7 @@ class AccompagnateursModele extends Modele
 //        $loginsetup = lcfirst(substr($valeurs->getNom(),0,1)). lcfirst(substr($valeurs->getPrenom(),0,1)) . date("dmo-hi");
 //        $valeurs->setLogin($loginsetup);
 
-        $sql = "INSERT INTO p4t1_accompagnateurs (acc_nom, acc_pre, acc_tel, acc_mail, acc_fonc) VALUES (?, ?, ?, ?, ?)";
+        $sql = "INSERT INTO p4t1_accompagnateurs (acc_nom, acc_pre, acc_tel, acc_mail, acc_fon) VALUES (?, ?, ?, ?, ?)";
         $idRequete = $this->executeRequete($sql, [
             $valeurs->getNom(),
             $valeurs->getPrenom(),

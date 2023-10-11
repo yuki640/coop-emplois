@@ -70,24 +70,24 @@
                     <td>{$unReunion->getReuCap()}</td>
                     <td>
                         <form action="index.php" method="post">
-                            <input type="hidden" name="lie_ide" value="{$unReunion->getReuIde()}">
-                            <input type="hidden" name="gestion" value="lieux">
+                            <input type="hidden" name="reu_ide" value="{$unReunion->getReuIde()}">
+                            <input type="hidden" name="gestion" value="reunion">
                             <input type="hidden" name="action" value="form_consulter">
                             <input type="image" name="btn_consulter" src="public/images/icones/p16.png">
                         </form>
                     </td>
                     <td>
                         <form action="index.php" method="post">
-                            <input type="hidden" name="lie_ide" value="{$unReunion->getReuIde()}">
-                            <input type="hidden" name="gestion" value="lieux">
+                            <input type="hidden" name="reu_ide" value="{$unReunion->getReuIde()}">
+                            <input type="hidden" name="gestion" value="reunion">
                             <input type="hidden" name="action" value="form_modifier">
                             <input type="image" name="btn_modifier" src="public/images/icones/m16.png">
                         </form>
                     </td>
                     <td>
                         <form action="index.php" method="post">
-                            <input type="hidden" name="lie_ide" value="{$unReunion->getReuIde()}">
-                            <input type="hidden" name="gestion" value="lieux">
+                            <input type="hidden" name="reu_ide" value="{$unReunion->getReuIde()}">
+                            <input type="hidden" name="gestion" value="reunion">
                             <input type="hidden" name="action" value="form_supprimer">
                             <input type="image" name="btn_supprimer" src="public/images/icones/s16.png">
                         </form>
