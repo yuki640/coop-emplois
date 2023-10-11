@@ -62,7 +62,7 @@
                                         <label for="text" class=" form-control">
                                             Code Réunion :
                                         </label>
-                                        <input type="text" name="codel" class="form-control"
+                                        <input type="text" name="reu_ide" class="form-control"
                                                value="{$unReunion->getReuIde()}"
                                                readonly>
                                     </div>
@@ -70,9 +70,9 @@
 
                                 <div class="form-group">
                                     <label for="text" class=" form-control">
-                                        Date de la réunion <sup>(*)</sup>:
+                                        Date <sup>(*)</sup>:
                                     </label>
-                                    <input type="text" name="nom" class="form-control"
+                                    <input type="text" name="reu_dat" class="form-control"
                                            value="{$unLieux->getReuDat()}"
                                             {$readonly}
                                            required
@@ -81,41 +81,41 @@
 
                                 <div class="form-group">
                                     <label for="text" class=" form-control">
-                                        Service, N°de bureau ou étage :
+                                        Heure de début :
                                     </label>
-                                    <input type="text" name="adresse1" class="form-control"
+                                    <input type="text" name="reu_heu" class="form-control"
                                            value="{$unLieux->getAdresse1()}" {$readonly}>
                                 </div>
 
                                 <div class="form-group">
                                     <label for="text" class=" form-control">
-                                        Résidence, Immeuble, Bâtiment, ZI :
+                                        Durée approximative :
                                     </label>
-                                    <input type="text" name="adresse1=2" class="form-control"
+                                    <input type="text" name="reu_dur" class="form-control"
                                            value="{$unLieux->getAdresse2()}" {$readonly}>
                                 </div>
 
                                 <div class="form-group">
                                     <label for="text" class=" form-control">
-                                        Numéro voie , type, nom de la voie :
+                                        Nom du lieu :
                                     </label>
-                                    <input type="text" name="adresse3" class="form-control"
+                                    <input type="text" name="reu_lie" class="form-control"
                                            value="{$unLieux->getAdresse3()}" {$readonly}>
                                 </div>
 
                                 <div class="form-group">
                                     <label for="text" class=" form-control">
-                                        Mention de distribution, lieu-dit :
+                                        Capacité :
                                     </label>
-                                    <input type="text" name="adresse4" class="form-control"
+                                    <input type="text" name="reu_cap" class="form-control"
                                            value="{$unLieux->getAdresse4()}" {$readonly}>
                                 </div>
 
                                 <div class="form-group">
                                     <label for="text" class=" form-control">
-                                        Code postal <sup>*</sup>:
+                                        Contenu de la présentation <sup>*</sup>:
                                     </label>
-                                    <input type="text" name="codepostal" class="form-control"
+                                    <input type="text" name="reu_pre" class="form-control"
                                            value="{$unLieux->getCodepostal()}"
                                             {$readonly}
                                            required
@@ -126,7 +126,7 @@
                                     <label for="text" class=" form-control">
                                         Localité de destination cedex <sup>(*)</sup>:
                                     </label>
-                                    <input type="text" name="ville" class="form-control"
+                                    <input type="text" name="reu_pre" class="form-control"
                                            value="{$unLieux->getVille()}"
                                             {$readonly}
                                            required
@@ -137,36 +137,8 @@
                                     <label for="text" class=" form-control">
                                         Telephone de l'établissement :
                                     </label>
-                                    <input type="text" name="telephoneS" class="form-control"
+                                    <input type="text" name="reu_pub" class="form-control"
                                            value="{$unLieux->getTelephoneS()}" {$readonly}>
-                                </div>
-
-                                <div class="form-group">
-                                    <label for="text" class=" form-control">
-                                        Nom du contact : <sup>(*)</sup>
-                                    </label>
-                                    <input type="text" name="contact" class="form-control"
-                                           value="{$unLieux->getContact()}" {$readonly}>
-                                </div>
-
-                                <div class="form-group">
-                                    <label for="text" class=" form-control">
-                                        Téléphone du contact <sup>(*)</sup>
-                                    </label>
-                                    <input type="text" name="telephoneC" class="form-control"
-                                           value="{$unLieux->getTelephoneC()}" {$readonly}
-                                           required
-                                    >
-                                </div>
-
-                                <div class="form-group">
-                                    <label for="text" class=" form-control">
-                                        Capacité d'accueil de la salle : <sup>(*)</sup>
-                                    </label>
-                                    <input type="text" name="capacite" class="form-control"
-                                           value="{$unLieux->getCapacite()}" {$readonly}
-                                           required
-                                    >
                                 </div>
 
                                 <div class="card-body card-block">
