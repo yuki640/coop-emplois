@@ -16,12 +16,17 @@ class ReunionControleur
         $this->oVue = new ReunionVue($this->parametre);
     }
 
+    public function setAction($action)
+    {
+        $this->action = $action;
+    }
     public function listerAV()
     {
         $listage = ">";
         $listeReunion = $this->oModele->getListeReunion($listage);
 
-        $this->oVue->genererAffichageListe($listeReunion);
+        $this->oVue->setAction('listerAV');;
+        $this->oVue->genererAffichageListe($listeReunion, $this->action);
     }
 
     public function listerDP()
@@ -29,7 +34,8 @@ class ReunionControleur
         $listage = "<";
         $listeReunion = $this->oModele->getListeReunion($listage);
 
-        $this->oVue->genererAffichageListe($listeReunion);
+        $this->oVue->setAction('listerDP');
+        $this->oVue->genererAffichageListe($listeReunion, $this->action);
     }
 
     public function preparerFiche()
@@ -41,7 +47,9 @@ class ReunionControleur
     public function form_consulter()
     {
         $unReunion = $this->oModele->getUnReunion();
-        $this->preparerFiche($unReunion);
+        $listeLieux = $this->oModele->getListeLieux();
+        $listeAccompagnateurs = $this->oModele->getListeAccompagnateurs();
+        $this->oVue->genererAffichageFiche($unReunion, $listeLieux, $listeAccompagnateurs);
     }
 
     public function form_ajouter()
@@ -54,9 +62,8 @@ class ReunionControleur
 
     public function ajouter()
     {
-
         $controleReunion = new ReunionTable($this->parametre);
-        $controleReunion->setReuLie($this->parametre['reu_lie']); // Assurez-vous que le nom du champ combo est correct
+        $controleReunion->setReu_Lie($this->parametre['reu_lie']); // Assurez-vous que le nom du champ combo est correct
 
         if ($controleReunion->getAutorisationBD() == false) {
             //Retour à la fiche
@@ -64,15 +71,16 @@ class ReunionControleur
         } else {
             // Insertion BD puis retour liste des reunion
             $this->oModele->addReunion($controleReunion);
-            $this->lister();
+            $this->listerAV();
         }
     }
 
     public function form_supprimer()
     {
-
         $unReunion = $this->oModele->getUnReunion();
-        $this->oVue->genererAffichageFiche($unReunion);
+        $listeLieux = $this->oModele->getListeLieux();
+        $listeAccompagnateurs = $this->oModele->getListeAccompagnateurs();
+        $this->oVue->genererAffichageFiche($unReunion, $listeLieux, $listeAccompagnateurs);
     }
 
     public function supprimer()
@@ -82,14 +90,16 @@ class ReunionControleur
 
         // Insertion BD puis retour liste des reunion
         $this->oModele->deleteReunion($controleReunion);
-        $this->lister();
+        $this->listerAV();
     }
 
     public function form_modifier()
     {
 
         $unReunion = $this->oModele->getUnReunion();
-        $this->oVue->genererAffichageFiche($unReunion);
+        $listeLieux = $this->oModele->getListeLieux();
+        $listeAccompagnateurs = $this->oModele->getListeAccompagnateurs();
+        $this->oVue->genererAffichageFiche($unReunion, $listeLieux, $listeAccompagnateurs);
     }
 
     public function modifier()
@@ -103,7 +113,7 @@ class ReunionControleur
         } else {
             // Insertion BD puis retour liste des reunion
             $this->oModele->updateReunion($controleReunion);
-            $this->lister();
+            $this->listerAV();
         }
     }
 }

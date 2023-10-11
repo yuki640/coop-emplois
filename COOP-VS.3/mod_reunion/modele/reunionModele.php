@@ -66,20 +66,18 @@ class ReunionModele extends Modele
 
     public function addReunion(ReunionTable $valeurs)
     {
-        $sql = "INSERT INTO p4t1_reunionx (lie_nom, lie_ad1, lie_ad2, lie_ad3, lie_ad4, lie_cpo, lie_ville,
-                    lie_tel, lie_con, lie_tco, lie_cap) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+        $sql = "INSERT INTO p4t1_reunion (reu_dat,reu_heu,reu_dur,reu_lie,reu_cap,reu_pre,reu_acc,reu_pub/*,reu_dcr,reu_dmo*/) VALUES (?, ?, ?, ?, ?, ?, ?, ?/*, ?, ?*/)";
         $idRequete = $this->executeRequete($sql, [
-            $valeurs->getNom(),
-            $valeurs->getAdresse1(),
-            $valeurs->getAdresse2(),
-            $valeurs->getAdresse3(),
-            $valeurs->getAdresse4(),
-            $valeurs->getCodepostal(),
-            $valeurs->getVille(),
-            $valeurs->getTelephoneS(),
-            $valeurs->getContact(),
-            $valeurs->getTelephoneC(),
-            $valeurs->getCapacite(),
+            $valeurs->getReuDat(),
+            $valeurs->getReuHeu(),
+            $valeurs->getReuDur(),
+            $valeurs->getReuLie(),
+            $valeurs->getReuCap(),
+            $valeurs->getReuPre(),
+            $valeurs->getReuAcc(),
+            $valeurs->getReuPub(),
+//            $valeurs->getReuDcr(),
+//            $valeurs->getReuDmo(),
         ]);
 
         if ($idRequete) {
@@ -90,49 +88,29 @@ class ReunionModele extends Modele
 
     public function deleteReunion(ReunionTable $valeurs)
     {
-        $sql = "DELETE FROM p4t1_reunionx where lie_ide = ?";
+        $sql = "DELETE FROM p4t1_reunion where reu_ide = ?";
         $idRequete = $this->executeRequete($sql, [
-            $valeurs->getIde()
+            $valeurs->getReuIde()
         ]);
         if ($idRequete) {
             ReunionTable::setMessageSucces("Suppression de la reunion correctement effectué.");
         }
     }
 
-//    public function verifieAssignation(ReunionTable $valeurs)
-//    {
-//        $sql = "select * from accompagnateur where codeA = ?";
-//        $idRequete = $this->executeRequete($sql, [
-//            $valeurs->getidentifiant()
-//        ]);
-//
-//        $rowCount = $idRequete->rowCount();
-//
-//        if ($rowCount > 0) {
-//            ClientTable::setMessageErreur("Suppression de la reunion impossible car ce client posséde une réunion");
-//            return false;
-//        }
-//        return true;
-//    }
-
     public function updateReunion(ReunionTable $valeurs)
     {
-        $sql = "UPDATE p4t1_reunionx SET lie_nom = ?, lie_ad1 = ?,lie_ad2 = ?,lie_ad3 = ?,lie_ad4 = ?, lie_cpo = ?,
-                 lie_ville = ?, lie_tel = ?,lie_con= ?, lie_tco = ?, lie_cap = ?
-             WHERE lie_ide = ?";
+        $sql = "UPDATE p4t1_reunion SET reu_dat = ? ,reu_heu = ?,reu_dur = ? ,reu_lie = ? ,reu_cap = ? ,reu_pre = ? ,reu_acc = ? ,reu_pub = ?
+             WHERE reu_ide = ?";
         $idRequete = $this->executeRequete($sql, [
-            $valeurs->getNom(),
-            $valeurs->getAdresse1(),
-            $valeurs->getAdresse2(),
-            $valeurs->getAdresse3(),
-            $valeurs->getAdresse4(),
-            $valeurs->getCodePostal(),
-            $valeurs->getVille(),
-            $valeurs->getTelephoneS(),
-            $valeurs->getContact(),
-            $valeurs->getTelephoneC(),
-            $valeurs->getCapacite(),
-            $valeurs->getIde()
+            $valeurs->getReuDat(),
+            $valeurs->getReuHeu(),
+            $valeurs->getReuDur(),
+            $valeurs->getReuLie(),
+            $valeurs->getReuCap(),
+            $valeurs->getReuPre(),
+            $valeurs->getReuAcc(),
+            $valeurs->getReuPub(),
+            $valeurs->getReuIde()
         ]);
         if ($idRequete) {
             ReunionTable::setMessageSucces("Modification de la  reunion correctement effectué.");

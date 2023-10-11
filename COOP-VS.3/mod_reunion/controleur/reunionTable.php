@@ -161,37 +161,37 @@ class ReunionTable
         $this->reu_dur = $reu_dur;
     }
 
-    public function setReuLie(string $reu_lie): void
+    public function setReu_Lie(string $reu_lie): void
     {
         $this->reu_lie = $reu_lie;
     }
 
-    public function setReuCap(string $reu_cap): void
+    public function setReu_Cap(string $reu_cap): void
     {
         $this->reu_cap = $reu_cap;
     }
 
-    public function setReuPre(string $reu_pre): void
+    public function setReu_Pre(string $reu_pre): void
     {
         $this->reu_pre = $reu_pre;
     }
 
-    public function setReuAcc(string $reu_acc): void
+    public function setReu_Acc(string $reu_acc): void
     {
         $this->reu_acc = $reu_acc;
     }
 
-    public function setReuPub(string $reu_pub): void
+    public function setReu_Pub(string $reu_pub): void
     {
         $this->reu_pub = $reu_pub;
     }
 
-    public function setReuDcr(string $reu_dcr): void
+    public function setReu_Dcr(string $reu_dcr): void
     {
         $this->reu_dcr = $reu_dcr;
     }
 
-    public function setReuDmo(string $reu_dmo): void
+    public function setReu_Dmo(string $reu_dmo): void
     {
         $this->reu_dmo = $reu_dmo;
     }

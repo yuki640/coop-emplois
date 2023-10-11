@@ -13,6 +13,10 @@ class ReunionVue
 
     }
 
+    public function setAction($action)
+    {
+        $this->parametre['action'] = $action;
+    }
 //    public function chargementValeurs()
 //    {
 //        $this->tpl->assign('deconnexion', 'Déconnexion');
@@ -23,10 +27,14 @@ class ReunionVue
 //
 //    }
 
-    public function genererAffichageListe($valeurs)
+    public function genererAffichageListe($valeurs, $action)
     {
         //     $this->chargementValeurs();
-        $this->tpl->assign('titrePage', 'Liste des lieux');
+        $this->tpl->assign('titrePageAV', 'Liste des reunions à venir');
+
+        $this->tpl->assign('titrePageDP', 'Liste des reunions déja passé');
+
+        $this->tpl->assign('action', $action);
 
         $this->tpl->assign('listeReunion', $valeurs);
 

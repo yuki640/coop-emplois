@@ -23,6 +23,7 @@ class Reunion
         // Ici, à venir une structure alternative pour tester les différentes actions pour tester
         // Les différentes actions possibles (type switch)
         if (isset($this->parametre['action'])) {
+            $this->oControleur->setAction($this->parametre['action']);
             //Traitement des différentes actions
             switch ($this->parametre['action']) {
                 case 'form_consulter' :

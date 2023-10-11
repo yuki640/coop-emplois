@@ -7,7 +7,7 @@
 
     <link rel="stylesheet" href="public/assets/css/liste.css">
 
-    <title>liste des lieux</title>
+    <title>liste des reunions</title>
 
 
 </head>
@@ -21,7 +21,13 @@
     <!-- FIN : header -->
 
     <div class="page-title">
-        <h1>Lieux</h1>
+        <h1>
+            {if $action == 'listerAV'}
+                {$titrePageAV}
+            {else}
+                {$titrePageDP}
+            {/if}
+        </h1>
     </div>
     <div class="card-header">
         <strong class="card-title">

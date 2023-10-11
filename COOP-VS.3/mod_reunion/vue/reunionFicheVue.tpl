@@ -84,9 +84,10 @@
                                     <input type="text" name="reu_pre" class="form-control"
                                            value="{$unReunion->getReuPre()}" {$readonly} required>
                                 </div>
+
                                 <div class="form-group">
-                                    <label for="reu_lie" class="form-control">Nom du lieu :</label>
-                                    <select name="reu_lie" class="form-control" {$readonly}>
+                                    <label for="reu_acc" class="form-control">Nom de l'accompagnateur :</label>
+                                    <select name="reu_acc" class="form-control" {$readonly}>
                                         {foreach $listeAccompagnateurs as $accompagnateur}
                                             <option value="{$accompagnateur['acc_ide']}"
                                                     {if $accompagnateur['acc_ide'] == $unReunion->getReuAcc()}selected{/if}>
@@ -95,17 +96,22 @@
                                         {/foreach}
                                     </select>
                                 </div>
+
                                 <div class="form-group">
                                     <label for="text" class="form-control">
-                                        Téléphone de l'établissement :
+                                        Visible sur les sites proposant l'inscription aux réunions ?
                                     </label>
-                                    <input type="number" name="reu_pub" class="form-control"
-                                           value="{$unReunion->getReuPub()}" {$readonly}>
+                                    <!-- Champ caché pour la valeur "faux" (false) par défaut -->
+                                    <input type="hidden" name="reu_pub" value="0">
+                                    <!-- Champ de type "checkbox" pour permettre à l'utilisateur de basculer -->
+                                    <input type="checkbox" name="reu_pub" class="form-control"
+                                           value="1" {if $unReunion->getReuPub()}checked{/if} {$readonly}>
                                 </div>
+
                                 <div class="card-body card-block">
                                     <div class="col-md-6">
                                         <input type="button" class="btn btn-retour" value="Retour"
-                                               onclick="location.href='index.php?gestion=lieux'">
+                                               onclick="location.href='index.php?gestion=reunion&action=listerAV'">
                                     </div>
                                     <div class="col-md-6">
                                         {if $action neq 'consulter'}
