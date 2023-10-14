@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.3.2, created on 2023-10-11 17:20:59
+/* Smarty version 4.3.2, created on 2023-10-14 14:04:28
   from 'C:\laragon\www\coop-emplois\COOP-VS.3\mod_reunion\vue\reunionListeVue.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array(
     'version' => '4.3.2',
-    'unifunc' => 'content_6526d97b4383c0_41529905',
+    'unifunc' => 'content_652a9feceec611_57228285',
     'has_nocache_code' => false,
     'file_dependency' =>
         array(
             '0ebb9a230b2ced79d342e630efafbce5501bc5db' =>
                 array(
                     0 => 'C:\\laragon\\www\\coop-emplois\\COOP-VS.3\\mod_reunion\\vue\\reunionListeVue.tpl',
-                    1 => 1697044854,
+                    1 => 1697053963,
                     2 => 'file',
                 ),
         ),
@@ -22,7 +22,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array(
             'file:public/footer.tpl' => 1,
         ),
 ), false)) {
-function content_6526d97b4383c0_41529905 (Smarty_Internal_Template $_smarty_tpl) {
+function content_652a9feceec611_57228285 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="fr">
 
@@ -32,7 +32,7 @@ function content_6526d97b4383c0_41529905 (Smarty_Internal_Template $_smarty_tpl)
 
     <link rel="stylesheet" href="public/assets/css/liste.css">
 
-    <title>liste des lieux</title>
+    <title>liste des reunions</title>
 
 
 </head>
@@ -47,7 +47,15 @@ function content_6526d97b4383c0_41529905 (Smarty_Internal_Template $_smarty_tpl)
     <!-- FIN : header -->
 
     <div class="page-title">
-        <h1>Lieux</h1>
+        <h1>
+            <?php if ($_smarty_tpl->tpl_vars['action']->value == 'listerAV') { ?>
+                <?php echo $_smarty_tpl->tpl_vars['titrePageAV']->value; ?>
+
+            <?php } else { ?>
+                <?php echo $_smarty_tpl->tpl_vars['titrePageDP']->value; ?>
+
+            <?php } ?>
+        </h1>
     </div>
     <div class="card-header">
         <strong class="card-title">

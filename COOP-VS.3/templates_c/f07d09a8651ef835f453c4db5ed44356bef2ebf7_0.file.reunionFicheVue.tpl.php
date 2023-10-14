@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.3.2, created on 2023-10-11 18:15:28
+/* Smarty version 4.3.2, created on 2023-10-14 14:04:33
   from 'C:\laragon\www\coop-emplois\COOP-VS.3\mod_reunion\vue\reunionFicheVue.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array(
     'version' => '4.3.2',
-    'unifunc' => 'content_6526e640442731_76667154',
+    'unifunc' => 'content_652a9ff10eb9a9_09060221',
     'has_nocache_code' => false,
     'file_dependency' =>
         array(
             'f07d09a8651ef835f453c4db5ed44356bef2ebf7' =>
                 array(
                     0 => 'C:\\laragon\\www\\coop-emplois\\COOP-VS.3\\mod_reunion\\vue\\reunionFicheVue.tpl',
-                    1 => 1697048122,
+                    1 => 1697289530,
                     2 => 'file',
                 ),
         ),
@@ -22,7 +22,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array(
             'file:public/footer.tpl' => 1,
         ),
 ), false)) {
-    function content_6526e640442731_76667154(Smarty_Internal_Template $_smarty_tpl)
+    function content_652a9ff10eb9a9_09060221(Smarty_Internal_Template $_smarty_tpl)
     {
         $_smarty_tpl->_checkPlugins(array(0 => array('file' => 'C:\\laragon\\www\\coop-emplois\\COOP-VS.3\\include\\libs\\plugins\\modifier.capitalize.php', 'function' => 'smarty_modifier_capitalize',),));
         ?>
@@ -93,7 +93,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array(
                                             <input type="time" name="reu_heu" class="form-control"
                                                    value="<?php echo $_smarty_tpl->tpl_vars['unReunion']->value->getReuHeu(); ?>
 " <?php echo $_smarty_tpl->tpl_vars['readonly']->value; ?>
-                                            >
+                                                   required>
                                         </div>
                                         <div class="form-group">
                                             <label for="text" class="form-control">
@@ -133,20 +133,21 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array(
                                             <input type="number" name="reu_cap" class="form-control"
                                                    value="<?php echo $_smarty_tpl->tpl_vars['unReunion']->value->getReuCap(); ?>
 " <?php echo $_smarty_tpl->tpl_vars['readonly']->value; ?>
-                                            >
+                                                   required>
                                         </div>
                                         <div class="form-group">
                                             <label for="text" class="form-control">
-                                                Contenu de la présentation <sup>*</sup>:
+                                                Intitulé de la présentation <sup>*</sup>:
                                             </label>
                                             <input type="text" name="reu_pre" class="form-control"
                                                    value="<?php echo $_smarty_tpl->tpl_vars['unReunion']->value->getReuPre(); ?>
 " <?php echo $_smarty_tpl->tpl_vars['readonly']->value; ?>
                                                    required>
                                         </div>
+
                                         <div class="form-group">
-                                            <label for="reu_lie" class="form-control">Nom du lieu :</label>
-                                            <select name="reu_lie"
+                                            <label for="reu_acc" class="form-control">Nom de l'accompagnateur :</label>
+                                            <select name="reu_acc"
                                                     class="form-control" <?php echo $_smarty_tpl->tpl_vars['readonly']->value; ?>
                                             >
                                                 <?php
@@ -167,19 +168,24 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array(
                                                 $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1); ?>
                                             </select>
                                         </div>
+
                                         <div class="form-group">
                                             <label for="text" class="form-control">
-                                                Téléphone de l'établissement :
+                                                Visible sur les sites proposant l'inscription aux réunions ?
                                             </label>
-                                            <input type="number" name="reu_pub" class="form-control"
-                                                   value="<?php echo $_smarty_tpl->tpl_vars['unReunion']->value->getReuPub(); ?>
-" <?php echo $_smarty_tpl->tpl_vars['readonly']->value; ?>
+                                            <!-- Champ caché pour la valeur "faux" (false) par défaut -->
+                                            <input type="hidden" name="reu_pub" value="0">
+                                            <!-- Champ de type "checkbox" pour permettre à l'utilisateur de basculer -->
+                                            <input type="checkbox" name="reu_pub" class="form-control"
+                                                   value="1"
+                                                   <?php if ($_smarty_tpl->tpl_vars['unReunion']->value->getReuPub()) { ?>checked<?php } ?> <?php echo $_smarty_tpl->tpl_vars['readonly']->value; ?>
                                             >
                                         </div>
+
                                         <div class="card-body card-block">
                                             <div class="col-md-6">
                                                 <input type="button" class="btn btn-retour" value="Retour"
-                                                       onclick="location.href='index.php?gestion=lieux'">
+                                                       onclick="location.href='index.php?gestion=reunion&action=listerAV'">
                                             </div>
                                             <div class="col-md-6">
                                                 <?php if ($_smarty_tpl->tpl_vars['action']->value != 'consulter') { ?>

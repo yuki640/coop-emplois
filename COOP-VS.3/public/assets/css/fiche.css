@@ -1,7 +1,6 @@
-/* Add your custom CSS styles in fiche.css */
-
 /* Body styles */
 body {
+    background-color: darkblue;
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
@@ -9,7 +8,7 @@ body {
 
 /* Page title styles */
 .page-title {
-    text-align: center;
+    text-align: left;
     margin: 20px 0;
 }
 
@@ -17,8 +16,16 @@ body {
     font-size: 24px;
 }
 
+.alert-danger {
+    background-color: #f44336; /* Couleur de fond rouge */
+    color: white; /* Couleur du texte en blanc */
+    padding: 10px; /* Espace interne */
+    border-radius: 4px; /* Coins arrondis */
+    margin-bottom: 20px; /* Espacement en bas */
+}
 /* Card styles */
 .card {
+    background-color: limegreen;
     border: 1px solid #ccc;
     border-radius: 4px;
     margin-bottom: 20px;
@@ -26,7 +33,7 @@ body {
 
 .card-header {
     padding: 10px 20px;
-    background-color: #f7f7f7;
+    background-color: yellow;
     border-bottom: 1px solid #ccc;
     font-weight: bold;
 }
@@ -37,32 +44,31 @@ body {
 
 /* Form input styles */
 .form-group {
-    margin-bottom: 20px; /* Increase margin for more spacing */
+    margin-bottom: 20px;
 }
 
 .form-control {
-    width: calc(100% - 20px); /* Adjust width for increased spacing */
-    padding: 15px; /* Adjust padding for increased spacing */
+    width: calc(100% - 20px);
+    padding: 15px;
 }
 
 /* Button styles */
-.btn {
+.btn-submit {
     padding: 10px 20px;
     border: none;
     border-radius: 4px;
     cursor: pointer;
-}
-
-.btn-submit {
     background-color: #4CAF50;
     color: white;
-
 }
 
 .btn-retour {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
     background-color: #f87d12;
     color: white;
-
 }
 
 .btn-submit:hover {

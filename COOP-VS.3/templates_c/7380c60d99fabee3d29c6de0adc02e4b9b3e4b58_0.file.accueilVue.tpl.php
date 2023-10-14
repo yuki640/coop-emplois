@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 4.3.2, created on 2023-10-11 17:18:08
+/* Smarty version 4.3.2, created on 2023-10-14 14:14:03
   from 'C:\laragon\www\coop-emplois\COOP-VS.3\mod_accueil\vue\accueilVue.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array(
     'version' => '4.3.2',
-    'unifunc' => 'content_6526d8d0af6295_84181680',
+    'unifunc' => 'content_652aa22b839323_53113300',
     'has_nocache_code' => false,
     'file_dependency' =>
         array(
@@ -22,7 +22,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array(
             'file:public/footer.tpl' => 1,
         ),
 ), false)) {
-function content_6526d8d0af6295_84181680 (Smarty_Internal_Template $_smarty_tpl) {
+function content_652aa22b839323_53113300 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="fr">
 
@@ -47,7 +47,7 @@ function content_6526d8d0af6295_84181680 (Smarty_Internal_Template $_smarty_tpl)
 
     <main>
 
-        <h1>Contenu principal</h1>
+    <h1>Contenu principal</h1>
         <p>Bienvenue sur mon site web. Ceci est la page d'accueil.</p>
     </main>
 

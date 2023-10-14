@@ -50,7 +50,7 @@
                                     Heure de début :
                                     </label>
                                     <input type="time" name="reu_heu" class="form-control"
-                                           value="{$unReunion->getReuHeu()}" {$readonly}>
+                                           value="{$unReunion->getReuHeu()}" {$readonly} required>
                                 </div>
                                 <div class="form-group">
                                     <label for="text" class="form-control">
@@ -75,11 +75,11 @@
                                         Capacité :
                                     </label>
                                     <input type="number" name="reu_cap" class="form-control"
-                                           value="{$unReunion->getReuCap()}" {$readonly}>
+                                           value="{$unReunion->getReuCap()}" {$readonly} required>
                                 </div>
                                 <div class="form-group">
                                     <label for="text" class="form-control">
-                                        Contenu de la présentation <sup>*</sup>:
+                                        Intitulé de la présentation <sup>*</sup>:
                                     </label>
                                     <input type="text" name="reu_pre" class="form-control"
                                            value="{$unReunion->getReuPre()}" {$readonly} required>

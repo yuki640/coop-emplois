@@ -137,11 +137,28 @@ class ReunionTable
      */
     public function setReu_dat($reu_dat)
     {
+        // Vérifier si la valeur est vide ou composée uniquement d'espaces
         if (empty($reu_dat) || ctype_space(strval($reu_dat))) {
             $this->setAutorisationBD(false);
-            self:: setMessageErreur("La date est obligatoire. <br>");
+            self::setMessageErreur("La date est obligatoire et ne peut pas être vide. <br>");
+        } else {
+            // Vérifier si la date est au format 'Y-m-d' (AAAA-MM-JJ)
+            $dateObj = DateTime::createFromFormat('Y-m-d', $reu_dat);
+
+            if ($dateObj === false || $dateObj->format('Y-m-d') !== $reu_dat) {
+                $this->setAutorisationBD(false);
+                self::setMessageErreur("Le format de la date est incorrect. Utilisez le format JJ-MM-AAAA. <br>");
+            } else {
+                // Vérifier si la date est postérieure à la date actuelle
+                $dateActuelle = new DateTime();
+                if ($dateObj < $dateActuelle) {
+                    $this->setAutorisationBD(false);
+                    self::setMessageErreur("La date ne peut pas être antérieure à la date actuelle. <br>");
+                } else {
+                    $this->reu_dat = $reu_dat;
+                }
+            }
         }
-        $this->reu_dat = $reu_dat;
     }
 
     /**
@@ -149,7 +166,32 @@ class ReunionTable
      */
     public function setReu_heu(string $reu_heu)
     {
-        $this->reu_heu = $reu_heu;
+        // Vérifier si la valeur est vide ou composée uniquement d'espaces
+        if (empty($reu_heu) || ctype_space($reu_heu)) {
+            $this->setAutorisationBD(false);
+            self::setMessageErreur("L'heure de la réunion est obligatoire. <br>");
+        } else {
+            // Séparer l'heure en heures et minutes
+            list($heures, $minutes) = explode(":", $reu_heu);
+
+            // Vérifier si les heures et les minutes sont des nombres valides
+            if (!is_numeric($heures) || !is_numeric($minutes)) {
+                $this->setAutorisationBD(false);
+                self::setMessageErreur("L'heure de la réunion est au format incorrect. Utilisez HH:MM. <br>");
+            } else {
+                // Convertir l'heure en minutes depuis minuit
+                $heureEnMinutes = $heures * 60 + $minutes;
+
+                // Vérifier si l'heure est entre 9h (540 minutes) et 20h (1200 minutes)
+                if ($heureEnMinutes < 540 || $heureEnMinutes > 1200) {
+                    $this->setAutorisationBD(false);
+                    self::setMessageErreur("L'heure de la réunion doit être entre 9h et 20h. <br>");
+                } else {
+                    // Si l'heure est valide, stocker la valeur
+                    $this->reu_heu = $reu_heu;
+                }
+            }
+        }
     }
 
     /**
@@ -158,11 +200,40 @@ class ReunionTable
 
     public function setReu_dur(string $reu_dur)
     {
-        $this->reu_dur = $reu_dur;
+        // Vérifier si la valeur est vide ou composée uniquement d'espaces
+        if (empty($reu_dur) || ctype_space($reu_dur)) {
+            $this->setAutorisationBD(false);
+            self::setMessageErreur("La durée de la réunion est obligatoire. <br>");
+        } else {
+            // Séparer la durée en heures et minutes
+            list($heures, $minutes) = explode(":", $reu_dur);
+
+            // Vérifier si les heures et les minutes sont des nombres valides
+            if (!is_numeric($heures) || !is_numeric($minutes)) {
+                $this->setAutorisationBD(false);
+                self::setMessageErreur("La durée de la réunion est au format incorrect. Utilisez HH:MM. <br>");
+            } else {
+                // Convertir la durée en minutes
+                $dureeEnMinutes = $heures * 60 + $minutes;
+
+                // Vérifier si la durée est d'au moins 1h30 (90 minutes) et au maximum de 6 heures (360 minutes)
+                if ($dureeEnMinutes < 90 || $dureeEnMinutes > 360) {
+                    $this->setAutorisationBD(false);
+                    self::setMessageErreur("La réunion doit durer au moins 1h30 (90 minutes) et au maximum 6 heures (360 minutes). <br>");
+                } else {
+                    // Si la durée est valide, stocker la valeur
+                    $this->reu_dur = $reu_dur;
+                }
+            }
+        }
     }
 
     public function setReu_Lie(string $reu_lie): void
     {
+        if (empty($reu_lie) || ctype_space($reu_lie)) {
+            $this->setAutorisationBD(false);
+            self::setMessageErreur("Un lieu pour la réunion est obligatoire. <br>");
+        }
         $this->reu_lie = $reu_lie;
     }
 
@@ -173,11 +244,19 @@ class ReunionTable
 
     public function setReu_Pre(string $reu_pre): void
     {
+        if (empty($reu_pre) || ctype_space($reu_pre)) {
+            $this->setAutorisationBD(false);
+            self::setMessageErreur("Un intitulé pour la réunion est obligatoire. <br>");
+        }
         $this->reu_pre = $reu_pre;
     }
 
     public function setReu_Acc(string $reu_acc): void
     {
+        if (empty($reu_acc) || ctype_space($reu_acc)) {
+            $this->setAutorisationBD(false);
+            self::setMessageErreur("Un accompagnateur pour la réunion est obligatoire. <br>");
+        }
         $this->reu_acc = $reu_acc;
     }
 

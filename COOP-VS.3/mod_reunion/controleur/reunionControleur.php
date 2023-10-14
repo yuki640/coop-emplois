@@ -38,12 +38,6 @@ class ReunionControleur
         $this->oVue->genererAffichageListe($listeReunion, $this->action);
     }
 
-    public function preparerFiche()
-    {
-        $listeLieux = $this->oModele->getListeLieux();
-        $this->oVue->genererAffichageFiche(new ReunionTable(), $listeLieux);
-    }
-
     public function form_consulter()
     {
         $unReunion = $this->oModele->getUnReunion();
@@ -63,13 +57,15 @@ class ReunionControleur
     public function ajouter()
     {
         $controleReunion = new ReunionTable($this->parametre);
-        $controleReunion->setReu_Lie($this->parametre['reu_lie']); // Assurez-vous que le nom du champ combo est correct
+        $controleCapacite = $this->oModele->VérifieNombrePlace($controleReunion);
 
-        if ($controleReunion->getAutorisationBD() == false) {
-            //Retour à la fiche
-            $this->preparerFiche($controleReunion);
+        if ($controleReunion->getAutorisationBD() == false || $controleCapacite === false) {
+            // Retour à la fiche
+            $listeAccompagnateur = $this->oModele->getListeAccompagnateurs();
+            $listeLieux = $this->oModele->getListeLieux();
+            $this->oVue->genererAffichageFiche($controleReunion, $listeLieux, $listeAccompagnateur);
         } else {
-            // Insertion BD puis retour liste des reunion
+            // Insertion BD puis retour liste des réunions
             $this->oModele->addReunion($controleReunion);
             $this->listerAV();
         }
@@ -106,10 +102,14 @@ class ReunionControleur
     {
 
         $controleReunion = new ReunionTable($this->parametre);
+        $controleCapacite = $this->oModele->VérifieNombrePlace($controleReunion);
 
-        if ($controleReunion->getAutorisationBD() == false) {
+        if ($controleReunion->getAutorisationBD() == false || $controleCapacite === false) {
             //Retour à la fiche
-            $this->oVue->genererAffichageFiche($controleReunion);
+
+            $listeLieux = $this->oModele->getListeLieux();
+            $listeAccompagnateurs = $this->oModele->getListeAccompagnateurs();
+            $this->oVue->genererAffichageFiche($controleReunion, $listeLieux, $listeAccompagnateurs);
         } else {
             // Insertion BD puis retour liste des reunion
             $this->oModele->updateReunion($controleReunion);

@@ -116,5 +116,25 @@ class ReunionModele extends Modele
             ReunionTable::setMessageSucces("Modification de la  reunion correctement effectué.");
         }
     }
+
+    public function VérifieNombrePlace(ReunionTable $valeurs)
+    {
+        $sql = "SELECT lie_cap FROM p4t1_lieux WHERE lie_ide = ?";
+        $idRequete = $this->executeRequete($sql, [
+            $valeurs->getReuLie()
+        ]);
+
+        if ($idRequete !== false) {
+            $row = $idRequete->fetch(PDO::FETCH_ASSOC);
+            $lie_cap = $row['lie_cap'];
+
+            if ($valeurs->getReuCap() > $lie_cap) {
+                ReunionTable::setMessageErreur("La capacité saisie dépasse la capacité d'accueil de la salle.");
+                return false;
+            } else {
+                return true;
+            }
+        }
+    }
 }
 
