@@ -62,12 +62,16 @@ class LieuxControleur
 
     public function supprimer()
     {
-
         $controleLieux = new LieuxTable($this->parametre);
 
+        if ($this->oModele->verifieAssignation($controleLieux) == false) {
+            //Retour à la fiche
+            $this->oVue->genererAffichageFiche($controleLieux);
+        } else {
             // Insertion BD puis retour liste des lieux
             $this->oModele->deleteLieux($controleLieux);
             $this->lister();
+        }
     }
 
     public function form_modifier()

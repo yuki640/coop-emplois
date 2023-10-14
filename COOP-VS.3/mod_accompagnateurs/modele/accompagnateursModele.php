@@ -86,6 +86,21 @@ class AccompagnateursModele extends Modele
         return true;
     }
 
+    public function verifieAssignation(AccompagnateursTable $valeurs)
+    {
+        $sql = "select reu_acc from p4t1_reunion where reu_acc = ?";
+        $idRequete = $this->executeRequete($sql, [
+            $valeurs->getIde()
+        ]);
+
+        $rowCount = $idRequete->rowCount();
+
+        if ($rowCount > 0) {
+            AccompagnateursTable::setMessageErreur("Suppression de l'accompagnateur impossible car il est liée a au moins une réunion");
+            return false;
+        }
+        return true;
+    }
     public function updateAccompagnateurs(AccompagnateursTable $valeurs)
     {
         $sql = "UPDATE p4t1_accompagnateurs SET acc_nom = ?, acc_pre = ?,acc_tel = ?, acc_mail = ?,acc_fon = ? WHERE acc_ide = ?";

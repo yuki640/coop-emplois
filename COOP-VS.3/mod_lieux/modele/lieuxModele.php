@@ -74,21 +74,21 @@ class LieuxModele extends Modele
         }
     }
 
-//    public function verifieAssignation(LieuxTable $valeurs)
-//    {
-//        $sql = "select * from accompagnateur where codeA = ?";
-//        $idRequete = $this->executeRequete($sql, [
-//            $valeurs->getidentifiant()
-//        ]);
-//
-//        $rowCount = $idRequete->rowCount();
-//
-//        if ($rowCount > 0) {
-//            ClientTable::setMessageErreur("Suppression du lieu impossible car ce client posséde une réunion");
-//            return false;
-//        }
-//        return true;
-//    }
+    public function verifieAssignation(LieuxTable $valeurs)
+    {
+        $sql = "select reu_lie from p4t1_reunion where reu_lie = ?";
+        $idRequete = $this->executeRequete($sql, [
+            $valeurs->getIde()
+        ]);
+
+        $rowCount = $idRequete->rowCount();
+
+        if ($rowCount > 0) {
+            LieuxTable::setMessageErreur("Suppression du lieu impossible car il est liée a au moins une réunion");
+            return false;
+        }
+        return true;
+    }
 
     public function updateLieux(LieuxTable $valeurs)
     {

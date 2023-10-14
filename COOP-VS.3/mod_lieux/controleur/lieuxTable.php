@@ -192,10 +192,17 @@ Class LieuxTable{
      */
     public function setLie_nom($lie_nom)
     {
-        if(empty($lie_nom) || ctype_space(strval($lie_nom))) {
+        if (empty($lie_nom) || ctype_space(strval($lie_nom))) {
             $this->setAutorisationBD(false);
-            self :: setMessageErreur("Le nom est obligatoire. <br>");
+            self::setMessageErreur("Le nom est obligatoire. <br>");
+        } else {
+            $nomLength = mb_strlen($lie_nom);
+            if ($nomLength > 38) {
+                $this->setAutorisationBD(false);
+                self::setMessageErreur("Le nom ne peut pas dépasser 38 caractères. Actuellement, il contient $nomLength caractères. <br>");
+            }
         }
+
         $this->lie_nom = $lie_nom;
     }
 
@@ -204,6 +211,12 @@ Class LieuxTable{
      */
     public function setLie_ad1(string $lie_ad1)
     {
+        $ad1Length = mb_strlen($lie_ad1);
+        if ($ad1Length >= 38) {
+            $this->setAutorisationBD(false);
+            self::setMessageErreur("La première adresse ne peut pas dépasser 38 caractères. Actuellement, elle contient $ad1Length caractères. <br>");
+        }
+
         $this->lie_ad1 = $lie_ad1;
     }
 
@@ -213,7 +226,13 @@ Class LieuxTable{
 
     public function setLie_ad2(string $lie_ad2)
     {
-        $this->lie_ad2 = $lie_ad2;
+        $ad1Length = mb_strlen($lie_ad2);
+        if ($ad1Length >= 38) {
+            $this->setAutorisationBD(false);
+            self::setMessageErreur("La seconde adresse ne peut pas dépasser 38 caractères. Actuellement, elle contient $ad1Length caractères. <br>");
+        }
+
+        $this->lie_ad1 = $lie_ad2;
     }
 
     /**
@@ -221,6 +240,12 @@ Class LieuxTable{
      */
     public function setLie_ad3(string $lie_ad3)
     {
+        $ad1Length = mb_strlen($lie_ad3);
+        if ($ad1Length >= 38) {
+            $this->setAutorisationBD(false);
+            self::setMessageErreur("La troisième adresse ne peut pas dépasser 38 caractères. Actuellement, elle contient $ad1Length caractères. <br>");
+        }
+
         $this->lie_ad3 = $lie_ad3;
     }
 
@@ -229,6 +254,12 @@ Class LieuxTable{
      */
     public function setLie_ad4(string $lie_ad4)
     {
+        $ad1Length = mb_strlen($lie_ad4);
+        if ($ad1Length >= 38) {
+            $this->setAutorisationBD(false);
+            self::setMessageErreur("La quatrième adresse ne peut pas dépasser 38 caractères. Actuellement, elle contient $ad1Length caractères. <br>");
+        }
+
         $this->lie_ad4 = $lie_ad4;
     }
 
@@ -237,10 +268,14 @@ Class LieuxTable{
      */
     public function setLie_cpo($lie_cpo)
     {
-        if(empty($lie_cpo) || ctype_space(strval($lie_cpo))) {
+        if (empty($lie_cpo) || ctype_space(strval($lie_cpo))) {
             $this->setAutorisationBD(false);
-            self :: setMessageErreur("Le code postal est obligatoire. <br>");
+            self::setMessageErreur("Le code postal est obligatoire. <br>");
+        } elseif (strlen($lie_cpo) !== 5 || !ctype_digit($lie_cpo)) {
+            $this->setAutorisationBD(false);
+            self::setMessageErreur("Le code postal doit comporter exactement 5 chiffres. <br>");
         }
+
         $this->lie_cpo = $lie_cpo;
     }
 
@@ -249,43 +284,67 @@ Class LieuxTable{
      */
     public function setLie_ville($lie_ville)
     {
-        if(empty($lie_ville) || ctype_space(strval($lie_ville))) {
+        if (empty($lie_ville) || ctype_space(strval($lie_ville))) {
             $this->setAutorisationBD(false);
-            self :: setMessageErreur("La ville est obligatoire. <br>");
+            self::setMessageErreur("La ville est obligatoire. <br>");
+        } else {
+            $villeLength = strlen($lie_ville);
+            if ($villeLength > 32) {
+                $this->setAutorisationBD(false);
+                self::setMessageErreur("La ville ne peut pas dépasser 32 caractères. Actuellement, elle contient $villeLength caractères. <br>");
+            }
         }
+
         $this->lie_ville = $lie_ville;
     }
 
     /**
      * @param string $lie_tel
      */
-    public function setlie_tel(string $lie_tel)
+    public function setLie_tel(string $lie_tel)
     {
+        if (empty($lie_tel) || ctype_space(strval($lie_tel))) {
+            $this->setAutorisationBD(false);
+            self::setMessageErreur("Le numéro de téléphone est obligatoire. <br>");
+        } elseif (strlen($lie_tel) !== 14) {
+            $this->setAutorisationBD(false);
+            self::setMessageErreur("Le numéro de téléphone doit comporter exactement 14 caractères. 10 chiffres et un espace tout les deux chiffres <br>");
+        }
+
         $this->lie_tel = $lie_tel;
     }
-
-
     /**
      * @param string $lie_con
      */
     public function setLie_con(string $lie_con)
     {
-        if(empty($lie_con) || ctype_space(strval($lie_con))) {
+        if (empty($lie_con) || ctype_space(strval($lie_con))) {
             $this->setAutorisationBD(false);
-            self :: setMessageErreur("Le contact est obligatoire. <br>");
+            self::setMessageErreur("Le contact est obligatoire. <br>");
+        } else {
+            $lieConLength = strlen($lie_con);
+            if ($lieConLength > 50) {
+                $this->setAutorisationBD(false);
+                self::setMessageErreur("Le contact ne peut pas dépasser 50 caractères. Actuellement, il contient $lieConLength caractères. <br>");
+            }
         }
+
         $this->lie_con = $lie_con;
     }
 
     /**
      * @param mixed $lie_tco
      */
-    public function setLie_tco($lie_tco)
+    public function setLie_tco(string $lie_tco)
     {
-        if(empty($lie_tco) || ctype_space(strval($lie_tco))) {
+        if (empty($lie_tco) || ctype_space(strval($lie_tco))) {
             $this->setAutorisationBD(false);
-            self :: setMessageErreur("Le téléphone du contact est obligatoire. <br>");
+            self::setMessageErreur("Le téléphone du contact est obligatoire. <br>");
+        } elseif (strlen($lie_tco) > 14) {
+            $this->setAutorisationBD(false);
+            self::setMessageErreur("Le téléphone du contact ne peut pas dépasser 14 caractères. 10 chiffres et un espace tout les deux chiffres <br>");
         }
+
         $this->lie_tco = $lie_tco;
     }
 
@@ -296,7 +355,7 @@ Class LieuxTable{
     {
         if(empty($lie_cap) || ctype_space(strval($lie_cap))) {
             $this->setAutorisationBD(false);
-            self :: setMessageErreur("La ville est obligatoire. <br>");
+            self:: setMessageErreur("La capacité est obligatoire. <br>");
         }
         $this->lie_cap = $lie_cap;
     }

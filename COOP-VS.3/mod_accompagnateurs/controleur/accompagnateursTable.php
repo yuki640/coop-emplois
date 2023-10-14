@@ -137,21 +137,34 @@ Class AccompagnateursTable{
      */
     public function setAcc_nom(string $acc_nom)
     {
-        if(empty($acc_nom) || ctype_space(strval($acc_nom))) {
+        if (empty($acc_nom) || ctype_space(strval($acc_nom))) {
             $this->setAutorisationBD(false);
-            self :: setMessageErreur("Le nom est obligatoire. <br>");
+            self::setMessageErreur("Le nom est obligatoire. <br>");
+        } else {
+            $accNomLength = strlen($acc_nom);
+            if ($accNomLength > 50) {
+                $this->setAutorisationBD(false);
+                self::setMessageErreur("Le nom ne peut pas dépasser 50 caractères. Actuellement, il contient $accNomLength caractères. <br>");
+            }
         }
         $this->acc_nom = $acc_nom;
     }
+
 
     /**
      * @param string $acc_pre
      */
     public function setAcc_pre(string $acc_pre)
     {
-        if(empty($acc_pre) || ctype_space(strval($acc_pre))) {
+        if (empty($acc_pre) || ctype_space(strval($acc_pre))) {
             $this->setAutorisationBD(false);
-            self :: setMessageErreur("Le prenom est obligatoire. <br>");
+            self::setMessageErreur("Le prénom est obligatoire. <br>");
+        } else {
+            $accPreLength = strlen($acc_pre);
+            if ($accPreLength > 30) {
+                $this->setAutorisationBD(false);
+                self::setMessageErreur("Le prénom ne peut pas dépasser 30 caractères. Actuellement, il contient $accPreLength caractères. <br>");
+            }
         }
         $this->acc_pre = $acc_pre;
     }
@@ -161,32 +174,57 @@ Class AccompagnateursTable{
      */
     public function setAcc_tel(string $acc_tel)
     {
-        if(empty($acc_tel) || ctype_space(strval($acc_tel))) {
+        if (empty($acc_tel) || ctype_space(strval($acc_tel))) {
             $this->setAutorisationBD(false);
-            self :: setMessageErreur("Le telephone est obligatoire. <br>");
+            self::setMessageErreur("Le téléphone est obligatoire. <br>");
+        } else {
+            $accTelLength = strlen($acc_tel);
+            if ($accTelLength > 14) {
+                $this->setAutorisationBD(false);
+                self::setMessageErreur("Le téléphone ne peut pas dépasser 14 caractères. 10 chiffres et un espace tout les deux chiffres <br>");
+            }
         }
+
         $this->acc_tel = $acc_tel;
     }
+
 
     /**
      * @param string $acc_mail
      */
     public function setAcc_mail(string $acc_mail)
     {
-        if(empty($acc_mail) || ctype_space(strval($acc_mail))) {
+        if (empty($acc_mail) || ctype_space(strval($acc_mail))) {
             $this->setAutorisationBD(false);
-            self :: setMessageErreur("Le email est obligatoire. <br>");
+            self::setMessageErreur("L'email est obligatoire. <br>");
+        } else {
+            $accMailLength = strlen($acc_mail);
+            if ($accMailLength > 191) {
+                $this->setAutorisationBD(false);
+                self::setMessageErreur("L'email ne peut pas dépasser 191 caractères. Actuellement, il contient $accMailLength caractères. <br>");
+            }
         }
+
         $this->acc_mail = $acc_mail;
     }
+
 
     /**
      * @param string $acc_fon
      */
-    public function setAcc_fon(string $acc_fon)
+    public function setAcc_fon(string $acc_fon = null)
     {
+        if (!empty($acc_fon)) {
+            $accFonLength = strlen($acc_fon);
+            if ($accFonLength > 100) {
+                $this->setAutorisationBD(false);
+                self::setMessageErreur("La fonction ne peut pas dépasser 100 caractères. Actuellement, elle contient $accFonLength caractères. <br>");
+            }
+        }
+
         $this->acc_fon = $acc_fon;
     }
+
 
     /**
      * @param string $acc_dcr

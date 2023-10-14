@@ -69,11 +69,16 @@ class AccompagnateursControleur
 
     public function supprimer()
     {
-
         $controleAccompagnateurs = new AccompagnateursTable($this->parametre);
+
+        if ($this->oModele->verifieAssignation($controleAccompagnateurs) == false) {
+            //Retour à la fiche
+            $this->oVue->genererAffichageFiche($controleAccompagnateurs);
+        } else {
             // Insertion BD puis retour liste des Accompagnateurs
             $this->oModele->deleteAccompagnateurs($controleAccompagnateurs);
             $this->lister();
+        }
     }
 
     public function form_modifier()

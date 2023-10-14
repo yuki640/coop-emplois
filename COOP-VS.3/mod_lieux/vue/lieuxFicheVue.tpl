@@ -165,7 +165,7 @@
                             <label for="text" class=" form-control">
                                 Capacité d'accueil de la salle : <sup>(*)</sup>
                             </label>
-                            <input type="text" name="lie_cap" class="form-control"
+                            <input type="number" name="lie_cap" class="form-control"
                                    value="{$unLieux->getCapacite()}" {$readonly}
                                    required
                             >
