@@ -1,18 +1,30 @@
 <?php
+<<<<<<< HEAD
 /* Smarty version 4.3.2, created on 2023-09-18 18:08:17
+=======
+/* Smarty version 4.3.2, created on 2023-09-18 21:08:52
+>>>>>>> origin/thomas
   from 'C:\laragon\www\coop-emplois\COOP-VS\mod_Accompagnateurs\vue\AccompagnateursListeVue.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.2',
+<<<<<<< HEAD
   'unifunc' => 'content_650892111cf553_02093511',
+=======
+  'unifunc' => 'content_6508bc641b01d9_23505225',
+>>>>>>> origin/thomas
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '2bfa70afcbf35d51238d3f9cb9f3cd1692e19e75' => 
     array (
       0 => 'C:\\laragon\\www\\coop-emplois\\COOP-VS\\mod_Accompagnateurs\\vue\\AccompagnateursListeVue.tpl',
+<<<<<<< HEAD
       1 => 1695060365,
+=======
+      1 => 1695071329,
+>>>>>>> origin/thomas
       2 => 'file',
     ),
   ),
@@ -22,7 +34,11 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:public/footer.tpl' => 1,
   ),
 ),false)) {
+<<<<<<< HEAD
 function content_650892111cf553_02093511 (Smarty_Internal_Template $_smarty_tpl) {
+=======
+function content_6508bc641b01d9_23505225 (Smarty_Internal_Template $_smarty_tpl) {
+>>>>>>> origin/thomas
 ?><!DOCTYPE html>
 <html lang="fr">
 
@@ -32,7 +48,7 @@ function content_650892111cf553_02093511 (Smarty_Internal_Template $_smarty_tpl)
 
     <link rel="stylesheet" href="public/assets/css/liste.css">
 
-    <title>Mon Site Web</title>
+    <title>CoopEmploi</title>
 
 
 </head>
@@ -54,9 +70,9 @@ function content_650892111cf553_02093511 (Smarty_Internal_Template $_smarty_tpl)
                 <!-- PLACER LE TITRE DE LA PAGE-->
                 <!-- PLACER LE FORMULAIRE D'AJOUT-->
                 <form class="pos-ajout" method="post" action="index.php">
-                    <input type="hidden" name="gestion" value="accompagnateurs">
+                    <input type="hidden" name="gestion" value="accompagnateur">
                     <input type="hidden" name="action" value="form_ajouter">
-                    <label>Ajouter un accompagnateurs :
+                    <label>Ajouter un accompagnateur :
                         <input type="image" name="btn_ajouter" src="public/images/icones/a16.png">
                     </label>
                 </form>
@@ -71,8 +87,8 @@ function content_650892111cf553_02093511 (Smarty_Internal_Template $_smarty_tpl)
                 <!-- PLACER LA LISTE DES CLIENTS -->
                 <thead>
                     <tr>
-                        <th>Code Accompagnateurs</th>
-                        <th>Nom de L'Accompagnateurs</th>
+                        <th>Code Accompagnateur</th>
+                        <th>Nom de L'Accompagnateur</th>
                         <th>Prenom</th>
                         <th>Téléphone</th>
                         <th>specialisation</th>
@@ -83,45 +99,45 @@ function content_650892111cf553_02093511 (Smarty_Internal_Template $_smarty_tpl)
                 </thead>
                 <tbody>
                     <?php
-$_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['listeAccompagnateurs']->value, 'unAccompagnateurs');
-$_smarty_tpl->tpl_vars['unAccompagnateurs']->do_else = true;
-if ($_from !== null) foreach ($_from as $_smarty_tpl->tpl_vars['unAccompagnateurs']->value) {
-$_smarty_tpl->tpl_vars['unAccompagnateurs']->do_else = false;
+$_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['listeAccompagnateurs']->value, 'unAccompagnateur');
+$_smarty_tpl->tpl_vars['unAccompagnateur']->do_else = true;
+if ($_from !== null) foreach ($_from as $_smarty_tpl->tpl_vars['unAccompagnateur']->value) {
+$_smarty_tpl->tpl_vars['unAccompagnateur']->do_else = false;
 ?>
                     <tr>
-                        <td><?php echo $_smarty_tpl->tpl_vars['unAccompagnateurs']->value->getCodeA();?>
+                        <td><?php echo $_smarty_tpl->tpl_vars['unAccompagnateur']->value->getCodeA();?>
 </td>
-                        <td><?php echo $_smarty_tpl->tpl_vars['unAccompagnateurs']->value->getNom();?>
+                        <td><?php echo $_smarty_tpl->tpl_vars['unAccompagnateur']->value->getNom();?>
 </td>
-                        <td><?php echo $_smarty_tpl->tpl_vars['unAccompagnateurs']->value->getPrenom();?>
+                        <td><?php echo $_smarty_tpl->tpl_vars['unAccompagnateur']->value->getPrenom();?>
 </td>
-                        <td><?php echo $_smarty_tpl->tpl_vars['unAccompagnateurs']->value->getTelephone();?>
+                        <td><?php echo $_smarty_tpl->tpl_vars['unAccompagnateur']->value->getTelephone();?>
 </td>
-                        <td><?php echo $_smarty_tpl->tpl_vars['unAccompagnateurs']->value->getSpecialisation();?>
+                        <td><?php echo $_smarty_tpl->tpl_vars['unAccompagnateur']->value->getSpecialisation();?>
 </td>
                         <td>
                             <form action="index.php" method="post">
-                                <input type="hidden" name="codea" value="<?php echo $_smarty_tpl->tpl_vars['unAccompagnateurs']->value->getCodeA();?>
+                                <input type="hidden" name="codea" value="<?php echo $_smarty_tpl->tpl_vars['unAccompagnateur']->value->getCodeA();?>
 ">
-                                <input type="hidden" name="gestion" value="accompagnateurs">
+                                <input type="hidden" name="gestion" value="accompagnateur">
                                 <input type="hidden" name="action" value="form_consulter">
                                 <input type="image" name="btn_consulter" src="public/images/icones/p16.png">
                             </form>
                         </td>
                         <td>
                             <form action="index.php" method="post">
-                                <input type="hidden" name="codea" value="<?php echo $_smarty_tpl->tpl_vars['unAccompagnateurs']->value->getCodeA();?>
+                                <input type="hidden" name="codea" value="<?php echo $_smarty_tpl->tpl_vars['unAccompagnateur']->value->getCodeA();?>
 ">
-                                <input type="hidden" name="gestion" value="accompagnateurs">
+                                <input type="hidden" name="gestion" value="accompagnateur">
                                 <input type="hidden" name="action" value="form_modifier">
                                 <input type="image" name="btn_modifier" src="public/images/icones/m16.png">
                             </form>
                         </td>
                         <td>
                             <form action="index.php" method="post">
-                                <input type="hidden" name="codea" value="<?php echo $_smarty_tpl->tpl_vars['unAccompagnateurs']->value->getCodeA();?>
+                                <input type="hidden" name="codea" value="<?php echo $_smarty_tpl->tpl_vars['unAccompagnateur']->value->getCodeA();?>
 ">
-                                <input type="hidden" name="gestion" value="accompagnateurs">
+                                <input type="hidden" name="gestion" value="accompagnateur">
                                 <input type="hidden" name="action" value="form_supprimer">
                                 <input type="image" name="btn_supprimer" src="public/images/icones/s16.png">
                             </form>

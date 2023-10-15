@@ -1,18 +1,30 @@
 <?php
+<<<<<<< HEAD
 /* Smarty version 4.3.2, created on 2023-09-18 18:07:23
+=======
+/* Smarty version 4.3.2, created on 2023-09-18 20:17:56
+>>>>>>> origin/thomas
   from 'C:\laragon\www\coop-emplois\COOP-VS\mod_accueil\vue\accueilVue.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.2',
+<<<<<<< HEAD
   'unifunc' => 'content_650891db8bdec9_50573237',
+=======
+  'unifunc' => 'content_6508b074baa890_80897966',
+>>>>>>> origin/thomas
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'db5b6ce2abbaf8e00432d7a3cebcde9631ba49ec' => 
     array (
       0 => 'C:\\laragon\\www\\coop-emplois\\COOP-VS\\mod_accueil\\vue\\accueilVue.tpl',
+<<<<<<< HEAD
       1 => 1695060365,
+=======
+      1 => 1695068274,
+>>>>>>> origin/thomas
       2 => 'file',
     ),
   ),
@@ -22,7 +34,11 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:public/footer.tpl' => 1,
   ),
 ),false)) {
+<<<<<<< HEAD
 function content_650891db8bdec9_50573237 (Smarty_Internal_Template $_smarty_tpl) {
+=======
+function content_6508b074baa890_80897966 (Smarty_Internal_Template $_smarty_tpl) {
+>>>>>>> origin/thomas
 ?><!DOCTYPE html>
 <html lang="fr">
 
@@ -37,8 +53,6 @@ function content_650891db8bdec9_50573237 (Smarty_Internal_Template $_smarty_tpl)
 
 </head>
 <body>
-
-
 
 <div id="right-panel" class="right-panel">
 

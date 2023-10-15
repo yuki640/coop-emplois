@@ -1,18 +1,30 @@
 <?php
+<<<<<<< HEAD
 /* Smarty version 4.3.2, created on 2023-09-18 18:08:16
+=======
+/* Smarty version 4.3.2, created on 2023-09-18 20:37:15
+>>>>>>> origin/thomas
   from 'C:\laragon\www\coop-emplois\COOP-VS\mod_lieux\vue\lieuxListeVue.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.2',
+<<<<<<< HEAD
   'unifunc' => 'content_6508921023c1c8_95051664',
+=======
+  'unifunc' => 'content_6508b4fb0c3f78_68966891',
+>>>>>>> origin/thomas
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'fd23a542397604af4ff87b3a53513af7877b020d' => 
     array (
       0 => 'C:\\laragon\\www\\coop-emplois\\COOP-VS\\mod_lieux\\vue\\lieuxListeVue.tpl',
+<<<<<<< HEAD
       1 => 1695060365,
+=======
+      1 => 1695069399,
+>>>>>>> origin/thomas
       2 => 'file',
     ),
   ),
@@ -22,7 +34,11 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:public/footer.tpl' => 1,
   ),
 ),false)) {
+<<<<<<< HEAD
 function content_6508921023c1c8_95051664 (Smarty_Internal_Template $_smarty_tpl) {
+=======
+function content_6508b4fb0c3f78_68966891 (Smarty_Internal_Template $_smarty_tpl) {
+>>>>>>> origin/thomas
 ?><!DOCTYPE html>
 <html lang="fr">
 
@@ -32,7 +48,7 @@ function content_6508921023c1c8_95051664 (Smarty_Internal_Template $_smarty_tpl)
 
     <link rel="stylesheet" href="public/assets/css/liste.css">
 
-    <title>liste de lieux</title>
+    <title>liste des lieux</title>
 
 
 </head>
@@ -47,7 +63,7 @@ function content_6508921023c1c8_95051664 (Smarty_Internal_Template $_smarty_tpl)
         <!-- FIN : header -->
 
         <div class="page-title">
-            <h1>L'emplois, c'est maintenant </h1>
+            <h1>Lieux</h1>
         </div>
         <div class="card-header">
             <strong class="card-title">
@@ -89,25 +105,25 @@ function content_6508921023c1c8_95051664 (Smarty_Internal_Template $_smarty_tpl)
            </thead>
            <tbody>
                 <?php
-$_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['listeLieux']->value, 'unLieux');
-$_smarty_tpl->tpl_vars['unLieux']->do_else = true;
-if ($_from !== null) foreach ($_from as $_smarty_tpl->tpl_vars['unLieux']->value) {
-$_smarty_tpl->tpl_vars['unLieux']->do_else = false;
+$_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['listeLieux']->value, 'unLieu');
+$_smarty_tpl->tpl_vars['unLieu']->do_else = true;
+if ($_from !== null) foreach ($_from as $_smarty_tpl->tpl_vars['unLieu']->value) {
+$_smarty_tpl->tpl_vars['unLieu']->do_else = false;
 ?>
                     <tr>
-                        <td><?php echo $_smarty_tpl->tpl_vars['unLieux']->value->getCodeL();?>
+                        <td><?php echo $_smarty_tpl->tpl_vars['unLieu']->value->getCodeL();?>
 </td>
-                        <td><?php echo $_smarty_tpl->tpl_vars['unLieux']->value->getNom();?>
+                        <td><?php echo $_smarty_tpl->tpl_vars['unLieu']->value->getNom();?>
 </td>
-                        <td><?php echo $_smarty_tpl->tpl_vars['unLieux']->value->getVille();?>
+                        <td><?php echo $_smarty_tpl->tpl_vars['unLieu']->value->getVille();?>
 </td>
-                        <td><?php echo $_smarty_tpl->tpl_vars['unLieux']->value->getContact();?>
+                        <td><?php echo $_smarty_tpl->tpl_vars['unLieu']->value->getContact();?>
 </td>
-                        <td><?php echo $_smarty_tpl->tpl_vars['unLieux']->value->getTelephoneC();?>
+                        <td><?php echo $_smarty_tpl->tpl_vars['unLieu']->value->getTelephoneC();?>
 </td>
                         <td>
                             <form action="index.php" method="post">
-                                <input type="hidden" name="codel" value="<?php echo $_smarty_tpl->tpl_vars['unLieux']->value->getCodeL();?>
+                                <input type="hidden" name="codel" value="<?php echo $_smarty_tpl->tpl_vars['unLieu']->value->getCodeL();?>
 ">
                                 <input type="hidden" name="gestion" value="lieux">
                                 <input type="hidden" name="action" value="form_consulter">
@@ -116,7 +132,7 @@ $_smarty_tpl->tpl_vars['unLieux']->do_else = false;
                         </td>
                         <td>
                             <form action="index.php" method="post">
-                                <input type="hidden" name="codel" value="<?php echo $_smarty_tpl->tpl_vars['unLieux']->value->getCodeL();?>
+                                <input type="hidden" name="codel" value="<?php echo $_smarty_tpl->tpl_vars['unLieu']->value->getCodeL();?>
 ">
                                 <input type="hidden" name="gestion" value="lieux">
                                 <input type="hidden" name="action" value="form_modifier">
@@ -125,7 +141,7 @@ $_smarty_tpl->tpl_vars['unLieux']->do_else = false;
                         </td>
                         <td>
                             <form action="index.php" method="post">
-                                <input type="hidden" name="codel" value="<?php echo $_smarty_tpl->tpl_vars['unLieux']->value->getCodeL();?>
+                                <input type="hidden" name="codel" value="<?php echo $_smarty_tpl->tpl_vars['unLieu']->value->getCodeL();?>
 ">
                                 <input type="hidden" name="gestion" value="lieux">
                                 <input type="hidden" name="action" value="form_supprimer">

@@ -1,18 +1,30 @@
 <?php
+<<<<<<< HEAD
 /* Smarty version 4.3.2, created on 2023-09-18 18:07:23
+=======
+/* Smarty version 4.3.2, created on 2023-09-18 20:48:42
+>>>>>>> origin/thomas
   from 'C:\laragon\www\coop-emplois\COOP-VS\public\header.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.2',
+<<<<<<< HEAD
   'unifunc' => 'content_650891db8f0bd1_76310781',
+=======
+  'unifunc' => 'content_6508b7aa6622f4_89371637',
+>>>>>>> origin/thomas
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'be9a2379f82d953bb0172a954e496e9a5a4febf5' => 
     array (
       0 => 'C:\\laragon\\www\\coop-emplois\\COOP-VS\\public\\header.tpl',
+<<<<<<< HEAD
       1 => 1695060365,
+=======
+      1 => 1695070119,
+>>>>>>> origin/thomas
       2 => 'file',
     ),
   ),
@@ -20,7 +32,11 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
+<<<<<<< HEAD
 function content_650891db8f0bd1_76310781 (Smarty_Internal_Template $_smarty_tpl) {
+=======
+function content_6508b7aa6622f4_89371637 (Smarty_Internal_Template $_smarty_tpl) {
+>>>>>>> origin/thomas
 ?><!DOCTYPE html>
 <html lang="fr">
 
@@ -47,7 +63,7 @@ function content_650891db8f0bd1_76310781 (Smarty_Internal_Template $_smarty_tpl)
                 </li>
                 <li><a href="#"">Entretiens</a></li>
             <li><a href=" #">Porteurs de Projet</a></li>
-                <li><a href="index.php?gestion=accompagnateurs">Accompagnateurs</a></li>
+                <li><a href="index.php?gestion=accompagnateur">Accompagnateurs</a></li>
 
                 <li class="dropdown">
                     <a href="#" class="dropbtn">Paramètres</a>
@@ -77,6 +93,10 @@ function content_650891db8f0bd1_76310781 (Smarty_Internal_Template $_smarty_tpl)
         </nav>
     </header>
 
+    <img src="public/images/logo_coopemploi.png" style="
+    height: 100px;
+     width: 130px;
+">
 
 </body>
 

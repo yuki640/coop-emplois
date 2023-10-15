@@ -7,7 +7,7 @@
 
     <link rel="stylesheet" href="public/assets/css/liste.css">
 
-    <title>Mon Site Web</title>
+    <title>CoopEmploi</title>
 
 
 </head>
@@ -28,9 +28,9 @@
                 <!-- PLACER LE TITRE DE LA PAGE-->
                 <!-- PLACER LE FORMULAIRE D'AJOUT-->
                 <form class="pos-ajout" method="post" action="index.php">
-                    <input type="hidden" name="gestion" value="accompagnateurs">
+                    <input type="hidden" name="gestion" value="accompagnateur">
                     <input type="hidden" name="action" value="form_ajouter">
-                    <label>Ajouter un accompagnateurs :
+                    <label>Ajouter un accompagnateur :
                         <input type="image" name="btn_ajouter" src="public/images/icones/a16.png">
                     </label>
                 </form>
@@ -44,8 +44,8 @@
                 <!-- PLACER LA LISTE DES CLIENTS -->
                 <thead>
                     <tr>
-                        <th>Code Accompagnateurs</th>
-                        <th>Nom de L'Accompagnateurs</th>
+                        <th>Code Accompagnateur</th>
+                        <th>Nom de L'Accompagnateur</th>
                         <th>Prenom</th>
                         <th>Téléphone</th>
                         <th>specialisation</th>
@@ -55,33 +55,33 @@
                     </tr>
                 </thead>
                 <tbody>
-                    {foreach from=$listeAccompagnateurs item=unAccompagnateurs}
+                    {foreach from=$listeAccompagnateurs item=unAccompagnateur}
                     <tr>
-                        <td>{$unAccompagnateurs->getCodeA()}</td>
-                        <td>{$unAccompagnateurs->getNom()}</td>
-                        <td>{$unAccompagnateurs->getPrenom()}</td>
-                        <td>{$unAccompagnateurs->getTelephone()}</td>
-                        <td>{$unAccompagnateurs->getSpecialisation()}</td>
+                        <td>{$unAccompagnateur->getCodeA()}</td>
+                        <td>{$unAccompagnateur->getNom()}</td>
+                        <td>{$unAccompagnateur->getPrenom()}</td>
+                        <td>{$unAccompagnateur->getTelephone()}</td>
+                        <td>{$unAccompagnateur->getSpecialisation()}</td>
                         <td>
                             <form action="index.php" method="post">
-                                <input type="hidden" name="codea" value="{$unAccompagnateurs->getCodeA()}">
-                                <input type="hidden" name="gestion" value="accompagnateurs">
+                                <input type="hidden" name="codea" value="{$unAccompagnateur->getCodeA()}">
+                                <input type="hidden" name="gestion" value="accompagnateur">
                                 <input type="hidden" name="action" value="form_consulter">
                                 <input type="image" name="btn_consulter" src="public/images/icones/p16.png">
                             </form>
                         </td>
                         <td>
                             <form action="index.php" method="post">
-                                <input type="hidden" name="codea" value="{$unAccompagnateurs->getCodeA()}">
-                                <input type="hidden" name="gestion" value="accompagnateurs">
+                                <input type="hidden" name="codea" value="{$unAccompagnateur->getCodeA()}">
+                                <input type="hidden" name="gestion" value="accompagnateur">
                                 <input type="hidden" name="action" value="form_modifier">
                                 <input type="image" name="btn_modifier" src="public/images/icones/m16.png">
                             </form>
                         </td>
                         <td>
                             <form action="index.php" method="post">
-                                <input type="hidden" name="codea" value="{$unAccompagnateurs->getCodeA()}">
-                                <input type="hidden" name="gestion" value="accompagnateurs">
+                                <input type="hidden" name="codea" value="{$unAccompagnateur->getCodeA()}">
+                                <input type="hidden" name="gestion" value="accompagnateur">
                                 <input type="hidden" name="action" value="form_supprimer">
                                 <input type="image" name="btn_supprimer" src="public/images/icones/s16.png">
                             </form>
