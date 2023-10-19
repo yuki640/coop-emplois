@@ -88,12 +88,14 @@
                                 <div class="form-group">
                                     <label for="reu_acc" class="form-control">Nom de l'accompagnateur :</label>
                                     <select name="reu_acc" class="form-control" {$readonly}>
-                                        {foreach $listeAccompagnateurs as $accompagnateur}
+
+                                    {foreach $listeAccompagnateurs as $accompagnateur}
                                             <option value="{$accompagnateur['acc_ide']}"
                                                     {if $accompagnateur['acc_ide'] == $unReunion->getReuAcc()}selected{/if}>
                                                 {$accompagnateur['acc_nom']} {$accompagnateur['acc_pre']}
                                             </option>
                                         {/foreach}
+
                                     </select>
                                 </div>
 
