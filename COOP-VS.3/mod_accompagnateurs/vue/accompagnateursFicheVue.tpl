@@ -25,7 +25,7 @@
 
 
         <div class="page-title">
-            <h1>L'emplois, c'est maintenant !</h1>
+            <h1>L'emploi, c'est maintenant !</h1>
         </div>
 
 
