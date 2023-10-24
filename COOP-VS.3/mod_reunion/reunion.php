@@ -1,8 +1,7 @@
 <?php
 
 //Routeur pour la Reunion
-class Reunion
-{
+class Reunion{
 
     private $parametre = []; // Tableau =$_REQUEST
     private $oControleur; //propriété de type objet

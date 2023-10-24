@@ -25,7 +25,7 @@
 
 
         <div class="page-title">
-            <h1>L'emplois, c'est maintenant !</h1>
+            <h1>L'emploi, c'est maintenant !</h1>
         </div>
 
 
@@ -137,7 +137,7 @@
 
                         <div class="form-group">
                             <label for="text" class=" form-control">
-                                Telephone de l'établissement :
+                                Téléphone de l'établissement :
                             </label>
                             <input type="text" name="lie_tel" class="form-control"
                                    value="{$unLieux->getTelephoneS()}" {$readonly}>

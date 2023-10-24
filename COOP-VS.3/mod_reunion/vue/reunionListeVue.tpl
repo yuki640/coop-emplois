@@ -58,22 +58,32 @@
             <tr>
                 <th>ID</th>
                 <th>Date</th>
-                <th>Heure</th>
-                <th>Intitulé</th>
-                <th>Capacité</th>
+                <th>Nom du lieux</th>
+                <th>Nom de l'accompagnateur</th>
+                <th>Publié O/N</th>
+                <th>Nombre d'inscrits</th>
                 <th class="pos-actions">Consulter</th>
+                {if $action neq 'listerDP'}
                 <th class="pos-actions">Modifier</th>
                 <th class="pos-actions">Supprimer</th>
+                {/if}
             </tr>
             </thead>
             <tbody>
             {foreach from=$listeReunion item=unReunion}
                 <tr>
                     <td>{$unReunion->getReuIde()}</td>
-                    <td>{$unReunion->getReuDat()}</td>
-                    <td>{$unReunion->getReuHeu()}</td>
-                    <td>{$unReunion->getReuPre()}</td>
-                    <td>{$unReunion->getReuCap()}</td>
+                    <td>{$unReunion->getReuDatFormatted()}</td>
+                    <td>{$unReunion->getReuLieNom()}</td>
+                    <td>{$unReunion->getReuAccNom()}</td>
+                    <td>
+                        {if $unReunion->getReuPub() == 1}
+                            OUI
+                        {else}
+                            NON
+                        {/if}
+                    </td>
+                    <td></td>
                     <td>
                         <form action="index.php" method="post">
                             <input type="hidden" name="reu_ide" value="{$unReunion->getReuIde()}">
@@ -82,6 +92,7 @@
                             <input type="image" name="btn_consulter" src="public/images/icones/p16.png">
                         </form>
                     </td>
+                    {if $action neq 'listerDP'}
                     <td>
                         <form action="index.php" method="post">
                             <input type="hidden" name="reu_ide" value="{$unReunion->getReuIde()}">
@@ -98,6 +109,7 @@
                             <input type="image" name="btn_supprimer" src="public/images/icones/s16.png">
                         </form>
                     </td>
+                    {/if}
                 </tr>
             {/foreach}
 

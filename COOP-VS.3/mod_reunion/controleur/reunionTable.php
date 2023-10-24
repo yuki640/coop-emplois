@@ -14,6 +14,8 @@ class ReunionTable
     private $reu_pub = "";
     private $reu_dcr = "";
     private $reu_dmo = "";
+    private $reu_lie_nom = "";
+    private $reu_acc_nom = "";
     private $autorisationBD = true;
     private static $messageErreur = "";
     private static $messageSucces = "";
@@ -51,6 +53,13 @@ class ReunionTable
     {
         return $this->reu_dat;
     }
+    public function getReuDatFormatted()
+    {
+        $timestamp = strtotime($this->reu_dat);
+        $formatter = new IntlDateFormatter('fr_FR', IntlDateFormatter::LONG, IntlDateFormatter::NONE);
+        $dateFormatted = $formatter->format($timestamp);
+        return $dateFormatted;
+    }
 
     public function getReuHeu(): string
     {
@@ -85,6 +94,22 @@ class ReunionTable
     public function getReuPub(): string
     {
         return $this->reu_pub;
+    }
+
+    /**
+     * @return string
+     */
+    public function getReuLieNom(): string
+    {
+        return $this->reu_lie_nom;
+    }
+
+    /**
+     * @return string
+     */
+    public function getReuAccNom(): string
+    {
+        return $this->reu_acc_nom;
     }
 
     public function getReuDcr(): string
@@ -263,6 +288,22 @@ class ReunionTable
     public function setReu_Pub(string $reu_pub): void
     {
         $this->reu_pub = $reu_pub;
+    }
+
+    /**
+     * @param string $reu_lie_nom
+     */
+    public function setReu_Lie_Nom(string $reu_lie_nom): void
+    {
+        $this->reu_lie_nom = $reu_lie_nom;
+    }
+
+    /**
+     * @param string $reu_acc_nom
+     */
+    public function setReu_Acc_Nom(string $reu_acc_nom): void
+    {
+        $this->reu_acc_nom = $reu_acc_nom;
     }
 
     public function setReu_Dcr(string $reu_dcr): void

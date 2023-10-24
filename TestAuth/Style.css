@@ -1,0 +1,94 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Helvetica Neue", sans-serif;
+}
+
+body {
+    background-color: #691313; /* Couleur de fond */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.box {
+    width: 400px;
+    height: 450px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+h2 {
+    font-size: 24px;
+    color: #262626; /* Couleur du texte */
+    padding: 20px 0;
+}
+
+.inputbox {
+    margin: 20px 0;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; /* Centrer le champ de saisie horizontalement */
+    justify-items: center;
+}
+
+.inputbox label {
+    color: #8e8e8e; /* Couleur du texte de l'étiquette */
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+.inputbox input {
+    width: 90%;
+    height: 40px;
+    border: 1px solid #dbdbdb;
+    border-radius: 5px;
+    padding: 10px;
+    outline: none;
+    font-size: 16px;
+
+}
+
+button {
+    width: 80%;
+    height: 40px;
+    background-color: #3897f0; /* Couleur du bouton */
+    border: none;
+    border-radius: 5px;
+    color: white; /* Couleur du texte du bouton */
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.forget {
+    margin: 10px 0;
+    color: #8e8e8e;
+    font-size: 14px;
+}
+
+.forget a {
+    color: #003569; /* Couleur du lien "register" */
+    text-decoration: none;
+    font-weight: 600;
+    margin-left: 5px;
+}
+
+.register {
+    font-size: 14px;
+    color: #262626;
+    margin-top: 20px;
+}
+
+.register a {
+    color: #003569; /* Couleur du lien "register" */
+    text-decoration: none;
+    font-weight: 600;
+}

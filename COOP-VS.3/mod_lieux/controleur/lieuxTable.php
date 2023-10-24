@@ -303,13 +303,6 @@ Class LieuxTable{
      */
     public function setLie_tel(string $lie_tel)
     {
-        if (empty($lie_tel) || ctype_space(strval($lie_tel))) {
-            $this->setAutorisationBD(false);
-            self::setMessageErreur("Le numéro de téléphone est obligatoire. <br>");
-        } elseif (strlen($lie_tel) !== 14) {
-            $this->setAutorisationBD(false);
-            self::setMessageErreur("Le numéro de téléphone doit comporter exactement 14 caractères. 10 chiffres et un espace tout les deux chiffres <br>");
-        }
 
         $this->lie_tel = $lie_tel;
     }

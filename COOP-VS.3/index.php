@@ -20,5 +20,10 @@ Autoloader::chargerClasses();
 
 // Création d'un objet, instance de la classe de type (routeur) accueil (client, produit, ...)
 $oRouteur = new $_REQUEST['gestion']($_REQUEST);
+<<<<<<< HEAD
 //var_dump($_REQUEST['gestion']);
 $oRouteur->choixAction();
+=======
+
+$oRouteur->choixAction();
+>>>>>>> origin/thomas
