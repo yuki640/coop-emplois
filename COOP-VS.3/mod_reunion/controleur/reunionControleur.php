@@ -25,7 +25,7 @@ class ReunionControleur
         $listage = ">";
         $listeReunion = $this->oModele->getListeReunion($listage);
 
-        $this->oVue->setAction('listerAV');;
+        $this->oVue->setAction('listerAV');
         $this->oVue->genererAffichageListe($listeReunion, $this->action);
     }
 

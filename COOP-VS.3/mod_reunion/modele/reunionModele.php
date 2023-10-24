@@ -16,12 +16,15 @@ class ReunionModele extends Modele
     {
         $valListage = $valListage . "'" . date("Y-m-d") . "'";
 
-        $sql = "SELECT * FROM p4t1_reunion where reu_dat $valListage";
-        $idRequete = $this->executeRequete($sql); // requête simple
+        $sql = "SELECT p4t1_reunion.*,p4t1_lieux.lie_nom AS reu_lie_nom, p4t1_accompagnateurs.acc_nom  AS reu_acc_nom
+FROM p4t1_reunion
+LEFT JOIN p4t1_lieux ON p4t1_reunion.reu_lie = p4t1_lieux.lie_ide
+LEFT JOIN p4t1_accompagnateurs ON p4t1_reunion.reu_acc = p4t1_accompagnateurs.acc_ide
+WHERE p4t1_reunion.reu_dat $valListage";
 
+        $idRequete = $this->executeRequete($sql); // requête simple
         if ($idRequete->rowCount() > 0) {
             while ($row = $idRequete->fetch(PDO::FETCH_ASSOC)) {
-
                 $listeReunion[] = new ReunionTable($row);
             }
             return $listeReunion;

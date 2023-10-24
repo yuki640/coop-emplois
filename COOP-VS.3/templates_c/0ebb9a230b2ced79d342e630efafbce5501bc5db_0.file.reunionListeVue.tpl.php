@@ -1,28 +1,28 @@
 <?php
-/* Smarty version 4.3.2, created on 2023-10-14 14:04:28
+/* Smarty version 4.3.2, created on 2023-10-24 09:14:53
   from 'C:\laragon\www\coop-emplois\COOP-VS.3\mod_reunion\vue\reunionListeVue.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
-if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array(
-    'version' => '4.3.2',
-    'unifunc' => 'content_652a9feceec611_57228285',
-    'has_nocache_code' => false,
-    'file_dependency' =>
-        array(
-            '0ebb9a230b2ced79d342e630efafbce5501bc5db' =>
-                array(
-                    0 => 'C:\\laragon\\www\\coop-emplois\\COOP-VS.3\\mod_reunion\\vue\\reunionListeVue.tpl',
-                    1 => 1697053963,
-                    2 => 'file',
-                ),
-        ),
-    'includes' =>
-        array(
-            'file:public/header.tpl' => 1,
-            'file:public/footer.tpl' => 1,
-        ),
-), false)) {
-function content_652a9feceec611_57228285 (Smarty_Internal_Template $_smarty_tpl) {
+if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
+  'version' => '4.3.2',
+  'unifunc' => 'content_65378b0de1ea60_18280967',
+  'has_nocache_code' => false,
+  'file_dependency' => 
+  array (
+    '0ebb9a230b2ced79d342e630efafbce5501bc5db' => 
+    array (
+      0 => 'C:\\laragon\\www\\coop-emplois\\COOP-VS.3\\mod_reunion\\vue\\reunionListeVue.tpl',
+      1 => 1698138892,
+      2 => 'file',
+    ),
+  ),
+  'includes' => 
+  array (
+    'file:public/header.tpl' => 1,
+    'file:public/footer.tpl' => 1,
+  ),
+),false)) {
+function content_65378b0de1ea60_18280967 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="fr">
 
@@ -43,18 +43,18 @@ function content_652a9feceec611_57228285 (Smarty_Internal_Template $_smarty_tpl)
 
     <!--Header -->
     <?php $_smarty_tpl->_subTemplateRender('file:public/header.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
-    ?>
+?>
     <!-- FIN : header -->
 
     <div class="page-title">
         <h1>
-            <?php if ($_smarty_tpl->tpl_vars['action']->value == 'listerAV') { ?>
-                <?php echo $_smarty_tpl->tpl_vars['titrePageAV']->value; ?>
+            <?php if ($_smarty_tpl->tpl_vars['action']->value == 'listerAV') {?>
+                <?php echo $_smarty_tpl->tpl_vars['titrePageAV']->value;?>
 
             <?php } else { ?>
-                <?php echo $_smarty_tpl->tpl_vars['titrePageDP']->value; ?>
+                <?php echo $_smarty_tpl->tpl_vars['titrePageDP']->value;?>
 
-            <?php } ?>
+            <?php }?>
         </h1>
     </div>
     <div class="card-header">
@@ -76,8 +76,8 @@ function content_652a9feceec611_57228285 (Smarty_Internal_Template $_smarty_tpl)
     </div>
     <div class="card-body">
 
-        <div <?php if (ReunionTable::getMessageSucces() != '') { ?> class="alert alert-success" role="alert" <?php } ?> >
-            <?php echo ReunionTable::getMessageSucces(); ?>
+        <div <?php if (ReunionTable::getMessageSucces() != '') {?> class="alert alert-success" role="alert" <?php }?> >
+            <?php echo ReunionTable::getMessageSucces();?>
 
         </div>
 
@@ -87,46 +87,54 @@ function content_652a9feceec611_57228285 (Smarty_Internal_Template $_smarty_tpl)
             <tr>
                 <th>ID</th>
                 <th>Date</th>
-                <th>Heure</th>
-                <th>Intitulé</th>
-                <th>Capacité</th>
+                <th>Nom du lieux</th>
+                <th>Nom de l'accompagnateur</th>
+                <th>Publié O/N</th>
+                <th>Nombre d'inscrits</th>
                 <th class="pos-actions">Consulter</th>
+                <?php if ($_smarty_tpl->tpl_vars['action']->value != 'listerDP') {?>
                 <th class="pos-actions">Modifier</th>
                 <th class="pos-actions">Supprimer</th>
+                <?php }?>
             </tr>
             </thead>
             <tbody>
             <?php
-            $_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['listeReunion']->value, 'unReunion');
-            $_smarty_tpl->tpl_vars['unReunion']->do_else = true;
-            if ($_from !== null) foreach ($_from as $_smarty_tpl->tpl_vars['unReunion']->value) {
-                $_smarty_tpl->tpl_vars['unReunion']->do_else = false;
-                ?>
+$_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['listeReunion']->value, 'unReunion');
+$_smarty_tpl->tpl_vars['unReunion']->do_else = true;
+if ($_from !== null) foreach ($_from as $_smarty_tpl->tpl_vars['unReunion']->value) {
+$_smarty_tpl->tpl_vars['unReunion']->do_else = false;
+?>
                 <tr>
-                    <td><?php echo $_smarty_tpl->tpl_vars['unReunion']->value->getReuIde(); ?>
+                    <td><?php echo $_smarty_tpl->tpl_vars['unReunion']->value->getReuIde();?>
+</td>
+                    <td><?php echo $_smarty_tpl->tpl_vars['unReunion']->value->getReuDatFormatted();?>
+</td>
+                    <td><?php echo $_smarty_tpl->tpl_vars['unReunion']->value->getReuLieNom();?>
+</td>
+                    <td><?php echo $_smarty_tpl->tpl_vars['unReunion']->value->getReuAccNom();?>
+</td>
+                    <td>
+                        <?php if ($_smarty_tpl->tpl_vars['unReunion']->value->getReuPub() == 1) {?>
+                            OUI
+                        <?php } else { ?>
+                            NON
+                        <?php }?>
                     </td>
-                    <td><?php echo $_smarty_tpl->tpl_vars['unReunion']->value->getReuDat(); ?>
-                    </td>
-                    <td><?php echo $_smarty_tpl->tpl_vars['unReunion']->value->getReuHeu(); ?>
-                    </td>
-                    <td><?php echo $_smarty_tpl->tpl_vars['unReunion']->value->getReuPre(); ?>
-                    </td>
-                    <td><?php echo $_smarty_tpl->tpl_vars['unReunion']->value->getReuCap(); ?>
-                    </td>
+                    <td></td>
                     <td>
                         <form action="index.php" method="post">
-                            <input type="hidden" name="reu_ide"
-                                   value="<?php echo $_smarty_tpl->tpl_vars['unReunion']->value->getReuIde(); ?>
+                            <input type="hidden" name="reu_ide" value="<?php echo $_smarty_tpl->tpl_vars['unReunion']->value->getReuIde();?>
 ">
                             <input type="hidden" name="gestion" value="reunion">
                             <input type="hidden" name="action" value="form_consulter">
                             <input type="image" name="btn_consulter" src="public/images/icones/p16.png">
                         </form>
                     </td>
+                    <?php if ($_smarty_tpl->tpl_vars['action']->value != 'listerDP') {?>
                     <td>
                         <form action="index.php" method="post">
-                            <input type="hidden" name="reu_ide"
-                                   value="<?php echo $_smarty_tpl->tpl_vars['unReunion']->value->getReuIde(); ?>
+                            <input type="hidden" name="reu_ide" value="<?php echo $_smarty_tpl->tpl_vars['unReunion']->value->getReuIde();?>
 ">
                             <input type="hidden" name="gestion" value="reunion">
                             <input type="hidden" name="action" value="form_modifier">
@@ -135,18 +143,18 @@ function content_652a9feceec611_57228285 (Smarty_Internal_Template $_smarty_tpl)
                     </td>
                     <td>
                         <form action="index.php" method="post">
-                            <input type="hidden" name="reu_ide"
-                                   value="<?php echo $_smarty_tpl->tpl_vars['unReunion']->value->getReuIde(); ?>
+                            <input type="hidden" name="reu_ide" value="<?php echo $_smarty_tpl->tpl_vars['unReunion']->value->getReuIde();?>
 ">
                             <input type="hidden" name="gestion" value="reunion">
                             <input type="hidden" name="action" value="form_supprimer">
                             <input type="image" name="btn_supprimer" src="public/images/icones/s16.png">
                         </form>
                     </td>
+                    <?php }?>
                 </tr>
-                <?php
-            }
-            $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1); ?>
+            <?php
+}
+$_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
 
             </tbody>
         </table>
@@ -161,6 +169,9 @@ function content_652a9feceec611_57228285 (Smarty_Internal_Template $_smarty_tpl)
 
 
 </html>
+
+
+
 
 
 <?php }
