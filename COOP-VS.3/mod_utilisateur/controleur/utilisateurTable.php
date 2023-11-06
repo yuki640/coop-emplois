@@ -2,7 +2,8 @@
 Class UtilisateurTable{
     private $uti_ide="";
     private $uti_log="";
-    private $uti_mdp="coopemploi";
+    private $uti_mdp = password_hash("coopemploi", PASSWORD_BCRYPT);
+    
 
 
     public function __construct($data = null){

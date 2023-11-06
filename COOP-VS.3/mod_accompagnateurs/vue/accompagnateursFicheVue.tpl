@@ -166,9 +166,11 @@
     </div><!-- /#right-panel -->
     <script>
         function genererLogin() {
-            // Récupérez les valeurs des champs "Nom" et "Prénom"
-            var nom = document.querySelector('input[name="acc_nom"]').value;
-            var prenom = document.querySelector('input[name="acc_pre"]').value;
+            // Récupérez les valeurs des champs "Nom" et "Prénom" avec la première lettre en majuscule
+          
+
+                var nom = document.querySelector('input[name="acc_nom"]').value.charAt(0).toUpperCase();
+            var prenom = document.querySelector('input[name="acc_pre"]').value.charAt(0).toUpperCase();
 
             // Créez une date au format YYYYMMJJ-HHMM
             var date = new Date();

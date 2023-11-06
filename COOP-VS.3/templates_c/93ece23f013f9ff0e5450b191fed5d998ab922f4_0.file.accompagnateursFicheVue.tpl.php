@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.3.2, created on 2023-11-06 13:11:49
+/* Smarty version 4.3.2, created on 2023-11-06 14:19:56
   from 'C:\laragon\www\coop-emplois\COOP-VS.3\mod_accompagnateurs\vue\accompagnateursFicheVue.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.2',
-  'unifunc' => 'content_6548e615f22378_85356417',
+  'unifunc' => 'content_6548f60cf00c47_30854344',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '93ece23f013f9ff0e5450b191fed5d998ab922f4' => 
     array (
       0 => 'C:\\laragon\\www\\coop-emplois\\COOP-VS.3\\mod_accompagnateurs\\vue\\accompagnateursFicheVue.tpl',
-      1 => 1699276302,
+      1 => 1699280395,
       2 => 'file',
     ),
   ),
@@ -22,7 +22,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:public/footer.tpl' => 1,
   ),
 ),false)) {
-function content_6548e615f22378_85356417 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6548f60cf00c47_30854344 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'C:\\laragon\\www\\coop-emplois\\COOP-VS.3\\include\\libs\\plugins\\modifier.capitalize.php','function'=>'smarty_modifier_capitalize',),));
 ?>
 <!DOCTYPE html>
@@ -35,39 +35,6 @@ $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'C:\\laragon\\www\\coop-emplo
     <link rel="stylesheet" href="public/assets/css/fiche.css">
 
     <title>Mon Site Web</title>
-
-    <?php echo '<script'; ?>
->
-        document.addEventListener("DOMContentLoaded", function() {
-    function genererLogin() {
-
-
-        
-
-
-            // Récupérez les valeurs des champs "Nom" et "Prénom"
-            var nom = document.querySelector('input[name="acc_nom"]').value;
-            var prenom = document.querySelector('input[name="acc_pre"]').value;
-
-            // Créez une date au format YYYYMMJJ-HHMM
-            var date = new Date();
-            var dateFormatted = date.getFullYear() +
-                (date.getMonth() + 1).toString().padStart(2, '0') +
-                date.getDate().toString().padStart(2, '0') + '-' +
-                date.getHours().toString().padStart(2, '0') +
-                date.getMinutes().toString().padStart(2, '0');
-
-            // Créez le login en utilisant la première lettre du prénom, la première lettre du nom, et la date
-            var login = prenom.charAt(0) + nom.charAt(0) + dateFormatted;
-
-            
-
-            // Mettez à jour le champ "Login" avec la valeur générée
-            document.querySelector('input[name="uti_log"]').value = login;
-            }
-});
-    <?php echo '</script'; ?>
->
 
 </head>
 
@@ -136,69 +103,80 @@ $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'C:\\laragon\\www\\coop-emplo
                                     <?php }?>
 
                                     <div class="form-group">
-                                        <label for="text" class=" form-control">
-                                            Nom <sup>(*)</sup>:
-                                        </label>
-                                        <input type="text" name="acc_nom" class="form-control"
-                                            value="<?php echo $_smarty_tpl->tpl_vars['unAccompagnateur']->value->getNom();?>
-" <?php echo $_smarty_tpl->tpl_vars['readonly']->value;?>
- required>
-                                    </div>
-
-
-                                    <div class="form-group">
-                                        <label for="text" class=" form-control">
+                                        <label for="acc_pre" class="form-control">
                                             Prénom <sup>(*)</sup>:
                                         </label>
-                                        <input type="text" name="acc_pre" class="form-control"
-                                            value="<?php echo $_smarty_tpl->tpl_vars['unAccompagnateur']->value->getPrenom();?>
+                                        <?php if ($_smarty_tpl->tpl_vars['action']->value != 'ajouter') {?>
+                                            <input type="text" id="acc_pre" name="acc_pre" class="form-control"
+                                                   value="" <?php echo $_smarty_tpl->tpl_vars['readonly']->value;?>
+ required>
+                                        <?php } else { ?>
+                                            <input type="text" id="acc_pre" name="acc_pre" class="form-control"
+                                                   value="<?php echo $_smarty_tpl->tpl_vars['unAccompagnateur']->value->getPrenom();?>
 " <?php echo $_smarty_tpl->tpl_vars['readonly']->value;?>
->
+ required>
+                                        <?php }?>
                                     </div>
 
                                     <div class="form-group">
-                                        <label for="text" class=" form-control">
+                                        <label for="acc_nom" class="form-control">
+                                            Nom <sup>(*)</sup>:
+                                        </label>
+                                        <?php if ($_smarty_tpl->tpl_vars['action']->value != 'ajouter') {?>
+                                            <input type="text" id="acc_nom" name="acc_nom" class="form-control"
+                                                   value="" <?php echo $_smarty_tpl->tpl_vars['readonly']->value;?>
+ required>
+                                        <?php } else { ?>
+                                            <input type="text" id="acc_nom" name="acc_nom" class="form-control"
+                                                   value="<?php echo $_smarty_tpl->tpl_vars['unAccompagnateur']->value->getNom();?>
+" <?php echo $_smarty_tpl->tpl_vars['readonly']->value;?>
+ required>
+                                        <?php }?>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="acc_tel" class="form-control">
                                             Téléphone <sup>(*)</sup>:
                                         </label>
-                                        <input type="text" name="acc_tel" class="form-control"
-                                            value="<?php echo $_smarty_tpl->tpl_vars['unAccompagnateur']->value->getTelephone();?>
+                                        <input type="text" id="acc_tel" name="acc_tel" class="form-control"
+                                               value="<?php echo $_smarty_tpl->tpl_vars['unAccompagnateur']->value->getTelephone();?>
 " <?php echo $_smarty_tpl->tpl_vars['readonly']->value;?>
 >
                                     </div>
 
                                     <div class="form-group">
-                                        <label for="text" class=" form-control">
+                                        <label for="acc_mail" class="form-control">
                                             Email <sup>(*)</sup>:
                                         </label>
-                                        <input type="text" name="acc_mail" class="form-control"
-                                            value="<?php echo $_smarty_tpl->tpl_vars['unAccompagnateur']->value->getMail();?>
+                                        <input type="text" id="acc_mail" name="acc_mail" class="form-control"
+                                               value="<?php echo $_smarty_tpl->tpl_vars['unAccompagnateur']->value->getMail();?>
 " <?php echo $_smarty_tpl->tpl_vars['readonly']->value;?>
 >
                                     </div>
 
                                     <div class="form-group">
-                                        <label for="text" class=" form-control">
+                                        <label for="acc_fon" class="form-control">
                                             Specialisation :
                                         </label>
-                                        <input type="text" name="acc_fon" class="form-control"
-                                            value="<?php echo $_smarty_tpl->tpl_vars['unAccompagnateur']->value->getFonction();?>
+                                        <input type="text" id="acc_fon" name="acc_fon" class="form-control"
+                                               value="<?php echo $_smarty_tpl->tpl_vars['unAccompagnateur']->value->getFonction();?>
 " <?php echo $_smarty_tpl->tpl_vars['readonly']->value;?>
 >
                                     </div>
 
                                     <div class="form-group">
-                                        <label for="text" class=" form-control">
+                                        <label for="uti_log" class="form-control">
                                             Login <sup>(*)</sup>:
                                         </label>
                                         <?php if ($_smarty_tpl->tpl_vars['action']->value == 'ajouter') {?>
-                                            <input type="text" name="uti_log" class="form-control" value="" disabled
-                                                onblur="genererLogin()">
+                                            <input type="text" id="uti_log" name="uti_log" class="form-control" value="" readonly>
                                         <?php } else { ?>
-                                            <input type="text" name="uti_log" class="form-control"
-                                                value="<?php echo $_smarty_tpl->tpl_vars['unAccompagnateur']->value->getlog();?>
-" disabled>
+                                            <input type="text" id="uti_log" name="uti_log" class="form-control"
+                                                   value="<?php echo $_smarty_tpl->tpl_vars['unAccompagnateur']->value->getlog();?>
+" readonly>
                                         <?php }?>
                                     </div>
+
 
 
                                     <div class="card-body card-block">
@@ -233,6 +211,35 @@ $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'C:\\laragon\\www\\coop-emplo
         </div>
 
     </div><!-- /#right-panel -->
+    <?php echo '<script'; ?>
+>
+        function genererLogin() {
+            // Récupérez les valeurs des champs "Nom" et "Prénom" avec la première lettre en majuscule
+          
+
+                var nom = document.querySelector('input[name="acc_nom"]').value.charAt(0).toUpperCase();
+            var prenom = document.querySelector('input[name="acc_pre"]').value.charAt(0).toUpperCase();
+
+            // Créez une date au format YYYYMMJJ-HHMM
+            var date = new Date();
+            var dateFormatted = date.getFullYear() +
+                (date.getMonth() + 1).toString().padStart(2, '0') +
+                date.getDate().toString().padStart(2, '0') + '-' +
+                date.getHours().toString().padStart(2, '0') +
+                date.getMinutes().toString().padStart(2, '0');
+
+            // Créez le login en utilisant la première lettre du prénom, la première lettre du nom, et la date
+            var login = prenom.charAt(0) + nom.charAt(0) + dateFormatted;
+
+            // Mettez à jour le champ "Login" avec la valeur générée
+            document.querySelector('input[name="uti_log"]').value = login;
+        }
+
+        // Attachez l'événement input au champ "Prénom"
+        document.getElementById('acc_pre').addEventListener('input', genererLogin);
+        document.getElementById('acc_nom').addEventListener('input', genererLogin);
+    <?php echo '</script'; ?>
+>
 
 </body>
 <?php $_smarty_tpl->_subTemplateRender('file:public/footer.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
