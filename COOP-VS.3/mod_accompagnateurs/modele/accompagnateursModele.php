@@ -126,7 +126,7 @@ class AccompagnateursModele extends Modele
         $valeurs->setAcc_dmo(date("Y-m-d H:i:s"));
         $sql = "UPDATE p4t1_accompagnateurs, p4t1_utilisateur SET p4t1_accompagnateurs.acc_nom = ?, p4t1_accompagnateurs.acc_pre = ?, p4t1_accompagnateurs.acc_tel = ?,
          p4t1_accompagnateurs.acc_mail = ?,p4t1_accompagnateurs.acc_fon = ?,
-         p4t1_accompagnateurs.acc_dmo = ?, p4t1_utilisateur.uti_log = ?
+         p4t1_accompagnateurs.acc_dmo = ?, p4t1_utilisateur.uti_dmo = ?, p4t1_utilisateur.uti_log = ?
           WHERE  p4t1_accompagnateurs.acc_ide = ? AND p4t1_utilisateur.uti_ide_acc = ?";
         $idRequete = $this->executeRequete($sql, [
             $valeurs->getNom(),
@@ -134,6 +134,7 @@ class AccompagnateursModele extends Modele
             $valeurs->getTelephone(),
             $valeurs->getMail(),
             $valeurs->getFonction(),
+            $valeurs->getDateM(),
             $valeurs->getDateM(),
             $valeurs->getLog(),
             $valeurs->getIde(),
