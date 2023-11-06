@@ -9,6 +9,31 @@
 
     <title>Mon Site Web</title>
 
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+    function genererLogin() {
+            // Récupérez les valeurs des champs "Nom" et "Prénom"
+            var nom = document.querySelector('input[name="acc_nom"]').value;
+            var prenom = document.querySelector('input[name="acc_pre"]').value;
+
+            // Créez une date au format YYYYMMJJ-HHMM
+            var date = new Date();
+            var dateFormatted = date.getFullYear() +
+                (date.getMonth() + 1).toString().padStart(2, '0') +
+                date.getDate().toString().padStart(2, '0') + '-' +
+                date.getHours().toString().padStart(2, '0') +
+                date.getMinutes().toString().padStart(2, '0');
+
+            // Créez le login en utilisant la première lettre du prénom, la première lettre du nom, et la date
+            var login = prenom.charAt(0) + nom.charAt(0) + dateFormatted;
+
+            
+
+            // Mettez à jour le champ "Login" avec la valeur générée
+            document.querySelector('input[name="uti_log"]').value = login;
+            }
+});
+    </script>
 
 </head>
 
@@ -78,6 +103,7 @@
                                             value="{$unAccompagnateur->getNom()}" {$readonly} required>
                                     </div>
 
+
                                     <div class="form-group">
                                         <label for="text" class=" form-control">
                                             Prénom <sup>(*)</sup>:
@@ -109,6 +135,20 @@
                                         <input type="text" name="acc_fon" class="form-control"
                                             value="{$unAccompagnateur->getFonction()}" {$readonly}>
                                     </div>
+
+                                    <div class="form-group">
+                                        <label for="text" class=" form-control">
+                                            Login <sup>(*)</sup>:
+                                        </label>
+                                        {if $action == 'ajouter'}
+                                            <input type="text" name="uti_log" class="form-control" value="" disabled
+                                                onblur="genererLogin()">
+                                        {else}
+                                            <input type="text" name="uti_log" class="form-control"
+                                                value="{$unAccompagnateur->getlog()}" disabled>
+                                        {/if}
+                                    </div>
+
 
                                     <div class="card-body card-block">
 

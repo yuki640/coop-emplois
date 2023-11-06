@@ -43,6 +43,7 @@ class AccompagnateursControleur
 
         $controleAccompagnateurs = new AccompagnateursTable($this->parametre);
 
+
         if ($controleAccompagnateurs->getAutorisationBD() == false) {
                 //Retour à la fiche
                 $this->oVue->genererAffichageFiche($controleAccompagnateurs);

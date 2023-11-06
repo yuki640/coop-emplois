@@ -1,5 +1,5 @@
 <?php
-Class AccompagnateursTable{
+Class AccompagnateursTable extends UtilisateurTable {
 
     private $acc_ide=""; //getCodec | setCodec
     private $acc_nom=""; // getPrix_unitaire_HT
