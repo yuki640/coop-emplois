@@ -1,30 +1,18 @@
 <?php
-<<<<<<< HEAD
-/* Smarty version 4.3.2, created on 2023-10-15 11:34:33
-=======
-/* Smarty version 4.3.2, created on 2023-11-06 12:57:00
->>>>>>> 0ae4940811bf861d318ad20ae39df12d1e5ae0e0
+/* Smarty version 4.3.2, created on 2023-11-06 16:14:44
   from 'C:\laragon\www\coop-emplois\COOP-VS.3\mod_accompagnateurs\vue\accompagnateursListeVue.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.2',
-<<<<<<< HEAD
-  'unifunc' => 'content_652bce495fe482_23010774',
-=======
-  'unifunc' => 'content_6548e29c2ff390_47944340',
->>>>>>> 0ae4940811bf861d318ad20ae39df12d1e5ae0e0
+  'unifunc' => 'content_654910f41dc240_45351598',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '2e7c82b2c5d316918c3cdb169c33afcd40523324' => 
     array (
       0 => 'C:\\laragon\\www\\coop-emplois\\COOP-VS.3\\mod_accompagnateurs\\vue\\accompagnateursListeVue.tpl',
-<<<<<<< HEAD
-      1 => 1697369485,
-=======
-      1 => 1699046781,
->>>>>>> 0ae4940811bf861d318ad20ae39df12d1e5ae0e0
+      1 => 1699286758,
       2 => 'file',
     ),
   ),
@@ -34,11 +22,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:public/footer.tpl' => 1,
   ),
 ),false)) {
-<<<<<<< HEAD
-function content_652bce495fe482_23010774 (Smarty_Internal_Template $_smarty_tpl) {
-=======
-function content_6548e29c2ff390_47944340 (Smarty_Internal_Template $_smarty_tpl) {
->>>>>>> 0ae4940811bf861d318ad20ae39df12d1e5ae0e0
+function content_654910f41dc240_45351598 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="fr">
 
@@ -88,11 +72,7 @@ function content_6548e29c2ff390_47944340 (Smarty_Internal_Template $_smarty_tpl)
                 <thead>
                     <tr>
                         <th>Code Accompagnateur</th>
-<<<<<<< HEAD
-                        <th>Nom de L'Accompagnateur</th>
-=======
                         <th>Nom</th>
->>>>>>> 0ae4940811bf861d318ad20ae39df12d1e5ae0e0
                         <th>Prenom</th>
                         <th>Téléphone</th>
                         <th>specialisation</th>

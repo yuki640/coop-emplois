@@ -121,18 +121,22 @@ class AccompagnateursModele extends Modele
     }
     public function updateAccompagnateurs(AccompagnateursTable $valeurs)
     {
-        $sql = "UPDATE p4t1_accompagnateurs SET acc_nom = ?, acc_pre = ?,acc_tel = ?, acc_mail = ?,acc_fon = ? WHERE acc_ide = ?";
+        // recuperer la date est l'heure du jour en france
+
+        $valeurs->setAcc_dmo(date("Y-m-d H:i:s"));
+        $sql = "UPDATE p4t1_accompagnateurs SET acc_nom = ?, acc_pre = ?,acc_tel = ?, acc_mail = ?,acc_fon = ?, acc_dmo = ? WHERE acc_ide = ?";
         $idRequete = $this->executeRequete($sql, [
             $valeurs->getNom(),
             $valeurs->getPrenom(),
             $valeurs->getTelephone(),
             $valeurs->getMail(),
             $valeurs->getFonction(),
+            $valeurs->getDateM(),
             $valeurs->getIde(),
+            
         ]);
         if ($idRequete) {
             AccompagnateursTable::setMessageSucces("Modification de l'accompagnateur correctement effectué.");
         }
     }
 }
-
