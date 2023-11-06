@@ -73,26 +73,18 @@
                                         <label for="acc_pre" class="form-control">
                                             Prénom <sup>(*)</sup>:
                                         </label>
-                                        {if $action neq 'ajouter'}
-                                            <input type="text" id="acc_pre" name="acc_pre" class="form-control"
-                                                   value="" {$readonly} required>
-                                        {else}
                                             <input type="text" id="acc_pre" name="acc_pre" class="form-control"
                                                    value="{$unAccompagnateur->getPrenom()}" {$readonly} required>
-                                        {/if}
+                                      
                                     </div>
 
                                     <div class="form-group">
                                         <label for="acc_nom" class="form-control">
                                             Nom <sup>(*)</sup>:
-                                        </label>
-                                        {if $action neq 'ajouter'}
-                                            <input type="text" id="acc_nom" name="acc_nom" class="form-control"
-                                                   value="" {$readonly} required>
-                                        {else}
+                                        </label>                                        
                                             <input type="text" id="acc_nom" name="acc_nom" class="form-control"
                                                    value="{$unAccompagnateur->getNom()}" {$readonly} required>
-                                        {/if}
+                                        
                                     </div>
 
                                     <div class="form-group">
@@ -123,12 +115,8 @@
                                         <label for="uti_log" class="form-control">
                                             Login <sup>(*)</sup>:
                                         </label>
-                                        {if $action == 'ajouter'}
-                                            <input type="text" id="uti_log" name="uti_log" class="form-control" value="" readonly>
-                                        {else}
-                                            <input type="text" id="uti_log" name="uti_log" class="form-control"
-                                                   value="{$unAccompagnateur->getlog()}" readonly>
-                                        {/if}
+                                        <input type="text" id="uti_log" name="uti_log" class="form-control"
+                                        value="{$unAccompagnateur->getlog()}" readonly>
                                     </div>
 
 

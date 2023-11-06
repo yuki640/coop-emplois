@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.3.2, created on 2023-11-06 16:53:45
+/* Smarty version 4.3.2, created on 2023-11-06 18:43:53
   from 'C:\laragon\www\coop-emplois\COOP-VS.3\mod_accompagnateurs\vue\accompagnateursFicheVue.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.2',
-  'unifunc' => 'content_65491a19166f59_61082943',
+  'unifunc' => 'content_654925d93b3300_84082404',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '93ece23f013f9ff0e5450b191fed5d998ab922f4' => 
     array (
       0 => 'C:\\laragon\\www\\coop-emplois\\COOP-VS.3\\mod_accompagnateurs\\vue\\accompagnateursFicheVue.tpl',
-      1 => 1699289585,
+      1 => 1699292602,
       2 => 'file',
     ),
   ),
@@ -22,7 +22,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:public/footer.tpl' => 1,
   ),
 ),false)) {
-function content_65491a19166f59_61082943 (Smarty_Internal_Template $_smarty_tpl) {
+function content_654925d93b3300_84082404 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'C:\\laragon\\www\\coop-emplois\\COOP-VS.3\\include\\libs\\plugins\\modifier.capitalize.php','function'=>'smarty_modifier_capitalize',),));
 ?>
 <!DOCTYPE html>
@@ -106,32 +106,22 @@ $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'C:\\laragon\\www\\coop-emplo
                                         <label for="acc_pre" class="form-control">
                                             Prénom <sup>(*)</sup>:
                                         </label>
-                                        <?php if ($_smarty_tpl->tpl_vars['action']->value != 'ajouter') {?>
-                                            <input type="text" id="acc_pre" name="acc_pre" class="form-control"
-                                                   value="" <?php echo $_smarty_tpl->tpl_vars['readonly']->value;?>
- required>
-                                        <?php } else { ?>
                                             <input type="text" id="acc_pre" name="acc_pre" class="form-control"
                                                    value="<?php echo $_smarty_tpl->tpl_vars['unAccompagnateur']->value->getPrenom();?>
 " <?php echo $_smarty_tpl->tpl_vars['readonly']->value;?>
  required>
-                                        <?php }?>
+                                      
                                     </div>
 
                                     <div class="form-group">
                                         <label for="acc_nom" class="form-control">
                                             Nom <sup>(*)</sup>:
-                                        </label>
-                                        <?php if ($_smarty_tpl->tpl_vars['action']->value != 'ajouter') {?>
-                                            <input type="text" id="acc_nom" name="acc_nom" class="form-control"
-                                                   value="" <?php echo $_smarty_tpl->tpl_vars['readonly']->value;?>
- required>
-                                        <?php } else { ?>
+                                        </label>                                        
                                             <input type="text" id="acc_nom" name="acc_nom" class="form-control"
                                                    value="<?php echo $_smarty_tpl->tpl_vars['unAccompagnateur']->value->getNom();?>
 " <?php echo $_smarty_tpl->tpl_vars['readonly']->value;?>
  required>
-                                        <?php }?>
+                                        
                                     </div>
 
                                     <div class="form-group">
@@ -168,13 +158,9 @@ $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'C:\\laragon\\www\\coop-emplo
                                         <label for="uti_log" class="form-control">
                                             Login <sup>(*)</sup>:
                                         </label>
-                                        <?php if ($_smarty_tpl->tpl_vars['action']->value == 'ajouter') {?>
-                                            <input type="text" id="uti_log" name="uti_log" class="form-control" value="" readonly>
-                                        <?php } else { ?>
-                                            <input type="text" id="uti_log" name="uti_log" class="form-control"
-                                                   value="<?php echo $_smarty_tpl->tpl_vars['unAccompagnateur']->value->getlog();?>
+                                        <input type="text" id="uti_log" name="uti_log" class="form-control"
+                                        value="<?php echo $_smarty_tpl->tpl_vars['unAccompagnateur']->value->getlog();?>
 " readonly>
-                                        <?php }?>
                                     </div>
 
 
