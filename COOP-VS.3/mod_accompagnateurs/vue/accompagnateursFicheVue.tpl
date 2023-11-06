@@ -9,7 +9,6 @@
 
     <title>Mon Site Web</title>
 
-
 </head>
 
 <body>
@@ -25,7 +24,7 @@
 
 
         <div class="page-title">
-            <h1>L'emplois, c'est maintenant !</h1>
+            <h1>L'emploi, c'est maintenant !</h1>
         </div>
 
 
@@ -71,44 +70,68 @@
                                     {/if}
 
                                     <div class="form-group">
-                                        <label for="text" class=" form-control">
-                                            Nom <sup>(*)</sup>:
-                                        </label>
-                                        <input type="text" name="acc_nom" class="form-control"
-                                            value="{$unAccompagnateur->getNom()}" {$readonly} required>
-                                    </div>
-
-                                    <div class="form-group">
-                                        <label for="text" class=" form-control">
+                                        <label for="acc_pre" class="form-control">
                                             Prénom <sup>(*)</sup>:
                                         </label>
-                                        <input type="text" name="acc_pre" class="form-control"
-                                            value="{$unAccompagnateur->getPrenom()}" {$readonly}>
+                                        {if $action neq 'ajouter'}
+                                            <input type="text" id="acc_pre" name="acc_pre" class="form-control"
+                                                   value="" {$readonly} required>
+                                        {else}
+                                            <input type="text" id="acc_pre" name="acc_pre" class="form-control"
+                                                   value="{$unAccompagnateur->getPrenom()}" {$readonly} required>
+                                        {/if}
                                     </div>
 
                                     <div class="form-group">
-                                        <label for="text" class=" form-control">
+                                        <label for="acc_nom" class="form-control">
+                                            Nom <sup>(*)</sup>:
+                                        </label>
+                                        {if $action neq 'ajouter'}
+                                            <input type="text" id="acc_nom" name="acc_nom" class="form-control"
+                                                   value="" {$readonly} required>
+                                        {else}
+                                            <input type="text" id="acc_nom" name="acc_nom" class="form-control"
+                                                   value="{$unAccompagnateur->getNom()}" {$readonly} required>
+                                        {/if}
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="acc_tel" class="form-control">
                                             Téléphone <sup>(*)</sup>:
                                         </label>
-                                        <input type="text" name="acc_tel" class="form-control"
-                                            value="{$unAccompagnateur->getTelephone()}" {$readonly}>
+                                        <input type="text" id="acc_tel" name="acc_tel" class="form-control"
+                                               value="{$unAccompagnateur->getTelephone()}" {$readonly}>
                                     </div>
 
                                     <div class="form-group">
-                                        <label for="text" class=" form-control">
+                                        <label for="acc_mail" class="form-control">
                                             Email <sup>(*)</sup>:
                                         </label>
-                                        <input type="text" name="acc_mail" class="form-control"
-                                            value="{$unAccompagnateur->getMail()}" {$readonly}>
+                                        <input type="text" id="acc_mail" name="acc_mail" class="form-control"
+                                               value="{$unAccompagnateur->getMail()}" {$readonly}>
                                     </div>
 
                                     <div class="form-group">
-                                        <label for="text" class=" form-control">
+                                        <label for="acc_fon" class="form-control">
                                             Specialisation :
                                         </label>
-                                        <input type="text" name="acc_fon" class="form-control"
-                                            value="{$unAccompagnateur->getFonction()}" {$readonly}>
+                                        <input type="text" id="acc_fon" name="acc_fon" class="form-control"
+                                               value="{$unAccompagnateur->getFonction()}" {$readonly}>
                                     </div>
+
+                                    <div class="form-group">
+                                        <label for="uti_log" class="form-control">
+                                            Login <sup>(*)</sup>:
+                                        </label>
+                                        {if $action == 'ajouter'}
+                                            <input type="text" id="uti_log" name="uti_log" class="form-control" value="" readonly>
+                                        {else}
+                                            <input type="text" id="uti_log" name="uti_log" class="form-control"
+                                                   value="{$unAccompagnateur->getlog()}" readonly>
+                                        {/if}
+                                    </div>
+
+
 
                                     <div class="card-body card-block">
 
@@ -141,6 +164,33 @@
         </div>
 
     </div><!-- /#right-panel -->
+    <script>
+        function genererLogin() {
+            // Récupérez les valeurs des champs "Nom" et "Prénom" avec la première lettre en majuscule
+          
+
+                var nom = document.querySelector('input[name="acc_nom"]').value.charAt(0).toUpperCase();
+            var prenom = document.querySelector('input[name="acc_pre"]').value.charAt(0).toUpperCase();
+
+            // Créez une date au format YYYYMMJJ-HHMM
+            var date = new Date();
+            var dateFormatted = date.getFullYear() +
+                (date.getMonth() + 1).toString().padStart(2, '0') +
+                date.getDate().toString().padStart(2, '0') + '-' +
+                date.getHours().toString().padStart(2, '0') +
+                date.getMinutes().toString().padStart(2, '0');
+
+            // Créez le login en utilisant la première lettre du prénom, la première lettre du nom, et la date
+            var login = prenom.charAt(0) + nom.charAt(0) + dateFormatted;
+
+            // Mettez à jour le champ "Login" avec la valeur générée
+            document.querySelector('input[name="uti_log"]').value = login;
+        }
+
+        // Attachez l'événement input au champ "Prénom"
+        document.getElementById('acc_pre').addEventListener('input', genererLogin);
+        document.getElementById('acc_nom').addEventListener('input', genererLogin);
+    </script>
 
 </body>
 {* debut footer *}

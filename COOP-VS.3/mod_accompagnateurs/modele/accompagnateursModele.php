@@ -39,8 +39,8 @@ class AccompagnateursModele extends Modele
 
     public function addAccompagnateurs(AccompagnateursTable $valeurs)
     {
-//        $loginsetup = lcfirst(substr($valeurs->getNom(),0,1)). lcfirst(substr($valeurs->getPrenom(),0,1)) . date("dmo-hi");
-//        $valeurs->setLogin($loginsetup);
+    //    $loginsetup = lcfirst(substr($valeurs->getNom(),0,1)). lcfirst(substr($valeurs->getPrenom(),0,1)) . date("dmo-hi");
+    //    $valeurs->setLogin($loginsetup);
 
         $sql = "INSERT INTO p4t1_accompagnateurs (acc_nom, acc_pre, acc_tel, acc_mail, acc_fon) VALUES (?, ?, ?, ?, ?)";
         $idRequete = $this->executeRequete($sql, [
@@ -49,6 +49,17 @@ class AccompagnateursModele extends Modele
             $valeurs->getTelephone(),
             $valeurs->getMail(),
             $valeurs->getFonction(),
+        ]);
+
+        $sql = "SELECT LAST_INSERT_ID() as acc_ide FROM p4t1_accompagnateurs";
+        $lastId = $this->executeRequete($sql);
+
+
+        $sql = "INSERT INTO p4t1_utilisateur (uti_log, uti_ide_acc, uti_mdp) VALUES (?, ?, ?)";
+        $idRequete = $this->executeRequete($sql, [
+            $valeurs->getLog(),
+            $lastId->fetch(PDO::FETCH_ASSOC)['acc_ide'],
+            $valeurs->getMdp(),
         ]);
 
         // var_dump($valeurs);
@@ -62,10 +73,17 @@ class AccompagnateursModele extends Modele
 
     public function deleteAccompagnateurs(AccompagnateursTable $valeurs)
     {
+        $sql = "DELETE FROM p4t1_utilisateur where uti_ide_acc = ?";
+        $idRequete = $this->executeRequete($sql, [
+            $valeurs->getIde()
+        ]);
+
+        
         $sql = "DELETE FROM p4t1_accompagnateurs where acc_ide = ?";
         $idRequete = $this->executeRequete($sql, [
             $valeurs->getIde()
         ]);
+       
         if ($idRequete) {
             AccompagnateursTable::setMessageSucces("Suppression de l'accompagnateurs correctement effectué.");
         }

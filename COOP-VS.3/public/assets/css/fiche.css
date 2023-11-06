@@ -1,6 +1,6 @@
 /* Body styles */
 body {
-    background-color: darkblue;
+    background-color: #ada8a8;
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
@@ -25,7 +25,7 @@ body {
 }
 /* Card styles */
 .card {
-    background-color: limegreen;
+    background-color: #e8b24a;
     border: 1px solid #ccc;
     border-radius: 4px;
     margin-bottom: 20px;
@@ -33,10 +33,12 @@ body {
 
 .card-header {
     padding: 10px 20px;
-    background-color: yellow;
+    background-color: #da3c3c;
     border-bottom: 1px solid #ccc;
     font-weight: bold;
 }
+
+
 
 .card-body {
     padding: 20px;

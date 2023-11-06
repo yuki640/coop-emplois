@@ -27,6 +27,8 @@ class Autoloader{
             'mod_reunion/controleur/',
             'mod_reunion/modele/',
             'mod_reunion/vue/',
+            'mod_utilisateur/',
+            'mod_utilisateur/controleur/',
         ];
 
         foreach($repertoires as $repertoire) {

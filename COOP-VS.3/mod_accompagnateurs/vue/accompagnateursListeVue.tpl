@@ -45,7 +45,7 @@
                 <thead>
                     <tr>
                         <th>Code Accompagnateur</th>
-                        <th>Nom de L'Accompagnateur</th>
+                        <th>Nom</th>
                         <th>Prenom</th>
                         <th>Téléphone</th>
                         <th>specialisation</th>
