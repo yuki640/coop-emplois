@@ -31,17 +31,17 @@ class AccompagnateursModele extends Modele
     }
     public function getUnAccompagnateurs()
     {
-        $sql = "SELECT * FROM p4t1_accompagnateurs WHERE acc_ide = ?";
-        $idRequete = $this->executeRequete($sql, [$this->parametre['acc_ide']]); // requête préparée
+        $sql = "SELECT p4t1_accompagnateurs.*, p4t1_utilisateur.uti_log FROM p4t1_accompagnateurs, p4t1_utilisateur WHERE p4t1_accompagnateurs.acc_ide = ? AND p4t1_utilisateur.uti_ide_acc = ?";
+        $idRequete = $this->executeRequete($sql, [
+            $this->parametre['acc_ide'],
+            $this->parametre['acc_ide']
+        ]); // requête préparée
 
         return new AccompagnateursTable($idRequete->fetch(PDO::FETCH_ASSOC));
     }
 
     public function addAccompagnateurs(AccompagnateursTable $valeurs)
     {
-    //    $loginsetup = lcfirst(substr($valeurs->getNom(),0,1)). lcfirst(substr($valeurs->getPrenom(),0,1)) . date("dmo-hi");
-    //    $valeurs->setLogin($loginsetup);
-
         $sql = "INSERT INTO p4t1_accompagnateurs (acc_nom, acc_pre, acc_tel, acc_mail, acc_fon) VALUES (?, ?, ?, ?, ?)";
         $idRequete = $this->executeRequete($sql, [
             $valeurs->getNom(),
@@ -121,13 +121,23 @@ class AccompagnateursModele extends Modele
     }
     public function updateAccompagnateurs(AccompagnateursTable $valeurs)
     {
-        $sql = "UPDATE p4t1_accompagnateurs SET acc_nom = ?, acc_pre = ?,acc_tel = ?, acc_mail = ?,acc_fon = ? WHERE acc_ide = ?";
+        // recuperer la date est l'heure du jour en france
+
+        $valeurs->setAcc_dmo(date("Y-m-d H:i:s"));
+        $sql = "UPDATE p4t1_accompagnateurs, p4t1_utilisateur SET p4t1_accompagnateurs.acc_nom = ?, p4t1_accompagnateurs.acc_pre = ?, p4t1_accompagnateurs.acc_tel = ?,
+         p4t1_accompagnateurs.acc_mail = ?,p4t1_accompagnateurs.acc_fon = ?,
+         p4t1_accompagnateurs.acc_dmo = ?, p4t1_utilisateur.uti_dmo = ?, p4t1_utilisateur.uti_log = ?
+          WHERE  p4t1_accompagnateurs.acc_ide = ? AND p4t1_utilisateur.uti_ide_acc = ?";
         $idRequete = $this->executeRequete($sql, [
             $valeurs->getNom(),
             $valeurs->getPrenom(),
             $valeurs->getTelephone(),
             $valeurs->getMail(),
             $valeurs->getFonction(),
+            $valeurs->getDateM(),
+            $valeurs->getDateM(),
+            $valeurs->getLog(),
+            $valeurs->getIde(),
             $valeurs->getIde(),
         ]);
         if ($idRequete) {
@@ -135,4 +145,3 @@ class AccompagnateursModele extends Modele
         }
     }
 }
-

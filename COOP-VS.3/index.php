@@ -1,5 +1,6 @@
 <?php
 session_start();
+date_default_timezone_set('Europe/Paris');
 require_once 'include/configuration.php';
 // gestion = ? client, produit, profil, accueil ?
 // action = ? lister (action par défaut), ajouter, modifier, supprimer, rechercher, trier, ...

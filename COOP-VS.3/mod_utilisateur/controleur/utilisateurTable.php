@@ -2,7 +2,7 @@
 Class UtilisateurTable{
     private $uti_ide="";
     private $uti_log="";
-    private $uti_mdp = password_hash("coopemploi", PASSWORD_BCRYPT);
+    private $uti_mdp = "coopemploi";
     
 
 
@@ -72,14 +72,16 @@ public function setUti_log($log)
 }
 
 /**
- * @param string $mdp
- */
+* @param string $mdp
+*/
 public function setUti_mdp($mdp)
 {
-    $this->uti_mdp=$mdp;
-}   
-
+    $this->uti_mdp=password_hash($mdp,PASSWORD_BCRYPT);
 }
 
+
+
+
+}
 
 ?>
