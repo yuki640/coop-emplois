@@ -1,0 +1,73 @@
+body, h1, p {
+    margin: 0;
+    padding: 0;
+    font-family: 'Your font family', sans-serif; /* Add your custom font family */
+}
+
+header {
+    background-color: rgba(0, 0, 0, 0.5); /* Make header slightly transparent */
+    color: white;
+    padding: 10px 0;
+    position: fixed; /* Keep the header at the top */
+    width: 100%;
+    z-index: 1000;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    padding: 0;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.hero {
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 100%), url('fond.png');
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    padding: 150px 20px; /* Adjust padding as needed */
+    color: white;
+    position: relative;
+    min-height: 100vh; /* Make sure it covers the full view height */
+}
+
+h1 {
+    font-size: 2.5em;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Add shadow to your text */
+}
+
+h2 {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+}
+
+button {
+    background-color: orange;
+    border: none;
+    padding: 15px 30px;
+    margin: 10px;
+    color: white;
+    cursor: pointer;
+    font-size: 1em;
+    border-radius: 5px; /* Rounded corners for buttons */
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Add shadow to your buttons */
+    transition: background-color 0.3s; /* Smooth transition for hover effect */
+}
+.b1{
+    background-color: rgba(0, 0, 0, 0.295);
+    border: none;
+    padding: 15px 30px;
+    margin: 10px;
+    color: white;
+    cursor: pointer;
+    font-size: 1em;
+    border-radius: 5px; /* Rounded corners for buttons */
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Add shadow to your buttons */
+    transition: background-color 0.3s; /* Smooth transition for hover effect */
+}
