@@ -1,6 +1,6 @@
 <?php
 
-class ReunionTable
+class EntretienTable
 {
 
     private $reu_ide = ""; //getCodec | setCodec

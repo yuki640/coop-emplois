@@ -21,7 +21,7 @@
                         <a href="index.php?gestion=reunion&action=listerDP">Déja passée</a>
                     </div>
                 </li>
-                <li><a href="#">Entretiens</a></li>
+                <li><a href="index.php?gestion=entretien">Entretien</a></li>
             <li><a href=" #">Porteurs de Projet</a></li>
                 <li><a href="index.php?gestion=accompagnateur">Accompagnateurs</a></li>
 

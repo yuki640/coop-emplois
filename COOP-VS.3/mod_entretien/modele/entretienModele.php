@@ -1,6 +1,6 @@
 <?php
 
-class ReunionModele extends Modele
+class EntretienModele extends Modele
 {
 
     private $parametre = []; //Tableau = $_REQUEST du fichier index
@@ -12,22 +12,22 @@ class ReunionModele extends Modele
 
     }
 
-    public function getListeReunion($valListage)
+    public function getListeEntretien($valListage)
     {
         $valListage = $valListage . "'" . date("Y-m-d") . "'";
 
-        $sql = "SELECT p4t1_reunion.*,p4t1_lieux.lie_nom AS reu_lie_nom, p4t1_accompagnateurs.acc_nom  AS reu_acc_nom
-FROM p4t1_reunion
-LEFT JOIN p4t1_lieux ON p4t1_reunion.reu_lie = p4t1_lieux.lie_ide
-LEFT JOIN p4t1_accompagnateurs ON p4t1_reunion.reu_acc = p4t1_accompagnateurs.acc_ide
-WHERE p4t1_reunion.reu_dat $valListage";
+        $sql = "SELECT p4t1_entretien.*,p4t1_lieux.lie_nom AS reu_lie_nom, p4t1_accompagnateurs.acc_nom  AS reu_acc_nom
+FROM p4t1_entretien
+LEFT JOIN p4t1_lieux ON p4t1_entretien.reu_lie = p4t1_lieux.lie_ide
+LEFT JOIN p4t1_accompagnateurs ON p4t1_entretien.reu_acc = p4t1_accompagnateurs.acc_ide
+WHERE p4t1_entretien.reu_dat $valListage";
 
         $idRequete = $this->executeRequete($sql); // requête simple
         if ($idRequete->rowCount() > 0) {
             while ($row = $idRequete->fetch(PDO::FETCH_ASSOC)) {
-                $listeReunion[] = new ReunionTable($row);
+                $listeEntretien[] = new EntretienTable($row);
             }
-            return $listeReunion;
+            return $listeEntretien;
         } else {
             return null;
         }
@@ -58,18 +58,18 @@ WHERE p4t1_reunion.reu_dat $valListage";
         return $listeAccompagnateurs;
     }
 
-    public function getUnReunion()
+    public function getUnEntretien()
     {
-        $sql = "SELECT * FROM p4t1_reunion WHERE reu_ide = ?";
+        $sql = "SELECT * FROM p4t1_entretien WHERE reu_ide = ?";
 
         $idRequete = $this->executeRequete($sql, [$this->parametre['reu_ide']]); // requête préparée
 
-        return new ReunionTable($idRequete->fetch(PDO::FETCH_ASSOC));
+        return new EntretienTable($idRequete->fetch(PDO::FETCH_ASSOC));
     }
 
-    public function addReunion(ReunionTable $valeurs)
+    public function addEntretien(EntretienTable $valeurs)
     {
-        $sql = "INSERT INTO p4t1_reunion (reu_dat,reu_heu,reu_dur,reu_lie,reu_cap,reu_pre,reu_acc,reu_pub/*,reu_dcr,reu_dmo*/) VALUES (?, ?, ?, ?, ?, ?, ?, ?/*, ?, ?*/)";
+        $sql = "INSERT INTO p4t1_entretien (reu_dat,reu_heu,reu_dur,reu_lie,reu_cap,reu_pre,reu_acc,reu_pub/*,reu_dcr,reu_dmo*/) VALUES (?, ?, ?, ?, ?, ?, ?, ?/*, ?, ?*/)";
         $idRequete = $this->executeRequete($sql, [
             $valeurs->getReuDat(),
             $valeurs->getReuHeu(),
@@ -85,24 +85,24 @@ WHERE p4t1_reunion.reu_dat $valListage";
 
         if ($idRequete) {
 
-            ReunionTable::setMessageSucces("Création de la reunion correctement effectué.");
+            EntretienTable::setMessageSucces("Création de la entretien correctement effectué.");
         }
     }
 
-    public function deleteReunion(ReunionTable $valeurs)
+    public function deleteEntretien(EntretienTable $valeurs)
     {
-        $sql = "DELETE FROM p4t1_reunion where reu_ide = ?";
+        $sql = "DELETE FROM p4t1_entretien where reu_ide = ?";
         $idRequete = $this->executeRequete($sql, [
             $valeurs->getReuIde()
         ]);
         if ($idRequete) {
-            ReunionTable::setMessageSucces("Suppression de la reunion correctement effectué.");
+            EntretienTable::setMessageSucces("Suppression de la entretien correctement effectué.");
         }
     }
 
-    public function updateReunion(ReunionTable $valeurs)
+    public function updateEntretien(EntretienTable $valeurs)
     {
-        $sql = "UPDATE p4t1_reunion SET reu_dat = ? ,reu_heu = ?,reu_dur = ? ,reu_lie = ? ,reu_cap = ? ,reu_pre = ? ,reu_acc = ? ,reu_pub = ?
+        $sql = "UPDATE p4t1_entretien SET reu_dat = ? ,reu_heu = ?,reu_dur = ? ,reu_lie = ? ,reu_cap = ? ,reu_pre = ? ,reu_acc = ? ,reu_pub = ?
              WHERE reu_ide = ?";
         $idRequete = $this->executeRequete($sql, [
             $valeurs->getReuDat(),
@@ -116,11 +116,11 @@ WHERE p4t1_reunion.reu_dat $valListage";
             $valeurs->getReuIde()
         ]);
         if ($idRequete) {
-            ReunionTable::setMessageSucces("Modification de la  reunion correctement effectué.");
+            EntretienTable::setMessageSucces("Modification de la  entretien correctement effectué.");
         }
     }
 
-    public function VérifieNombrePlace(ReunionTable $valeurs)
+    public function VérifieNombrePlace(EntretienTable $valeurs)
     {
         $sql = "SELECT lie_cap FROM p4t1_lieux WHERE lie_ide = ?";
         $idRequete = $this->executeRequete($sql, [
@@ -132,7 +132,7 @@ WHERE p4t1_reunion.reu_dat $valListage";
             $lie_cap = $row['lie_cap'];
 
             if ($valeurs->getReuCap() > $lie_cap) {
-                ReunionTable::setMessageErreur("La capacité saisie dépasse la capacité d'accueil de la salle.");
+                EntretienTable::setMessageErreur("La capacité saisie dépasse la capacité d'accueil de la salle.");
                 return false;
             } else {
                 return true;

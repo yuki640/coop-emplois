@@ -7,7 +7,7 @@
 
     <link rel="stylesheet" href="public/assets/css/liste.css">
 
-    <title>liste des reunions</title>
+    <title>liste des Entretiens</title>
 
 
 </head>
@@ -35,7 +35,7 @@
             <!-- PLACER LE FORMULAIRE D'AJOUT-->
             <!-- PLACER LE FORMULAIRE D'AJOUT-->
             <form class="pos-ajout" method="post" action="index.php">
-                <input type="hidden" name="gestion" value="reunion">
+                <input type="hidden" name="gestion" value="entretien">
                 <input type="hidden" name="action" value="form_ajouter">
                 <label>Ajouter un lieu :
                     <input type="image"
@@ -48,8 +48,8 @@
     </div>
     <div class="card-body">
 
-        <div {if ReunionTable::getMessageSucces () neq ''} class="alert alert-success" role="alert" {/if} >
-            {ReunionTable::getMessageSucces ()}
+        <div {if EntretienTable::getMessageSucces () neq ''} class="alert alert-success" role="alert" {/if} >
+            {EntretienTable::getMessageSucces ()}
         </div>
 
         <table id="bootstrap-data-table" class="table table-striped table-bordered">
@@ -70,14 +70,14 @@
             </tr>
             </thead>
             <tbody>
-            {foreach from=$listeReunion item=unReunion}
+            {foreach from=$listeEntretien item=unEntretien}
                 <tr>
-                    <td>{$unReunion->getReuIde()}</td>
-                    <td>{$unReunion->getReuDatFormatted()}</td>
-                    <td>{$unReunion->getReuLieNom()}</td>
-                    <td>{$unReunion->getReuAccNom()}</td>
+                    <td>{$unEntretien->getReuIde()}</td>
+                    <td>{$unEntretien->getReuDatFormatted()}</td>
+                    <td>{$unEntretien->getReuLieNom()}</td>
+                    <td>{$unEntretien->getReuAccNom()}</td>
                     <td>
-                        {if $unReunion->getReuPub() == 1}
+                        {if $unEntretien->getReuPub() == 1}
                             OUI
                         {else}
                             NON
@@ -86,8 +86,8 @@
                     <td></td>
                     <td>
                         <form action="index.php" method="post">
-                            <input type="hidden" name="reu_ide" value="{$unReunion->getReuIde()}">
-                            <input type="hidden" name="gestion" value="reunion">
+                            <input type="hidden" name="reu_ide" value="{$unEntretien->getReuIde()}">
+                            <input type="hidden" name="gestion" value="entretien">
                             <input type="hidden" name="action" value="form_consulter">
                             <input type="image" name="btn_consulter" src="public/images/icones/p16.png">
                         </form>
@@ -95,16 +95,16 @@
                     {if $action neq 'listerDP'}
                     <td>
                         <form action="index.php" method="post">
-                            <input type="hidden" name="reu_ide" value="{$unReunion->getReuIde()}">
-                            <input type="hidden" name="gestion" value="reunion">
+                            <input type="hidden" name="reu_ide" value="{$unEntretien->getReuIde()}">
+                            <input type="hidden" name="gestion" value="entretien">
                             <input type="hidden" name="action" value="form_modifier">
                             <input type="image" name="btn_modifier" src="public/images/icones/m16.png">
                         </form>
                     </td>
                     <td>
                         <form action="index.php" method="post">
-                            <input type="hidden" name="reu_ide" value="{$unReunion->getReuIde()}">
-                            <input type="hidden" name="gestion" value="reunion">
+                            <input type="hidden" name="reu_ide" value="{$unEntretien->getReuIde()}">
+                            <input type="hidden" name="gestion" value="entretien">
                             <input type="hidden" name="action" value="form_supprimer">
                             <input type="image" name="btn_supprimer" src="public/images/icones/s16.png">
                         </form>

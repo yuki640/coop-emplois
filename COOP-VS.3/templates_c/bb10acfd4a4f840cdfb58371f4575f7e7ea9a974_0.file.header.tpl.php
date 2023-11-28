@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.3.2, created on 2023-11-06 16:14:11
+/* Smarty version 4.3.2, created on 2023-11-28 20:55:26
   from 'C:\laragon\www\coop-emplois\COOP-VS.3\public\header.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.2',
-  'unifunc' => 'content_654910d31b4633_77009047',
+  'unifunc' => 'content_656645ae394710_01373957',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'bb10acfd4a4f840cdfb58371f4575f7e7ea9a974' => 
     array (
       0 => 'C:\\laragon\\www\\coop-emplois\\COOP-VS.3\\public\\header.tpl',
-      1 => 1697369485,
+      1 => 1701201324,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_654910d31b4633_77009047 (Smarty_Internal_Template $_smarty_tpl) {
+function content_656645ae394710_01373957 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="fr">
 
@@ -44,7 +44,7 @@ function content_654910d31b4633_77009047 (Smarty_Internal_Template $_smarty_tpl)
                         <a href="index.php?gestion=reunion&action=listerDP">Déja passée</a>
                     </div>
                 </li>
-                <li><a href="#">Entretiens</a></li>
+                <li><a href="index.php?gestion=entretien">Entretien</a></li>
             <li><a href=" #">Porteurs de Projet</a></li>
                 <li><a href="index.php?gestion=accompagnateur">Accompagnateurs</a></li>
 

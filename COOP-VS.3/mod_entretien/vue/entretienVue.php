@@ -1,6 +1,6 @@
 <?php
 
-class ReunionVue
+class EntretienVue
 {
     private $parametre = [];
     private $tpl; // propriété de type objet (smarty)
@@ -30,15 +30,15 @@ class ReunionVue
     public function genererAffichageListe($valeurs, $action)
     {
         //     $this->chargementValeurs();
-        $this->tpl->assign('titrePageAV', 'Liste des reunions à venir');
+        $this->tpl->assign('titrePageAV', 'Liste des entretien à venir');
 
-        $this->tpl->assign('titrePageDP', 'Liste des reunions déja passé');
+        $this->tpl->assign('titrePageDP', 'Liste des entretien déja passé');
 
         $this->tpl->assign('action', $action);
 
-        $this->tpl->assign('listeReunion', $valeurs);
+        $this->tpl->assign('listeEntretien', $valeurs);
 
-        $this->tpl->display('mod_reunion/vue/reunionListeVue.tpl');
+        $this->tpl->display('mod_entretien/vue/entretienListeVue.tpl');
     }
 
     public function genererAffichageFiche($valeurs, $listeLieux, $listeAccompagnateurs)
@@ -53,9 +53,9 @@ class ReunionVue
 
                 $this->tpl->assign('required', '');
 
-                $this->tpl->assign('titrePage', 'Fiche reunion :  Consultation');
+                $this->tpl->assign('titrePage', 'Fiche Entretien :  Consultation');
 
-                $this->tpl->assign('unReunion', $valeurs);
+                $this->tpl->assign('unEntretien', $valeurs);
 
                 $this->tpl->assign('listeLieux', $listeLieux);
 
@@ -70,9 +70,9 @@ class ReunionVue
 
                 $this->tpl->assign('required', 'required');
 
-                $this->tpl->assign('titrePage', 'Fiche reunion :  Création');
+                $this->tpl->assign('titrePage', 'Fiche entretien :  Création');
 
-                $this->tpl->assign('unReunion', $valeurs);
+                $this->tpl->assign('unEntretien', $valeurs);
 
             $this->tpl->assign('listeLieux', $listeLieux);
 
@@ -88,9 +88,9 @@ class ReunionVue
 
                 $this->tpl->assign('required', '');
 
-                $this->tpl->assign('titrePage', 'Fiche reunion :  Suppression');
+                $this->tpl->assign('titrePage', 'Fiche entretien :  Suppression');
 
-                $this->tpl->assign('unReunion', $valeurs);
+                $this->tpl->assign('unEntretien', $valeurs);
 
             $this->tpl->assign('listeLieux', $listeLieux);
 
@@ -106,9 +106,9 @@ class ReunionVue
 
                 $this->tpl->assign('required', 'required');
 
-                $this->tpl->assign('titrePage', 'Fiche reunion :  Modification');
+                $this->tpl->assign('titrePage', 'Fiche entretien :  Modification');
 
-                $this->tpl->assign('unReunion', $valeurs);
+                $this->tpl->assign('unEntretien', $valeurs);
 
             $this->tpl->assign('listeLieux', $listeLieux);
 
@@ -117,7 +117,7 @@ class ReunionVue
                 break;
         }
 
-        $this->tpl->display('mod_reunion/vue/reunionFicheVue.tpl');
+        $this->tpl->display('mod_entretien/vue/entretienFicheVue.tpl');
     }
 
 }

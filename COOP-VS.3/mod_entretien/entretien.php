@@ -1,7 +1,7 @@
 <?php
 
-//Routeur pour la Reunion
-class Reunion{
+//Routeur pour l'entretien
+class Entretien{
 
     private $parametre = []; // Tableau =$_REQUEST
     private $oControleur; //propriété de type objet
@@ -12,8 +12,8 @@ class Reunion{
         $this->parametre = $parametre;
         // Chargement ou appel du controleur
 
-        // Création d'un objet, instance de la classe ReunionControleur
-        $this->oControleur = new ReunionControleur($this->parametre);
+        // Création d'un objet, instance de la classe EntretienControleur
+        $this->oControleur = new EntretienControleur($this->parametre);
     }
 
     public function choixAction()
