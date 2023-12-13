@@ -8,11 +8,11 @@ require_once 'include/configuration.php';
 // Existe GET pour rechercher et POST pour écriture
 // Mais aussi request
 Autoloader::chargerClasses();
-//if(!isset($_SESSION['login'])){
-//
-//    $_REQUEST['gestion'] = 'authentification';
-//
-/*else */if(!isset($_REQUEST['gestion'])){
+if (!isset($_SESSION['login'])) {
+
+    $_REQUEST['gestion'] = 'authentification';
+    
+} else if (!isset($_REQUEST['gestion'])) {
 
     $_REQUEST['gestion'] = 'accueil';
 

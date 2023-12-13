@@ -6,7 +6,8 @@ class Autoloader{
         spl_autoload_register([__CLASS__, 'autoload']);
     }
 
-    public static function autoload($maClasse){
+    public static function autoload($maClasse): void
+    {
         // Passe le nom de la classe avec une minuscule Accueil => accueil
         $maClasse = lcfirst($maClasse);
 
@@ -27,6 +28,10 @@ class Autoloader{
             'mod_reunion/controleur/',
             'mod_reunion/modele/',
             'mod_reunion/vue/',
+            'mod_authentification/',
+            'mod_authentification/controleur/',
+            'mod_authentification/modele/',
+            'mod_authentification/vue/',
         ];
 
         foreach($repertoires as $repertoire) {
