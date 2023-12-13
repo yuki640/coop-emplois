@@ -25,7 +25,7 @@
     <div id="login">
         <h1>Bon retour parmis nous !</h1>
 
-        <form action="/" method="post">
+        <form action="../../index.php" method="post">
 
             <div class="field-wrap">
                 <label>

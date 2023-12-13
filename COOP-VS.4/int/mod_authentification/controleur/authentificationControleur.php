@@ -2,15 +2,15 @@
 
 namespace mod_authentification\controleur;
 
-use mod_authentification\modele\AuthentificationModele;
-use mod_authentification\vue\AuthentificationVue;
+use mod_authentification\modele\authentificationModele;
+use mod_authentification\vue\authentificationVue;
 
 class AuthentificationControleur
 {
 
-    private $parametre = []; // tableau = $_REQUEST
-    private $oModele; //propriété de type objet
-    private $oVue;  // propriété de type objet
+    private array $parametre = []; // tableau = $_REQUEST
+    private AuthentificationModele $oModele; //propriété de type objet
+    private authentificationVue $oVue;  // propriété de type objet
 
     public function __construct($parametre)
     {
@@ -18,12 +18,12 @@ class AuthentificationControleur
         // Création d'un objet, instance de la classe ClientModele
         $this->oModele = new AuthentificationModele($this->parametre);
         // Création d'un objet, instance de la classe ClientVue
-        $this->oVue = new AuthentificationVue($this->parametre);
+        $this->oVue = new authentificationVue($this->parametre);
     }
 
-    public function form_authentifier()
+    public function form_authentifier(): void
     {
-        $prepareAuthentification = new AuthentificationTable($this->parametre);
+        $prepareAuthentification = new authentificationTable($this->parametre);
 
 //                var_dump($prepareAuthentification);
 //                die();
@@ -31,12 +31,15 @@ class AuthentificationControleur
         $this->oVue->genererAffichage($prepareAuthentification);
     }
 
-    public function authentifier()
+    /**
+     * @throws \SmartyException
+     */
+    public function authentifier(): void
     {
 
-        $controleAuthentification = new AuthentificationTable($this->parametre);
-        if ($controleAuthentification->getAutorisationSession() == false ||
-            $this->oModele->rechercherVendeur($controleAuthentification) == false) {
+        $controleAuthentification = new authentificationTable($this->parametre);
+        if (!$controleAuthentification->getAutorisationSession() ||
+            !$this->oModele->rechercherVendeur($controleAuthentification)) {
 
             $this->oVue->genererAffichage($controleAuthentification);
         } else {

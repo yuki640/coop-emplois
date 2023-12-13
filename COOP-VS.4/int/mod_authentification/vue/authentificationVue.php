@@ -5,7 +5,7 @@ use Smarty;
 
 class AuthentificationVue
 {
-    private $parametre = [];
+    private array $parametre = [];
     private $tpl; // propriété de type objet (smarty)
 
     public function __construct($parametre)
@@ -16,9 +16,12 @@ class AuthentificationVue
 
     }
 
-    public function genererAffichage($valeurs)
+    /**
+     * @throws \SmartyException
+     */
+    public function genererAffichage($valeurs): void
     {
-        $this->tpl->assign('titreVue', 'Gourmandise SARL');
+        $this->tpl->assign('titreVue', 'COOP EMPLOI');
 
         $this->tpl->assign('action', 'authentifier');
 

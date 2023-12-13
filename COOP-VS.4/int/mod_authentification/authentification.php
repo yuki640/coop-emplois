@@ -2,16 +2,15 @@
 
 namespace mod_authentification;
 
-use AllowDynamicProperties;
-use mod_authentification\controleur\AuthentificationControleur;
+use mod_authentification\controleur\authentificationControleur;
 
-#[AllowDynamicProperties] class Authentification
+class Authentification
 {
 
     /** Routeur du Module Authentification */
 
-    private $parametre = []; // Tableau =$_REQUEST
-    private $ocontroleur; //propriété de type objet
+    private array $parametre = []; // Tableau =$_REQUEST
+    private authentificationControleur $oControleur; //propriété de type objet
 
     public function __construct($parametre)
     {
