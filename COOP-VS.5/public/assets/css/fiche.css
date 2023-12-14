@@ -23,6 +23,7 @@ body {
     border-radius: 4px; /* Coins arrondis */
     margin-bottom: 20px; /* Espacement en bas */
 }
+
 /* Card styles */
 .card {
     background-color: #e8b24a;
@@ -37,7 +38,6 @@ body {
     border-bottom: 1px solid #ccc;
     font-weight: bold;
 }
-
 
 
 .card-body {

@@ -11,7 +11,7 @@ header {
     position: relative; /* Keep the header at the top */
     width: 100%;
     z-index: 1000;
-    
+
 }
 
 nav ul {
@@ -62,7 +62,8 @@ button {
     box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Add shadow to your buttons */
     transition: background-color 0.3s; /* Smooth transition for hover effect */
 }
-.b1{
+
+.b1 {
     background-color: rgba(0, 0, 0, 0.295);
     border: none;
     padding: 15px 30px;
@@ -81,7 +82,7 @@ form {
     padding: 20px;
     background: #f9f9f9; /* couleur de fond du formulaire */
     border-radius: 8px; /* coins arrondis */
-    box-shadow: 0 0 10px rgba(0,0,0,0.1); /* ombre extérieure */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* ombre extérieure */
 }
 
 fieldset {
@@ -118,7 +119,8 @@ input[type="submit"] {
     border-radius: 4px; /* coins arrondis */
     cursor: pointer;
 }
-.color{
+
+.color {
     color: rgb(0, 0, 0);
 }
 
