@@ -1,4 +1,29 @@
-<!DOCTYPE html>
+<?php
+/* Smarty version 4.3.2, created on 2023-12-14 11:35:21
+  from 'C:\laragon\www\coop-emplois\COOP-VS.5\int\mod_entretien\vue\entretienListeVue.tpl' */
+
+/* @var Smarty_Internal_Template $_smarty_tpl */
+if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
+  'version' => '4.3.2',
+  'unifunc' => 'content_657ada699ecaf1_58704829',
+  'has_nocache_code' => false,
+  'file_dependency' => 
+  array (
+    '72185662b9b5292a7dc451c60cb0e564ce64a62a' => 
+    array (
+      0 => 'C:\\laragon\\www\\coop-emplois\\COOP-VS.5\\int\\mod_entretien\\vue\\entretienListeVue.tpl',
+      1 => 1702549782,
+      2 => 'file',
+    ),
+  ),
+  'includes' => 
+  array (
+    'file:../../../public/header.tpl' => 1,
+    'file:../../../public/footer.tpl' => 1,
+  ),
+),false)) {
+function content_657ada699ecaf1_58704829 (Smarty_Internal_Template $_smarty_tpl) {
+?><!DOCTYPE html>
 <html lang="fr">
 
 <head>
@@ -17,7 +42,8 @@
     <div id="right-panel" class="right-panel">
 
         <!--Header -->
-        {include file='../../../public/header.tpl'}
+        <?php $_smarty_tpl->_subTemplateRender('file:../../../public/header.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
+?>
         <!-- FIN : header -->
 
         <div class="page-title">
@@ -37,8 +63,9 @@
             </strong>
         </div>
         <div class="card-body">
-            <div {if EntretienTable::getMessageSucces () neq ''} class="alert alert-success" role="alert" {/if}>
-                {EntretienTable::getMessageSucces ()}
+            <div <?php if (EntretienTable::getMessageSucces() != '') {?> class="alert alert-success" role="alert" <?php }?>>
+                <?php echo EntretienTable::getMessageSucces();?>
+
             </div>
             <table id="bootstrap-data-table" class="table table-striped table-bordered">
                 <!-- PLACER LA LISTE DES CLIENTS -->
@@ -55,16 +82,27 @@
                     </tr>
                 </thead>
                 <tbody>
-                    {foreach from=$listeEntretien item=unEntretien}
+                    <?php
+$_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['listeEntretien']->value, 'unEntretien');
+$_smarty_tpl->tpl_vars['unEntretien']->do_else = true;
+if ($_from !== null) foreach ($_from as $_smarty_tpl->tpl_vars['unEntretien']->value) {
+$_smarty_tpl->tpl_vars['unEntretien']->do_else = false;
+?>
                     <tr>
-                        <td>{$unEntretien->getIde()}</td>
-                        <td>{$unEntretien->getNom()}</td>
-                        <td>{$unEntretien->getPrenom()}</td>
-                        <td>{$unEntretien->getTelephone()}</td>
-                        <td>{$unEntretien->getFonction()}</td>
+                        <td><?php echo $_smarty_tpl->tpl_vars['unEntretien']->value->getIde();?>
+</td>
+                        <td><?php echo $_smarty_tpl->tpl_vars['unEntretien']->value->getNom();?>
+</td>
+                        <td><?php echo $_smarty_tpl->tpl_vars['unEntretien']->value->getPrenom();?>
+</td>
+                        <td><?php echo $_smarty_tpl->tpl_vars['unEntretien']->value->getTelephone();?>
+</td>
+                        <td><?php echo $_smarty_tpl->tpl_vars['unEntretien']->value->getFonction();?>
+</td>
                         <td>
                             <form action="index.php" method="post">
-                                <input type="hidden" name="acc_ide" value="{$unEntretien->getIde()}">
+                                <input type="hidden" name="acc_ide" value="<?php echo $_smarty_tpl->tpl_vars['unEntretien']->value->getIde();?>
+">
                                 <input type="hidden" name="gestion" value="entretien">
                                 <input type="hidden" name="action" value="form_consulter">
                                 <input type="image" name="btn_consulter" src="../../../public/images/icones/p16.png">
@@ -72,7 +110,8 @@
                         </td>
                         <td>
                             <form action="index.php" method="post">
-                                <input type="hidden" name="acc_ide" value="{$unEntretien->getIde()}">
+                                <input type="hidden" name="acc_ide" value="<?php echo $_smarty_tpl->tpl_vars['unEntretien']->value->getIde();?>
+">
                                 <input type="hidden" name="gestion" value="entretien">
                                 <input type="hidden" name="action" value="form_modifier">
                                 <input type="image" name="btn_modifier" src="../../../public/images/icones/m16.png">
@@ -80,14 +119,17 @@
                         </td>
                         <td>
                             <form action="index.php" method="post">
-                                <input type="hidden" name="acc_ide" value="{$unEntretien->getIde()}">
+                                <input type="hidden" name="acc_ide" value="<?php echo $_smarty_tpl->tpl_vars['unEntretien']->value->getIde();?>
+">
                                 <input type="hidden" name="gestion" value="entretien">
                                 <input type="hidden" name="action" value="form_supprimer">
                                 <input type="image" name="btn_supprimer" src="../../../public/images/icones/s16.png">
                             </form>
                         </td>
                     </tr>
-                    {/foreach}
+                    <?php
+}
+$_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
                 </tbody>
             </table>
         </div>
@@ -97,9 +139,9 @@
 
 </body>
 
-{* ajouter footer *}
-{include file='../../../public/footer.tpl'}
-{* fin ajouter footer *}
+<?php $_smarty_tpl->_subTemplateRender('file:../../../public/footer.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
+?>
 
 
-</html>
+</html><?php }
+}

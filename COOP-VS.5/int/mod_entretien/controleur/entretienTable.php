@@ -1,41 +1,32 @@
 <?php
+Class EntretienTable extends UtilisateurTable {
 
-class EntretienTable
-{
-
-    private $reu_ide = ""; //getCodec | setCodec
-    private $reu_dat = ""; // getPrix_unitaire_HT
-    private $reu_heu = "";
-    private $reu_dur = "";
-    private $reu_lie = "";
-    private $reu_cap = "";
-    private $reu_pre = "";
-    private $reu_acc = "";
-    private $reu_pub = "";
-    private $reu_dcr = "";
-    private $reu_dmo = "";
-    private $reu_lie_nom = "";
-    private $reu_acc_nom = "";
+    private $acc_ide=""; //getCodec | setCodec
+    private $acc_nom=""; // getPrix_unitaire_HT
+    private $acc_pre="";
+    private $acc_tel="";
+    private $acc_mail="";
+    private $acc_fon="";
+    private $acc_dcr="";
+    private $acc_dmo="";
     private $autorisationBD = true;
     private static $messageErreur = "";
     private static $messageSucces = "";
 
-    public function __construct($data = null)
-    {
+    public function __construct($data = null){
 //$data est UN TABLEAU
-        if ($data != null) {
+        if($data !=null) {
             $this->hydrater($data);
         }
     }
 
-    public function hydrater(array $row)
-    {
+    public function hydrater(array $row){
 //$row est un TABLEAU
-        foreach ($row as $k => $v) {
+        foreach ($row as $k => $v){
             //concaténation du préfixe set et du nom de la propriété avec
             // La première lettre en majuscule
-            $setter = 'set' . ucfirst($k);
-            if (method_exists($this, $setter)) {
+            $setter = 'set'.ucfirst($k);
+            if(method_exists($this,$setter)){
                 // On appelle la méthode
                 //                   $this->setNom($nom);
                 $this->$setter($v);
@@ -43,83 +34,68 @@ class EntretienTable
         }
     }
 
-// Getters
-    public function getReuIde(): string
+    /**
+     * @return string
+     */
+    public function getIde()
     {
-        return $this->reu_ide;
-    }
-
-    public function getReuDat(): string
-    {
-        return $this->reu_dat;
-    }
-    public function getReuDatFormatted()
-    {
-        $timestamp = strtotime($this->reu_dat);
-        $formatter = new IntlDateFormatter('fr_FR', IntlDateFormatter::LONG, IntlDateFormatter::NONE);
-        $dateFormatted = $formatter->format($timestamp);
-        return $dateFormatted;
-    }
-
-    public function getReuHeu(): string
-    {
-        return $this->reu_heu;
-    }
-
-    public function getReuDur(): string
-    {
-        return $this->reu_dur;
-    }
-
-    public function getReuLie(): string
-    {
-        return $this->reu_lie;
-    }
-
-    public function getReuCap(): string
-    {
-        return $this->reu_cap;
-    }
-
-    public function getReuPre(): string
-    {
-        return $this->reu_pre;
-    }
-
-    public function getReuAcc(): string
-    {
-        return $this->reu_acc;
-    }
-
-    public function getReuPub(): string
-    {
-        return $this->reu_pub;
+        return $this->acc_ide;
     }
 
     /**
      * @return string
      */
-    public function getReuLieNom(): string
+    public function getNom()
     {
-        return $this->reu_lie_nom;
+        return $this->acc_nom;
     }
 
     /**
      * @return string
      */
-    public function getReuAccNom(): string
+    public function getPrenom()
     {
-        return $this->reu_acc_nom;
+        return $this->acc_pre;
     }
 
-    public function getReuDcr(): string
+    /**
+     * @return string
+     */
+    public function getTelephone()
     {
-        return $this->reu_dcr;
+        return $this->acc_tel;
     }
 
-    public function getReuDmo(): string
+    /**
+     * @return string
+     */
+    public function getMail()
     {
-        return $this->reu_dmo;
+        return $this->acc_mail;
+    }
+
+    /**
+     * @return string
+     */
+    public function getFonction()
+    {
+        return $this->acc_fon;
+    }
+
+    /**
+     * @return string
+     */
+    public function getDateC()
+    {
+        return $this->acc_dcr;
+    }
+
+    /**
+     * @return string
+     */
+    public function getDateM()
+    {
+        return $this->acc_dmo;
     }
 
     /**
@@ -138,7 +114,6 @@ class EntretienTable
         return self::$messageErreur;
     }
 
-
     /**
      * @return string
      */
@@ -147,173 +122,124 @@ class EntretienTable
         return self::$messageSucces;
     }
 
-    // Setters
+ // Setters
 
     /**
-     * @param mixed $reu_ide
+     * @param string $acc_ide
      */
-    public function setReu_ide($reu_ide)
+    public function setAcc_ide(string $acc_ide)
     {
-        $this->reu_ide = $reu_ide;
+        $this->acc_ide = $acc_ide;
     }
 
     /**
-     * @param mixed $reu_dat
+     * @param string $acc_nom
      */
-    public function setReu_dat($reu_dat)
+    public function setAcc_nom(string $acc_nom)
     {
-        // Vérifier si la valeur est vide ou composée uniquement d'espaces
-        if (empty($reu_dat) || ctype_space(strval($reu_dat))) {
+        if (empty($acc_nom) || ctype_space(strval($acc_nom))) {
             $this->setAutorisationBD(false);
-            self::setMessageErreur("La date est obligatoire et ne peut pas être vide. <br>");
+            self::setMessageErreur("Le nom est obligatoire. <br>");
         } else {
-            // Vérifier si la date est au format 'Y-m-d' (AAAA-MM-JJ)
-            $dateObj = DateTime::createFromFormat('Y-m-d', $reu_dat);
-
-            if ($dateObj === false || $dateObj->format('Y-m-d') !== $reu_dat) {
+            $accNomLength = strlen($acc_nom);
+            if ($accNomLength > 50) {
                 $this->setAutorisationBD(false);
-                self::setMessageErreur("Le format de la date est incorrect. Utilisez le format JJ-MM-AAAA. <br>");
-            } else {
-                // Vérifier si la date est postérieure à la date actuelle
-                $dateActuelle = new DateTime();
-                if ($dateObj < $dateActuelle) {
-                    $this->setAutorisationBD(false);
-                    self::setMessageErreur("La date ne peut pas être antérieure à la date actuelle. <br>");
-                } else {
-                    $this->reu_dat = $reu_dat;
-                }
+                self::setMessageErreur("Le nom ne peut pas dépasser 50 caractères. Actuellement, il contient $accNomLength caractères. <br>");
             }
         }
+        $this->acc_nom = $acc_nom;
     }
 
+
     /**
-     * @param string $reu_heu
+     * @param string $acc_pre
      */
-    public function setReu_heu(string $reu_heu)
+    public function setAcc_pre(string $acc_pre)
     {
-        // Vérifier si la valeur est vide ou composée uniquement d'espaces
-        if (empty($reu_heu) || ctype_space($reu_heu)) {
+        if (empty($acc_pre) || ctype_space(strval($acc_pre))) {
             $this->setAutorisationBD(false);
-            self::setMessageErreur("L'heure de la réunion est obligatoire. <br>");
+            self::setMessageErreur("Le prénom est obligatoire. <br>");
         } else {
-            // Séparer l'heure en heures et minutes
-            list($heures, $minutes) = explode(":", $reu_heu);
-
-            // Vérifier si les heures et les minutes sont des nombres valides
-            if (!is_numeric($heures) || !is_numeric($minutes)) {
+            $accPreLength = strlen($acc_pre);
+            if ($accPreLength > 30) {
                 $this->setAutorisationBD(false);
-                self::setMessageErreur("L'heure de la réunion est au format incorrect. Utilisez HH:MM. <br>");
-            } else {
-                // Convertir l'heure en minutes depuis minuit
-                $heureEnMinutes = $heures * 60 + $minutes;
-
-                // Vérifier si l'heure est entre 9h (540 minutes) et 20h (1200 minutes)
-                if ($heureEnMinutes < 540 || $heureEnMinutes > 1200) {
-                    $this->setAutorisationBD(false);
-                    self::setMessageErreur("L'heure de la réunion doit être entre 9h et 20h. <br>");
-                } else {
-                    // Si l'heure est valide, stocker la valeur
-                    $this->reu_heu = $reu_heu;
-                }
+                self::setMessageErreur("Le prénom ne peut pas dépasser 30 caractères. Actuellement, il contient $accPreLength caractères. <br>");
             }
         }
+        $this->acc_pre = $acc_pre;
     }
 
     /**
-     * @param string $reu_dur
+     * @param string $acc_tel
      */
-
-    public function setReu_dur(string $reu_dur)
+    public function setAcc_tel(string $acc_tel)
     {
-        // Vérifier si la valeur est vide ou composée uniquement d'espaces
-        if (empty($reu_dur) || ctype_space($reu_dur)) {
+        if (empty($acc_tel) || ctype_space(strval($acc_tel))) {
             $this->setAutorisationBD(false);
-            self::setMessageErreur("La durée de la réunion est obligatoire. <br>");
+            self::setMessageErreur("Le téléphone est obligatoire. <br>");
         } else {
-            // Séparer la durée en heures et minutes
-            list($heures, $minutes) = explode(":", $reu_dur);
-
-            // Vérifier si les heures et les minutes sont des nombres valides
-            if (!is_numeric($heures) || !is_numeric($minutes)) {
+            $accTelLength = strlen($acc_tel);
+            if ($accTelLength > 14) {
                 $this->setAutorisationBD(false);
-                self::setMessageErreur("La durée de la réunion est au format incorrect. Utilisez HH:MM. <br>");
-            } else {
-                // Convertir la durée en minutes
-                $dureeEnMinutes = $heures * 60 + $minutes;
-
-                // Vérifier si la durée est d'au moins 1h30 (90 minutes) et au maximum de 6 heures (360 minutes)
-                if ($dureeEnMinutes < 90 || $dureeEnMinutes > 360) {
-                    $this->setAutorisationBD(false);
-                    self::setMessageErreur("La réunion doit durer au moins 1h30 (90 minutes) et au maximum 6 heures (360 minutes). <br>");
-                } else {
-                    // Si la durée est valide, stocker la valeur
-                    $this->reu_dur = $reu_dur;
-                }
+                self::setMessageErreur("Le téléphone ne peut pas dépasser 14 caractères. 10 chiffres et un espace tout les deux chiffres <br>");
             }
         }
+
+        $this->acc_tel = $acc_tel;
     }
 
-    public function setReu_Lie(string $reu_lie): void
+
+    /**
+     * @param string $acc_mail
+     */
+    public function setAcc_mail(string $acc_mail)
     {
-        if (empty($reu_lie) || ctype_space($reu_lie)) {
+        if (empty($acc_mail) || ctype_space(strval($acc_mail))) {
             $this->setAutorisationBD(false);
-            self::setMessageErreur("Un lieu pour la réunion est obligatoire. <br>");
+            self::setMessageErreur("L'email est obligatoire. <br>");
+        } else {
+            $accMailLength = strlen($acc_mail);
+            if ($accMailLength > 191) {
+                $this->setAutorisationBD(false);
+                self::setMessageErreur("L'email ne peut pas dépasser 191 caractères. Actuellement, il contient $accMailLength caractères. <br>");
+            }
         }
-        $this->reu_lie = $reu_lie;
+
+        $this->acc_mail = $acc_mail;
     }
 
-    public function setReu_Cap(string $reu_cap): void
-    {
-        $this->reu_cap = $reu_cap;
-    }
 
-    public function setReu_Pre(string $reu_pre): void
+    /**
+     * @param string $acc_fon
+     */
+    public function setAcc_fon(string $acc_fon = null)
     {
-        if (empty($reu_pre) || ctype_space($reu_pre)) {
-            $this->setAutorisationBD(false);
-            self::setMessageErreur("Un intitulé pour la réunion est obligatoire. <br>");
+        if (!empty($acc_fon)) {
+            $accFonLength = strlen($acc_fon);
+            if ($accFonLength > 100) {
+                $this->setAutorisationBD(false);
+                self::setMessageErreur("La fonction ne peut pas dépasser 100 caractères. Actuellement, elle contient $accFonLength caractères. <br>");
+            }
         }
-        $this->reu_pre = $reu_pre;
+
+        $this->acc_fon = $acc_fon;
     }
 
-    public function setReu_Acc(string $reu_acc): void
-    {
-        if (empty($reu_acc) || ctype_space($reu_acc)) {
-            $this->setAutorisationBD(false);
-            self::setMessageErreur("Un accompagnateur pour la réunion est obligatoire. <br>");
-        }
-        $this->reu_acc = $reu_acc;
-    }
 
-    public function setReu_Pub(string $reu_pub): void
+    /**
+     * @param string $acc_dcr
+     */
+    public function setAcc_dcr(string $acc_dcr)
     {
-        $this->reu_pub = $reu_pub;
+        $this->acc_dcr = $acc_dcr;
     }
 
     /**
-     * @param string $reu_lie_nom
+     * @param string $acc_dmo
      */
-    public function setReu_Lie_Nom(string $reu_lie_nom): void
+    public function setAcc_dmo(string $acc_dmo)
     {
-        $this->reu_lie_nom = $reu_lie_nom;
-    }
-
-    /**
-     * @param string $reu_acc_nom
-     */
-    public function setReu_Acc_Nom(string $reu_acc_nom): void
-    {
-        $this->reu_acc_nom = $reu_acc_nom;
-    }
-
-    public function setReu_Dcr(string $reu_dcr): void
-    {
-        $this->reu_dcr = $reu_dcr;
-    }
-
-    public function setReu_Dmo(string $reu_dmo): void
-    {
-        $this->reu_dmo = $reu_dmo;
+        $this->acc_dmo = $acc_dmo;
     }
 
     /**

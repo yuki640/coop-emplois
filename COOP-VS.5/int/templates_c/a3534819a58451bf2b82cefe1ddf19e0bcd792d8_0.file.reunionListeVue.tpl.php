@@ -1,28 +1,28 @@
 <?php
-/* Smarty version 4.3.2, created on 2023-12-14 11:11:19
+/* Smarty version 4.3.2, created on 2023-12-14 11:14:44
   from 'C:\laragon\www\coop-emplois\COOP-VS.5\int\mod_reunion\vue\reunionListeVue.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.2',
-  'unifunc' => 'content_657ad4c7443cf0_15453858',
+  'unifunc' => 'content_657ad594e7c8e5_78902410',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'a3534819a58451bf2b82cefe1ddf19e0bcd792d8' => 
     array (
       0 => 'C:\\laragon\\www\\coop-emplois\\COOP-VS.5\\int\\mod_reunion\\vue\\reunionListeVue.tpl',
-      1 => 1702548312,
+      1 => 1702548882,
       2 => 'file',
     ),
   ),
   'includes' => 
   array (
-    'file:public/header.tpl' => 1,
-    'file:public/footer.tpl' => 1,
+    'file:../../../public/header.tpl' => 1,
+    'file:../../../public/footer.tpl' => 1,
   ),
 ),false)) {
-function content_657ad4c7443cf0_15453858 (Smarty_Internal_Template $_smarty_tpl) {
+function content_657ad594e7c8e5_78902410 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="fr">
 
@@ -30,7 +30,7 @@ function content_657ad4c7443cf0_15453858 (Smarty_Internal_Template $_smarty_tpl)
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="public/assets/css/liste.css">
+    <link rel="stylesheet" href="../../../public/assets/css/liste.css">
 
     <title>liste des reunions</title>
 
@@ -42,7 +42,7 @@ function content_657ad4c7443cf0_15453858 (Smarty_Internal_Template $_smarty_tpl)
 <div id="right-panel" class="right-panel">
 
     <!--Header -->
-    <?php $_smarty_tpl->_subTemplateRender('file:public/header.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
+    <?php $_smarty_tpl->_subTemplateRender('file:../../../public/header.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
     <!-- FIN : header -->
 
@@ -68,7 +68,7 @@ function content_657ad4c7443cf0_15453858 (Smarty_Internal_Template $_smarty_tpl)
                 <label>Ajouter un lieu :
                     <input type="image"
                            name="btn_ajouter"
-                           src="public/images/icones/a16.png">
+                           src="../../../public/images/icones/a16.png">
                 </label>
             </form>
 
@@ -128,7 +128,7 @@ $_smarty_tpl->tpl_vars['unReunion']->do_else = false;
 ">
                             <input type="hidden" name="gestion" value="reunion">
                             <input type="hidden" name="action" value="form_consulter">
-                            <input type="image" name="btn_consulter" src="public/images/icones/p16.png">
+                            <input type="image" name="btn_consulter" src="../../../public/images/icones/p16.png">
                         </form>
                     </td>
                     <?php if ($_smarty_tpl->tpl_vars['action']->value != 'listerDP') {?>
@@ -138,7 +138,7 @@ $_smarty_tpl->tpl_vars['unReunion']->do_else = false;
 ">
                             <input type="hidden" name="gestion" value="reunion">
                             <input type="hidden" name="action" value="form_modifier">
-                            <input type="image" name="btn_modifier" src="public/images/icones/m16.png">
+                            <input type="image" name="btn_modifier" src="../../../public/images/icones/m16.png">
                         </form>
                     </td>
                     <td>
@@ -147,7 +147,7 @@ $_smarty_tpl->tpl_vars['unReunion']->do_else = false;
 ">
                             <input type="hidden" name="gestion" value="reunion">
                             <input type="hidden" name="action" value="form_supprimer">
-                            <input type="image" name="btn_supprimer" src="public/images/icones/s16.png">
+                            <input type="image" name="btn_supprimer" src="../../../public/images/icones/s16.png">
                         </form>
                     </td>
                     <?php }?>
@@ -164,7 +164,7 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
 
 </body>
 
-<?php $_smarty_tpl->_subTemplateRender('file:public/footer.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
+<?php $_smarty_tpl->_subTemplateRender('file:../../../public/footer.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
 
 

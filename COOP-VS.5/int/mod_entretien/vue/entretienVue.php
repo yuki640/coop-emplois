@@ -13,37 +13,30 @@ class EntretienVue
 
     }
 
-    public function setAction($action)
-    {
-        $this->parametre['action'] = $action;
-    }
 //    public function chargementValeurs()
 //    {
 //        $this->tpl->assign('deconnexion', 'Déconnexion');
-//
+
 //        $this->tpl->assign('login', $_SESSION['prenomNom']);
-//
+
 //        $this->tpl->assign('titreVue', 'Gourmandise SARL');
-//
+
 //    }
 
-    public function genererAffichageListe($valeurs, $action)
+    public function genererAffichageListe($valeurs)
     {
-        //     $this->chargementValeurs();
-        $this->tpl->assign('titrePageAV', 'Liste des entretien à venir');
-
-        $this->tpl->assign('titrePageDP', 'Liste des entretien déja passé');
-
-        $this->tpl->assign('action', $action);
+   //     $this->chargementValeurs();
+        $this->tpl->assign('titrePage', 'Liste des Entretien');
 
         $this->tpl->assign('listeEntretien', $valeurs);
 
         $this->tpl->display('mod_entretien/vue/entretienListeVue.tpl');
     }
 
-    public function genererAffichageFiche($valeurs, $listeLieux, $listeAccompagnateurs)
+    public function genererAffichageFiche($valeurs)
     {
-        //       $this->chargementValeurs();
+
+ //       $this->chargementValeurs();
 
         switch ($this->parametre['action']) {
             case 'form_consulter':
@@ -57,10 +50,6 @@ class EntretienVue
 
                 $this->tpl->assign('unEntretien', $valeurs);
 
-                $this->tpl->assign('listeLieux', $listeLieux);
-
-                $this->tpl->assign('listeAccompagnateurs', $listeAccompagnateurs);
-
                 break;
             case 'form_ajouter':
             case 'ajouter':
@@ -73,11 +62,6 @@ class EntretienVue
                 $this->tpl->assign('titrePage', 'Fiche entretien :  Création');
 
                 $this->tpl->assign('unEntretien', $valeurs);
-
-            $this->tpl->assign('listeLieux', $listeLieux);
-
-            $this->tpl->assign('listeAccompagnateurs', $listeAccompagnateurs);
-
                 break;
 
             case 'form_supprimer':
@@ -86,16 +70,11 @@ class EntretienVue
 
                 $this->tpl->assign('readonly', 'readonly');
 
-                $this->tpl->assign('required', '');
+            $this->tpl->assign('required', '');
 
                 $this->tpl->assign('titrePage', 'Fiche entretien :  Suppression');
 
                 $this->tpl->assign('unEntretien', $valeurs);
-
-            $this->tpl->assign('listeLieux', $listeLieux);
-
-            $this->tpl->assign('listeAccompagnateurs', $listeAccompagnateurs);
-
                 break;
 
             case 'form_modifier':
@@ -109,11 +88,6 @@ class EntretienVue
                 $this->tpl->assign('titrePage', 'Fiche entretien :  Modification');
 
                 $this->tpl->assign('unEntretien', $valeurs);
-
-            $this->tpl->assign('listeLieux', $listeLieux);
-
-            $this->tpl->assign('listeAccompagnateurs', $listeAccompagnateurs);
-
                 break;
         }
 

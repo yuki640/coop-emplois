@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.3.2, created on 2023-12-14 10:26:06
+/* Smarty version 4.3.2, created on 2023-12-14 11:35:20
   from 'C:\laragon\www\coop-emplois\COOP-VS.5\public\header.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.2',
-  'unifunc' => 'content_657aca2ee9bbb4_68145119',
+  'unifunc' => 'content_657ada68730df0_21339293',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '38ef3214c06e279ad8c8fb70656737f7f01d4f18' => 
     array (
       0 => 'C:\\laragon\\www\\coop-emplois\\COOP-VS.5\\public\\header.tpl',
-      1 => 1702545965,
+      1 => 1702550107,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_657aca2ee9bbb4_68145119 (Smarty_Internal_Template $_smarty_tpl) {
+function content_657ada68730df0_21339293 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="fr">
 
