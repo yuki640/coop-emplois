@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../../../public/assets/css/fiche.css">
+    <link rel="stylesheet" href="public/assets/css/fiche.css">
     <title>Mon Site Web</title>
 </head>
 <body>
 <div id="right-panel" class="right-panel">
     <!--Header -->
-    {include file='../../../public/header.tpl'}
+    {include file='../../public/header.tpl'}
     <!-- FIN : header -->
     <div class="page-title">
         <h1>L'emploi, c'est maintenant !</h1>
@@ -46,8 +46,8 @@
                                            value="{$unReunion->getReuDat()}" {$readonly} required>
                                 </div>
                                 <div class="form-group">
-                                    <label for "text" class="form-control">
-                                    Heure de début :
+                                    <label for=text" class="form-control">
+                                        Heure de début :
                                     </label>
                                     <input type="time" name="reu_heu" class="form-control"
                                            value="{$unReunion->getReuHeu()}" {$readonly} required>
@@ -56,47 +56,57 @@
                                     <label for="text" class="form-control">
                                         Durée approximative :
                                     </label>
-                                    <input type="time" name="reu_dur" class="form-control"
-                                           value="{$unReunion->getReuDur()}" {$readonly}>
+                                    <label for="text" class="form-control">
+                                        <input type="time" name="reu_dur" class="form-control"
+                                               value="{$unReunion->getReuDur()}" {$readonly}>
+                                    </label>
                                 </div>
                                 <div class="form-group">
                                     <label for="reu_lie" class="form-control">Nom du lieu :</label>
-                                    <select name="reu_lie" class="form-control" {$readonly}>
-                                        {foreach $listeLieux as $lieu}
-                                            <option value="{$lieu['lie_ide']}"
-                                                    {if $lieu['lie_ide'] == $unReunion->getReuLie()}selected{/if}>
-                                                {$lieu['lie_nom']}
-                                            </option>
-                                        {/foreach}
-                                    </select>
+                                    <label for="text" class="form-control">
+                                        <select name="reu_lie" class="form-control" {$readonly}>
+                                            {foreach $listeLieux as $lieu}
+                                                <option value="{$lieu['lie_ide']}"
+                                                        {if $lieu['lie_ide'] == $unReunion->getReuLie()}selected{/if}>
+                                                    {$lieu['lie_nom']}
+                                                </option>
+                                            {/foreach}
+                                        </select>
+                                    </label>
                                 </div>
                                 <div class="form-group">
                                     <label for="text" class="form-control">
                                         Capacité :
                                     </label>
-                                    <input type="number" name="reu_cap" class="form-control"
-                                           value="{$unReunion->getReuCap()}" {$readonly} required>
+                                    <label for="text" class="form-control">
+                                        <input type="number" name="reu_cap" class="form-control"
+                                               value="{$unReunion->getReuCap()}" {$readonly} required>
+                                    </label>
                                 </div>
                                 <div class="form-group">
                                     <label for="text" class="form-control">
                                         Intitulé de la présentation <sup>*</sup>:
                                     </label>
-                                    <input type="text" name="reu_pre" class="form-control"
-                                           value="{$unReunion->getReuPre()}" {$readonly} required>
+                                    <label for="text" class="form-control">
+                                        <input type="text" name="reu_pre" class="form-control"
+                                               value="{$unReunion->getReuPre()}" {$readonly} required>
+                                    </label>
                                 </div>
 
                                 <div class="form-group">
                                     <label for="reu_acc" class="form-control">Nom de l'accompagnateur :</label>
-                                    <select name="reu_acc" class="form-control" {$readonly}>
+                                    <label for="text" class="form-control">
+                                        <select name="reu_acc" class="form-control" {$readonly}>
 
-                                    {foreach $listeAccompagnateurs as $accompagnateur}
-                                            <option value="{$accompagnateur['acc_ide']}"
-                                                    {if $accompagnateur['acc_ide'] == $unReunion->getReuAcc()}selected{/if}>
-                                                {$accompagnateur['acc_nom']} {$accompagnateur['acc_pre']}
-                                            </option>
-                                        {/foreach}
+                                            {foreach $listeAccompagnateurs as $accompagnateur}
+                                                <option value="{$accompagnateur['acc_ide']}"
+                                                        {if $accompagnateur['acc_ide'] == $unReunion->getReuAcc()}selected{/if}>
+                                                    {$accompagnateur['acc_nom']} {$accompagnateur['acc_pre']}
+                                                </option>
+                                            {/foreach}
 
-                                    </select>
+                                        </select>
+                                    </label>
                                 </div>
 
                                 <div class="form-group">
@@ -106,8 +116,10 @@
                                     <!-- Champ caché pour la valeur "faux" (false) par défaut -->
                                     <input type="hidden" name="reu_pub" value="0">
                                     <!-- Champ de type "checkbox" pour permettre à l'utilisateur de basculer -->
-                                    <input type="checkbox" name="reu_pub" class="form-control"
-                                           value="1" {if $unReunion->getReuPub()}checked{/if} {$readonly}>
+                                    <label for="text" class="form-control">
+                                        <input type="checkbox" name="reu_pub" class="form-control"
+                                               value="1" {if $unReunion->getReuPub()}checked{/if} {$readonly}>
+                                    </label>
                                 </div>
 
                                 <div class="card-body card-block">
@@ -130,6 +142,6 @@
         </div><!-- .content -->
     </div>
 </div>
-{include file='../../../public/footer.tpl'}
+{include file='../../public/footer.tpl'}
 </body>
 </html>

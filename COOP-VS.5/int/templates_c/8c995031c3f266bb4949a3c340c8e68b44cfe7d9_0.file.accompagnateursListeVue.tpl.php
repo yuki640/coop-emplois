@@ -1,4 +1,29 @@
-<!DOCTYPE html>
+<?php
+/* Smarty version 4.3.2, created on 2023-12-14 11:48:33
+  from 'C:\laragon\www\coop-emplois\COOP-VS.5\int\mod_accompagnateurs\vue\accompagnateursListeVue.tpl' */
+
+/* @var Smarty_Internal_Template $_smarty_tpl */
+if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
+  'version' => '4.3.2',
+  'unifunc' => 'content_657add81589082_24711878',
+  'has_nocache_code' => false,
+  'file_dependency' => 
+  array (
+    '8c995031c3f266bb4949a3c340c8e68b44cfe7d9' => 
+    array (
+      0 => 'C:\\laragon\\www\\coop-emplois\\COOP-VS.5\\int\\mod_accompagnateurs\\vue\\accompagnateursListeVue.tpl',
+      1 => 1702550875,
+      2 => 'file',
+    ),
+  ),
+  'includes' => 
+  array (
+    'file:../../public/header.tpl' => 1,
+    'file:../../public/footer.tpl' => 1,
+  ),
+),false)) {
+function content_657add81589082_24711878 (Smarty_Internal_Template $_smarty_tpl) {
+?><!DOCTYPE html>
 <html lang="fr">
 
 <head>
@@ -17,7 +42,8 @@
     <div id="right-panel" class="right-panel">
 
         <!--Header -->
-        {include file='../../public/header.tpl'}
+        <?php $_smarty_tpl->_subTemplateRender('file:../../public/header.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
+?>
         <!-- FIN : header -->
 
         <div class="page-title">
@@ -37,8 +63,9 @@
             </strong>
         </div>
         <div class="card-body">
-            <div {if AccompagnateursTable::getMessageSucces () neq ''} class="alert alert-success" role="alert" {/if}>
-                {AccompagnateursTable::getMessageSucces ()}
+            <div <?php if (AccompagnateursTable::getMessageSucces() != '') {?> class="alert alert-success" role="alert" <?php }?>>
+                <?php echo AccompagnateursTable::getMessageSucces();?>
+
             </div>
             <table id="bootstrap-data-table" class="table table-striped table-bordered">
                 <!-- PLACER LA LISTE DES CLIENTS -->
@@ -55,16 +82,27 @@
                     </tr>
                 </thead>
                 <tbody>
-                    {foreach from=$listeAccompagnateurs item=unAccompagnateur}
+                    <?php
+$_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['listeAccompagnateurs']->value, 'unAccompagnateur');
+$_smarty_tpl->tpl_vars['unAccompagnateur']->do_else = true;
+if ($_from !== null) foreach ($_from as $_smarty_tpl->tpl_vars['unAccompagnateur']->value) {
+$_smarty_tpl->tpl_vars['unAccompagnateur']->do_else = false;
+?>
                     <tr>
-                        <td>{$unAccompagnateur->getIde()}</td>
-                        <td>{$unAccompagnateur->getNom()}</td>
-                        <td>{$unAccompagnateur->getPrenom()}</td>
-                        <td>{$unAccompagnateur->getTelephone()}</td>
-                        <td>{$unAccompagnateur->getFonction()}</td>
+                        <td><?php echo $_smarty_tpl->tpl_vars['unAccompagnateur']->value->getIde();?>
+</td>
+                        <td><?php echo $_smarty_tpl->tpl_vars['unAccompagnateur']->value->getNom();?>
+</td>
+                        <td><?php echo $_smarty_tpl->tpl_vars['unAccompagnateur']->value->getPrenom();?>
+</td>
+                        <td><?php echo $_smarty_tpl->tpl_vars['unAccompagnateur']->value->getTelephone();?>
+</td>
+                        <td><?php echo $_smarty_tpl->tpl_vars['unAccompagnateur']->value->getFonction();?>
+</td>
                         <td>
                             <form action="index.php" method="post">
-                                <input type="hidden" name="acc_ide" value="{$unAccompagnateur->getIde()}">
+                                <input type="hidden" name="acc_ide" value="<?php echo $_smarty_tpl->tpl_vars['unAccompagnateur']->value->getIde();?>
+">
                                 <input type="hidden" name="gestion" value="accompagnateur">
                                 <input type="hidden" name="action" value="form_consulter">
                                 <input type="image" name="btn_consulter" src="public/images/icones/p16.png">
@@ -72,7 +110,8 @@
                         </td>
                         <td>
                             <form action="index.php" method="post">
-                                <input type="hidden" name="acc_ide" value="{$unAccompagnateur->getIde()}">
+                                <input type="hidden" name="acc_ide" value="<?php echo $_smarty_tpl->tpl_vars['unAccompagnateur']->value->getIde();?>
+">
                                 <input type="hidden" name="gestion" value="accompagnateur">
                                 <input type="hidden" name="action" value="form_modifier">
                                 <input type="image" name="btn_modifier" src="public/images/icones/m16.png">
@@ -80,14 +119,17 @@
                         </td>
                         <td>
                             <form action="index.php" method="post">
-                                <input type="hidden" name="acc_ide" value="{$unAccompagnateur->getIde()}">
+                                <input type="hidden" name="acc_ide" value="<?php echo $_smarty_tpl->tpl_vars['unAccompagnateur']->value->getIde();?>
+">
                                 <input type="hidden" name="gestion" value="accompagnateur">
                                 <input type="hidden" name="action" value="form_supprimer">
                                 <input type="image" name="btn_supprimer" src="public/images/icones/s16.png">
                             </form>
                         </td>
                     </tr>
-                    {/foreach}
+                    <?php
+}
+$_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
                 </tbody>
             </table>
         </div>
@@ -97,9 +139,9 @@
 
 </body>
 
-{* ajouter footer *}
-{include file='../../public/footer.tpl'}
-{* fin ajouter footer *}
+<?php $_smarty_tpl->_subTemplateRender('file:../../public/footer.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
+?>
 
 
-</html>
+</html><?php }
+}

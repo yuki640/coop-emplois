@@ -12,7 +12,7 @@ class ReunionModele extends Modele
 
     }
 
-    public function getListeReunion($valListage)
+    public function getListeReunion($valListage): ?array
     {
         $valListage = $valListage . "'" . date("Y-m-d") . "'";
 
@@ -34,7 +34,7 @@ WHERE p4t1_reunion.reu_dat $valListage";
 
     }
 
-    public function getListeLieux()
+    public function getListeLieux(): array
     {
         $sql = "SELECT lie_ide, lie_nom FROM p4t1_lieux";
         $idRequete = $this->executeRequete($sql);
@@ -46,7 +46,7 @@ WHERE p4t1_reunion.reu_dat $valListage";
         return $listeLieux;
     }
 
-    public function getListeAccompagnateurs()
+    public function getListeAccompagnateurs(): array
     {
         $sql = "SELECT acc_ide, acc_nom, acc_pre FROM p4t1_accompagnateurs";
         $idRequete = $this->executeRequete($sql);
@@ -58,7 +58,7 @@ WHERE p4t1_reunion.reu_dat $valListage";
         return $listeAccompagnateurs;
     }
 
-    public function getUnReunion()
+    public function getUnReunion(): ReunionTable
     {
         $sql = "SELECT * FROM p4t1_reunion WHERE reu_ide = ?";
 
@@ -67,7 +67,7 @@ WHERE p4t1_reunion.reu_dat $valListage";
         return new ReunionTable($idRequete->fetch(PDO::FETCH_ASSOC));
     }
 
-    public function addReunion(ReunionTable $valeurs)
+    public function addReunion(ReunionTable $valeurs): void
     {
         $sql = "INSERT INTO p4t1_reunion (reu_dat,reu_heu,reu_dur,reu_lie,reu_cap,reu_pre,reu_acc,reu_pub/*,reu_dcr,reu_dmo*/) VALUES (?, ?, ?, ?, ?, ?, ?, ?/*, ?, ?*/)";
         $idRequete = $this->executeRequete($sql, [
@@ -89,7 +89,7 @@ WHERE p4t1_reunion.reu_dat $valListage";
         }
     }
 
-    public function deleteReunion(ReunionTable $valeurs)
+    public function deleteReunion(ReunionTable $valeurs): void
     {
         $sql = "DELETE FROM p4t1_reunion where reu_ide = ?";
         $idRequete = $this->executeRequete($sql, [
@@ -100,7 +100,7 @@ WHERE p4t1_reunion.reu_dat $valListage";
         }
     }
 
-    public function updateReunion(ReunionTable $valeurs)
+    public function updateReunion(ReunionTable $valeurs): void
     {
         $sql = "UPDATE p4t1_reunion SET reu_dat = ? ,reu_heu = ?,reu_dur = ? ,reu_lie = ? ,reu_cap = ? ,reu_pre = ? ,reu_acc = ? ,reu_pub = ?
              WHERE reu_ide = ?";
@@ -127,7 +127,7 @@ WHERE p4t1_reunion.reu_dat $valListage";
             $valeurs->getReuLie()
         ]);
 
-        if ($idRequete !== false) {
+        if ($idRequete) {
             $row = $idRequete->fetch(PDO::FETCH_ASSOC);
             $lie_cap = $row['lie_cap'];
 
