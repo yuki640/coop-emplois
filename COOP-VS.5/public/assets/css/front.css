@@ -8,9 +8,10 @@ header {
     background-color: rgba(0, 0, 0, 0.5); /* Make header slightly transparent */
     color: white;
     padding: 10px 0;
-    position: fixed; /* Keep the header at the top */
+    position: relative; /* Keep the header at the top */
     width: 100%;
     z-index: 1000;
+    
 }
 
 nav ul {
@@ -40,6 +41,7 @@ nav a {
 h1 {
     font-size: 2.5em;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Add shadow to your text */
+    /* text-align: center; */
 }
 
 h2 {
@@ -71,3 +73,51 @@ button {
     box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Add shadow to your buttons */
     transition: background-color 0.3s; /* Smooth transition for hover effect */
 }
+
+form {
+    max-width: 800px; /* ou la largeur que vous préférez */
+    margin: 0 auto; /* pour centrer le formulaire */
+    padding: 20px;
+    background: #f9f9f9; /* couleur de fond du formulaire */
+    border-radius: 8px; /* coins arrondis */
+    box-shadow: 0 0 10px rgba(0,0,0,0.1); /* ombre extérieure */
+}
+
+fieldset {
+    margin-bottom: 20px;
+    padding: 20px;
+    border-radius: 8px; /* coins arrondis */
+}
+
+legend {
+    padding: 0 10px;
+    font-weight: bold;
+    color: rgb(0, 0, 0);
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+    color: rgb(0, 0, 0);
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px; /* espacement entre les champs */
+    border-radius: 4px; /* coins arrondis */
+}
+
+input[type="submit"] {
+    width: auto;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px; /* coins arrondis */
+    cursor: pointer;
+}
+.color{
+    color: rgb(0, 0, 0);
+}
+

@@ -18,10 +18,33 @@
     </nav>
 </header>
 
-<main>
+    <main class="hero color">
+        
+        <form action="traitement.php" method="post">
+            <fieldset>
+                <h1>S'inscrire</h1>
+                <br>
 
-</main>
-
-
+                <br>
+                <p>pour que nous puission vous confirmer votre inscription. il est nécessaire de preciser un telephone ou une adresse mail valide. merci pour votre comprention.</p>
+                <br>
+                <label for="nom">Nom :</label>
+                <input type="text" name="nom" id="nom" required><br>
+                <label for="prenom">Prénom :</label>
+                <input type="text" name="prenom" id="prenom" required><br>
+                <label for="code_postal">Code postal :</label>
+                <input type="text" name="code_postal" id="code_postal" required><br>
+                <label for="ville">Ville :</label>
+                <input type="text" name="ville" id="ville" required><br>
+                <label for="tel_fix">Téléphone fixe :</label>
+                <input type="tel" name="tel_fix" id="tel_fix" required><br>
+                <label for="tel_port">Téléphone portable :</label>
+                <input type="tel" name="tel_port" id="tel_port" required><br>
+                <label for="email">Email :</label>
+                <input type="email" name="email" id="email" required><br>
+            </fieldset>
+            <button type="submit">Envoyer</button>
+        </form>
+    </main>
 </body>
 </html>
