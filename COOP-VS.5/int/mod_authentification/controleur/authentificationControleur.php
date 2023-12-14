@@ -1,8 +1,5 @@
 <?php
 
-use mod_authentification\controleur\AuthentificationTable;
-use mod_authentification\modele\AuthentificationModele;
-use mod_authentification\vue\AuthentificationVue;
 
 class AuthentificationControleur
 {
@@ -17,7 +14,7 @@ class AuthentificationControleur
         // Création d'un objet, instance de la classe ClientModele
         $this->oModele = new AuthentificationModele($this->parametre);
         // Création d'un objet, instance de la classe ClientVue
-        $this->oVue = new authentificationVue($this->parametre);
+        $this->oVue = new AuthentificationVue($this->parametre);
     }
 
     /**

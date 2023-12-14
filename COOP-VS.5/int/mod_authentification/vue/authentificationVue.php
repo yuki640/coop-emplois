@@ -1,8 +1,5 @@
 <?php
 
-namespace mod_authentification\vue;
-use Smarty;
-
 class AuthentificationVue
 {
     private array $parametre = [];

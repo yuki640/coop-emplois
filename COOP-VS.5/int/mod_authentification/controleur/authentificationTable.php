@@ -1,6 +1,5 @@
 <?php
 
-namespace mod_authentification\controleur;
 class AuthentificationTable
 {
 

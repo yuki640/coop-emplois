@@ -1,12 +1,14 @@
 <?php
 
 //Routeur pour le lieux
-class Lieux{
+class Lieux
+{
 
-    private $parametre = []; // Tableau =$_REQUEST
+    private array $parametre = []; // Tableau =$_REQUEST
     private $oControleur; //propriété de type objet
 
-    public function __construct($parametre){
+    public function __construct($parametre)
+    {
         //Initialisation de la propriété parametre
         $this->parametre = $parametre;
         // Chargement ou appel du controleur
@@ -15,13 +17,14 @@ class Lieux{
         $this->oControleur = new LieuxControleur($this->parametre);
     }
 
-    public function choixAction(){
+    public function choixAction()
+    {
 
         // Ici, à venir une structure alternative pour tester les différentes actions pour tester
         // Les différentes actions possibles (type switch)
-        if(isset($this->parametre['action'])){
+        if (isset($this->parametre['action'])) {
             //Traitement des différentes actions
-            switch($this->parametre['action']){
+            switch ($this->parametre['action']) {
                 case 'form_consulter' :
                     $this->oControleur->form_consulter();
                     break;
@@ -43,8 +46,8 @@ class Lieux{
                 case 'modifier' :
                     $this->oControleur->modifier();
                     break;
-                  }
-            } else{
+            }
+        } else {
 
             $this->oControleur->lister();
 

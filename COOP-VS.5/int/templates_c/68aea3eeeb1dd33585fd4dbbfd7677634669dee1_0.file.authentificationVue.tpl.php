@@ -1,4 +1,27 @@
-<!DOCTYPE html>
+<?php
+/* Smarty version 4.3.2, created on 2023-12-14 12:41:00
+  from 'C:\laragon\www\coop-emplois\COOP-VS.5\int\mod_authentification\vue\authentificationVue.tpl' */
+
+/* @var Smarty_Internal_Template $_smarty_tpl */
+if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
+  'version' => '4.3.2',
+  'unifunc' => 'content_657ae9cc796e54_87280015',
+  'has_nocache_code' => false,
+  'file_dependency' => 
+  array (
+    '68aea3eeeb1dd33585fd4dbbfd7677634669dee1' => 
+    array (
+      0 => 'C:\\laragon\\www\\coop-emplois\\COOP-VS.5\\int\\mod_authentification\\vue\\authentificationVue.tpl',
+      1 => 1702554058,
+      2 => 'file',
+    ),
+  ),
+  'includes' => 
+  array (
+  ),
+),false)) {
+function content_657ae9cc796e54_87280015 (Smarty_Internal_Template $_smarty_tpl) {
+?><!DOCTYPE html>
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
@@ -52,8 +75,14 @@
 
 </div>
 
-<script src='//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
-<script src="./script.js"></script>
+<?php echo '<script'; ?>
+ src='//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'><?php echo '</script'; ?>
+>
+<?php echo '<script'; ?>
+ src="./script.js"><?php echo '</script'; ?>
+>
 
 </body>
 </html>
+<?php }
+}

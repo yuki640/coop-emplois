@@ -1,25 +1,18 @@
 <?php
 
-namespace mod_authentification;
-
-use authentificationControleur;
-
 class Authentification
 {
 
-    /** Routeur du Module Authentification */
-
     private array $parametre = []; // Tableau =$_REQUEST
-    private authentificationControleur $oControleur; //propriété de type objet
+    private $oControleur; //propriété de type objet
 
     public function __construct($parametre)
     {
         //Initialisation de la propriété parametre
         $this->parametre = $parametre;
         // Chargement ou appel du controleur
-
-        // Création d'un objet, instance de la classe ClientControleur
-        $this->oControleur = new authentificationControleur($this->parametre);
+        // Création d'un objet, instance de la classe AuthentificationControleur
+        $this->oControleur = new AuthentificationControleur($this->parametre);
     }
 
     /**
