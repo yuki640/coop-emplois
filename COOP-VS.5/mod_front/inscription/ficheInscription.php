@@ -1,10 +1,10 @@
 <?php
 
-require_once 'int/include/configuration.php';
+require_once '../../int/include/configuration.php';
 
 $tpl = new Smarty();
 
-if(isset($_POST['form_inscription'])){
+if (isset($_POST['form_inscription'])) {
 
     $tpl->assign('rappel', $_POST['rappel']);
     $tpl->assign('reu_ide', $_POST['reu_ide']);
@@ -13,20 +13,20 @@ if(isset($_POST['form_inscription'])){
 
     $tpl->display('ficheInscriptionVue.tpl');
 
-}elseif(isset($_POST['inscription'])){
+} elseif (isset($_POST['inscription'])) {
     // Accès à l'API
 
     //initialisation d'une nouvelle ressource cURL
     $curl = curl_init();
 
-    if($_SERVER['SERVER_ADDR'] == '94.247.180.77'){
+    if ($_SERVER['SERVER_ADDR'] == '94.247.180.77') {
 
         // l'URL du fichier reunion.php sur le vps
 
-    }else{
+    } else {
 
 
-        $url = 'http://localhost/coopemploi/api/inscription.php';
+        $url = 'http://localhost/coop-emplois/COOP-VS.5/api//inscription.php';
     }
 
 
@@ -44,11 +44,10 @@ if(isset($_POST['form_inscription'])){
     $options = [
         CURLOPT_URL => $url,
         CURLOPT_HTTPHEADER => ['content-type:application/json'],
-        CURLOPT_RETURNTRANSFER =>true,
+        CURLOPT_RETURNTRANSFER => true,
         CURLOPT_POST => true,
-        CURLOPT_POSTFIELDS =>$postFields
+        CURLOPT_POSTFIELDS => $postFields
     ];
-
 
 
     curl_setopt_array($curl, $options);
@@ -56,20 +55,20 @@ if(isset($_POST['form_inscription'])){
     $reponse = curl_exec($curl);
 
 
-    if($reponse === false){
+    if ($reponse === false) {
 
         var_dump('LA REPONSE EST : <br>' . curl_error($curl));
 
-    }else{
+    } else {
 
         $http_code = curl_getinfo($curl, CURLINFO_HTTP_CODE);
 
 
-        if($http_code === 201){
+        if ($http_code === 201) {
 
             $tpl->assign('affichage', 1);
 
-        }else{
+        } else {
 
             $tpl->assign('affichage', 0);
 
