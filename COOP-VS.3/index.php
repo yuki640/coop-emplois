@@ -6,7 +6,6 @@ require_once 'include/configuration.php';
 // action = ? lister (action par défaut), ajouter, modifier, supprimer, rechercher, trier, ...
 // action = form_ajouter (appel formulaire vierge), form_consulter (formulaire en consultation)
 
-// Existe GET pour rechercher et POST pour écriture
 // Mais aussi request
 Autoloader::chargerClasses();
 //if(!isset($_SESSION['login'])){

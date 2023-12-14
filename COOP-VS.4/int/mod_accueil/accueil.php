@@ -5,7 +5,7 @@ class Accueil
 {
 
     private $parametre = []; // Tableau =$_REQUEST
-    private $ocontroleur; //propriété de type objet
+    private $oControleur; //propriété de type objet
 
     public function __construct($parametre)
     {

@@ -9,6 +9,7 @@ $tpl = new Smarty();
 $curl = curl_init();
 
 if($_SERVER['SERVER_ADDR'] == '94.247.183.122'){
+    $url = '';
     // Url du fichier reunion.php sur le serveur
 }else{
 
@@ -23,8 +24,6 @@ $options = [
 curl_setopt_array($curl,$options);
 
 $reponse = curl_exec($curl);
-//var_dump($reponse);
-//die();
 
 if($reponse === false){
     var_dump('La réponse est : ' . curl_error($curl));
