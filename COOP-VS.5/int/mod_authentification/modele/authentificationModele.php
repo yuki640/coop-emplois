@@ -1,24 +1,20 @@
 <?php
 
-namespace mod_authentification\modele;
-
-use mod_authentification\controleur\AuthentificationTable;
-use Modele;
 
 class AuthentificationModele extends Modele
 {
 
-    private $parametre = []; // Tableau = $_REQUEST
+    private array $parametre = []; // Tableau = $_REQUEST
 
     public function __construct($parametre)
     {
         $this->parametre = $parametre;
     }
 
-    public function rechercherVendeur(AuthentificationTable $authEnCours)
+    public function rechercherVendeur(AuthentificationTable $authEnCours): bool
     {
 
-        $sql = "SELECT * FROM vendeur WHERE login = ?";
+        $sql = "SELECT * FROM p4t1_utilisateur WHERE uti_log = ?";
 
         $idRequete = $this->executeRequete($sql, [$authEnCours->getLogin()]);
 

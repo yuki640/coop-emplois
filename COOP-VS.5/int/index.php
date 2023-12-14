@@ -8,11 +8,10 @@ require_once 'include/configuration.php';
 
 // Mais aussi request
 Autoloader::chargerClasses();
-//if(!isset($_SESSION['login'])){
-//
-//    $_REQUEST['gestion'] = 'authentification';
-//
-/*else */if(!isset($_REQUEST['gestion'])){
+if (!isset($_SESSION['login'])) {
+
+    $_REQUEST['gestion'] = 'authentification';
+} else if (!isset($_REQUEST['gestion'])) {
 
     $_REQUEST['gestion'] = 'accueil';
 
@@ -20,5 +19,6 @@ Autoloader::chargerClasses();
 
 // Création d'un objet, instance de la classe de type (routeur) accueil (client, produit, ...)
 $oRouteur = new $_REQUEST['gestion']($_REQUEST);
-//var_dump($_REQUEST['gestion']);
+
+
 $oRouteur->choixAction();
