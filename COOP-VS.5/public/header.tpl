@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="public/assets/css/header.css">
+    <link rel="stylesheet" href="../public/assets/css/header.css">
     <title>Mon Site Web</title>
 </head>
 
@@ -53,7 +53,7 @@
         </nav>
     </header>
 
-    <img src="public/images/logo_coopemploi.png" style="
+    <img src="../public/images/logo_coopemploi.png" style="
     height: 100px;
      width: 130px;
 ">

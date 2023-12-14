@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.3.2, created on 2023-12-14 10:13:24
+/* Smarty version 4.3.2, created on 2023-12-14 10:26:06
   from 'C:\laragon\www\coop-emplois\COOP-VS.5\public\header.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.2',
-  'unifunc' => 'content_657ac734979671_79525233',
+  'unifunc' => 'content_657aca2ee9bbb4_68145119',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '38ef3214c06e279ad8c8fb70656737f7f01d4f18' => 
     array (
       0 => 'C:\\laragon\\www\\coop-emplois\\COOP-VS.5\\public\\header.tpl',
-      1 => 1702544612,
+      1 => 1702545965,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_657ac734979671_79525233 (Smarty_Internal_Template $_smarty_tpl) {
+function content_657aca2ee9bbb4_68145119 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="fr">
 
@@ -28,7 +28,7 @@ function content_657ac734979671_79525233 (Smarty_Internal_Template $_smarty_tpl)
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="public/assets/css/header.css">
+    <link rel="stylesheet" href="../public/assets/css/header.css">
     <title>Mon Site Web</title>
 </head>
 
@@ -76,7 +76,7 @@ function content_657ac734979671_79525233 (Smarty_Internal_Template $_smarty_tpl)
         </nav>
     </header>
 
-    <img src="public/images/logo_coopemploi.png" style="
+    <img src="../public/images/logo_coopemploi.png" style="
     height: 100px;
      width: 130px;
 ">
