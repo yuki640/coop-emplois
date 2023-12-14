@@ -1,32 +1,18 @@
 <?php
-<<<<<<< HEAD:COOP-VS.5/int/templates_c/38ef3214c06e279ad8c8fb70656737f7f01d4f18_0.file.header.tpl.php
-/* Smarty version 4.3.2, created on 2023-12-14 11:35:20
-  from 'C:\laragon\www\coop-emplois\COOP-VS.5\public\header.tpl' */
-=======
-/* Smarty version 4.3.2, created on 2023-12-14 11:38:10
+/* Smarty version 4.3.2, created on 2023-12-14 11:58:20
   from 'C:\laragon\www\coop-emplois\COOP-VS.5\int\public\header.tpl' */
->>>>>>> origin/thomas:COOP-VS.5/int/templates_c/eacc408e6db265226a90fd186c2c619869a34dff_0.file.header.tpl.php
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.2',
-<<<<<<< HEAD:COOP-VS.5/int/templates_c/38ef3214c06e279ad8c8fb70656737f7f01d4f18_0.file.header.tpl.php
-  'unifunc' => 'content_657ada68730df0_21339293',
-=======
-  'unifunc' => 'content_657adb12630402_31729682',
->>>>>>> origin/thomas:COOP-VS.5/int/templates_c/eacc408e6db265226a90fd186c2c619869a34dff_0.file.header.tpl.php
+  'unifunc' => 'content_657adfcc683308_67330886',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'eacc408e6db265226a90fd186c2c619869a34dff' => 
     array (
-<<<<<<< HEAD:COOP-VS.5/int/templates_c/38ef3214c06e279ad8c8fb70656737f7f01d4f18_0.file.header.tpl.php
-      0 => 'C:\\laragon\\www\\coop-emplois\\COOP-VS.5\\public\\header.tpl',
-      1 => 1702550107,
-=======
       0 => 'C:\\laragon\\www\\coop-emplois\\COOP-VS.5\\int\\public\\header.tpl',
-      1 => 1702470585,
->>>>>>> origin/thomas:COOP-VS.5/int/templates_c/eacc408e6db265226a90fd186c2c619869a34dff_0.file.header.tpl.php
+      1 => 1702551450,
       2 => 'file',
     ),
   ),
@@ -34,11 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-<<<<<<< HEAD:COOP-VS.5/int/templates_c/38ef3214c06e279ad8c8fb70656737f7f01d4f18_0.file.header.tpl.php
-function content_657ada68730df0_21339293 (Smarty_Internal_Template $_smarty_tpl) {
-=======
-function content_657adb12630402_31729682 (Smarty_Internal_Template $_smarty_tpl) {
->>>>>>> origin/thomas:COOP-VS.5/int/templates_c/eacc408e6db265226a90fd186c2c619869a34dff_0.file.header.tpl.php
+function content_657adfcc683308_67330886 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="fr">
 

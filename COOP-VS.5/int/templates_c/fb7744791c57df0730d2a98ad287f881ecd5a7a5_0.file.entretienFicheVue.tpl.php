@@ -1,3 +1,30 @@
+<?php
+/* Smarty version 4.3.2, created on 2023-12-14 12:24:00
+  from 'C:\laragon\www\coop-emplois\COOP-VS.5\int\mod_entretien\vue\entretienFicheVue.tpl' */
+
+/* @var Smarty_Internal_Template $_smarty_tpl */
+if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
+  'version' => '4.3.2',
+  'unifunc' => 'content_657ae5d0654177_56268342',
+  'has_nocache_code' => false,
+  'file_dependency' => 
+  array (
+    'fb7744791c57df0730d2a98ad287f881ecd5a7a5' => 
+    array (
+      0 => 'C:\\laragon\\www\\coop-emplois\\COOP-VS.5\\int\\mod_entretien\\vue\\entretienFicheVue.tpl',
+      1 => 1702553037,
+      2 => 'file',
+    ),
+  ),
+  'includes' => 
+  array (
+    'file:../../public/header.tpl' => 1,
+    'file:../../public/footer.tpl' => 1,
+  ),
+),false)) {
+function content_657ae5d0654177_56268342 (Smarty_Internal_Template $_smarty_tpl) {
+$_smarty_tpl->_checkPlugins(array(0=>array('file'=>'C:\\laragon\\www\\coop-emplois\\COOP-VS.5\\int\\include\\libs\\plugins\\modifier.capitalize.php','function'=>'smarty_modifier_capitalize',),));
+?>
 <!DOCTYPE html>
 <html lang="fr">
 
@@ -18,7 +45,8 @@
 
         <!--Header -->
 
-        {include file='../../public/header.tpl'}
+        <?php $_smarty_tpl->_subTemplateRender('file:../../public/header.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
+?>
 
         <!-- FIN : header -->
 
@@ -38,43 +66,50 @@
 
                     <div class="col-md-6">
 
-                        <div {if EntretienTable::getMessageErreur () neq ''} class="alert alert-danger"
-                            role="alert" {/if}>
-                            {EntretienTable::getMessageErreur ()}
+                        <div <?php if (EntretienTable::getMessageErreur() != '') {?> class="alert alert-danger"
+                            role="alert" <?php }?>>
+                            <?php echo EntretienTable::getMessageErreur();?>
+
                         </div>
 
                         <div class="card">
-                            <div class="card-header"><strong>{$titrePage}</strong></div>
+                            <div class="card-header"><strong><?php echo $_smarty_tpl->tpl_vars['titrePage']->value;?>
+</strong></div>
                             <form action="index.php" method="POST">
 
                                 <!-- PLACER LE FORMULAIRE EN CONSULTATION -->
 
                                 <input type="hidden" name="gestion" value="entretien">
 
-                                <input type="hidden" name="action" value="{$action}">
+                                <input type="hidden" name="action" value="<?php echo $_smarty_tpl->tpl_vars['action']->value;?>
+">
 
 
 
-                                <input type="hidden" name="mailbase" value="{$unEntretien->getMail()}">
+                                <input type="hidden" name="mailbase" value="<?php echo $_smarty_tpl->tpl_vars['unEntretien']->value->getMail();?>
+">
 
                                 <div class="card-body card-block">
 
-                                    {if $action neq 'ajouter'}
+                                    <?php if ($_smarty_tpl->tpl_vars['action']->value != 'ajouter') {?>
                                         <div class="form-group">
                                             <label for="text" class=" form-control">
                                                 Code accompagnateurs :
                                             </label>
                                             <input type="text" name="acc_ide" class="form-control"
-                                                value="{$unEntretien->getIde()}" readonly>
+                                                value="<?php echo $_smarty_tpl->tpl_vars['unEntretien']->value->getIde();?>
+" readonly>
                                         </div>
-                                    {/if}
+                                    <?php }?>
 
                                     <div class="form-group">
                                         <label for="acc_pre" class="form-control">
                                             Prénom <sup>(*)</sup>:
                                         </label>
                                             <input type="text" id="acc_pre" name="acc_pre" class="form-control"
-                                                   value="{$unEntretien->getPrenom()}" {$readonly} required>
+                                                   value="<?php echo $_smarty_tpl->tpl_vars['unEntretien']->value->getPrenom();?>
+" <?php echo $_smarty_tpl->tpl_vars['readonly']->value;?>
+ required>
                                       
                                     </div>
 
@@ -83,7 +118,9 @@
                                             Nom <sup>(*)</sup>:
                                         </label>                                        
                                             <input type="text" id="acc_nom" name="acc_nom" class="form-control"
-                                                   value="{$unEntretien->getNom()}" {$readonly} required>
+                                                   value="<?php echo $_smarty_tpl->tpl_vars['unEntretien']->value->getNom();?>
+" <?php echo $_smarty_tpl->tpl_vars['readonly']->value;?>
+ required>
                                         
                                     </div>
 
@@ -92,7 +129,9 @@
                                             Téléphone <sup>(*)</sup>:
                                         </label>
                                         <input type="text" id="acc_tel" name="acc_tel" class="form-control"
-                                               value="{$unEntretien->getTelephone()}" {$readonly}>
+                                               value="<?php echo $_smarty_tpl->tpl_vars['unEntretien']->value->getTelephone();?>
+" <?php echo $_smarty_tpl->tpl_vars['readonly']->value;?>
+>
                                     </div>
 
                                     <div class="form-group">
@@ -100,7 +139,9 @@
                                             Email <sup>(*)</sup>:
                                         </label>
                                         <input type="text" id="acc_mail" name="acc_mail" class="form-control"
-                                               value="{$unEntretien->getMail()}" {$readonly}>
+                                               value="<?php echo $_smarty_tpl->tpl_vars['unEntretien']->value->getMail();?>
+" <?php echo $_smarty_tpl->tpl_vars['readonly']->value;?>
+>
                                     </div>
 
                                     <div class="form-group">
@@ -108,7 +149,9 @@
                                             Specialisation :
                                         </label>
                                         <input type="text" id="acc_fon" name="acc_fon" class="form-control"
-                                               value="{$unEntretien->getFonction()}" {$readonly}>
+                                               value="<?php echo $_smarty_tpl->tpl_vars['unEntretien']->value->getFonction();?>
+" <?php echo $_smarty_tpl->tpl_vars['readonly']->value;?>
+>
                                     </div>
 
                                     <div class="form-group">
@@ -116,7 +159,8 @@
                                             Login <sup>(*)</sup>:
                                         </label>
                                         <input type="text" id="uti_log" name="uti_log" class="form-control"
-                                        value="{$unEntretien->getlog()}" readonly>
+                                        value="<?php echo $_smarty_tpl->tpl_vars['unEntretien']->value->getlog();?>
+" readonly>
                                     </div>
 
 
@@ -130,10 +174,11 @@
                                         </div>
 
                                         <div class="col-md-6">
-                                            {if $action != 'consulter'}
+                                            <?php if ($_smarty_tpl->tpl_vars['action']->value != 'consulter') {?>
                                                 <input type="submit" class="btn btn-submit" name="btn-valider"
-                                                    value="{$action|capitalize}">
-                                            {/if}
+                                                    value="<?php echo smarty_modifier_capitalize($_smarty_tpl->tpl_vars['action']->value);?>
+">
+                                            <?php }?>
 
                                         </div>
                                         <br>
@@ -151,7 +196,8 @@
         </div>
 
     </div><!-- /#right-panel -->
-    <script>
+    <?php echo '<script'; ?>
+>
         function genererLogin() {
             // Récupérez les valeurs des champs "Nom" et "Prénom" avec la première lettre en majuscule
           
@@ -177,11 +223,12 @@
         // Attachez l'événement input au champ "Prénom"
         document.getElementById('acc_pre').addEventListener('input', genererLogin);
         document.getElementById('acc_nom').addEventListener('input', genererLogin);
-    </script>
+    <?php echo '</script'; ?>
+>
 
 </body>
-{* debut footer *}
-{include file='../../public/footer.tpl'}
-{* fin footer *}
+<?php $_smarty_tpl->_subTemplateRender('file:../../public/footer.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
+?>
 
-</html>
+</html><?php }
+}

@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="../../../public/assets/css/liste.css">
+    <link rel="stylesheet" href="public/assets/css/liste.css">
 
     <title>liste des reunions</title>
 
@@ -17,11 +17,7 @@
 <div id="right-panel" class="right-panel">
 
     <!--Header -->
-<<<<<<< HEAD
-    {include file='../../../public/header.tpl'}
-=======
     {include file='../../public/header.tpl'}
->>>>>>> origin/thomas
     <!-- FIN : header -->
 
     <div class="page-title">
@@ -44,11 +40,7 @@
                 <label>Ajouter un lieu :
                     <input type="image"
                            name="btn_ajouter"
-<<<<<<< HEAD
-                           src="../../../public/images/icones/a16.png">
-=======
-                           src="public/images/icones/a16.png" alt="">
->>>>>>> origin/thomas
+                           src="public/images/icones/a16.png">
                 </label>
             </form>
 
@@ -97,28 +89,6 @@
                             <input type="hidden" name="reu_ide" value="{$unReunion->getReuIde()}">
                             <input type="hidden" name="gestion" value="reunion">
                             <input type="hidden" name="action" value="form_consulter">
-<<<<<<< HEAD
-                            <input type="image" name="btn_consulter" src="../../../public/images/icones/p16.png">
-                        </form>
-                    </td>
-                    {if $action neq 'listerDP'}
-                    <td>
-                        <form action="index.php" method="post">
-                            <input type="hidden" name="reu_ide" value="{$unReunion->getReuIde()}">
-                            <input type="hidden" name="gestion" value="reunion">
-                            <input type="hidden" name="action" value="form_modifier">
-                            <input type="image" name="btn_modifier" src="../../../public/images/icones/m16.png">
-                        </form>
-                    </td>
-                    <td>
-                        <form action="index.php" method="post">
-                            <input type="hidden" name="reu_ide" value="{$unReunion->getReuIde()}">
-                            <input type="hidden" name="gestion" value="reunion">
-                            <input type="hidden" name="action" value="form_supprimer">
-                            <input type="image" name="btn_supprimer" src="../../../public/images/icones/s16.png">
-                        </form>
-                    </td>
-=======
                             <input type="image" name="btn_consulter" src="public/images/icones/p16.png" alt="">
                         </form>
                     </td>
@@ -141,7 +111,6 @@
                                        alt="">
                             </form>
                         </td>
->>>>>>> origin/thomas
                     {/if}
                 </tr>
             {/foreach}
@@ -155,11 +124,7 @@
 </body>
 
 {* ajouter footer *}
-<<<<<<< HEAD
-{include file='../../../public/footer.tpl'}
-=======
 {include file='../../public/footer.tpl'}
->>>>>>> origin/thomas
 {* fin ajouter footer *}
 
 

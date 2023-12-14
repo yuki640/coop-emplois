@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="../../../public/assets/css/liste.css">
+    <link rel="stylesheet" href="public/assets/css/liste.css">
 
     <title>liste des lieux</title>
 
@@ -17,7 +17,7 @@
     <div id="right-panel" class="right-panel">
 
         <!--Header -->
-        {include file='../../../public/header.tpl'}
+        {include file='../../public/header.tpl'}
         <!-- FIN : header -->
 
         <div class="page-title">
@@ -34,7 +34,7 @@
                   <label>Ajouter un lieu :
                   <input type="image"
                          name="btn_ajouter"
-                         src="../../../public/images/icones/a16.png">
+                         src="public/images/icones/a16.png">
                   </label>
               </form>
 
@@ -73,7 +73,7 @@
                                 <input type="hidden" name="lie_ide" value="{$unLieu->getIde()}">
                                 <input type="hidden" name="gestion" value="lieux">
                                 <input type="hidden" name="action" value="form_consulter">
-                                <input type="image" name="btn_consulter" src="../../../public/images/icones/p16.png">
+                                <input type="image" name="btn_consulter" src="public/images/icones/p16.png">
                             </form>
                         </td>
                         <td>
@@ -81,7 +81,7 @@
                                 <input type="hidden" name="lie_ide" value="{$unLieu->getIde()}">
                                 <input type="hidden" name="gestion" value="lieux">
                                 <input type="hidden" name="action" value="form_modifier">
-                                <input type="image" name="btn_modifier" src="../../../public/images/icones/m16.png">
+                                <input type="image" name="btn_modifier" src="public/images/icones/m16.png">
                             </form>
                         </td>
                         <td>
@@ -89,7 +89,7 @@
                                 <input type="hidden" name="lie_ide" value="{$unLieu->getIde()}">
                                 <input type="hidden" name="gestion" value="lieux">
                                 <input type="hidden" name="action" value="form_supprimer">
-                                <input type="image" name="btn_supprimer" src="../../../public/images/icones/s16.png">
+                                <input type="image" name="btn_supprimer" src="public/images/icones/s16.png">
                             </form>
                         </td>
                     </tr>
@@ -106,7 +106,7 @@
 </body>
 
 {* ajouter footer *}
-{include file='../../../public/footer.tpl'}
+{include file='../../public/footer.tpl'}
 {* fin ajouter footer *}
 
 

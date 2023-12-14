@@ -17,11 +17,7 @@
     <div id="right-panel" class="right-panel">
 
         <!--Header -->
-<<<<<<< HEAD
-        {include file='../../../public/header.tpl'}
-=======
         {include file='../../public/header.tpl'}
->>>>>>> origin/thomas
         <!-- FIN : header -->
 
         <div class="page-title">
@@ -35,7 +31,7 @@
                     <input type="hidden" name="gestion" value="accompagnateur">
                     <input type="hidden" name="action" value="form_ajouter">
                     <label>Ajouter un accompagnateur :
-                        <input type="image" name="btn_ajouter" src="../../../public/images/icones/a16.png">
+                        <input type="image" name="btn_ajouter" src="public/images/icones/a16.png">
                     </label>
                 </form>
             </strong>
@@ -71,7 +67,7 @@
                                 <input type="hidden" name="acc_ide" value="{$unAccompagnateur->getIde()}">
                                 <input type="hidden" name="gestion" value="accompagnateur">
                                 <input type="hidden" name="action" value="form_consulter">
-                                <input type="image" name="btn_consulter" src="../../../public/images/icones/p16.png">
+                                <input type="image" name="btn_consulter" src="public/images/icones/p16.png">
                             </form>
                         </td>
                         <td>
@@ -79,7 +75,7 @@
                                 <input type="hidden" name="acc_ide" value="{$unAccompagnateur->getIde()}">
                                 <input type="hidden" name="gestion" value="accompagnateur">
                                 <input type="hidden" name="action" value="form_modifier">
-                                <input type="image" name="btn_modifier" src="../../../public/images/icones/m16.png">
+                                <input type="image" name="btn_modifier" src="public/images/icones/m16.png">
                             </form>
                         </td>
                         <td>
@@ -87,7 +83,7 @@
                                 <input type="hidden" name="acc_ide" value="{$unAccompagnateur->getIde()}">
                                 <input type="hidden" name="gestion" value="accompagnateur">
                                 <input type="hidden" name="action" value="form_supprimer">
-                                <input type="image" name="btn_supprimer" src="../../../public/images/icones/s16.png">
+                                <input type="image" name="btn_supprimer" src="public/images/icones/s16.png">
                             </form>
                         </td>
                     </tr>
@@ -102,11 +98,7 @@
 </body>
 
 {* ajouter footer *}
-<<<<<<< HEAD
-{include file='../../../public/footer.tpl'}
-=======
 {include file='../../public/footer.tpl'}
->>>>>>> origin/thomas
 {* fin ajouter footer *}
 
 

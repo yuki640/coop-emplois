@@ -1,48 +1,28 @@
 <?php
-<<<<<<< HEAD
-/* Smarty version 4.3.2, created on 2023-12-14 11:16:43
-=======
-/* Smarty version 4.3.2, created on 2023-12-14 11:39:42
->>>>>>> origin/thomas
+/* Smarty version 4.3.2, created on 2023-12-14 12:25:24
   from 'C:\laragon\www\coop-emplois\COOP-VS.5\int\mod_lieux\vue\lieuxListeVue.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.2',
-<<<<<<< HEAD
-  'unifunc' => 'content_657ad60bb42a40_50909296',
-=======
-  'unifunc' => 'content_657adb6ea75b48_14710247',
->>>>>>> origin/thomas
+  'unifunc' => 'content_657ae6249d6790_55362091',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'ebfb930f38a0b062441eacc1a1da8ebafdc437b8' => 
     array (
       0 => 'C:\\laragon\\www\\coop-emplois\\COOP-VS.5\\int\\mod_lieux\\vue\\lieuxListeVue.tpl',
-<<<<<<< HEAD
-      1 => 1702549002,
-=======
-      1 => 1702545838,
->>>>>>> origin/thomas
+      1 => 1702553122,
       2 => 'file',
     ),
   ),
   'includes' => 
   array (
-<<<<<<< HEAD
-    'file:../../../public/header.tpl' => 1,
-    'file:../../../public/footer.tpl' => 1,
+    'file:../../public/header.tpl' => 1,
+    'file:../../public/footer.tpl' => 1,
   ),
 ),false)) {
-function content_657ad60bb42a40_50909296 (Smarty_Internal_Template $_smarty_tpl) {
-=======
-    'file:public/header.tpl' => 1,
-    'file:public/footer.tpl' => 1,
-  ),
-),false)) {
-function content_657adb6ea75b48_14710247 (Smarty_Internal_Template $_smarty_tpl) {
->>>>>>> origin/thomas
+function content_657ae6249d6790_55362091 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="fr">
 
@@ -50,11 +30,7 @@ function content_657adb6ea75b48_14710247 (Smarty_Internal_Template $_smarty_tpl)
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<<<<<<< HEAD
-    <link rel="stylesheet" href="../../../public/assets/css/liste.css">
-=======
     <link rel="stylesheet" href="public/assets/css/liste.css">
->>>>>>> origin/thomas
 
     <title>liste des lieux</title>
 
@@ -66,11 +42,7 @@ function content_657adb6ea75b48_14710247 (Smarty_Internal_Template $_smarty_tpl)
     <div id="right-panel" class="right-panel">
 
         <!--Header -->
-<<<<<<< HEAD
-        <?php $_smarty_tpl->_subTemplateRender('file:../../../public/header.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
-=======
-        <?php $_smarty_tpl->_subTemplateRender('file:public/header.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
->>>>>>> origin/thomas
+        <?php $_smarty_tpl->_subTemplateRender('file:../../public/header.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
         <!-- FIN : header -->
 
@@ -88,11 +60,7 @@ function content_657adb6ea75b48_14710247 (Smarty_Internal_Template $_smarty_tpl)
                   <label>Ajouter un lieu :
                   <input type="image"
                          name="btn_ajouter"
-<<<<<<< HEAD
-                         src="../../../public/images/icones/a16.png">
-=======
                          src="public/images/icones/a16.png">
->>>>>>> origin/thomas
                   </label>
               </form>
 
@@ -143,11 +111,7 @@ $_smarty_tpl->tpl_vars['unLieu']->do_else = false;
 ">
                                 <input type="hidden" name="gestion" value="lieux">
                                 <input type="hidden" name="action" value="form_consulter">
-<<<<<<< HEAD
-                                <input type="image" name="btn_consulter" src="../../../public/images/icones/p16.png">
-=======
                                 <input type="image" name="btn_consulter" src="public/images/icones/p16.png">
->>>>>>> origin/thomas
                             </form>
                         </td>
                         <td>
@@ -156,11 +120,7 @@ $_smarty_tpl->tpl_vars['unLieu']->do_else = false;
 ">
                                 <input type="hidden" name="gestion" value="lieux">
                                 <input type="hidden" name="action" value="form_modifier">
-<<<<<<< HEAD
-                                <input type="image" name="btn_modifier" src="../../../public/images/icones/m16.png">
-=======
                                 <input type="image" name="btn_modifier" src="public/images/icones/m16.png">
->>>>>>> origin/thomas
                             </form>
                         </td>
                         <td>
@@ -169,11 +129,7 @@ $_smarty_tpl->tpl_vars['unLieu']->do_else = false;
 ">
                                 <input type="hidden" name="gestion" value="lieux">
                                 <input type="hidden" name="action" value="form_supprimer">
-<<<<<<< HEAD
-                                <input type="image" name="btn_supprimer" src="../../../public/images/icones/s16.png">
-=======
                                 <input type="image" name="btn_supprimer" src="public/images/icones/s16.png">
->>>>>>> origin/thomas
                             </form>
                         </td>
                     </tr>
@@ -191,11 +147,7 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
 
 </body>
 
-<<<<<<< HEAD
-<?php $_smarty_tpl->_subTemplateRender('file:../../../public/footer.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
-=======
-<?php $_smarty_tpl->_subTemplateRender('file:public/footer.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
->>>>>>> origin/thomas
+<?php $_smarty_tpl->_subTemplateRender('file:../../public/footer.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
 
 
