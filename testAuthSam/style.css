@@ -7,8 +7,9 @@ html {
 }
 
 body {
-  background: #c1bdba;
+  background: #f96f05;
   font-family: 'Titillium Web', sans-serif;
+  /* background-image: url("/testAuthSam/fond-simple.jpg");   */
 }
 
 a {
