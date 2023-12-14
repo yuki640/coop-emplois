@@ -8,10 +8,11 @@ require_once 'include/configuration.php';
 
 // Mais aussi request
 Autoloader::chargerClasses();
-if (!isset($_SESSION['login'])) {
-
-    $_REQUEST['gestion'] = 'authentification';
-} else if (!isset($_REQUEST['gestion'])) {
+//if (!isset($_SESSION['login'])) {
+//
+//    $_REQUEST['gestion'] = 'authentification';
+/*} else*/
+if (!isset($_REQUEST['gestion'])) {
 
     $_REQUEST['gestion'] = 'accueil';
 

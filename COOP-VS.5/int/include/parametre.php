@@ -2,6 +2,6 @@
 // Definition de constantes pour l'accès à la base de données
 
 const SERVEUR = 'localhost';
-const BASE = 'coopemploi';
+const BASE = 'coop-emploi';
 const NOM = 'root';
 const PASS = '';
