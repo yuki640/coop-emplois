@@ -2,8 +2,8 @@
 
 class ReunionVue
 {
-    private $parametre = [];
-    private $tpl; // propriété de type objet (smarty)
+    private array $parametre = [];
+    private Smarty $tpl; // propriété de type objet (smarty)
 
     public function __construct($parametre)
     {
@@ -13,7 +13,7 @@ class ReunionVue
 
     }
 
-    public function setAction($action)
+    public function setAction($action): void
     {
         $this->parametre['action'] = $action;
     }
@@ -27,7 +27,10 @@ class ReunionVue
 //
 //    }
 
-    public function genererAffichageListe($valeurs, $action)
+    /**
+     * @throws SmartyException
+     */
+    public function genererAffichageListe($valeurs, $action): void
     {
         //     $this->chargementValeurs();
         $this->tpl->assign('titrePageAV', 'Liste des reunions à venir');
@@ -41,7 +44,10 @@ class ReunionVue
         $this->tpl->display('mod_reunion/vue/reunionListeVue.tpl');
     }
 
-    public function genererAffichageFiche($valeurs, $listeLieux, $listeAccompagnateurs)
+    /**
+     * @throws SmartyException
+     */
+    public function genererAffichageFiche($valeurs, $listeLieux, $listeAccompagnateurs): void
     {
         //       $this->chargementValeurs();
 

@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="../../../public/assets/css/liste.css">
+    <link rel="stylesheet" href="public/assets/css/liste.css">
 
     <title>CoopEmploi</title>
 
@@ -17,7 +17,11 @@
     <div id="right-panel" class="right-panel">
 
         <!--Header -->
+<<<<<<< HEAD
         {include file='../../../public/header.tpl'}
+=======
+        {include file='../../public/header.tpl'}
+>>>>>>> origin/thomas
         <!-- FIN : header -->
 
         <div class="page-title">
@@ -98,7 +102,11 @@
 </body>
 
 {* ajouter footer *}
+<<<<<<< HEAD
 {include file='../../../public/footer.tpl'}
+=======
+{include file='../../public/footer.tpl'}
+>>>>>>> origin/thomas
 {* fin ajouter footer *}
 
 

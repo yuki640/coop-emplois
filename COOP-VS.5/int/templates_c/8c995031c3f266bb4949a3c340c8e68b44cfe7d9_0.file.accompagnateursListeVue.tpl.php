@@ -1,28 +1,48 @@
 <?php
+<<<<<<< HEAD
 /* Smarty version 4.3.2, created on 2023-12-14 11:15:36
+=======
+/* Smarty version 4.3.2, created on 2023-12-14 11:48:33
+>>>>>>> origin/thomas
   from 'C:\laragon\www\coop-emplois\COOP-VS.5\int\mod_accompagnateurs\vue\accompagnateursListeVue.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.2',
+<<<<<<< HEAD
   'unifunc' => 'content_657ad5c83823b4_45871171',
+=======
+  'unifunc' => 'content_657add81589082_24711878',
+>>>>>>> origin/thomas
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '8c995031c3f266bb4949a3c340c8e68b44cfe7d9' => 
     array (
       0 => 'C:\\laragon\\www\\coop-emplois\\COOP-VS.5\\int\\mod_accompagnateurs\\vue\\accompagnateursListeVue.tpl',
+<<<<<<< HEAD
       1 => 1702548934,
+=======
+      1 => 1702550875,
+>>>>>>> origin/thomas
       2 => 'file',
     ),
   ),
   'includes' => 
   array (
+<<<<<<< HEAD
     'file:../../../public/header.tpl' => 1,
     'file:../../../public/footer.tpl' => 1,
   ),
 ),false)) {
 function content_657ad5c83823b4_45871171 (Smarty_Internal_Template $_smarty_tpl) {
+=======
+    'file:../../public/header.tpl' => 1,
+    'file:../../public/footer.tpl' => 1,
+  ),
+),false)) {
+function content_657add81589082_24711878 (Smarty_Internal_Template $_smarty_tpl) {
+>>>>>>> origin/thomas
 ?><!DOCTYPE html>
 <html lang="fr">
 
@@ -30,7 +50,11 @@ function content_657ad5c83823b4_45871171 (Smarty_Internal_Template $_smarty_tpl)
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+<<<<<<< HEAD
     <link rel="stylesheet" href="../../../public/assets/css/liste.css">
+=======
+    <link rel="stylesheet" href="public/assets/css/liste.css">
+>>>>>>> origin/thomas
 
     <title>CoopEmploi</title>
 
@@ -42,7 +66,11 @@ function content_657ad5c83823b4_45871171 (Smarty_Internal_Template $_smarty_tpl)
     <div id="right-panel" class="right-panel">
 
         <!--Header -->
+<<<<<<< HEAD
         <?php $_smarty_tpl->_subTemplateRender('file:../../../public/header.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
+=======
+        <?php $_smarty_tpl->_subTemplateRender('file:../../public/header.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
+>>>>>>> origin/thomas
 ?>
         <!-- FIN : header -->
 
@@ -57,7 +85,11 @@ function content_657ad5c83823b4_45871171 (Smarty_Internal_Template $_smarty_tpl)
                     <input type="hidden" name="gestion" value="accompagnateur">
                     <input type="hidden" name="action" value="form_ajouter">
                     <label>Ajouter un accompagnateur :
+<<<<<<< HEAD
                         <input type="image" name="btn_ajouter" src="../../../public/images/icones/a16.png">
+=======
+                        <input type="image" name="btn_ajouter" src="public/images/icones/a16.png">
+>>>>>>> origin/thomas
                     </label>
                 </form>
             </strong>
@@ -105,7 +137,11 @@ $_smarty_tpl->tpl_vars['unAccompagnateur']->do_else = false;
 ">
                                 <input type="hidden" name="gestion" value="accompagnateur">
                                 <input type="hidden" name="action" value="form_consulter">
+<<<<<<< HEAD
                                 <input type="image" name="btn_consulter" src="../../../public/images/icones/p16.png">
+=======
+                                <input type="image" name="btn_consulter" src="public/images/icones/p16.png">
+>>>>>>> origin/thomas
                             </form>
                         </td>
                         <td>
@@ -114,7 +150,11 @@ $_smarty_tpl->tpl_vars['unAccompagnateur']->do_else = false;
 ">
                                 <input type="hidden" name="gestion" value="accompagnateur">
                                 <input type="hidden" name="action" value="form_modifier">
+<<<<<<< HEAD
                                 <input type="image" name="btn_modifier" src="../../../public/images/icones/m16.png">
+=======
+                                <input type="image" name="btn_modifier" src="public/images/icones/m16.png">
+>>>>>>> origin/thomas
                             </form>
                         </td>
                         <td>
@@ -123,7 +163,11 @@ $_smarty_tpl->tpl_vars['unAccompagnateur']->do_else = false;
 ">
                                 <input type="hidden" name="gestion" value="accompagnateur">
                                 <input type="hidden" name="action" value="form_supprimer">
+<<<<<<< HEAD
                                 <input type="image" name="btn_supprimer" src="../../../public/images/icones/s16.png">
+=======
+                                <input type="image" name="btn_supprimer" src="public/images/icones/s16.png">
+>>>>>>> origin/thomas
                             </form>
                         </td>
                     </tr>
@@ -139,7 +183,11 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
 
 </body>
 
+<<<<<<< HEAD
 <?php $_smarty_tpl->_subTemplateRender('file:../../../public/footer.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
+=======
+<?php $_smarty_tpl->_subTemplateRender('file:../../public/footer.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
+>>>>>>> origin/thomas
 ?>
 
 

@@ -3,9 +3,9 @@
 class ReunionControleur
 {
 
-    private $parametre = []; // tableau = $_REQUEST
-    private $oModele; //propriété de type objet
-    private $oVue;  // propriété de type objet
+    private array $parametre = []; // tableau = $_REQUEST
+    private ReunionModele $oModele; //propriété de type objet
+    private ReunionVue $oVue;  // propriété de type objet
 
     public function __construct($parametre)
     {
@@ -20,7 +20,7 @@ class ReunionControleur
     {
         $this->action = $action;
     }
-    public function listerAV()
+    public function listerAV(): void
     {
         $listage = ">";
         $listeReunion = $this->oModele->getListeReunion($listage);
@@ -29,7 +29,7 @@ class ReunionControleur
         $this->oVue->genererAffichageListe($listeReunion, $this->action);
     }
 
-    public function listerDP()
+    public function listerDP(): void
     {
         $listage = "<";
         $listeReunion = $this->oModele->getListeReunion($listage);
@@ -38,7 +38,7 @@ class ReunionControleur
         $this->oVue->genererAffichageListe($listeReunion, $this->action);
     }
 
-    public function form_consulter()
+    public function form_consulter(): void
     {
         $unReunion = $this->oModele->getUnReunion();
         $listeLieux = $this->oModele->getListeLieux();
@@ -46,7 +46,7 @@ class ReunionControleur
         $this->oVue->genererAffichageFiche($unReunion, $listeLieux, $listeAccompagnateurs);
     }
 
-    public function form_ajouter()
+    public function form_ajouter(): void
     {
         $listeLieux = $this->oModele->getListeLieux();
         $listeAccompagnateurs = $this->oModele->getListeAccompagnateurs();
@@ -54,12 +54,12 @@ class ReunionControleur
         $this->oVue->genererAffichageFiche($unReunion, $listeLieux, $listeAccompagnateurs);
     }
 
-    public function ajouter()
+    public function ajouter(): void
     {
         $controleReunion = new ReunionTable($this->parametre);
         $controleCapacite = $this->oModele->VérifieNombrePlace($controleReunion);
 
-        if ($controleReunion->getAutorisationBD() == false || $controleCapacite === false) {
+        if (!$controleReunion->getAutorisationBD() || $controleCapacite === false) {
             // Retour à la fiche
             $listeAccompagnateur = $this->oModele->getListeAccompagnateurs();
             $listeLieux = $this->oModele->getListeLieux();
@@ -71,7 +71,7 @@ class ReunionControleur
         }
     }
 
-    public function form_supprimer()
+    public function form_supprimer(): void
     {
         $unReunion = $this->oModele->getUnReunion();
         $listeLieux = $this->oModele->getListeLieux();
@@ -79,7 +79,7 @@ class ReunionControleur
         $this->oVue->genererAffichageFiche($unReunion, $listeLieux, $listeAccompagnateurs);
     }
 
-    public function supprimer()
+    public function supprimer(): void
     {
 
         $controleReunion = new ReunionTable($this->parametre);
@@ -89,7 +89,7 @@ class ReunionControleur
         $this->listerAV();
     }
 
-    public function form_modifier()
+    public function form_modifier(): void
     {
 
         $unReunion = $this->oModele->getUnReunion();
@@ -98,13 +98,13 @@ class ReunionControleur
         $this->oVue->genererAffichageFiche($unReunion, $listeLieux, $listeAccompagnateurs);
     }
 
-    public function modifier()
+    public function modifier(): void
     {
 
         $controleReunion = new ReunionTable($this->parametre);
         $controleCapacite = $this->oModele->VérifieNombrePlace($controleReunion);
 
-        if ($controleReunion->getAutorisationBD() == false || $controleCapacite === false) {
+        if (!$controleReunion->getAutorisationBD() || $controleCapacite === false) {
             //Retour à la fiche
 
             $listeLieux = $this->oModele->getListeLieux();
