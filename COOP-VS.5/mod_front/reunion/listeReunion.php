@@ -41,9 +41,25 @@ if ($reponse === false) {
             $tpl->assign('affichage', 0);
 
         } else {
-
+            $formatter = new IntlDateFormatter(
+                'fr_FR', 
+                IntlDateFormatter::FULL, 
+                IntlDateFormatter::NONE, 
+                'Europe/Paris', 
+                IntlDateFormatter::GREGORIAN, 
+                'EEEE d MMMM Y'
+            );
             $tpl->assign('message', '');
             $tpl->assign('affichage', 1);
+            foreach ($reu as $key => $uneReunion) {
+                $dateObj = DateTime::createFromFormat('Y-m-d', $uneReunion->reu_dat);
+                if ($dateObj) {
+                    $uneReunion->reu_dat = $formatter->format($dateObj);
+                } else {
+                    $uneReunion->reu_dat = "Date invalide";
+                }
+            }
+
             $tpl->assign('listeReunions', $reu);
         }
 
@@ -60,8 +76,5 @@ if ($reponse === false) {
 }
 
 curl_close($curl);
-
-
-
 
 
