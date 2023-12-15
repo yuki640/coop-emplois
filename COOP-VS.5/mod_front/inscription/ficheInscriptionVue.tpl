@@ -20,13 +20,13 @@
 
     <main class="color">
         
-        <form action="traitement.php" method="post">
+        <form action="ficheInscription.php" method="post">
             <fieldset>
                 <h1>S'inscrire</h1>
                 <br>
 
                 <br>
-                <p>pour que nous puission vous confirmer votre inscription. il est nécessaire de preciser un telephone ou une adresse mail valide. merci pour votre comprention.</p>
+                <p>pour que nous puissions vous confirmer votre inscription. il est nécessaire de preciser un telephone ou une adresse mail valide. Merci pour votre comprention.</p>
                 <br>
                 <label for="nom">Nom :</label>
                 <input type="text" name="nom" id="nom" required><br>
