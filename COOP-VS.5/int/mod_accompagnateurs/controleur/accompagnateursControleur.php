@@ -28,6 +28,7 @@ class AccompagnateursControleur
     {
 
         $unAccompagnateurs = $this->oModele->getUnAccompagnateurs();
+        var_dump($unAccompagnateurs);
         $this->oVue->genererAffichageFiche($unAccompagnateurs);
     }
 

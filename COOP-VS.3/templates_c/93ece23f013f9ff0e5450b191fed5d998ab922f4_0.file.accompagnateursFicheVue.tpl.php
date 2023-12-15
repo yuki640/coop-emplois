@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.3.2, created on 2023-11-06 18:43:53
+/* Smarty version 4.3.2, created on 2023-11-06 19:40:36
   from 'C:\laragon\www\coop-emplois\COOP-VS.3\mod_accompagnateurs\vue\accompagnateursFicheVue.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.2',
-  'unifunc' => 'content_654925d93b3300_84082404',
+  'unifunc' => 'content_6549332452dc93_09707254',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '93ece23f013f9ff0e5450b191fed5d998ab922f4' => 
     array (
       0 => 'C:\\laragon\\www\\coop-emplois\\COOP-VS.3\\mod_accompagnateurs\\vue\\accompagnateursFicheVue.tpl',
-      1 => 1699292602,
+      1 => 1699296027,
       2 => 'file',
     ),
   ),
@@ -22,7 +22,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:public/footer.tpl' => 1,
   ),
 ),false)) {
-function content_654925d93b3300_84082404 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6549332452dc93_09707254 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'C:\\laragon\\www\\coop-emplois\\COOP-VS.3\\include\\libs\\plugins\\modifier.capitalize.php','function'=>'smarty_modifier_capitalize',),));
 ?>
 <!DOCTYPE html>
@@ -78,16 +78,22 @@ $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'C:\\laragon\\www\\coop-emplo
                             <form action="index.php" method="POST">
 
                                 <!-- PLACER LE FORMULAIRE EN CONSULTATION -->
+<?php echo var_dump($_smarty_tpl->tpl_vars['unAccompagnateur']->value);?>
 
                                 <input type="hidden" name="gestion" value="accompagnateur">
 
                                 <input type="hidden" name="action" value="<?php echo $_smarty_tpl->tpl_vars['action']->value;?>
 ">
 
-
-
                                 <input type="hidden" name="mailbase" value="<?php echo $_smarty_tpl->tpl_vars['unAccompagnateur']->value->getMail();?>
 ">
+
+                                <?php if ($_smarty_tpl->tpl_vars['action']->value == 'ajouter') {?>
+                                    <input type="hidden" name="uti_mdp" value="CoopEmploi">
+                                <?php } else { ?>
+                                    <input type="hidden" name="uti_mdp" value=<?php echo $_smarty_tpl->tpl_vars['unAccompagnateur']->value->getMdp();?>
+>
+                                <?php }?>
 
                                 <div class="card-body card-block">
 
@@ -162,8 +168,6 @@ $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'C:\\laragon\\www\\coop-emplo
                                         value="<?php echo $_smarty_tpl->tpl_vars['unAccompagnateur']->value->getlog();?>
 " readonly>
                                     </div>
-
-
 
                                     <div class="card-body card-block">
 

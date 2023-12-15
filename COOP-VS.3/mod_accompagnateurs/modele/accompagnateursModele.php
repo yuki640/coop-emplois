@@ -31,7 +31,7 @@ class AccompagnateursModele extends Modele
     }
     public function getUnAccompagnateurs()
     {
-        $sql = "SELECT p4t1_accompagnateurs.*, p4t1_utilisateur.uti_log FROM p4t1_accompagnateurs, p4t1_utilisateur WHERE p4t1_accompagnateurs.acc_ide = ? AND p4t1_utilisateur.uti_ide_acc = ?";
+        $sql = "SELECT p4t1_accompagnateurs.*, p4t1_utilisateur.uti_log,p4t1_utilisateur.uti_mdp  FROM p4t1_accompagnateurs, p4t1_utilisateur WHERE p4t1_accompagnateurs.acc_ide = ? AND p4t1_utilisateur.uti_ide_acc = ?";
         $idRequete = $this->executeRequete($sql, [
             $this->parametre['acc_ide'],
             $this->parametre['acc_ide']

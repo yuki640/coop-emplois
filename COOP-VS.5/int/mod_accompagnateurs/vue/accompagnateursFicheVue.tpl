@@ -55,11 +55,10 @@
                             <input type="hidden" name="mailbase" value="{$unAccompagnateur->getMail()}">
 
                             <div class="card-body card-block">
-
                                 {if $action neq 'ajouter'}
                                     <div class="form-group">
                                         <label for="text" class=" form-control">
-                                            Code accompagnateurs :
+                                            Code accompagnateur :
                                         </label>
                                         <input type="text" name="acc_ide" class="form-control"
                                                value="{$unAccompagnateur->getIde()}" readonly>

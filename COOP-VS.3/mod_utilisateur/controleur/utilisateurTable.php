@@ -2,7 +2,7 @@
 Class UtilisateurTable{
     private $uti_ide="";
     private $uti_log="";
-    private $uti_mdp = "coopemploi";
+    private $uti_mdp = "";
     
 
 
@@ -26,7 +26,16 @@ Class UtilisateurTable{
                     }
                 }
             }
-
+//    /** TODO a faire plus tard pour comparer le mot de passe */
+//     * Compare le mot de passe entré avec le hachage stocké
+//     *
+//     * @param string $password Le mot de passe entré par l'utilisateur
+//     * @return bool Vrai si le mot de passe correspond, faux sinon
+//     */
+//    public function comparePassword($password)
+//    {
+//        return password_verify($password, $this->uti_mdp);
+//    }
 //geters////////////////////////////////////////////////////////////////////////////
 
 /**
@@ -78,10 +87,4 @@ public function setUti_mdp($mdp)
 {
     $this->uti_mdp=password_hash($mdp,PASSWORD_BCRYPT);
 }
-
-
-
-
 }
-
-?>

@@ -31,12 +31,12 @@ class AccompagnateursModele extends Modele
     }
     public function getUnAccompagnateurs()
     {
+        var_dump($this->parametre['acc_ide']);
         $sql = "SELECT p4t1_accompagnateurs.*, p4t1_utilisateur.uti_log FROM p4t1_accompagnateurs, p4t1_utilisateur WHERE p4t1_accompagnateurs.acc_ide = ? AND p4t1_utilisateur.uti_ide_acc = ?";
         $idRequete = $this->executeRequete($sql, [
             $this->parametre['acc_ide'],
             $this->parametre['acc_ide']
         ]); // requête préparée
-
         return new AccompagnateursTable($idRequete->fetch(PDO::FETCH_ASSOC));
     }
 

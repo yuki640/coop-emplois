@@ -40,9 +40,7 @@ class AccompagnateursControleur
 
     public function ajouter()
     {
-
         $controleAccompagnateurs = new AccompagnateursTable($this->parametre);
-
 
         if ($controleAccompagnateurs->getAutorisationBD() == false) {
                 //Retour à la fiche
@@ -91,8 +89,10 @@ class AccompagnateursControleur
 
     public function modifier()
     {
-
+var_dump($this->parametre);
         $controleAccompagnateurs = new AccompagnateursTable($this->parametre);
+        var_dump($controleAccompagnateurs->getMdp());
+        die();
         $mailbase = $_POST['mailbase'];
         $mailmodifie = $_POST['acc_mail'];
         $mailidentique  = false;

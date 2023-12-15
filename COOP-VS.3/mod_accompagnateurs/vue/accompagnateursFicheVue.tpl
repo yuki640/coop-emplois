@@ -48,14 +48,18 @@
                             <form action="index.php" method="POST">
 
                                 <!-- PLACER LE FORMULAIRE EN CONSULTATION -->
-
+{var_dump($unAccompagnateur)}
                                 <input type="hidden" name="gestion" value="accompagnateur">
 
                                 <input type="hidden" name="action" value="{$action}">
 
-
-
                                 <input type="hidden" name="mailbase" value="{$unAccompagnateur->getMail()}">
+
+                                {if $action eq 'ajouter'}
+                                    <input type="hidden" name="uti_mdp" value="CoopEmploi">
+                                {else}
+                                    <input type="hidden" name="uti_mdp" value={$unAccompagnateur->getMdp()}>
+                                {/if}
 
                                 <div class="card-body card-block">
 
@@ -118,8 +122,6 @@
                                         <input type="text" id="uti_log" name="uti_log" class="form-control"
                                         value="{$unAccompagnateur->getlog()}" readonly>
                                     </div>
-
-
 
                                     <div class="card-body card-block">
 

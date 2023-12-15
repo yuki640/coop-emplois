@@ -41,7 +41,6 @@ if ($reponse === false) {
             $tpl->assign('affichage', 0);
 
         } else {
-
             $tpl->assign('message', '');
             $tpl->assign('affichage', 1);
             $tpl->assign('listeReunions', $reu);

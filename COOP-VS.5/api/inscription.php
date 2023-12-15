@@ -1,15 +1,16 @@
 <?php
+
 require_once('../int/include/configuration.php');
 
 class AccesBdInscription extends Modele
 {
 
-    public function addInscription($data)
+    public function addInscription($data): object
     {
         //Conversion de pdp_ric de chaine vers entier
         $pdp_ric = intval($data->pdp_ric);
 
-        $sql = 'INSERT INTO ' . P . 'porteur_de_projet '
+        $sql = 'INSERT INTO p4t1_porteur_de_projet '
             . ' (pdp_nom, pdp_pre, pdp_cpo, pdp_vil, pdp_tel, pdp_por, pdp_mai, pdp_ric, pdp_dcr)'
             . ' VALUES(?,?,?,?,?,?,?,?,?)';
 
