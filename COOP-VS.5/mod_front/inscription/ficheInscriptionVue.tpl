@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <title>Coop'Emploi</title>
 </head>
-<body>
+<body class="background">
 <header>
     <nav>
         <ul>
@@ -18,7 +18,7 @@
     </nav>
 </header>
 
-    <main class="hero color">
+    <main class="color">
         
         <form action="ficheInscription.php" method="post">
             <fieldset>
