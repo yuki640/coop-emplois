@@ -1,4 +1,27 @@
-<!DOCTYPE html>
+<?php
+/* Smarty version 4.3.2, created on 2023-12-18 15:33:17
+  from 'C:\laragon\www\coop-emplois\COOP-VS.5\mod_front\inscription\ficheInscriptionVue.tpl' */
+
+/* @var Smarty_Internal_Template $_smarty_tpl */
+if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
+  'version' => '4.3.2',
+  'unifunc' => 'content_6580663de417a8_23765082',
+  'has_nocache_code' => false,
+  'file_dependency' => 
+  array (
+    '69cd67ce8aa5e16ff7a96add8425fef5abe26a5b' => 
+    array (
+      0 => 'C:\\laragon\\www\\coop-emplois\\COOP-VS.5\\mod_front\\inscription\\ficheInscriptionVue.tpl',
+      1 => 1702913595,
+      2 => 'file',
+    ),
+  ),
+  'includes' => 
+  array (
+  ),
+),false)) {
+function content_6580663de417a8_23765082 (Smarty_Internal_Template $_smarty_tpl) {
+?><!DOCTYPE html>
 <html lang="fr">
 <head>
     <link rel="stylesheet" href="../../public/assets/css/front.css">
@@ -51,3 +74,5 @@
 </main>
 </body>
 </html>
+<?php }
+}

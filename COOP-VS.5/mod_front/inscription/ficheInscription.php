@@ -3,10 +3,8 @@
 require_once '../../int/include/configuration.php';
 
 $tpl = new Smarty();
-
 if (isset($_POST['form_inscription'])) {
-
-    $tpl->assign('rappel', $_POST['rappel']);
+   // $tpl->assign('rappel', $_POST['rappel']);
     $tpl->assign('reu_ide', $_POST['reu_ide']);
     $tpl->assign('message', "");
     $tpl->assign('affichage', 0);
@@ -22,11 +20,10 @@ if (isset($_POST['form_inscription'])) {
     if ($_SERVER['SERVER_ADDR'] == '94.247.180.77') {
 
         // l'URL du fichier reunion.php sur le vps
-
+        $url = "";
     } else {
 
-
-        $url = 'http://localhost/coop-emplois/COOP-VS.5/api//inscription.php';
+        $url = 'http://localhost/coop-emplois/COOP-VS.5/api/inscription.php';
     }
 
 
