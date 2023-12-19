@@ -40,7 +40,7 @@
                         <li class="dropdown pull-right">
                             <a href="#" class="dropbtn">Espace personnel</a>
                             <div class="dropdown-content expanded-dropdown-content">
-                                <a href="../mod_front/index.html">Site Front</a>
+                                <a href="../index.html">Site Front</a>
                                 <a href="#">Page 2</a>
                                 <a href="#">Page 3</a>
                             </div>

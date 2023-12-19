@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.3.2, created on 2023-12-18 15:18:16
+/* Smarty version 4.3.2, created on 2023-12-19 14:23:12
   from 'C:\laragon\www\coop-emplois\COOP-VS.5\mod_front\reunion\listeReunionVue.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.2',
-  'unifunc' => 'content_658062b8988824_81439959',
+  'unifunc' => 'content_6581a7503f9268_48708927',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '8a777e980a45f9dfe4c59cfa12873807cfb76cda' => 
     array (
       0 => 'C:\\laragon\\www\\coop-emplois\\COOP-VS.5\\mod_front\\reunion\\listeReunionVue.tpl',
-      1 => 1702912694,
+      1 => 1702995341,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_658062b8988824_81439959 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6581a7503f9268_48708927 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="fr">
 
@@ -35,7 +35,7 @@ function content_658062b8988824_81439959 (Smarty_Internal_Template $_smarty_tpl)
     <header>
         <nav>
             <ul>
-                <li><a href="../index.html">Accueil</a></li>
+                <li><a href="./index.html">Accueil</a></li>
                 <li><a href="">La coopérative</a></li>
                 <li><a href="">Nos projets</a></li>
                 <li><a href="">Contact</a></li>

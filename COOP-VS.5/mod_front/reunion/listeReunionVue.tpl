@@ -12,7 +12,7 @@
     <header>
         <nav>
             <ul>
-                <li><a href="../index.html">Accueil</a></li>
+                <li><a href="./index.html">Accueil</a></li>
                 <li><a href="">La coopérative</a></li>
                 <li><a href="">Nos projets</a></li>
                 <li><a href="">Contact</a></li>

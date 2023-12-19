@@ -20,7 +20,7 @@ if (isset($_POST['form_inscription'])) {
     //initialisation d'une nouvelle ressource cURL
     $curl = curl_init();
 
-    if ($_SERVER['SERVER_ADDR'] == 'https://devroomservice.v70208.campus-centre.fr') {
+    if ($_SERVER['SERVER_ADDR'] == '94.247.183.122') {
 
         // l'URL du fichier reunion.php sur le vps
         $url = "https://devroomservice.v70208.campus-centre.fr/api/inscription.php";
