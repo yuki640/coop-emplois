@@ -18,9 +18,9 @@
     </nav>
 </header>
 
-<main class="hero color">
+<main class="hero background color">
 
-    <form name="inscription" action="ficheInscription.php" method="post">
+    <form action="ficheInscription.php" method="post">
         <fieldset>
             <h1>S'inscrire</h1>
             <br>
@@ -29,6 +29,8 @@
             <p>Pour que nous puissions vous confirmer votre inscription. il est nécessaire de preciser un telephone ou
                 une adresse mail valide. Merci pour votre comprehension.</p>
             <br>
+            <input type="hidden" name="inscription" value="">
+            <input type="hidden" name="reu_ide" value="{$reu_ide}">
             <label for="nom">Nom :</label>
             <input type="text" name="pdp_nom" id="nom" required><br>
             <label for="prenom">Prénom :</label>
@@ -43,8 +45,9 @@
             <input type="tel" name="pdp_por" id="tel_port" required><br>
             <label for="email">Email :</label>
             <input type="email" name="pdp_mai" id="email" required><br>
-        <input type="button" class="btn btn-retour" value="Retour"
+            <input type="button" class="btn btn-retour" value="Retour"
                onclick="location.href='../index.html">
+               
         </fieldset>
         <button type="submit">Envoyer</button>
     </form>

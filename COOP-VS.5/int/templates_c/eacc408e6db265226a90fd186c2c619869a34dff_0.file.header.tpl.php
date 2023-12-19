@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.3.2, created on 2023-12-14 11:58:20
+/* Smarty version 4.3.2, created on 2023-12-19 14:02:19
   from 'C:\laragon\www\coop-emplois\COOP-VS.5\int\public\header.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.2',
-  'unifunc' => 'content_657adfcc683308_67330886',
+  'unifunc' => 'content_6581945b03a402_91398615',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'eacc408e6db265226a90fd186c2c619869a34dff' => 
     array (
       0 => 'C:\\laragon\\www\\coop-emplois\\COOP-VS.5\\int\\public\\header.tpl',
-      1 => 1702551450,
+      1 => 1702990935,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_657adfcc683308_67330886 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6581945b03a402_91398615 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="fr">
 
@@ -63,7 +63,7 @@ function content_657adfcc683308_67330886 (Smarty_Internal_Template $_smarty_tpl)
                         <li class="dropdown pull-right">
                             <a href="#" class="dropbtn">Espace personnel</a>
                             <div class="dropdown-content expanded-dropdown-content">
-                                <a href="#">Page 1</a>
+                                <a href="../mod_front/index.html">Site Front</a>
                                 <a href="#">Page 2</a>
                                 <a href="#">Page 3</a>
                             </div>

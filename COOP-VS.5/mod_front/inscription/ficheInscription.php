@@ -2,7 +2,10 @@
 
 require_once '../../int/include/configuration.php';
 
+
+
 $tpl = new Smarty();
+// var_dump($_POST);
 if (isset($_POST['form_inscription'])) {
    // $tpl->assign('rappel', $_POST['rappel']);
     $tpl->assign('reu_ide', $_POST['reu_ide']);
