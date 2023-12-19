@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.3.2, created on 2023-12-14 12:21:08
+/* Smarty version 4.3.2, created on 2023-12-19 14:14:17
   from 'C:\laragon\www\coop-emplois\COOP-VS.5\int\mod_accompagnateurs\vue\accompagnateursFicheVue.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.2',
-  'unifunc' => 'content_657ae524925926_13876804',
+  'unifunc' => 'content_658197292f4953_93128510',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'f7720694dfd29a9b4cbef466acc90bba2564af09' => 
     array (
       0 => 'C:\\laragon\\www\\coop-emplois\\COOP-VS.5\\int\\mod_accompagnateurs\\vue\\accompagnateursFicheVue.tpl',
-      1 => 1702551450,
+      1 => 1702907102,
       2 => 'file',
     ),
   ),
@@ -22,7 +22,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:../../public/footer.tpl' => 1,
   ),
 ),false)) {
-function content_657ae524925926_13876804 (Smarty_Internal_Template $_smarty_tpl) {
+function content_658197292f4953_93128510 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'C:\\laragon\\www\\coop-emplois\\COOP-VS.5\\int\\include\\libs\\plugins\\modifier.capitalize.php','function'=>'smarty_modifier_capitalize',),));
 ?>
 <!DOCTYPE html>
@@ -87,11 +87,10 @@ $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'C:\\laragon\\www\\coop-emplo
 ">
 
                             <div class="card-body card-block">
-
                                 <?php if ($_smarty_tpl->tpl_vars['action']->value != 'ajouter') {?>
                                     <div class="form-group">
                                         <label for="text" class=" form-control">
-                                            Code accompagnateurs :
+                                            Code accompagnateur :
                                         </label>
                                         <input type="text" name="acc_ide" class="form-control"
                                                value="<?php echo $_smarty_tpl->tpl_vars['unAccompagnateur']->value->getIde();?>

@@ -9,10 +9,11 @@ $curl = curl_init();
 
 if ($_SERVER['SERVER_ADDR'] == '94.247.183.122') {
     // Url du fichier reunion.php sur le serveur
-    $url = "";
+    $url = "https://devroomservice.v70208.campus-centre.fr/api/reunion.php";
 } else {
 
     $url = 'http://localhost/coop-emplois/COOP-VS.5/api/reunion.php';
+
 //    $url = 'http://localhost/coopemploi/api/reunion.php';
 }
 
@@ -42,11 +43,11 @@ if ($reponse === false) {
 
         } else {
             $formatter = new IntlDateFormatter(
-                'fr_FR', 
-                IntlDateFormatter::FULL, 
-                IntlDateFormatter::NONE, 
-                'Europe/Paris', 
-                IntlDateFormatter::GREGORIAN, 
+                'fr_FR',
+                IntlDateFormatter::FULL,
+                IntlDateFormatter::NONE,
+                'Europe/Paris',
+                IntlDateFormatter::GREGORIAN,
                 'EEEE d MMMM Y'
             );
             $tpl->assign('message', '');
