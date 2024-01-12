@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.3.2, created on 2023-12-19 14:23:12
+/* Smarty version 4.3.2, created on 2024-01-12 13:42:40
   from 'C:\laragon\www\coop-emplois\COOP-VS.5\mod_front\reunion\listeReunionVue.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.2',
-  'unifunc' => 'content_6581a7503f9268_48708927',
+  'unifunc' => 'content_65a141d0058f51_40548448',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '8a777e980a45f9dfe4c59cfa12873807cfb76cda' => 
     array (
       0 => 'C:\\laragon\\www\\coop-emplois\\COOP-VS.5\\mod_front\\reunion\\listeReunionVue.tpl',
-      1 => 1702995341,
+      1 => 1705066932,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_6581a7503f9268_48708927 (Smarty_Internal_Template $_smarty_tpl) {
+function content_65a141d0058f51_40548448 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="fr">
 
@@ -35,7 +35,7 @@ function content_6581a7503f9268_48708927 (Smarty_Internal_Template $_smarty_tpl)
     <header>
         <nav>
             <ul>
-                <li><a href="./index.html">Accueil</a></li>
+                <li><a href="../../index.html">Accueil</a></li>
                 <li><a href="">La coopérative</a></li>
                 <li><a href="">Nos projets</a></li>
                 <li><a href="">Contact</a></li>
@@ -46,6 +46,7 @@ function content_6581a7503f9268_48708927 (Smarty_Internal_Template $_smarty_tpl)
 
     <main>
         <h1>Réunions disponibles</h1>
+            <?php if ($_smarty_tpl->tpl_vars['affichage']->value == 1) {?>
         <table>
             <thead>
                 <tr>
@@ -87,6 +88,10 @@ H environ</td>
 $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
             </tbody>
         </table>
+            <?php } else { ?>
+                    <h4><?php echo $_smarty_tpl->tpl_vars['message']->value;?>
+</h4>
+            <?php }?>
 
        
     </main>

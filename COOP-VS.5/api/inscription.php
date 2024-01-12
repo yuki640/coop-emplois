@@ -1,5 +1,5 @@
 <?php
-require_once('../int/include/configuration.php');
+require_once '../int/include/configuration.php';
 
 class AccesBdInscription extends Modele
 {
@@ -10,8 +10,8 @@ class AccesBdInscription extends Modele
         $pdp_ric = intval($data->pdp_ric);
 
         $sql = 'INSERT INTO p4t1_porteur_de_projet '
-            . ' (pdp_nom, pdp_npre, pdp_cpo, pdp_vil, pdp_tel, pdp_por, pdp_mai, pdp_reu, pdp_dcr)'
-            . ' VALUES(?,?,?,?,?,?,?,?,?)';
+            . ' (pdp_nom, pdp_npre, pdp_cpo, pdp_vil, pdp_tel, pdp_por, pdp_mai, pdp_reu)'
+            . ' VALUES(?,?,?,?,?,?,?,?)';
 
         return $this->executeRequete($sql, [
             $data->pdp_nom,
@@ -22,7 +22,7 @@ class AccesBdInscription extends Modele
             $data->pdp_por,
             $data->pdp_mai,
             $pdp_ric,
-            DateHeure::getDateEcriture(),
+            //DateHeure::getDateEcriture(),
         ]);
     }
 }

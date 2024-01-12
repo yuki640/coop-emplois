@@ -12,7 +12,7 @@
     <header>
         <nav>
             <ul>
-                <li><a href="./index.html">Accueil</a></li>
+                <li><a href="../../index.html">Accueil</a></li>
                 <li><a href="">La coopérative</a></li>
                 <li><a href="">Nos projets</a></li>
                 <li><a href="">Contact</a></li>
@@ -23,6 +23,7 @@
 
     <main>
         <h1>Réunions disponibles</h1>
+            {if $affichage eq 1}
         <table>
             <thead>
                 <tr>
@@ -51,6 +52,9 @@
                 {/foreach}
             </tbody>
         </table>
+            {else}
+                    <h4>{$message}</h4>
+            {/if}
 
        
     </main>

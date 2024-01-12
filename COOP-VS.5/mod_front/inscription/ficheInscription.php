@@ -77,7 +77,7 @@ if (isset($_POST['form_inscription'])) {
         $a = json_decode($reponse);
 
         $tpl->assign('message', $a->message);
-        $tpl->assign('rappel', $_POST['rappel']);
+     //   $tpl->assign('rappel', $_POST['rappel']);
         $tpl->assign('reu_ide', $_POST['reu_ide']);
 
         $tpl->display('ficheInscriptionVue.tpl');
