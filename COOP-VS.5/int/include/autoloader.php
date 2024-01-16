@@ -41,6 +41,9 @@ class Autoloader
             'mod_authentification/controleur/',
             'mod_authentification/modele/',
             'mod_authentification/vue/',
+            'mod_porteur_de_projet/',
+            'mod_porteur_de_projet/controleur/',
+            'mod_porteur_de_projet/modele/',
         ];
 
         foreach ($repertoires as $repertoire) {

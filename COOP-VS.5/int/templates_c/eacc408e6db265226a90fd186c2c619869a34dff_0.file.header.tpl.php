@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.3.2, created on 2023-12-19 15:23:09
+/* Smarty version 4.3.2, created on 2024-01-16 16:35:16
   from 'C:\laragon\www\coop-emplois\COOP-VS.5\int\public\header.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.2',
-  'unifunc' => 'content_6581a74da18331_22332033',
+  'unifunc' => 'content_65a6a234310654_18001339',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'eacc408e6db265226a90fd186c2c619869a34dff' => 
     array (
       0 => 'C:\\laragon\\www\\coop-emplois\\COOP-VS.5\\int\\public\\header.tpl',
-      1 => 1702995783,
+      1 => 1705419312,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_6581a74da18331_22332033 (Smarty_Internal_Template $_smarty_tpl) {
+function content_65a6a234310654_18001339 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="fr">
 
@@ -45,7 +45,7 @@ function content_6581a74da18331_22332033 (Smarty_Internal_Template $_smarty_tpl)
                     </div>
                 </li>
                 <li><a href="index.php?gestion=entretien">Entretien</a></li>
-            <li><a href=" #">Porteurs de Projet</a></li>
+            <li><a href="index.php?gestion=porteurdeprojet">Porteurs de Projet</a></li>
                 <li><a href="index.php?gestion=accompagnateur">Accompagnateurs</a></li>
 
                 <li class="dropdown">
@@ -79,7 +79,7 @@ function content_6581a74da18331_22332033 (Smarty_Internal_Template $_smarty_tpl)
     <img src="public/images/logo_coopemploi.png" style="
     height: 100px;
      width: 130px;
-">
+" alt="">
 
 </body>
 

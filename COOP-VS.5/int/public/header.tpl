@@ -22,7 +22,7 @@
                     </div>
                 </li>
                 <li><a href="index.php?gestion=entretien">Entretien</a></li>
-            <li><a href=" #">Porteurs de Projet</a></li>
+            <li><a href="index.php?gestion=porteurdeprojet">Porteurs de Projet</a></li>
                 <li><a href="index.php?gestion=accompagnateur">Accompagnateurs</a></li>
 
                 <li class="dropdown">
@@ -56,7 +56,7 @@
     <img src="public/images/logo_coopemploi.png" style="
     height: 100px;
      width: 130px;
-">
+" alt="">
 
 </body>
 

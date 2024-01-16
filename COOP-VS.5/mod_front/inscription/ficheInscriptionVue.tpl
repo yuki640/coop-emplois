@@ -52,7 +52,7 @@
             <button type="submit">Envoyer</button>
         </form>
     {else}
-        {$message}
+        <h2>{$message}</h2>
         <a href="../../index.html"><button type="button" class="button">Accueil</button></a>
     {/if}
 </main>

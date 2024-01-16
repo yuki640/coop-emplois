@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.3.2, created on 2024-01-12 14:54:24
+/* Smarty version 4.3.2, created on 2024-01-16 13:28:36
   from 'C:\laragon\www\coop-emplois\COOP-VS.5\mod_front\inscription\ficheInscriptionVue.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.2',
-  'unifunc' => 'content_65a152a0b59c93_68872248',
+  'unifunc' => 'content_65a68484d47687_72505504',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '69cd67ce8aa5e16ff7a96add8425fef5abe26a5b' => 
     array (
       0 => 'C:\\laragon\\www\\coop-emplois\\COOP-VS.5\\mod_front\\inscription\\ficheInscriptionVue.tpl',
-      1 => 1705071263,
+      1 => 1705411714,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_65a152a0b59c93_68872248 (Smarty_Internal_Template $_smarty_tpl) {
+function content_65a68484d47687_72505504 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -76,8 +76,8 @@ function content_65a152a0b59c93_68872248 (Smarty_Internal_Template $_smarty_tpl)
             <button type="submit">Envoyer</button>
         </form>
     <?php } else { ?>
-        <?php echo $_smarty_tpl->tpl_vars['message']->value;?>
-
+        <h2><?php echo $_smarty_tpl->tpl_vars['message']->value;?>
+</h2>
         <a href="../../index.html"><button type="button" class="button">Accueil</button></a>
     <?php }?>
 </main>
